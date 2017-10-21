@@ -1,0 +1,32 @@
+DEBUG:root:This message should go to the log file
+INFO:root:Finding all the required data files
+INFO:root:Finding all the required data files
+INFO:root:Finding all the required data files
+INFO:root:Finding all the required data files
+2017-10-21 19:49:13,472 INFO Finding all the required data files
+2017-10-21 19:49:46,814 INFO Finding all the required data files
+2017-10-21 19:49:46,814 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:52:16,161 INFO Finding all the required data files
+2017-10-21 19:52:16,161 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:52:29,658 INFO Finding all the required data files
+2017-10-21 19:52:29,659 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:53:33,293 INFO Finding all the required data files
+2017-10-21 19:53:33,293 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:53:54,881 INFO Finding all the required data files
+2017-10-21 19:53:54,881 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:56:47,817 INFO Finding all the required data files
+2017-10-21 19:56:47,818 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:57:12,802 INFO Finding all the required data files
+2017-10-21 19:57:12,802 INFO Finished finding data, exported into data_files.txt
+2017-10-21 19:58:43,378 INFO files fn: Finding all the required data files
+2017-10-21 19:58:43,378 INFO files fn: Finished finding data, exported into data_files.txt
+2017-10-21 19:58:43,379 INFO copier fn: Opening data_files.txt
+2017-10-21 19:58:43,380 INFO copier fn: finished copying every file
+2017-10-21 20:09:45,264 INFO files fn: Finding all the required data files
+2017-10-21 20:09:45,266 INFO files fn: Finished finding data, exported into data_files.txt
+2017-10-21 20:09:45,266 INFO copier fn: Opening data_files.txt
+2017-10-21 20:09:45,269 INFO copier fn: Finished copying every file
+2017-10-21 20:10:03,106 INFO files fn: Finding all the required data files
+2017-10-21 20:10:03,106 INFO files fn: Finished finding data, exported into data_files.txt
+2017-10-21 20:10:03,107 INFO copier fn: Opening data_files.txt
+2017-10-21 20:10:03,109 INFO copier fn: Finished copying every file
