@@ -6,7 +6,6 @@ import os
 
 # Stuff to log the whole process
 LOG_FILENAME = 'data_copy.log'
-logging.basicConfig(filename=LOG_FILENAME,level=logging.INFO,format='%(asctime)s %(levelname)s %(message)s')
 
 # Telescope data location on remote server
 p5 = "/remote/archive/pt5m/2017/"
