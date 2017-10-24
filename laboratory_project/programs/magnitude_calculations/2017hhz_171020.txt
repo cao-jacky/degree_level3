@@ -1,5 +1,5 @@
-# supernova data on 17_10_17 for
-# 2017hhz
+# supernova data
+# 2017hhz 17_10_17
 
 # star catalogue objects
 # name, v-mag, b-mag, r-mag, i-mag
