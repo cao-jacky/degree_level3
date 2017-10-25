@@ -1,19 +1,21 @@
 import numpy as np
 
 def data_file(data):
-    """ Opening data_file and storing into a numpy array. """
+    """ Opening the supernova data text file and then returning: star catalogue
+    data (array), v-band and b-band data taken from photometry (arrays), the name of the
+    supernova (string), and the date that it was observed (string). """
+
     with open(data) as f:
         lines = f.readlines()
 
-    data_file = np.zeros(len(lines))
-    #print data_file
-    
     sn_name_date = lines[1]
     sn_name_date = sn_name_date[2:] # removes the initial hash and space
 
     sn_name = sn_name_date.split()[0]
     sn_date = sn_name_date.split()[1]
-    
+
+    data_file = np.zeros(len(lines)) # Storing where locations of things are
+
     # For loop to find the location of where things are
     for i in range(len(lines)):
         if lines[i] == '# star catalogue objects\n':
@@ -29,9 +31,9 @@ def data_file(data):
     loc_3 = np.asscalar(np.where(data_file == 3)[0]) # storing loc of b-band
 
     sc_data = np.zeros([loc_2-loc_1-3,5])
-    v_data = np.zeros([loc_3-loc_2-4,4]) 
+    v_data = np.zeros([loc_3-loc_2-4,4])
     b_data = np.copy(v_data) # creates exactly the same size array as for b_data
-   
+
     sc_initial, v_initial, b_initial = [], [], [] # storing what rows the data is on
 
     for i in range(len(data_file)):
@@ -39,7 +41,7 @@ def data_file(data):
             if i < loc_2: # for star catalogue
                 if not []:
                     sc_initial.append(i) # adds current row to the list
-                sc_split = lines[i].split() # splits the row of info into strings 
+                sc_split = lines[i].split() # splits the row of info into strings
                 for k in range(5):
                     if k == 0:
                         pass
@@ -67,6 +69,9 @@ def data_file(data):
     return sc_data, v_data, b_data, sn_name, sn_date
 
 def rel_mag_v(data):
+    """ Returns the v-band magnitude of the supernova and it's uncertainty,
+    data originally taken using photometry. """
+
     data = data_file(data)
 
     data_wol = np.delete(data[1], (-1), axis=0) # data without last row
@@ -77,10 +82,13 @@ def rel_mag_v(data):
 
     v_mag = sn_vband[1] * vr_av # the v band magnitude of the SN
     v_mag_err = sn_vband[2] * vr_av # v band mag uncertainty for SN
-    
+
     return v_mag, v_mag_err, data[3], data[4]
 
 def rel_mag_b(data):
+    """ Returns the b-band magnitude of the supernova and it's uncertainty,
+    data originally taken using photometry. """
+
     data = data_file(data)
 
     data_wol = np.delete(data[2], (-1), axis=0) # data without last row
@@ -91,14 +99,16 @@ def rel_mag_b(data):
 
     b_mag = sn_bband[1] * br_av # the v band magnitude of the SN
     b_mag_err = sn_bband[2] * br_av # v band mag uncertainty for SN
-    
+
     return b_mag, b_mag_err, data[3], data[4]
 
 def data_return(data):
+    """ Storing the data into a text file for easy access. """
+
     v_band = rel_mag_v(data)
     b_band = rel_mag_b(data)
 
-    file_name = '%s-%s.txt' % (v_band[2], b_band[3])  
+    file_name = '%s-%s.txt' % (v_band[2], b_band[3])
     f = open(file_name, 'w')
     f.write('Supernova: ' + v_band[2] + '\n')
     f.write('Date of observations: ' + v_band[3] + '\n')
@@ -108,6 +118,5 @@ def data_return(data):
 
 
 if __name__ == '__main__':
-   
-    data_return("2017hhz_171023.txt")
 
+    data_return("2017hhz_171023.txt")
