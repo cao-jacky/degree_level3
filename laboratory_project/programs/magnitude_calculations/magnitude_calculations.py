@@ -119,4 +119,4 @@ def data_return(data):
 
 if __name__ == '__main__':
 
-    data_return("2017hhz_171023.txt")
+    data_return("test.txt")

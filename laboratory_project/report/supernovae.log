@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  19 OCT 2017 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  26 OCT 2017 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,130 +402,26 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, AstroLabs, Lab Pa
 rtner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 17/03/2017, Date
  of report: 19/03/2017.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<method/fig1-1.pdf, id=24, 397.485pt x 268.00125pt>
-File: method/fig1-1.pdf Graphic file (type pdf)
- <use method/fig1-1.pdf>
-Package pdftex.def Info: method/fig1-1.pdf used on input line 137.
-(pdftex.def)             Requested size: 184.9429pt x 124.70107pt.
-
-[2 <./method/fig1-1.pdf>]
-<results/horizontal_intensity_profiles3.pdf, id=46, 586.19pt x 542.025pt>
-File: results/horizontal_intensity_profiles3.pdf Graphic file (type pdf)
-
-<use results/horizontal_intensity_profiles3.pdf>
-Package pdftex.def Info: results/horizontal_intensity_profiles3.pdf used on inp
-ut line 180.
-(pdftex.def)             Requested size: 199.16928pt x 184.16199pt.
-
-<results/data_and_models2.pdf, id=47, 562.1pt x 417.56pt>
-File: results/data_and_models2.pdf Graphic file (type pdf)
-
-<use results/data_and_models2.pdf>
-Package pdftex.def Info: results/data_and_models2.pdf used on input line 187.
-(pdftex.def)             Requested size: 256.0748pt x 190.22583pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 187--188
- [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
-
- []
-
-
-Overfull \hbox (1.9023pt too wide) in paragraph at lines 216--224
- []$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--224
-
- []
-
-<results/collage3.pdf, id=48, 397.485pt x 258.9675pt>
-File: results/collage3.pdf Graphic file (type pdf)
-
-<use results/collage3.pdf>
-Package pdftex.def Info: results/collage3.pdf used on input line 229.
-(pdftex.def)             Requested size: 227.62204pt x 148.3045pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <./results/horizontal_intensity_profiles3.pdf> <./results/data_and_models2.p
-df> <./results/collage3.pdf>]
-Underfull \hbox (badness 2057) in paragraph at lines 306--309
- []\OT1/cmr/m/n/9 M. Stokes, et al. \OT1/cmr/m/it/9 A Stan-dard De-fault Color 
-Space
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--309
- \OT1/cmr/m/it/9 for the In-ter-net\OT1/cmr/m/n/9 . Novem-ber 1996, avail-able 
-at:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--309
- \OT1/cmr/m/n/9 https://www.w3.org/Graphics/Color/sRGB, ac-cessed:
- []
-
-[4] [5] (./supernovae.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+[2] (./supernovae.aux) ) 
 Here is how much of TeX's memory you used:
- 4656 strings out of 493089
- 62465 string characters out of 6134841
- 163424 words of memory out of 5000000
- 8054 multiletter control sequences out of 15000+600000
- 13602 words of font info for 47 fonts, out of 8000000 for 9000
+ 4543 strings out of 493089
+ 60761 string characters out of 6134841
+ 135907 words of memory out of 5000000
+ 7973 multiletter control sequences out of 15000+600000
+ 5303 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,13n,23p,659b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (5 pages, 3675237 bytes).
+ 38i,4n,23p,349b,155s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti9.pfb>
+Output written on supernovae.pdf (2 pages, 71454 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 31 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
