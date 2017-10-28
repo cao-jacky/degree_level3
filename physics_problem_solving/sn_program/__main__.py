@@ -6,3 +6,4 @@ import l_peak
 file_name = 'sn_data.txt'
 
 data = data.data_input(file_name)
+l_peak.calculate_flux(data)
