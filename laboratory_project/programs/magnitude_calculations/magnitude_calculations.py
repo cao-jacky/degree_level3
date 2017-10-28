@@ -24,18 +24,20 @@ def data_file(data):
             data_file[i] = 2
         if lines[i] == '# b-band\n':
             data_file[i] = 3
-
-    # need to create different arrays for the data
+    
+    # Arrays to store where the data is located in the file
     loc_1 = np.asscalar(np.where(data_file == 1)[0]) # storing loc of sc objects
     loc_2 = np.asscalar(np.where(data_file == 2)[0]) # storing loc of v-band
     loc_3 = np.asscalar(np.where(data_file == 3)[0]) # storing loc of b-band
 
+    # Arrays to store data
     sc_data = np.zeros([loc_2-loc_1-3,5])
     v_data = np.zeros([loc_3-loc_2-4,4])
     b_data = np.copy(v_data) # creates exactly the same size array as for b_data
 
     sc_initial, v_initial, b_initial = [], [], [] # storing what rows the data is on
 
+    # Copying data from text file into an array, ignoring the names of the SNs
     for i in range(len(data_file)):
         if lines[i][0].isdigit() == True:
             if i < loc_2: # for star catalogue
