@@ -1,6 +1,10 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,ulem,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext}
+\usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
+
+\def\bibsection{\section*{\refname}} 
+\renewcommand{\thesubsection}{\alph{subsection}}
 
 \begin{document}
 
@@ -23,13 +27,39 @@ asdsa
 \subsection{Supernovae}
 \vspace{-2ex}
 
-In cosmology, we can argue that one of the most important objects that we can observe are supernovae.  
+One of the potential fates for a massive star is an extremely violent and luminous explosion. The likes of which occur when there are no possible equilibrium configurations for a star to exist in after it has ran out of nuclear fuel to burn. The luminosity of such an explosion when it reaches it's peak can be as bright as that of a small galaxy \cite{longair}.
+
+Observing this event and measuring the magnitude of it over a period allows us to plot {\em light curves\em}, where magnitude is displayed as a function of time. If we were to then collect sufficiently enough data from multiple supernovae, groups would begin to form, the likes of which we could use to classify the types of supernova explosions. 
+
+The two basic classifications of supernova are, Type I and Type II. The general distinction between both is that Type I has an absence of the Balmer series of hydrogen in their optical spectrum at maximum light, and Type II does have this \cite{mod_ast, longair}. We can further split the two groups into more sub types, as can be seen in Table \ref{sn_classes}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 20pt}c} 
+ \hline
+ \textbf{Type} & \textbf{Characteristic} \\ 
+ Type Ia		& Si II line at $616.0$ nm \\
+ Type IIP 		& Reaches a plateau in it's light curve \\
+ Type IIL		& Displays a linear decrease in it's light curve \\
+ \hline
+\end{tabular}
+\caption{Some of the subclassifications of supernova \cite{longair}.}
+\label{sn_classes}
+\end{table}
+
+The scenario which leads to a Type Ia supernova begins with a binary system of stars. Matter from a donor star is accreted onto the surface of a white dwarf. The material is then compressed and heated,   
 
 \vspace{-3ex}
 \subsection{Supernova Discovery}
 \vspace{-2ex}
 
-asdasd
+All sky camera? [find source for this]
+
+\vspace{-3ex}
+\subsection{Application to Cosmology}
+\vspace{-2ex}
+
+Type Ia supernovae are useful to us as they can be classed as standard candles [cite]. With this we can use them to calculate a value for Hubble's Constant, $H_0$, and thus calculate the expansion rate of the Universe.
 
 \vspace{-3ex}
 \subsection{Project Aims}
@@ -37,12 +67,38 @@ asdasd
 
 Studying the evolution of the magnitudes of different supernovae will allow us to produce a light curve which can be fitted with known models. Through this we can then discover the type of supernova that we are observing. 
 
-Through observing the magnitudes on different days.
+The main focus in experimentation is attempting to collect the data which would form our light curves. 
 
 Could we confirm the expansion rate of the universe through our observations of supernovae? 
 
 \vspace{-3ex}
 \section{Observations} 
+\vspace{-2ex}
+\subsection{Data Collection}
+\vspace{-2ex}
+
+sdafsdf
+
+\vspace{-3ex}
+\subsection{Observations Made}
+\vspace{-2ex}
+
+asdasd
+
+\vspace{-3ex}
+\subsection{Data Analysis}
+\vspace{-2ex}
+
+sdfsdf
+
+\vspace{-3ex}
+\subsection{Data Uncertainties}
+\vspace{-2ex}
+
+asdasdasd
+
+\vspace{-3ex}
+\subsection{Final Data}
 \vspace{-2ex}
 
 asdasd
@@ -50,12 +106,24 @@ asdasd
 \vspace{-3ex}
 \section{Analysis}
 \vspace{-2ex}
+\subsection{Supernovae Models}
+\vspace{-2ex}
 
-asdasd
+The fitting of the templates/models to our observations.
+
+\vspace{-3ex}
+\subsection{Resuluts}
+\vspace{-2ex}
+
+sdfsdfsa
 
 \vspace{-3ex}
 \section{Discussion}
 \vspace{-2ex}
+
+It is highly unlikely that we will see supernova remnants for the supernova that we have been studying, in the shape of the Crab Nebula. Much longer time periods would be required for this. 
+
+[neutrino studying]?
 
 asdasd
 
@@ -63,21 +131,21 @@ asdasd
 \section{Conclusions}
 \vspace{-2ex}
 
-sdfsdf
+sdfsdfasdas
 
 \vspace{-5ex}
-\section{Acknowledgements}
+\section*{Acknowledgements}
 \vspace{-2ex}
 
-sdfsadf
+I would like to thank Carl Sagan for producing his Cosmos series and inspiring a generation to become astronomers.
 
-\begin{thebibliography}{5}
-\bibitem{mathmethods}
-	K. F. Riley, M. P. Hobson, and S. J. Bence.
-	\textit{Mathematical Methods for Physics and Engineering}.
-	Cambridge University Press, Cambridge, UK, 2010.	
-\end{thebibliography}
+
+\bibliographystyle{abbrv}
+\bibliography{supernovae}
 \clearpage
+
+
+
 
 \vfill
 \twocolumngrid
