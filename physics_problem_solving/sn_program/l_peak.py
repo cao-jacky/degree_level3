@@ -4,7 +4,8 @@ def f(mag):
     """ Units of flux initially in erg cm^(-2)s^(-1)Angstrom^(-1). """
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
-    return (10 ** (-ex)) 
+    # CONVERT FLUX TO SI
+    return (10 ** (-ex)) * (10**7)
 
 def flux(data):
     """ Used with low redshift data, calculating the flux from the given magnitudes. """
@@ -40,3 +41,10 @@ def luminosity_peak(hubble, c, data):
         l_peak_store[i] = l_peak
     return l_peak_store
 
+def luminosity_value(hubble, c, data):
+    l_vals = luminosity_peak(hubble, c, data) 
+    l_peak = np.average(l_vals)
+    
+    l_solar = 3.84 * 10 ** 26
+
+    return l_peak

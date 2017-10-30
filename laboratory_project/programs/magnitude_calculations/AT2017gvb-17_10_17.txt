@@ -1,0 +1,4 @@
+Supernova: AT2017gvb
+Date of observations: 17_10_17
+v-band magnitude and error: 16.8494644834 +- 0.0145804638791
+b-band magnitude and error: 16.5832529851 +- 0.014860950759

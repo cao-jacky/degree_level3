@@ -1,0 +1,4 @@
+Supernova: ASASSN-17mz
+Date of observations: 17_10_11
+v-band magnitude and error: 14.9976644514 +- 0.00510840051315
+b-band magnitude and error: 14.499430222 +- 0.00345396686173
