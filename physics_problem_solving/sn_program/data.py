@@ -71,4 +71,4 @@ def data_input(data):
     dsn_data = np.append(dsn_names, dsn_data, axis=1)
     lzsn_data = np.append(lzsn_names, lzsn_data, axis=1)
 
-    return dsn_data, lzsn_data 
+    return dsn_data, lzsn_data, dsn_names, lzsn_names
