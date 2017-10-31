@@ -18,3 +18,19 @@ def flux_obs(hubble, c, data, l_peak):
 
     print f_o
     return f_o
+
+def chi_squared():
+    return chi_sq
+
+def omega_lambda():
+
+    # outside, L_peak testing
+    # inner loop chi_squared over supernova
+
+    # L_peak limits
+    l_step = 100
+    l_peak = 0.0
+
+    for i in range():
+        for i in range():
+            ???

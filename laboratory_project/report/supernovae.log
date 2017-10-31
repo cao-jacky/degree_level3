@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  31 OCT 2017 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  31 OCT 2017 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,7 +407,7 @@ rtner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 17/03/2017, Date
 Here is how much of TeX's memory you used:
  4587 strings out of 493089
  61247 string characters out of 6134841
- 141901 words of memory out of 5000000
+ 142901 words of memory out of 5000000
  8001 multiletter control sequences out of 15000+600000
  9769 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -426,7 +426,7 @@ blic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (3 pages, 151529 bytes).
+Output written on supernovae.pdf (3 pages, 151602 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
