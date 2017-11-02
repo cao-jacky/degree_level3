@@ -5,12 +5,12 @@ The style file: abbrv.bst
 Database file #1: supernovae.bib
 You've used 4 entries,
             2118 wiz_defined-function locations,
-            522 strings with 4118 characters,
-and the built_in function-call counts, 1113 in all, are:
+            522 strings with 4122 characters,
+and the built_in function-call counts, 1109 in all, are:
 = -- 106
 > -- 40
 < -- 0
-+ -- 19
++ -- 17
 - -- 12
 * -- 69
 := -- 195
@@ -34,7 +34,7 @@ purify$ -- 14
 quote$ -- 0
 skip$ -- 28
 stack$ -- 0
-substring$ -- 65
+substring$ -- 63
 swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
