@@ -15,8 +15,19 @@ def flux(data):
     for i in range(lzsn_data.shape[0]):
         mag = lzsn_data[i][2] # Mag from the current SN
         flux_store[i] = f(mag) # Calculating the flux of the current SN
-    # HOW WOULD UNCERTAINTIES WORK FOR THIS MAGNITUDE??? 
     return flux_store
+
+def flux_uncertainty(data):
+    lzsn_data = data[1] # Selection out low redshift data
+    flux_data = flux(data) # Finding flux information
+    uncert = np.zeros([lzsn_data.shape[0],1]) # Storing values for uncertainty 
+    
+    for i in range(lzsn_data.shape[0]):
+        A = flux_data[i]
+        print A
+        #flux_uncert = A * np.log(10) * alpha_A
+
+    return 
 
 def comoving_distances(hubble, c, data):
     """ Comoving distance is defined by $R_0 \eta=cz/ H_0$. """
@@ -29,7 +40,7 @@ def comoving_distances(hubble, c, data):
     return cmv_store
 
 def luminosity_peak(hubble, c, data):
-    """ Calculating L_peak for low supernova data. """
+    """ Calculating L_peak for each SN in low supernova data. """
     lzsn_data = data[1] # Pulling lzsn data
     l_peak_store = np.zeros([lzsn_data.shape[0],1]) # Storing our L_peak values
 
@@ -41,10 +52,8 @@ def luminosity_peak(hubble, c, data):
         l_peak_store[i] = l_peak
     return l_peak_store
 
-def luminosity_value(hubble, c, data):
+def luminosity_range(hubble, c, data):
     l_vals = luminosity_peak(hubble, c, data) 
-    l_peak = np.average(l_vals)
-    
-    l_solar = 3.84 * 10 ** 26
-
-    return l_peak
+    l_mean = np.mean(l_vals) # Min value in our L_peak range
+    l_max = np.max(l_vals) # Max value in our L_peak range
+    return l_mean, l_max

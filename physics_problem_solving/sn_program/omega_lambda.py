@@ -16,12 +16,13 @@ def flux_obs(hubble, c, data, l_peak):
         den = 4 * np.pi * (cmv**2) * (1 + z) **2 # Denominator of the equation
         f_o[i] = num/den # Calculated value of f_observed
 
-    print f_o
+    #print f_o
     return f_o
 
 def chi_squared():
     return chi_sq
 
+"""
 def omega_lambda():
 
     # outside, L_peak testing
@@ -33,4 +34,4 @@ def omega_lambda():
 
     for i in range():
         for i in range():
-            ???
+            ???"""
