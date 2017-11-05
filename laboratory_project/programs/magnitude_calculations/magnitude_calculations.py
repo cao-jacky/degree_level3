@@ -79,8 +79,10 @@ def rel_mag_v(data):
     data_wol = np.delete(data[1], (-1), axis=0) # data without last row
     sn_vband = data[1][-1] # row of data of the supernova
 
-    vr = np.divide(data[0][:,1], data_wol[:,1]) # vmag/relative mag
-    vr_av = np.average(vr) # averages all our v/r values together
+    vr_diff = data_wol[:,1] - data[0][:,1] # Difference between our data and known mags
+    vr_av = np.average(vr_diff) # Averaging the differences together
+
+    print vr_diff, vr_av
 
     v_mag = sn_vband[1] * vr_av # the v band magnitude of the SN
     v_mag_err = sn_vband[2] * vr_av # v band mag uncertainty for SN
@@ -96,11 +98,11 @@ def rel_mag_b(data):
     data_wol = np.delete(data[2], (-1), axis=0) # data without last row
     sn_bband = data[2][-1] # row of data of the supernova
 
-    br = np.divide(data[0][:,1], data_wol[:,1]) # vmag/relative mag
-    br_av = np.average(br) # averages all our v/r values together
+    br_diff = data_wol[:,1] - data[0][:,2] # Difference between our data and known mags 
+    br_av = np.average(br_diff) # Averaging the differences together
 
-    b_mag = sn_bband[1] * br_av # the v band magnitude of the SN
-    b_mag_err = sn_bband[2] * br_av # v band mag uncertainty for SN
+    b_mag = sn_bband[1] * br_av # the b band magnitude of the SN
+    b_mag_err = sn_bband[2] * br_av # b band mag uncertainty for SN
 
     return b_mag, b_mag_err, data[3], data[4]
 
@@ -121,4 +123,4 @@ def data_return(data):
 
 if __name__ == '__main__':
 
-    data_return("AT2017gvb_17_10_18.txt")
+    data_return("2017hhz_17_10_30.txt")

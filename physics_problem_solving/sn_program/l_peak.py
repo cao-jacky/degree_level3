@@ -18,16 +18,18 @@ def flux(data):
     return flux_store
 
 def flux_uncertainty(data):
+    """ Calculates the uncertainty for the luminosity. """
     lzsn_data = data[1] # Selection out low redshift data
     flux_data = flux(data) # Finding flux information
     uncert = np.zeros([lzsn_data.shape[0],1]) # Storing values for uncertainty 
     
     for i in range(lzsn_data.shape[0]):
         A = flux_data[i]
-        print A
-        #flux_uncert = A * np.log(10) * alpha_A
-
-    return 
+        alpha_m = lzsn_data[i][3] # Uncertainty on the magnitude
+        alpha_A = (alpha_m * (10**7)) / 2.5
+        flux_uncert = A * np.log(10) * alpha_A
+        uncert[i] = flux_uncert
+    return uncert
 
 def comoving_distances(hubble, c, data):
     """ Comoving distance is defined by $R_0 \eta=cz/ H_0$. """
@@ -53,7 +55,55 @@ def luminosity_peak(hubble, c, data):
     return l_peak_store
 
 def luminosity_range(hubble, c, data):
-    l_vals = luminosity_peak(hubble, c, data) 
+    """ Calculates the L_mean and L_max from low SN data. """
+    l_vals = luminosity_peak(hubble, c, data) # Calls previous function
     l_mean = np.mean(l_vals) # Min value in our L_peak range
     l_max = np.max(l_vals) # Max value in our L_peak range
     return l_mean, l_max
+
+def flux_model(hubble, c, data, i, l_peak):
+    """ Calculating the flux for the L_peak model values. """
+    lzsn_data = data[1]
+    cmv = comoving_distances(hubble, c, data) # Calling comoving distances function
+    
+    flux = l_peak / ( 4 * np.pi * (cmv[i])**2 * (1 + lzsn_data[i][1])**2) # Calculates flux
+
+    return flux
+
+def chi_sq_l_peak(hubble, c, data, step):
+    """ Chi^2 function to find the suitable value for L_peak. """
+    lzsn_data = data[1] # Calling the low redshift data
+    flx = flux(data) # Using flux data for the low redshift data
+    flx_unct = flux_uncertainty(data) # Calling the uncertainties
+
+    l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
+    chi_sq_store = np.zeros([step,2]) # Stores the value for chi^2 for each step
+    
+    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    l_mean = l_lims[0] / l_sol # Mean luminosity in terms of Solar Luminosity
+    l_max = l_lims[1] / l_sol # Max luminosity in terms of Solar Luminosity
+    l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
+
+    for i in range(l_range.size):
+        """ Outer loop to test for each value for L_peak for our models. """
+        l_peak = l_range[i] # Selecting L_peak value to use
+        chi_sq_store[i][0] = l_peak # Stores current using L_peak value in first column
+        current = [] # List to sum up all the chi^2 values
+        for j in range(lzsn_data.shape[0]):
+            """ Inner loop to calculate chi^2 over supernova. """
+            f_obs = flx[j]
+            f_mdl = flux_model(hubble, c, data, j, l_peak * l_sol)
+            print f_obs, f_mdl
+
+            val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
+            val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
+
+            val = val_n / val_d
+
+            current.append(val)
+
+        print i, np.sum(current)
+
+
+            
+    
