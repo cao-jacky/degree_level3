@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as pyplot
+from matplotlib import rc
 
 def data(data):
     """ Reads data and stores into an array. """
@@ -22,21 +23,27 @@ def data(data):
 def plot(data_file):
     d = data(data_file)
 
+    zeros = np.zeros([d.shape[0],1])
+
     # Plot B band
     fig1 = pyplot.figure()
     fig1.gca().invert_yaxis()
+    pyplot.rc('text', usetex=True)
+    pyplot.rc('font', family='serif')
     pyplot.title(r'\textbf{B band}')
     pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}')
     pyplot.ylabel(r'\textbf{Magnitude}')
-    pyplot.scatter(d[:,0], d[:,1])
+    pyplot.errorbar(d[:,0], d[:,1], yerr=d[:,2], fmt='o', markersize=8, capsize=5)
 
     # Plot V band
     fig2 = pyplot.figure()
     fig2.gca().invert_yaxis()
+    pyplot.rc('text', usetex=True)
+    pyplot.rc('font', family='serif')
     pyplot.title(r'\textbf{V band}')
     pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}')
     pyplot.ylabel(r'\textbf{Magnitude}')
-    pyplot.scatter(d[:,0], d[:,4])
+    pyplot.errorbar(d[:,0], d[:,3], yerr=d[:,4], fmt='o', markersize=8, capsize=5)
     pyplot.show()
 
 if __name__ == '__main__':

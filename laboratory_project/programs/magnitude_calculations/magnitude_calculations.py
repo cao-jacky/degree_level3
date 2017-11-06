@@ -125,33 +125,21 @@ def data_return(data):
     m_v = z_v_av - (2.5 * np.log10(v_band[0]))
     m_b = z_b_av - (2.5 * np.log10(b_band[0]))
 
-    print m_v, m_b
+    # Calculating the uncertainties
+    m_v_uncert = 2.5 * np.log10(1 + (1 / np.sqrt(v_band[0])))
+    m_b_uncert = 2.5 * np.log10(1 + (1 / np.sqrt(b_band[0])))
 
-    # Calculating uncertainty
-    ## V band - p is above, m is below
-    m_v_un_m = z_v_av - (2.5 * np.log10(v_band[0] + v_band[1]))
-    m_v_un_p = z_v_av - (2.5 * np.log10(v_band[0] - v_band[1]))
-
-    m_b_un_m = z_b_av - (2.5 * np.log10(b_band[0] + b_band[1]))
-    m_b_un_p = z_b_av - (2.5 * np.log10(b_band[0] - b_band[1]))
-
-    print m_v_un_p, m_v_un_m
-    print m_b_un_p, m_b_un_m
-
-    # Uncertanties on either side of the magnitude value (?)
-    m_v_uncerts = np.array([m_v - m_v_un_m, m_v_un_p - m_v])
-    m_b_uncerts = np.array([m_b - m_b_un_m, m_b_un_p - m_v])
-    print m_v_uncerts, m_b_uncerts
+    print m_v_uncert, m_b_uncert
 
     file_name = '%s-%s.txt' % (v_band[3], b_band[4])
     f = open(file_name, 'w')
     f.write('Supernova: ' + v_band[3] + '\n')
     f.write('Date of observations: ' + v_band[4] + '\n')
-    f.write('v-band magnitude and error: ' + str(m_v) + " +- " + str(m_v_uncerts) + '\n')
-    f.write('b-band magnitude and error: ' + str(m_b) + " +- " + str(m_b_uncerts) + '\n')
+    f.write('b-band magnitude and error: ' + str(m_b) + " +- " + str(m_b_uncert) + '\n')
+    f.write('v-band magnitude and error: ' + str(m_v) + " +- " + str(m_v_uncert) + '\n')
     f.close()
 
 
 if __name__ == '__main__':
 
-    data_return("2017hhz--17_10_29.txt")
+    data_return("2017hhz/2017hhz--17_10_30.txt")
