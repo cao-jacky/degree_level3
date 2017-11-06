@@ -57,7 +57,7 @@ def luminosity_peak(hubble, c, data):
 def luminosity_range(hubble, c, data):
     """ Calculates the L_mean and L_max from low SN data. """
     l_vals = luminosity_peak(hubble, c, data) # Calls previous function
-    l_mean = np.mean(l_vals) # Min value in our L_peak range
+    l_mean = np.min(l_vals) # Min value in our L_peak range
     l_max = np.max(l_vals) # Max value in our L_peak range
     return l_mean, l_max
 
@@ -94,15 +94,11 @@ def chi_sq_l_peak(hubble, c, data, step):
             f_obs = flx[j] # Observed flux from low redshift data
             f_mdl = flux_model(hubble, c, data, j, l_peak * l_sol) # Model flux
 
-            #print f_obs, f_mdl, flx_unct[j]
-
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
             current.append(val) # Adding all the current chi^s value to the list
-
         chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
-
     return chi_sq_store
 
 def find_nearest(array,value):

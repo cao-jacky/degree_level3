@@ -77,17 +77,12 @@ def rel_mag_v(data):
     data = data_file(data)
 
     data_wol = np.delete(data[1], (-1), axis=0) # data without last row
-    sn_vband = data[1][-1] # row of data of the supernova
+    sn_vband = data[1][-1] # row of data of the supernova    
 
-    vr_diff = data_wol[:,1] - data[0][:,1] # Difference between our data and known mags
-    vr_av = np.average(vr_diff) # Averaging the differences together
+    v_mag = sn_vband[1] # the counts value for v band of the SN
+    v_mag_err = sn_vband[2] # counts value for error of the SN
 
-    print vr_diff, vr_av
-
-    v_mag = sn_vband[1] * vr_av # the v band magnitude of the SN
-    v_mag_err = sn_vband[2] * vr_av # v band mag uncertainty for SN
-
-    return v_mag, v_mag_err, data[3], data[4]
+    return v_mag, v_mag_err, data_wol, data[3], data[4]
 
 def rel_mag_b(data):
     """ Returns the b-band magnitude of the supernova and it's uncertainty,
@@ -98,13 +93,10 @@ def rel_mag_b(data):
     data_wol = np.delete(data[2], (-1), axis=0) # data without last row
     sn_bband = data[2][-1] # row of data of the supernova
 
-    br_diff = data_wol[:,1] - data[0][:,2] # Difference between our data and known mags 
-    br_av = np.average(br_diff) # Averaging the differences together
+    b_mag = sn_bband[1] # the b band counts of the SN
+    b_mag_err = sn_bband[2] # b band mag count of the SN
 
-    b_mag = sn_bband[1] * br_av # the b band magnitude of the SN
-    b_mag_err = sn_bband[2] * br_av # b band mag uncertainty for SN
-
-    return b_mag, b_mag_err, data[3], data[4]
+    return b_mag, b_mag_err, data_wol, data[3], data[4]
 
 def data_return(data):
     """ Storing the data into a text file for easy access. """
@@ -112,15 +104,54 @@ def data_return(data):
     v_band = rel_mag_v(data)
     b_band = rel_mag_b(data)
 
-    file_name = '%s-%s.txt' % (v_band[2], b_band[3])
+    data = data_file(data)
+    sc_data = data[0]
+
+    print sc_data
+
+    v_band_cal = v_band[2]
+    b_band_cal = b_band[2]
+
+    z_1_v = sc_data[0][1] + (2.5 * np.log10(v_band_cal[0][1]))
+    z_2_v = sc_data[1][1] + (2.5 * np.log10(v_band_cal[1][1]))
+
+    z_1_b = sc_data[0][2] + (2.5 * np.log10(b_band_cal[0][1]))
+    z_2_b = sc_data[1][2] + (2.5 * np.log10(b_band_cal[1][1]))
+
+    z_v_av = np.average([z_1_v, z_2_v])
+    z_b_av = np.average([z_1_b, z_2_b])
+
+    # Calculating magnitudes of v and b band
+    m_v = z_v_av - (2.5 * np.log10(v_band[0]))
+    m_b = z_b_av - (2.5 * np.log10(b_band[0]))
+
+    print m_v, m_b
+
+    # Calculating uncertainty
+    ## V band - p is above, m is below
+    m_v_un_m = z_v_av - (2.5 * np.log10(v_band[0] + v_band[1]))
+    m_v_un_p = z_v_av - (2.5 * np.log10(v_band[0] - v_band[1]))
+
+    m_b_un_m = z_b_av - (2.5 * np.log10(b_band[0] + b_band[1]))
+    m_b_un_p = z_b_av - (2.5 * np.log10(b_band[0] - b_band[1]))
+
+    print m_v_un_p, m_v_un_m
+    print m_b_un_p, m_b_un_m
+
+    # Uncertanties on either side of the magnitude value (?)
+    m_v_uncerts = np.array([m_v - m_v_un_m, m_v_un_p - m_v])
+    m_b_uncerts = np.array([m_b - m_b_un_m, m_b_un_p - m_v])
+    print m_v_uncerts, m_b_uncerts
+
+    file_name = '%s-%s.txt' % (v_band[3], b_band[4])
     f = open(file_name, 'w')
-    f.write('Supernova: ' + v_band[2] + '\n')
-    f.write('Date of observations: ' + v_band[3] + '\n')
-    f.write('v-band magnitude and error: ' + str(v_band[0]) + " +- " + str(v_band[1]) + '\n')
-    f.write('b-band magnitude and error: ' + str(b_band[0]) + " +- " + str(b_band[1]) + '\n')
+    f.write('Supernova: ' + v_band[3] + '\n')
+    f.write('Date of observations: ' + v_band[4] + '\n')
+    f.write('v-band magnitude and error: ' + str(m_v) + " +- " + str(m_v_uncerts) + '\n')
+    f.write('b-band magnitude and error: ' + str(m_b) + " +- " + str(m_b_uncerts) + '\n')
     f.close()
 
 
 if __name__ == '__main__':
 
-    data_return("2017hhz_17_10_30.txt")
+    data_return("2017hhz--17_10_29.txt")

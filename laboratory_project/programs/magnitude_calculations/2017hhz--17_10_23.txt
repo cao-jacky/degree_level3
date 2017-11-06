@@ -1,0 +1,21 @@
+# supernova data
+# 2017hhz 17_10_23
+
+# star catalogue objects
+# name, V-mag, B-mag, r-mag, i-mag
+512-002598 14.952 15.719 14.129 13.953
+512-002599 16.158 17.105 15.887 15.79
+
+# v-band
+# name, counts, counts error, sky value
+512-002598 454.68 1.3422 76.278
+512-002599 103.85 1.1384 70.990
+
+2017hhz 65.817 1.5931 83.178
+
+# b-band
+# name, counts, counts error, sky value
+512-002598 100.43 1.1898 25.488
+512-002599 28.417 1.2141 24.935
+
+2017hhz 37.239 1.1423 31.660

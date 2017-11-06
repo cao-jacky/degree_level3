@@ -7,8 +7,8 @@ def plot(hubble, c, data, step):
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
     
     fig1 = pyplot.figure()
-    pyplot.title('test')
-    pyplot.xlabel('L_Peak')
+    pyplot.title('chi^2 against L_peak')
+    pyplot.xlabel('L_peak')
     pyplot.ylabel('chi^2')
     pyplot.plot(dt[:,0]*l_sol,dt[:,1])
     pyplot.show()

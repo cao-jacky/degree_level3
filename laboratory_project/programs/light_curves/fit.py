@@ -24,7 +24,7 @@ def plot(data_file):
 
     # Plot B band
     fig1 = pyplot.figure()
-    #fig1.gca().invert_yaxis()
+    fig1.gca().invert_yaxis()
     pyplot.title(r'\textbf{B band}')
     pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}')
     pyplot.ylabel(r'\textbf{Magnitude}')
@@ -32,11 +32,11 @@ def plot(data_file):
 
     # Plot V band
     fig2 = pyplot.figure()
-    #fig2.gca().invert_yaxis()
+    fig2.gca().invert_yaxis()
     pyplot.title(r'\textbf{V band}')
     pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}')
     pyplot.ylabel(r'\textbf{Magnitude}')
-    pyplot.scatter(d[:,0], d[:,3])
+    pyplot.scatter(d[:,0], d[:,4])
     pyplot.show()
 
 if __name__ == '__main__':
