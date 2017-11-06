@@ -1,6 +1,7 @@
 import data 
 import l_peak
 import omega_lambda
+import plotter
 
 """ Module to calculate the dark energy density, Omega_Lambda."""
 
@@ -13,5 +14,7 @@ cm_data[0] = (cm_data[0] * (10**3)) / (pc)
 
 data = data.data_input(file_name)
 l_peak.flux_uncertainty(data)
-l_peak = l_peak.chi_sq_l_peak(cm_data[0], cm_data[1], data, 100)
+l_peak = l_peak.chi_sq_one(cm_data[0], cm_data[1], data, 100)
 #omega_lambda.flux_obs(cm_data[0], cm_data[1], data, l_peak)
+
+plotter.plot(cm_data[0], cm_data[1], data, 100)

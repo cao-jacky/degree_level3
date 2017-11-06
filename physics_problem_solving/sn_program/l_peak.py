@@ -26,7 +26,7 @@ def flux_uncertainty(data):
     for i in range(lzsn_data.shape[0]):
         A = flux_data[i]
         alpha_m = lzsn_data[i][3] # Uncertainty on the magnitude
-        alpha_A = (alpha_m * (10**7)) / 2.5
+        alpha_A = (alpha_m * (10**1)) / 2.5
         flux_uncert = A * np.log(10) * alpha_A
         uncert[i] = flux_uncert
     return uncert
@@ -67,7 +67,6 @@ def flux_model(hubble, c, data, i, l_peak):
     cmv = comoving_distances(hubble, c, data) # Calling comoving distances function
     
     flux = l_peak / ( 4 * np.pi * (cmv[i])**2 * (1 + lzsn_data[i][1])**2) # Calculates flux
-
     return flux
 
 def chi_sq_l_peak(hubble, c, data, step):
@@ -77,12 +76,13 @@ def chi_sq_l_peak(hubble, c, data, step):
     flx_unct = flux_uncertainty(data) # Calling the uncertainties
 
     l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
-    chi_sq_store = np.zeros([step,2]) # Stores the value for chi^2 for each step
     
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
     l_mean = l_lims[0] / l_sol # Mean luminosity in terms of Solar Luminosity
     l_max = l_lims[1] / l_sol # Max luminosity in terms of Solar Luminosity
     l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
+
+    chi_sq_store = np.zeros([l_range.size,2]) # Stores the value for chi^2 for each step
 
     for i in range(l_range.size):
         """ Outer loop to test for each value for L_peak for our models. """
@@ -91,19 +91,36 @@ def chi_sq_l_peak(hubble, c, data, step):
         current = [] # List to sum up all the chi^2 values
         for j in range(lzsn_data.shape[0]):
             """ Inner loop to calculate chi^2 over supernova. """
-            f_obs = flx[j]
-            f_mdl = flux_model(hubble, c, data, j, l_peak * l_sol)
-            print f_obs, f_mdl
+            f_obs = flx[j] # Observed flux from low redshift data
+            f_mdl = flux_model(hubble, c, data, j, l_peak * l_sol) # Model flux
+
+            #print f_obs, f_mdl, flx_unct[j]
 
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
+            val = val_n / val_d # Calculating the chi^2 value
+            current.append(val) # Adding all the current chi^s value to the list
 
-            val = val_n / val_d
+        chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
 
-            current.append(val)
+    return chi_sq_store
 
-        print i, np.sum(current)
+def find_nearest(array,value):
+    """ Find closest values to value from array array. """
+    idx = (np.abs(array-value)).argmin()
+    return array[idx]
 
+def chi_sq_one(hubble, c, data, step):
+    """ Finding the chi^2 value closest to one and then returns the corresponding 
+    luminosity value with it. """ 
+    dt = chi_sq_l_peak(hubble, c, data, step) # Data from l_peak chi^2 function
+    chi = 1.0 # We want values closest to one
 
-            
-    
+    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+
+    nrst = find_nearest(dt[:,1], chi) # Nearest value to one from chi^2 values
+    nrst_index = np.where(dt[:,1] == nrst) # Finding index of the closest chi^2 value to one
+    nrst_l = dt[:,0][nrst_index] # Finding which luminosity value the index corresponds to
+    print nrst, nrst_l * l_sol
+    return nrst, nrst_l
+
