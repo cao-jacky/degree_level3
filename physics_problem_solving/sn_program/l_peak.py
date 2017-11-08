@@ -17,20 +17,6 @@ def flux(data):
         flux_store[i] = f(mag) # Calculating the flux of the current SN
     return flux_store
 
-def flux_uncertainty(data):
-    """ Calculates the uncertainty for the luminosity. """
-    lzsn_data = data[1] # Selection out low redshift data
-    flux_data = flux(data) # Finding flux information
-    uncert = np.zeros([lzsn_data.shape[0],1]) # Storing values for uncertainty 
-    
-    for i in range(lzsn_data.shape[0]):
-        A = flux_data[i]
-        alpha_m = lzsn_data[i][3] # Uncertainty on the magnitude
-        alpha_A = (alpha_m * (10**1)) / 2.5
-        flux_uncert = A * np.log(10) * alpha_A
-        uncert[i] = flux_uncert
-    return uncert
-
 def flux_uncert(data):
     """ Calculating uncertainty in the flux by adding the mangitude error onto the 
     magnitude, and taking it away. """
@@ -125,22 +111,13 @@ def chi_sq_l_peak(hubble, c, data, step):
         chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
     return chi_sq_store
 
-def find_nearest(array,value):
-    """ Find closest values to value from array array. """
-    idx = (np.abs(array-value)).argmin()
-    return array[idx]
+def chi_sq_min(hubble, c, data, step):
+    chi_sq_data = chi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
+    chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
 
-def chi_sq_one(hubble, c, data, step):
-    """ Finding the chi^2 value closest to one and then returns the corresponding 
-    luminosity value with it. """ 
-    dt = chi_sq_l_peak(hubble, c, data, step) # Data from l_peak chi^2 function
-    chi = 1.0 # We want values closest to one
-
+    min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of the closest chi^2 value to one
+    l_peak_min = chi_sq_data[:,0][min_index]
+   
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
 
-    nrst = find_nearest(dt[:,1], chi) # Nearest value to one from chi^2 values
-    nrst_index = np.where(dt[:,1] == nrst) # Finding index of the closest chi^2 value to one
-    nrst_l = dt[:,0][nrst_index] # Finding which luminosity value the index corresponds to
-    print nrst, nrst_l * l_sol
-    return nrst, nrst_l
-
+    return chi_sq_min, (l_peak_min * l_sol)
