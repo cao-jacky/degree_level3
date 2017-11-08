@@ -1,9 +1,22 @@
 \begin{thebibliography}{1}
 
+\bibitem{lascumbres}
+T.~M. Brown et~al.
+\newblock {Las Cumbres Observatory Global Telescope Network}.
+\newblock {\em Publications of the Astronomical Society of Pacific},
+  125:1031--1055, 2013.
+
 \bibitem{mod_ast}
 B.~W. Carroll and D.~A. Ostlie.
 \newblock {\em An Introduction to Modern Astrophysics}.
 \newblock Pearson, 2nd edition, 2007.
+
+\bibitem{asn_lc}
+C.~S. Kochanek et~al.
+\newblock {The All-Sky Automated Survey for Supernovae (ASAS-SN) Light Curve
+  Server V1.0}.
+\newblock {\em Publications of the Astronomical Society of Pacific},
+  129(980):104592, 2017.
 
 \bibitem{longair}
 M.~Longair.

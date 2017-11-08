@@ -1,10 +1,15 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell}
 \usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
 
 \def\bibsection{\section*{\refname}} 
 \renewcommand{\thesubsection}{\alph{subsection}}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 \begin{document}
 
@@ -25,7 +30,7 @@ We have measured the magnitude of supernova explosions over an extended period o
 \section{Introduction} 
 \vspace{-2ex}
 
-In astronomy, one of the most violent and luminous events which can take place is a supernova explosion. At the end of a massive star's lifetime, there is a possibility that the equilibrium configurations for a star will cease to exist after it has ran out of nuclear fuel to burn. This eventually leads to the final explosion, the luminosity of which when at it's peak can be as bright as a small galaxy \cite{longair}.
+In astronomy, one of the most violent and luminous events which can occur is a supernova explosion. At the end of a massive star's lifetime, there is a possibility that the equilibrium configurations for a star will cease to exist after it has ran out of nuclear fuel to burn. This eventually leads to the final explosion, the luminosity of which when at it's peak can be as bright as a small galaxy \cite{longair}.
 
 Observing these events and measuring their magnitude over a period of time allows us to then plot light curves (magnitude is displayed as a function of time). From visualising this evolution we can draw the conclusion that there is some order in the explosions - they can be grouped together into multiple types as their light curves have similar shapes and features.
 
@@ -61,16 +66,15 @@ With these two groups there are further possible subclassifications. This is pos
 \vspace{-3ex}
 \subsubsection{Type I Supernovae}
 \vspace{-2ex}
-With the case of Type I supernovae, the general consensus is that presupernova, a white dwarf within a binary system accretes matter from a donor star. The white dwarf then increases in mass until it reaches a critical point \cite{posn, longair}. This limit is thought to be the Chandrasekhar mass, $1.4 M_{\odot}$, after accreting this much matter, the object will be gravitationally unstable \cite{longair}. As the material is continually compressed and heated to a temperature of $T \geq 10^9$ K, the fusion of carbon and oxygen begins in the core which releases thermonuclear energy. This energy that is produced disrupts the star at high velocity and prevents a collapse into a neutron star, thus we have a supernova explosion \cite{posn}.
+With the case of Type I supernovae, the general consensus is that presupernova, a white dwarf within a binary system accretes matter from a donor star. The white dwarf increases in it's mass from [ADD VALUE GENERAL STAR HERE] until it reaches a critical point \cite{posn, longair}. This limit is thought to be the Chandrasekhar mass, $1.4 M_{\odot}$, after accreting the required matter, the object will be gravitationally unstable \cite{longair}. As the material is continually compressed and heated to a temperature of $T \geq 10^9$ K, the fusion of carbon and oxygen begins in the core which releases thermonuclear energy. The composition of the star at this point is [....]. This energy that is produced disrupts the star at velocities of the order [give a value and cite it] and prevents a collapse into a neutron star, this disruption leads to a supernova explosion \cite{posn}.
+
+As we observe the supernova event at a distance away, say from our position on Earth, from it we can perform spectral analysis to find out the chemical composition of what the SNe contains. [??]
 
 One of the subgroups of Type I which are especially important for cosmology are Type Ia SNe. When plotting their magnitudes against time passed we see that their light curves are generally homogeneous. These objects are the most luminous supernovae known, their absolute magnitudes in the B band are typically $M_B = -19.5 \pm 0.1$ \cite{posn}. Using light curve relationships and models we can determine precisely the magnitudes of very distant SNe, this has allowed astronomers to determine the redshift-distance relation for redshifts high redshift objects ($z>1$). Then, with these calculated values it is then possible to estimate the cosmological parameters $\Omega_0$ and $\Omega_\Lambda$. In doing so, it has been found that using Type Ia SNe has produced agreement with the literature value. so and so (cite paper) have done this and produced values of. 
 
 \vspace{-3ex}
 \subsubsection{Type II Supernovae}
 \vspace{-2ex}
-
-
-
 For a star to end it's life as a Type II supernova explosion, it's core must collapse to produce the enormous amounts of energy that we associate with a SNe. For stars more massive than $8 M_{\odot}$, their post-main-sequence evolution relies on the continual burning of carbon, oxygen, and silicon burning. As this process continues to heat up the core to larger temperatures, photodisintegration will start to occur. Photons have enough energy to breakup heavier elements such as iron (\ce{^{56}_{26}Fe}) and helium (\ce{^{4}_{2}He}), this process is endothermic so energy is removed from the gas that would have created the pressure required to support the core of the star \cite{mod_ast}. 
 
 The free electrons which had been supporting the star through degeneracy pressure are now captured by heavy nuclei and by the protons that were produced through photodisintegration. Through the photodisintegration of iron, and combined with electron capture by other elements, most of the core's support disappears and then the core begins to collapse extremely rapidly. 
@@ -79,15 +83,30 @@ The free electrons which had been supporting the star through degeneracy pressur
 \subsection{Supernova Discovery}
 \vspace{-2ex}
 
-All sky camera? [find source for this]
+When observing the universe the magnitudes that we observe using our instruments are not 
+
+In discovering supernovae it is important that the search is not focussed on just one part of the sky as there is potential for SNe to occur in any region of the sky. What is required is a survey which covers the entire visible sky, data can then be compared day-to-day and any new objects that appear can be verified to see if it is a new supernova or not. [reference] 
+
+One such survey that employs this is the \em{All-Sky Automated Survey for Supernovae }\em (or ASAS-SN). Their setup (??) involves two stations based in Halekala Observatory in Hawaii, and Cerro Tololo International Observatory in Chile. Together they can produce a survey of the entire visible sky up to a depth of $\sim 17$ mag \cite{asn_lc}.
+
+With this case specifically it has been set so that the data is taken automatically, but it requires humans to go over it. Another method that can be used is to observe a location such as a galactic cluster and do essentially the same method.
+
+In the classification of supernovae and in determining their redshifts, spectroscopic observations are required on the objects after they have been discovered \cite{lascumbres}. While we can use light curves to find the type of a supernova, it is more effective to use their spectra as that will allow us to be more certain [??].
 
 \vspace{-3ex}
 \subsection{Application to Cosmology} \label{appcosmo}
 \vspace{-2ex}
 
+In discovering supernovae we can calculate the rates at which supernovae occur.
+
 Type Ia supernovae are useful to us as they can be classed as standard candles [cite]. With this we can use them to calculate a value for Hubble's Constant, $H_0$, and thus calculate the expansion rate of the Universe.
 
 asdasd \cite{abs_phil}
+\begin{equation}
+v = H_0 d, 
+\end{equation}
+with $v$ as the velocity of the receding object, $H_0$ as the value for Hubble's 
+find a reference for this.
 
 \vspace{-3ex}
 \subsection{Project Aims}
@@ -174,18 +193,71 @@ I would like to thank Carl Sagan for producing his Cosmos series and inspiring a
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
+
+\clearpage
+\onecolumngrid
+\vspace{-3ex}
+\section*{Appendix A - Objects Observed}
+\vspace{-2ex}
+A list of the objects that were chosen to be observed, and then the subsequent notes on them. Not all objects were chosen to be observed for an extended period, the ones noted were observed for a couple of nights to ensure suitability. The subsequent observation logs can be found in Appendix B.
+
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
+    \hline
+    \textbf{Object} & \textbf{RA} & \textbf{Dec} & \textbf{Magnitude} &\textbf{First Discovered} &\textbf{Type} & \textbf{Notes} \\ 
+    AT2017hld & 22:18:22.849 & 34:45:08.46 & 16.1 & 2017/10/17.339 & - & {Cataclysmic Variable, stopped observing}  \\
+    AT2017hky & 11:23:30.514 & 63:21:59.43 & 16.2 & 2017/10/16.640 & II & {Could not see from Durham or La Palma}  \\
+    2017hhz & 01:44:16.75 & 12:15:18.00 & 16.83 & 2017/10/16.140 & Ia & {A measured redshift, $z=0.0392$}  \\
+    AT2017gvb & 08:04:42.34 & 61:31:41.50 & 17.33 & 2017/09/26.59 & unk & {asd}  \\
+
+    \hline      
+\end{tabularx}
+\caption{Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered at (or stated otherwise in the notes)}
+\label{objects}
+\end{table}
+
+
 \clearpage
 
+\onecolumngrid
+\vspace{-3ex}
+\section*{Appendix B - Observation Logs} \label{obslogs}
+\vspace{-2ex}
+Given below are all the observations and details of those observations made between x and y. With the information provided in the column, \textbf{Exposures}, the filters used and the number of exposures taken in the given exposure time.
 
+CHANGE TIMES FOR EARLY PT5M OBJECTS
 
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
+    \hline
+    \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
+    20/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Cloudy} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    	& ASASSN-17nb &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\      
+    21/10/17 & - & - & - & Cloudy & {\em No observations, weather not sufficient in Durham or La Palma \em} \\
+    22/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Cloudy} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    & ASASSN-17nb &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\   
+    & AT2017hmw &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\   
+    23/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    24/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    25/10/17 & - & - & - & Cloudy & {FE16/W14: \em No observations, too cloudy for observations in Durham \em} \\
+    26/10/17 & 2017hhz & 21:18:00 to 21:25:31 & \makecell{B, 4 in 60s \\ V, 4 in 60s} & {Clear} & {FE16: Seeing good, images not bad}  \\
+    & 2017hle &  - & - & Cloudy & {pt5m: images have a low seeing} \\ 
 
-\vfill
+    \hline      
+\end{tabularx}
+\caption{Observing logs for the entire observation period for our experiment.}
+\label{obs_logs}
+\end{table}
+
+\clearpage
+
 \twocolumngrid
 \vspace{-3ex}
-\section*{Appendix A - Observation Logs}
+\section*{Appendix C - Set of Sample Data}
 \vspace{-2ex}
 
-
-
-\clearpage
 \end{document}

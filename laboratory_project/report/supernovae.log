@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  6 NOV 2017 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 NOV 2017 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -581,55 +581,80 @@ Variant \str_if_eq:VnTF already defined; not changing it on line 57
 * compatibility mode), because you might get different output with the same
 * input in future versions.
 *************************************************
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen153
+\extrarowheight=\dimen154
+\NC@list=\toks23
+\extratabsurround=\skip67
+\backup@length=\skip68
+)
+\TX@col@width=\dimen155
+\TX@old@table=\dimen156
+\TX@old@col=\dimen157
+\TX@target=\dimen158
+\TX@delta=\dimen159
+\TX@cols=\count204
+\TX@ftn=\toks24
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen160
+\c@nlinenum=\count205
+\TeXr@lab=\toks25
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box51
 \UL@hyphenbox=\box52
-\UL@skip=\skip67
-\UL@hook=\toks23
-\UL@height=\dimen153
-\UL@pe=\count204
-\UL@pixel=\dimen154
+\UL@skip=\skip69
+\UL@hook=\toks26
+\UL@height=\dimen161
+\UL@pe=\count206
+\UL@pixel=\dimen162
 \ULC@box=\box53
 Package: ulem 2012/05/18
-\ULdepth=\dimen155
+\ULdepth=\dimen163
 )
 (./supernovae.aux)
 \openout1 = `supernovae.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 9.
-Class revtex4 Info: Patching LaTeX tabular. on input line 9.
-Class revtex4 Info: cite was not loaded (OK!) on input line 9.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 9.
+LaTeX Font Info:    ... okay on input line 14.
+Class revtex4 Info: Patching array package. on input line 14.
+Class revtex4 Info: cite was not loaded (OK!) on input line 14.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 14.
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count205
-\scratchdimen=\dimen156
+\scratchcounter=\count207
+\scratchdimen=\dimen164
 \scratchbox=\box54
-\nofMPsegments=\count206
-\nofMParguments=\count207
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count208
-\MPscratchDim=\dimen157
-\MPnumerator=\count209
-\makeMPintoPDFobject=\count210
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count208
+\nofMParguments=\count209
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count210
+\MPscratchDim=\dimen165
+\MPnumerator=\count211
+\makeMPintoPDFobject=\count212
+\everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -680,19 +705,19 @@ e
 ))
 \symgns@font=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 9.
-Package gensymb Info: Math companion symbols declared on input line 9.
-LaTeX Info: Redefining \degree on input line 9.
-LaTeX Info: Redefining \celsius on input line 9.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 14.
+Package gensymb Info: Math companion symbols declared on input line 14.
+LaTeX Info: Redefining \degree on input line 14.
+LaTeX Info: Redefining \celsius on input line 14.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 9.
-LaTeX Info: Redefining \ohm on input line 9.
-Package gensymb Info: Using \textohm for \ohm on input line 9.
-Package gensymb Info: Using \textmu for \micro on input line 9.
+erthousand on input line 14.
+LaTeX Info: Redefining \ohm on input line 14.
+Package gensymb Info: Using \textohm for \ohm on input line 14.
+Package gensymb Info: Using \textmu for \micro on input line 14.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 9.
+. Activating mapping `default' on line 14.
 .................................................
 
 
@@ -700,37 +725,50 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, AstroLabs, Lab Pa
 rtner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 17/03/2017, Date
  of report: 19/03/2017.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./supernovae.bbl) [2] [3] (./supernovae.aux) ) 
+(./supernovae.bbl
+Underfull \hbox (badness 2134) in paragraph at lines 15--20
+ \OT1/cmr/m/n/9 vey for Su-per-novae (ASAS-SN) Light Curve Server
+ []
+
+[2]) [3]
+Underfull \hbox (badness 10000) in alignment at lines 216--216
+[][][][][][][][]
+ []
+
+[4] [5] [6] (./supernovae.aux) )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 232 ({)
+### simple group (level 1) entered at line 204 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 12469 strings out of 493089
- 227570 string characters out of 6134841
- 293896 words of memory out of 5000000
- 15833 multiletter control sequences out of 15000+600000
- 9423 words of font info for 34 fonts, out of 8000000 for 9000
+ 12703 strings out of 493089
+ 230256 string characters out of 6134841
+ 300678 words of memory out of 5000000
+ 16056 multiletter control sequences out of 15000+600000
+ 10077 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,47p,10379b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (3 pages, 156414 bytes).
+ 42i,13n,47p,10379b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on supernovae.pdf (6 pages, 188787 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
