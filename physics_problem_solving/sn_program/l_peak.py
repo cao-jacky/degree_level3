@@ -35,6 +35,26 @@ def flux_uncert(data):
     """ Calculating uncertainty in the flux by adding the mangitude error onto the 
     magnitude, and taking it away. """
     lzsn_data = data[1] # Taking out the low redshift data
+    flux_error_store = np.zeros([lzsn_data.shape[0],2]) # Storing the values for error on flux
+
+    for i in range(lzsn_data.shape[0]):
+        mag = lzsn_data[i][2] # Mag from the current supernova
+        mag_uncert = lzsn_data[i][3] # Uncertainty on that magnitude
+
+        mag_p = mag + mag_uncert # Magnitude with added uncertainty
+        mag_n = mag - mag_uncert # Magnitude with uncertainty subtracted
+
+        flux_p = f(mag_p) # Flux with uncertainty added
+        flux_n = f(mag_n) # Flux with uncertainty subtracted
+
+        flux = f(mag) # Flux of the object from magnitude
+
+        flux_error_store[i][0] = flux - flux_p # Storing the greater uncert value
+        flux_error_store[i][1] = flux_n - flux # Storing lesser uncert value
+
+    uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
+
+    return uncert_av
 
 def comoving_distances(hubble, c, data):
     """ Comoving distance is defined by $R_0 \eta=cz/ H_0$. """

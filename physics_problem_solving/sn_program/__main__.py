@@ -13,6 +13,7 @@ cm_data = [75, (3*(10**8))] # In the order [hubbles_constant (km s^-1 Mpc^-1), s
 cm_data[0] = (cm_data[0] * (10**3)) / (pc)
 
 data = data.data_input(file_name)
+l_peak.flux_uncert(data)
 l_peak.flux_uncertainty(data)
 l_peak = l_peak.chi_sq_one(cm_data[0], cm_data[1], data, 100)
 #omega_lambda.flux_obs(cm_data[0], cm_data[1], data, l_peak)
