@@ -19,30 +19,66 @@
 \title{Supernova Cosmology: Mid-Term Report}
  
 \author{Jacky Cao, AstroLabs, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to -, Date of report: 08/11/2017}
-
-\begin{abstract}              
-We have measured the magnitude of supernova explosions over an extended period of 47 days using $0.5$ m and $?.?$ m telescopes situated in Durham and La Palma. We have plotted several light curves and identified Type Ia, Type II, and ?? supernovae. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccesful due to redsjhift of something.
-\end{abstract}
-
 \maketitle
-
 \vspace{-3ex}
-\section{Introduction} 
+\subsection{So Far} 
 \vspace{-2ex}
 
-In astronomy, one of the most violent and luminous events which can occur is a supernova explosion. At the end of a massive star's lifetime, there is a possibility that the equilibrium configurations for a star will cease to exist after it has ran out of nuclear fuel to burn. This eventually leads to the final explosion, the luminosity of which when at it's peak can be as bright as a small galaxy \cite{longair}.
+Our project is centred around supernovae, for our experiment we have been attempting to collect enough magnitude data over the past few weeks to generate some light curves to show magnitude as a function of time. We have been aiming to try and see the characteristic shapes that are associated with the varying types of SN. Having collected this, we then want to apply different templates to our data and see how it fits. Calculating the $\chi^2$ statistic where possible to quantify the quality of our data.
 
-Observing these events and measuring their magnitude over a period of time allows us to then plot light curves (magnitude is displayed as a function of time). From visualising this evolution we can draw the conclusion that there is some order in the explosions - they can be grouped together into multiple types as their light curves have similar shapes and features.
+To perform our data collection we have been using the telescopes in Durham (on the Physics Department's Roof) and we have used the telescope in La Palma. When there has been an opportunity for us to observe in Durham we have always aimed to use Far-East-16 (when the exoplanets group are not struggling to collect data). This is because as our objects are so faint (they often have a magnitude of around $\sim 15 - 18$), we require a telescope which can collect as much as light as possible, the 16-inch provides us with a way to do so. But, we can also use East-14 and West-14, we just need to ensure that we use a longer exposure time from 120s to ensure we can collect as much light as possible. 
 
-Once we have our different groups we can then use them in cosmology for example. One type of supernova explosion called Type Ia's can be used in calculations which leads to a value for Hubble's Constant. The methodology of which will be discussed later in section \ref{appcosmo}.
+Once we had collected this data, we then required to perform the correct data analysis on it. Our sessions generally involve the following: 
+\begin{itemize}
+ \item We retrieve and copy the data from the previous night(s) observations from the remote server.
+ \item We then perform stacking using the d$\_$stack script to remove any noise such as cosmic rays, and also to 'increase' the number of counts we get from an object. 
+ \item The software package GAIA is used as a tool to aid us in our photometry:
+ 	\begin{itemize}
+ 	 \item The image is orientated so that it is comparable to discovery image that we have from the Rochester database.
+	 \item A search is then done to match any known objects in the image to UCAC4, the U.S. Naval Observatory catalogue of objects. This is done so that we can identify our object more easily, along with using the RA and Dec from the SNe. We also found where our comparison stars were, but we eventually learned the location of these after analysing the data multiple times.
+	 \item Using the Aperture Photometry tools on the software, the results in data counts were found for our calibration/comparison stars, and for our SNe as well.
+	 \item Once this had been noted down, a custom Python script would be ran calculating our magnitudes and errors using the following equations,
+	 
+	 \begin{equation}
+	 m = z - 2.5 \log_{10}{C},
+	 \end{equation}
+	 \begin{equation}
+	 \delta{m} = 2.5 \log_{10}{\Big(1+\frac{1}{\sqrt{C}}\Big)},
+	 \end{equation}
+	 
+	 where $m$ the magnitude of the objects, $z$ is our zero-point (found by using our calibration stars), and $C$ is the number of counts. 
+	 
+	\end{itemize}
 
-In studying and using supernovae as a tool, we must understand the underlying physics which creates these awesome cosmic events. (??)
+\end{itemize}
+
+The above method has only been employed for a week, we had been using an incorrect one previously which would produce magnitudes which did not seem reasonable at all, due to the fact that the uncertainties would be very small.
+
+Using our old method of to calculate magnitudes using ratios, for our main object \em{2017hhz }\em, for data from the 20th October 2017, the V band magnitude was found to be $16.25\pm0.01$, and B band was $15.82\pm0.01$. Using the method briefly detailed above, for this same set of data we have now found that the magnitudes for V and B band are respectively, $17.1\pm0.1$ and $16.9\pm0.1$. The latter values seem more reasonable as using our instrumentation we cannot achieve that high level of precision.
+
+We must also note that the above method is for finding the differential magnitudes, or the instrumental magnitudes. What would be of more particular interest would be the absolute magnitudes. This can be found out through calculating the 'actual' zero point of the image and then using the magnitudes tool on GAIA to process the calibration stars and the SNe.
+
+Having both sets of data we can then compare and calculate the differences between them.
 
 \vspace{-3ex}
-\section*{Acknowledgements}
+\subsection{Plan for the remainder of the project}
 \vspace{-2ex}
-I would finally like to thank the coffee shops of Durham for putting up with my buy-one-drink-and-stay-in-there-for-six-hours mentality. It has allowed me to complete my lab report in a slightly buzzed but also happy state.
+As we move onto the final half of our project, the main question that we would like to ask is: to what accuracy can we produce these light curves to and whether or not it would produce a valid value for Hubble's Constant, $H_0$?
 
+Our masterplan for this stage of the project is as follows,
+\begin{itemize}
+ \item To continue to perform relative photometry on our SNe candidates
+ \item To perform model/template fittings to our supernovae
+ \item To then perform absolute photometry on our SNe by finding the zero points
+ \item To continue observing our candidates: 2017hhz, AT2017hhq, 2017hou, and AT2017gvb. (from Durham and from La Palma)
+ \item To find potential viewing candidates from the SN database on Rochester and ASAS-SN
+ \item To flat-field our images
+ \item To use our data from our Type Ia supernovae to calculate a value for $H_0$
+ \item To try and perform a galaxy subtraction from one of sets of data to leave just the SNe in view
+
+\end{itemize}
+
+There is still a lot of work to complete and analysis to perform, but with good time management and with planning it will be completed. Also it all depends on the weather.
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
@@ -113,10 +149,5 @@ CHANGE TIMES FOR EARLY PT5M OBJECTS
 \end{table}
 
 \clearpage
-
-\twocolumngrid
-\vspace{-3ex}
-\section*{Appendix C - Set of Sample Data}
-\vspace{-2ex}
 
 \end{document}

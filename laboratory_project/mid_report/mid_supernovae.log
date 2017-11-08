@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 NOV 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 NOV 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -727,54 +727,45 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, AstroLabs, Lab Pa
 rtner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to -, Date of repor
 t: 08/11/2017.
 
-
-Package natbib Warning: Citation `longair' on page 1 undefined on input line 33
-.
-
-
-LaTeX Warning: Reference `appcosmo' on page 1 undefined on input line 37.
-
-No file mid_supernovae.bbl.
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in alignment at lines 69--69
+No file mid_supernovae.bbl.
+[2]
+Underfull \hbox (badness 10000) in alignment at lines 105--105
 [][][][][][][][]
  []
 
-[2] [3]
-
-Package natbib Warning: There were undefined citations.
-
-[4] (./mid_supernovae.aux)
-
-LaTeX Warning: There were undefined references.
-
- )
+[3] [4] (./mid_supernovae.aux) )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 85 ({)
-### simple group (level 1) entered at line 57 ({)
+### simple group (level 2) entered at line 121 ({)
+### simple group (level 1) entered at line 93 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12666 strings out of 493089
- 229719 string characters out of 6134841
- 296535 words of memory out of 5000000
- 16024 multiletter control sequences out of 15000+600000
- 8830 words of font info for 32 fonts, out of 8000000 for 9000
+ 12677 strings out of 493089
+ 229872 string characters out of 6134841
+ 299547 words of memory out of 5000000
+ 16032 multiletter control sequences out of 15000+600000
+ 10077 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,13n,41p,10383b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on mid_supernovae.pdf (4 pages, 121511 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
+-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on mid_supernovae.pdf (4 pages, 152741 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
