@@ -1,37 +1,94 @@
+from __future__ import division
 import numpy as np
+from scipy.integrate import quad
 
-# using L_peak from lzsn data we could then reuse 10.14 to calculate the flux for each 
-# distant SN? But then we have to deal with the comoving distances for high redshift.
+def f(mag):
+    """ Units of flux initially in erg cm^(-2)s^(-1)Angstrom^(-1). """
+    m_0 = -20.45 # Comparative magnitude
+    ex = (mag-m_0) / (2.5) # The exponent
+    # CONVERT FLUX TO SI
+    return (10 ** (-ex)) * (10**7)
 
-def flux_obs(hubble, c, data, l_peak):
-    """ Calculating the observed value for flux using: 
-        f_obs =  \frac{L_peak}{4\pi [R_0 S(\eta)]^2 (1+z)^2 . """
-    num = l_peak # Numerator of f_obs eqn
-    dsn_data = data[0]
-    f_o = np.zeros([dsn_data.shape[0],1]) # Storing all the calculated values for f_observed
-    
+def flux(data):
+    """ Using distance supernova data, calculating the flux from the given magnitudes. """
+    dsn_data = data[0] # Selecting the data from the data module
+    flux_store = np.zeros([dsn_data.shape[0],1]) # Storing the calculated values of flux
+
     for i in range(dsn_data.shape[0]):
-        z = dsn_data[i][1]
-        cmv = (c * z) / hubble # Comoving distance R_0 \eta
-        den = 4 * np.pi * (cmv**2) * (1 + z) **2 # Denominator of the equation
-        f_o[i] = num/den # Calculated value of f_observed
+        mag = dsn_data[i][2] # Mag from the current SN
+        flux_store[i] = f(mag) # Calculating the flux of the current SN
+    return flux_store
 
-    #print f_o
-    return f_o
+def flux_uncert(data):
+    """ Calculating uncertainty in the flux by adding the mangitude error onto the 
+    magnitude, and taking it away. """
+    dsn_data = data[0] # Taking out the high redshift data
+    flux_error_store = np.zeros([dsn_data.shape[0],2]) # Storing the values for error on flux
 
-def chi_squared():
-    return chi_sq
+    for i in range(dsn_data.shape[0]):
+        mag = dsn_data[i][2] # Mag from the current supernova
+        mag_uncert = dsn_data[i][3] # Uncertainty on that magnitude
 
-"""
-def omega_lambda():
+        mag_p = mag + mag_uncert # Magnitude with added uncertainty
+        mag_n = mag - mag_uncert # Magnitude with uncertainty subtracted
 
-    # outside, L_peak testing
-    # inner loop chi_squared over supernova
+        flux_p = f(mag_p) # Flux with uncertainty added
+        flux_n = f(mag_n) # Flux with uncertainty subtracted
 
-    # L_peak limits
-    l_step = 100
-    l_peak = 0.0
+        flux = f(mag) # Flux of the object from magnitude
 
-    for i in range():
-        for i in range():
-            ???"""
+        flux_error_store[i][0] = flux - flux_p # Storing the greater uncert value
+        flux_error_store[i][1] = flux_n - flux # Storing lesser uncert value
+
+    uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
+    return uncert_av
+
+def com_integral(x, z, O_L):
+    """ The integral required to find the comoving distance, with: 
+        x - our variable
+        O_L - Value of Omega_Lambda being changed from two limits """
+    z1 = (1 + z) ** 3
+    B = O_L * (z1 + 1)
+
+    return 1.0 / ( (z1 - B) ** 0.5 ) 
+
+def flux_model(l_peak, cmv, z):
+    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    l_peak = l_peak * l_sol # Converting l_peak into Watts
+    return l_peak / (4 * np.pi * (cmv ** 2) * ((1+z)**2))
+
+def chi_sq_omg_lam(hubble, c, data, step, l_peak):
+    """ Chi^2 function to find the best value for \Omega_Lambda. """
+    dsn_data = data[0] # Pulling out distant supernovae data
+    flx = flux(data) # Finding the flux for distance supernova data
+    flx_unct = flux_uncert(data) # Finding the uncertainties
+    
+    O_L_range = np.arange(0.0, 1.0, step) # Produces range of Omega_Lambda values to test from 0 to 1
+
+    chi_sq_store = np.zeros([O_L_range.size,2]) # Stores chi^2 for each step
+
+    for i in range(O_L_range.size):
+        """ Outer loop to test for each value of Omega_Lambda. """
+        O_L = O_L_range[i] # Selecting Omega_Lambda value to use
+        chi_sq_store[i][0] = O_L # Stores current value of Omega_Lambda in first column
+        current = [] # List to store chi^2 values
+        for j in range(dsn_data.shape[0]):
+            """ Inner loop to calculate chi^2 over supernova data. """
+            z = dsn_data[j][1] # Selecting redshift for current supernova
+            f_obs = flx[j] # Observed flux calculated using distance supernova data
+            f_mdl_cmv = quad(com_integral, 0, z, args=(z, O_L)) # Using Scipy to calculate the comoving integral
+            f_mdl_cmv = f_mdl_cmv[0] * (c / hubble) # Selecting the value from integral routine
+            f_mdl = flux_model(l_peak, f_mdl_cmv, z) # Model flux using functions
+
+            print f_obs, f_mdl
+
+            val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
+            val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
+            val = val_n / val_d # Calculating the chi^2 value
+            #print val
+            current.append(val) # Adding all the chi^2s into a list
+        chi_sq_store[i][1] = np.sum(current) # Storing the summed chi^2 into array
+    print chi_sq_store
+    return chi_sq_store
+
+

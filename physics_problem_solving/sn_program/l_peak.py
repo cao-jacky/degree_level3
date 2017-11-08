@@ -107,11 +107,12 @@ def chi_sq_l_peak(hubble, c, data, step):
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
-            current.append(val) # Adding all the current chi^s value to the list
+            current.append(val) # Adding all the current chi^2s value to the list
         chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
     return chi_sq_store
 
 def chi_sq_min(hubble, c, data, step):
+    """ Finding the minimum chi^2 value from our calculated data. """
     chi_sq_data = chi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
     chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
 
@@ -120,4 +121,4 @@ def chi_sq_min(hubble, c, data, step):
    
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
 
-    return chi_sq_min, (l_peak_min * l_sol)
+    return chi_sq_min, (l_peak_min)
