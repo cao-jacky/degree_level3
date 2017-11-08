@@ -31,6 +31,11 @@ def flux_uncertainty(data):
         uncert[i] = flux_uncert
     return uncert
 
+def flux_uncert(data):
+    """ Calculating uncertainty in the flux by adding the mangitude error onto the 
+    magnitude, and taking it away. """
+    lzsn_data = data[1] # Taking out the low redshift data
+
 def comoving_distances(hubble, c, data):
     """ Comoving distance is defined by $R_0 \eta=cz/ H_0$. """
     lzsn_data = data[1] # Selecting the data from the data module
