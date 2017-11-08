@@ -1,0 +1,122 @@
+\documentclass[twocolumn]{revtex4}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell}
+\usepackage[normalem]{ulem}
+\newcommand{\squeezeup}{\vspace{-2.5mm}}
+
+\def\bibsection{\section*{\refname}} 
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\begin{document}
+
+\textheight=26.385cm
+%Change textheight as the last resort...
+
+\title{Supernova Cosmology: Mid-Term Report}
+ 
+\author{Jacky Cao, AstroLabs, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to -, Date of report: 08/11/2017}
+
+\begin{abstract}              
+We have measured the magnitude of supernova explosions over an extended period of 47 days using $0.5$ m and $?.?$ m telescopes situated in Durham and La Palma. We have plotted several light curves and identified Type Ia, Type II, and ?? supernovae. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccesful due to redsjhift of something.
+\end{abstract}
+
+\maketitle
+
+\vspace{-3ex}
+\section{Introduction} 
+\vspace{-2ex}
+
+In astronomy, one of the most violent and luminous events which can occur is a supernova explosion. At the end of a massive star's lifetime, there is a possibility that the equilibrium configurations for a star will cease to exist after it has ran out of nuclear fuel to burn. This eventually leads to the final explosion, the luminosity of which when at it's peak can be as bright as a small galaxy \cite{longair}.
+
+Observing these events and measuring their magnitude over a period of time allows us to then plot light curves (magnitude is displayed as a function of time). From visualising this evolution we can draw the conclusion that there is some order in the explosions - they can be grouped together into multiple types as their light curves have similar shapes and features.
+
+Once we have our different groups we can then use them in cosmology for example. One type of supernova explosion called Type Ia's can be used in calculations which leads to a value for Hubble's Constant. The methodology of which will be discussed later in section \ref{appcosmo}.
+
+In studying and using supernovae as a tool, we must understand the underlying physics which creates these awesome cosmic events. (??)
+
+\vspace{-3ex}
+\section*{Acknowledgements}
+\vspace{-2ex}
+I would finally like to thank the coffee shops of Durham for putting up with my buy-one-drink-and-stay-in-there-for-six-hours mentality. It has allowed me to complete my lab report in a slightly buzzed but also happy state.
+
+
+\bibliographystyle{abbrv}
+\bibliography{supernovae}
+
+\clearpage
+\onecolumngrid
+\vspace{-3ex}
+\section*{Appendix A - Objects Observed}
+\vspace{-2ex}
+A list of the objects that were chosen to be observed, and then the subsequent notes on them. Not all objects were chosen to be observed for an extended period, the ones noted were observed for a couple of nights to ensure suitability. The subsequent observation logs can be found in Appendix B.
+
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
+    \hline
+    \textbf{Object} & \textbf{RA} & \textbf{Dec} & \textbf{Magnitude} &\textbf{First Discovered} &\textbf{Type} & \textbf{Notes} \\ 
+    AT2017hld & 22:18:22.849 & 34:45:08.46 & 16.1 & 2017/10/17.339 & - & {Cataclysmic Variable, stopped observing}  \\
+    AT2017hky & 11:23:30.514 & 63:21:59.43 & 16.2 & 2017/10/16.640 & II & {Not viewable from Durham or La Palma}  \\
+    2017hhz & 01:44:16.75 & 12:15:18.00 & 16.83 & 2017/10/16.140 & Ia & {A measured redshift, $z=0.0392$}  \\
+    AT2017gvb & 08:04:42.34 & 61:31:41.50 & 17.33 & 2017/09/26.59 & unk & {asd}  \\
+
+    \hline      
+\end{tabularx}
+\caption{Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered at (or stated otherwise in the notes), it's units are (??).}
+\label{objects}
+\end{table}
+
+
+\clearpage
+
+\onecolumngrid
+\vspace{-3ex}
+\section*{Appendix B - Observation Logs} \label{obslogs}
+\vspace{-2ex}
+Given below are all the observations and details of those observations made between x and y. With the information provided in the column, \textbf{Exposures}, the filters used and the number of exposures taken in the given exposure time.
+
+CHANGE TIMES FOR EARLY PT5M OBJECTS
+
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
+    \hline
+    \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
+    20/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Cloudy} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    	& ASASSN-17nb &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\      
+	
+    21/10/17 & - & - & - & Cloudy & {\em No observations, weather not sufficient in Durham or La Palma \em} \\
+    
+    22/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Cloudy} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    & ASASSN-17nb &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\   
+    & AT2017hmw &  20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: images have a low seeing} \\   
+    
+    23/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    
+    24/10/17 & 2017hhz & 20:42:54 to 23:43:21 & \makecell{B, 4 in 60s \\ V, 12 in 60s} & {Clear?} & {pt5m: Images were cloudy in the B-band, seeing was not high}  \\
+    
+    25/10/17 & - & - & - & Cloudy & {FE16/W14: \em No observations, too cloudy for observations in Durham \em} \\
+    
+    26/10/17 & 2017hhz & 21:18:00 to 21:25:31 & \makecell{B, 4 in 60s \\ V, 4 in 60s} & {Clear} & {FE16: Seeing good, images not bad}  \\
+    & 2017hle &  - & - & Cloudy & {pt5m: images have a low seeing} \\ 
+
+    \hline      
+\end{tabularx}
+\caption{Observing logs for the entire observation period for our experiment.}
+\label{obs_logs}
+\end{table}
+
+\clearpage
+
+\twocolumngrid
+\vspace{-3ex}
+\section*{Appendix C - Set of Sample Data}
+\vspace{-2ex}
+
+\end{document}
