@@ -49,11 +49,10 @@ def flux_uncert(data):
 
         flux = f(mag) # Flux of the object from magnitude
 
-        flux_error_store[i][0] = flux - flux_p # Storing the greater uncert value
-        flux_error_store[i][1] = flux_n - flux # Storing lesser uncert value
+        flux_error_store[i][0] = flux - flux_p # Storing the greater uncert value
+        flux_error_store[i][1] = flux_n - flux # Storing lesser uncert value
 
-    uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
-
+    uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
     return uncert_av
 
 def comoving_distances(hubble, c, data):
@@ -98,7 +97,7 @@ def chi_sq_l_peak(hubble, c, data, step):
     """ Chi^2 function to find the suitable value for L_peak. """
     lzsn_data = data[1] # Calling the low redshift data
     flx = flux(data) # Using flux data for the low redshift data
-    flx_unct = flux_uncertainty(data) # Calling the uncertainties
+    flx_unct = flux_uncert(data) # Calling the uncertainties
 
     l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
     
