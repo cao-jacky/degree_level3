@@ -1,0 +1,21 @@
+# supernova data
+# AT2017gvb 17_10_18
+
+# star catalogue objects
+# name, V-mag, B-mag, r-mag, i-mag
+758-040550 15.713 16.744 15.207 14.836
+758-040546 16.971 17.726 16.895 0
+
+# v-band
+# name, counts, counts error, sky value 
+758-040550 259.64 1.3948 91.805
+758-040546 67.326 1.0152 86.441
+
+0AT2017gvb 41.518 1.2163 86.476
+
+# b-band
+# name, counts, counts error, sky value 
+758-040550 99.655 1.8215 42.518
+758-040546 35.138 1.6568 38.521
+
+0AT2017gvb 27.331 1.2003 43.093

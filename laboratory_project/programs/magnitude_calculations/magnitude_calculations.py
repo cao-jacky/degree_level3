@@ -142,4 +142,4 @@ def data_return(data):
 
 if __name__ == '__main__':
 
-    data_return("2017hhz/2017hhz--17_10_30.txt")
+    data_return("AT2017gvb/AT2017gvb--17_10_22.txt")
