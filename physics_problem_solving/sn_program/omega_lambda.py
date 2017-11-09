@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from __future__ import division
 import numpy as np
 from scipy.integrate import quad
@@ -43,13 +44,12 @@ def flux_uncert(data):
     uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
     return uncert_av
 
-def com_integral(x, z, O_L):
+def com_integral(x, O_L):
     """ The integral required to find the comoving distance, with: 
         x - our variable
         O_L - Value of Omega_Lambda being changed from two limits """
-    z1 = (1 + z) ** 3
-    B = O_L * (z1 + 1)
-
+    z1 = (1 + x) ** 3 # Part of the integral
+    B = O_L * (z1 - 1) # Another part of the integral
     return 1.0 / ( (z1 - B) ** 0.5 ) 
 
 def flux_model(l_peak, cmv, z):
@@ -76,19 +76,26 @@ def chi_sq_omg_lam(hubble, c, data, step, l_peak):
             """ Inner loop to calculate chi^2 over supernova data. """
             z = dsn_data[j][1] # Selecting redshift for current supernova
             f_obs = flx[j] # Observed flux calculated using distance supernova data
-            f_mdl_cmv = quad(com_integral, 0, z, args=(z, O_L)) # Using Scipy to calculate the comoving integral
+            f_mdl_cmv = quad(com_integral, 0, z, args=(O_L)) # Using Scipy to calculate the comoving integral
             f_mdl_cmv = f_mdl_cmv[0] * (c / hubble) # Selecting the value from integral routine
             f_mdl = flux_model(l_peak, f_mdl_cmv, z) # Model flux using functions
-
-            print f_obs, f_mdl
 
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
-            #print val
             current.append(val) # Adding all the chi^2s into a list
         chi_sq_store[i][1] = np.sum(current) # Storing the summed chi^2 into array
-    print chi_sq_store
     return chi_sq_store
 
+def chi_sq_min(hubble, c, data, step, l_peak):
+    """ Finding the minimum chi^2 value from the calculate data. """
+    chi_sq_data = chi_sq_omg_lam(hubble, c, data, step, l_peak) # Data from chi^2 function
+    chi_sq_min = np.min(chi_sq_data[:,1]) # Minimum chi^2 from column
+
+    min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
+    O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
+
+    print chi_sq_min, O_L_min
+    return chi_sq_min, O_L_min
+    
 

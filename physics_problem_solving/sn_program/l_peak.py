@@ -116,8 +116,8 @@ def chi_sq_min(hubble, c, data, step):
     chi_sq_data = chi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
     chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
 
-    min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of the closest chi^2 value to one
-    l_peak_min = chi_sq_data[:,0][min_index]
+    min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
+    l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
    
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
 
