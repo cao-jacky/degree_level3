@@ -27,3 +27,5 @@ plotter.plot_l(cm_data[0], cm_data[1], data, 100)
 plotter.plot_o(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
 plotter.plot_redmag(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
 
+plotter.model(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
+
