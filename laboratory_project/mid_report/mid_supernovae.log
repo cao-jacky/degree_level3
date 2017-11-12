@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  12 NOV 2017 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  12 NOV 2017 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,17 +753,17 @@ Underfull \hbox (badness 2277) in paragraph at lines 98--99
 
 No file mid_supernovae.bbl.
 [2]
-Underfull \hbox (badness 3724) in paragraph at lines 142--142
+Underfull \hbox (badness 3724) in paragraph at lines 140--140
 []|\OT1/cmr/m/n/9 Unobservable, too close to galac-tic
  []
 
 [3]
-Underfull \hbox (badness 2894) in paragraph at lines 192--192
+Underfull \hbox (badness 2894) in paragraph at lines 190--190
 \OT1/cmr/m/n/9 ob-ject tran-sited across the frame while
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 240.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 238.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -771,23 +771,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4] [5] [6] (./mid_supernovae.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- )
+[4] [5] [6] (./mid_supernovae.aux) )
 (\end occurred inside a group at level 4)
 
-### simple group (level 4) entered at line 242 ({)
-### simple group (level 3) entered at line 196 ({)
-### simple group (level 2) entered at line 155 ({)
+### simple group (level 4) entered at line 240 ({)
+### simple group (level 3) entered at line 194 ({)
+### simple group (level 2) entered at line 153 ({)
 ### simple group (level 1) entered at line 116 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  12714 strings out of 493089
  230276 string characters out of 6134841
- 321621 words of memory out of 5000000
+ 321618 words of memory out of 5000000
  16055 multiletter control sequences out of 15000+600000
  13557 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -805,14 +800,14 @@ tra/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
->
-Output written on mid_supernovae.pdf (6 pages, 225068 bytes).
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on mid_supernovae.pdf (6 pages, 231766 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
