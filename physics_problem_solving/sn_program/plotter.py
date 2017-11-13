@@ -9,8 +9,9 @@ import matplotlib.pyplot as pyplot
 def plot_l(hubble, c, data, step):
     """ Plotting the chi^2 against L_peak. """
     dt = l_peak.chi_sq_l_peak(hubble, c, data, step)
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    
+    #l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    l_sol = 1.0
+
     fig = pyplot.figure()
     pyplot.title('chi^2 against L_peak')
     pyplot.xlabel('L_peak')
@@ -47,15 +48,15 @@ def m_function(hubble, c, z, l_peak, O_L):
     cmv = (c / hubble) * cmv[0]
     val_d = 4 * np.pi * (cmv**2) * ((1+z)**2) # Denominator of fraction
     frac = val_n / val_d # Calculating the fraction
-    return m_0 - (2.5 * np.log10(frac * (10**7)))
+    return m_0 - (2.5 * np.log10(frac))
 
 def model_ranged(hubble, c, data, step, l_peak, z):
     """ Using model with a generated linspace. """ 
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    l_sol = 1.0
     O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
     hubble = hubble / (10**6)
     l_peak = l_peak * l_sol
-    O_L = 0.84
     print O_L, l_peak, c, z, hubble
     m = m_function(hubble, c, z, l_peak, O_L)
     #print m

@@ -8,7 +8,7 @@ def f(mag):
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
     # CONVERT FLUX TO SI
-    return (10 ** (-ex)) * (10**7)
+    return (10 ** (-ex))
 
 def flux(data):
     """ Using distance supernova data, calculating the flux from the given magnitudes. """
@@ -58,7 +58,7 @@ def flux_model(l_peak, cmv, z):
     return l_peak / (4 * np.pi * (cmv ** 2) * ((1+z)**2))
 
 def mag_model(flux):
-    return -20.45 - (2.5 * np.log10(flux/10**7))
+    return -20.45 - (2.5 * np.log10(flux))
 
 def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
     """ Using magnitude space instead of flux space. """
@@ -130,7 +130,7 @@ def chi_sq_min(hubble, c, data, step, l_peak):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
-    #print chi_sq_min, O_L_min
+    print chi_sq_min, O_L_min
     return chi_sq_min, O_L_min
     
 

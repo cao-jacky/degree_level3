@@ -5,7 +5,7 @@ def f(mag):
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
     # CONVERT FLUX TO SI
-    return (10 ** (-ex)) * (10**7)
+    return (10 ** (-ex))
 
 def flux(data):
     """ Used with low redshift data, calculating the flux from the given magnitudes. """
@@ -87,7 +87,8 @@ def chi_sq_l_peak(hubble, c, data, step):
 
     l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
     
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    #l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+    l_sol = 1.0
     l_mean = l_lims[0] / l_sol # Mean luminosity in terms of Solar Luminosity
     l_max = l_lims[1] / l_sol # Max luminosity in terms of Solar Luminosity
     l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
