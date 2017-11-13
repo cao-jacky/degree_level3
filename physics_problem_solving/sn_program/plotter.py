@@ -41,7 +41,7 @@ def com_integral(x, O_L):
 
 def m_function(hubble, c, z, l_peak, O_L):
     """ Function to calculate magnitude for a given redshift. """
-    m_0 = -20.45 
+    m_0 = -20.45
     val_n = l_peak # Numerator of fraction
     cmv = quad(com_integral, 0, z, args=(O_L))
     cmv = (c / hubble) * cmv[0]
@@ -69,14 +69,12 @@ def model(hubble, c, data, step, l_peak):
 
 def model_ranged(hubble, c, data, step, l_peak, z):
     """ Using model with a generated linspace. """
-
     O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
     m = m_function(hubble, c, z, l_peak, O_L)
     return m
 
 def plot_redmag(hubble, c, data, step, l_peak):
     """ Plotting redshift vs magnitude, data and model. """
-
     z = np.linspace(0, 1, num=100) # Generating redshift values to plot agianst
     fn_r = np.zeros([len(z),1]) # Storing calculated magnitudes
 
