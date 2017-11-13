@@ -47,7 +47,7 @@ def m_function(hubble, c, z, l_peak, O_L):
     cmv = (c / hubble) * cmv[0]
     val_d = 4 * np.pi * (cmv**2) * ((1+z)**2) # Denominator of fraction
     frac = val_n / val_d # Calculating the fraction
-    return m_0 - (2.5 * np.log10(frac / (10*7)))
+    return m_0 - (2.5 * np.log10(frac))
 
 def model(hubble, c, data, step, l_peak):
     """Producing 'model' data from our found L_peak and Omega_Lambda using the 
