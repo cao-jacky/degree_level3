@@ -5,7 +5,7 @@ def f(mag):
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
     # CONVERT FLUX TO SI
-    return (10 ** (-ex))
+    return (10 ** (-ex)) * (10**7)
 
 def flux(data):
     """ Used with low redshift data, calculating the flux from the given magnitudes. """
