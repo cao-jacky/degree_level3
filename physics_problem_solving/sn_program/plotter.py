@@ -47,31 +47,18 @@ def m_function(hubble, c, z, l_peak, O_L):
     cmv = (c / hubble) * cmv[0]
     val_d = 4 * np.pi * (cmv**2) * ((1+z)**2) # Denominator of fraction
     frac = val_n / val_d # Calculating the fraction
-    return m_0 - (2.5 * np.log10(frac))
-
-def model(hubble, c, data, step, l_peak):
-    """Producing 'model' data from our found L_peak and Omega_Lambda using the 
-    given data."""
-    O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
-
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    l_peak = l_peak * l_sol
-    
-    dsn_data = data[0] # Distant supernovae data
-    data_store = np.zeros([dsn_data.shape[0],2]) # Storing the values for flux
-
-    for i in range(dsn_data.shape[0]):
-        redshift = dsn_data[i][1]
-        m = m_function(hubble, c, redshift, l_peak, O_L)
-        data_store[i][0] = redshift # storing the value of redshift used
-        data_store[i][1] = m # Storing calculated magnitude
-    return data_store
+    return m_0 - (2.5 * np.log10(frac * (10**7)))
 
 def model_ranged(hubble, c, data, step, l_peak, z):
-    """ Using model with a generated linspace. """
-
+    """ Using model with a generated linspace. """ 
+    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
     O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
+    hubble = hubble / (10**6)
+    l_peak = l_peak * l_sol
+    O_L = 0.84
+    print O_L, l_peak, c, z, hubble
     m = m_function(hubble, c, z, l_peak, O_L)
+    #print m
     return m
 
 def plot_redmag(hubble, c, data, step, l_peak):
@@ -88,7 +75,6 @@ def plot_redmag(hubble, c, data, step, l_peak):
     pyplot.ylabel('magnitude')
     pyplot.xlabel('redshift')
     pyplot.scatter(data[0][:,1],data[0][:,2])
+    pyplot.scatter(data[1][:,1],data[1][:,2])
     pyplot.plot(z, fn_r)
     pyplot.savefig('redmag.pdf')
-
-

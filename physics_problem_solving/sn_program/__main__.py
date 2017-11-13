@@ -17,15 +17,10 @@ rnge = [0,1] # Range to test Omega_Lambda values in
 
 data = data.data_input(file_name)
 
-#l_peak.flux_uncert(data)
 l_peak = l_peak.chi_sq_min(cm_data[0], cm_data[1], data, 100)
 
-#omega_lambda.flux_uncert(data)
 omega_lambda.chi_sq_min(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
 
 plotter.plot_l(cm_data[0], cm_data[1], data, 100)
 plotter.plot_o(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
 plotter.plot_redmag(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
-
-plotter.model(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
-

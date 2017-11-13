@@ -57,6 +57,42 @@ def flux_model(l_peak, cmv, z):
     l_peak = l_peak * l_sol # Converting l_peak into Watts
     return l_peak / (4 * np.pi * (cmv ** 2) * ((1+z)**2))
 
+def mag_model(flux):
+    return -20.45 - (2.5 * np.log10(flux/10**7))
+
+def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
+    """ Using magnitude space instead of flux space. """
+    dsn_data = data[0] # Pulling out distant supernovae data
+    flx = flux(data) # Finding the flux for distance supernova data
+    flx_unct = flux_uncert(data) # Finding the uncertainties
+    
+    O_L_range = np.arange(0.0, 1.0, step) # Produces range of Omega_Lambda values to test from 0 to 1
+
+    chi_sq_store = np.zeros([O_L_range.size,2]) # Stores chi^2 for each step
+
+    for i in range(O_L_range.size):
+        """ Outer loop to test for each value of Omega_Lambda. """
+        O_L = O_L_range[i] # Selecting Omega_Lambda value to use
+        chi_sq_store[i][0] = O_L # Stores current value of Omega_Lambda in first column
+        current = [] # List to store chi^2 values
+        for j in range(dsn_data.shape[0]):
+            """ Inner loop to calculate chi^2 over supernova data. """
+            z = dsn_data[j][1] # Selecting redshift for current supernova
+            f_mdl_cmv = quad(com_integral, 0, z, args=(O_L)) # Using Scipy to calculate the comoving integral
+            f_mdl_cmv = f_mdl_cmv[0] * (c / hubble) # Selecting the value from integral routine
+            f_mdl = flux_model(l_peak, f_mdl_cmv, z) # Model flux using functions
+
+            mag_obs = dsn_data[j][2] # Observed flux calculated using distance supernova data
+            mag_mdl = mag_model(f_mdl) # Converting into magnitude space
+
+            val_n = (mag_obs - mag_mdl) ** 2 # Numerator of chi^2 value
+            val_d = dsn_data[j][3] ** 2 # Denominator of chi^2 value
+            val = val_n / val_d # Calculating the chi^2 value
+            current.append(val) # Adding all the chi^2s into a list
+        chi_sq_store[i][1] = np.sum(current) # Storing the summed chi^2 into array
+    return chi_sq_store
+
+
 def chi_sq_omg_lam(hubble, c, data, step, l_peak):
     """ Chi^2 function to find the best value for \Omega_Lambda. """
     dsn_data = data[0] # Pulling out distant supernovae data
@@ -94,6 +130,7 @@ def chi_sq_min(hubble, c, data, step, l_peak):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
+    #print chi_sq_min, O_L_min
     return chi_sq_min, O_L_min
     
 
