@@ -8,7 +8,7 @@ def f(mag):
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
     # CONVERT FLUX TO SI
-    return (10 ** (-ex))
+    return (10 ** (-ex)) * (10**7)
 
 def flux(data):
     """ Using distance supernova data, calculating the flux from the given magnitudes. """
@@ -57,7 +57,6 @@ def flux_model(l_peak, cmv, z):
     l_peak = l_peak * l_sol # Converting l_peak into Watts
     return l_peak / (4 * np.pi * (cmv ** 2) * ((1+z)**2))
 
-<<<<<<< HEAD
 def mag_model(flux):
     return -20.45 - (2.5 * np.log10(flux))
 
@@ -66,6 +65,8 @@ def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
     dsn_data = data[0] # Pulling out distant supernovae data
     flx = flux(data) # Finding the flux for distance supernova data
     flx_unct = flux_uncert(data) # Finding the uncertainties
+
+    hubble = hubble / (10**6)
     
     O_L_range = np.arange(0.0, 1.0, step) # Produces range of Omega_Lambda values to test from 0 to 1
 
@@ -84,7 +85,7 @@ def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
             f_mdl = flux_model(l_peak, f_mdl_cmv, z) # Model flux using functions
 
             mag_obs = dsn_data[j][2] # Observed flux calculated using distance supernova data
-            mag_mdl = mag_model(f_mdl) # Converting into magnitude space
+            mag_mdl = mag_model(f_mdl) # Converting into magnitude space
 
             val_n = (mag_obs - mag_mdl) ** 2 # Numerator of chi^2 value
             val_d = dsn_data[j][3] ** 2 # Denominator of chi^2 value
@@ -94,14 +95,12 @@ def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
     return chi_sq_store
 
 
-=======
->>>>>>> parent of 3010ded... problem solving
 def chi_sq_omg_lam(hubble, c, data, step, l_peak):
     """ Chi^2 function to find the best value for \Omega_Lambda. """
     dsn_data = data[0] # Pulling out distant supernovae data
     flx = flux(data) # Finding the flux for distance supernova data
-    flx_unct = flux_uncert(data) # Finding the uncertainties
-    
+    flx_unct = flux_uncert(data) # Finding the uncertainties 
+
     O_L_range = np.arange(0.0, 1.0, step) # Produces range of Omega_Lambda values to test from 0 to 1
 
     chi_sq_store = np.zeros([O_L_range.size,2]) # Stores chi^2 for each step
@@ -133,10 +132,5 @@ def chi_sq_min(hubble, c, data, step, l_peak):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
-<<<<<<< HEAD
-    print chi_sq_min, O_L_min
-=======
->>>>>>> parent of 3010ded... problem solving
+    #print chi_sq_min, O_L_min
     return chi_sq_min, O_L_min
-    
-
