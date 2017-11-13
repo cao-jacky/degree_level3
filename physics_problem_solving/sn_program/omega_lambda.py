@@ -57,6 +57,7 @@ def flux_model(l_peak, cmv, z):
     l_peak = l_peak * l_sol # Converting l_peak into Watts
     return l_peak / (4 * np.pi * (cmv ** 2) * ((1+z)**2))
 
+<<<<<<< HEAD
 def mag_model(flux):
     return -20.45 - (2.5 * np.log10(flux))
 
@@ -93,6 +94,8 @@ def chi_sq_omg_lam_mag(hubble, c, data, step, l_peak):
     return chi_sq_store
 
 
+=======
+>>>>>>> parent of 3010ded... problem solving
 def chi_sq_omg_lam(hubble, c, data, step, l_peak):
     """ Chi^2 function to find the best value for \Omega_Lambda. """
     dsn_data = data[0] # Pulling out distant supernovae data
@@ -130,7 +133,10 @@ def chi_sq_min(hubble, c, data, step, l_peak):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
+<<<<<<< HEAD
     print chi_sq_min, O_L_min
+=======
+>>>>>>> parent of 3010ded... problem solving
     return chi_sq_min, O_L_min
     
 
