@@ -49,13 +49,12 @@ def m_function(hubble, c, z, l_peak, O_L):
     frac = val_n / val_d # Calculating the fraction
     return m_0 - (2.5 * np.log10(frac * (10**7)))
 
-def model_ranged(hubble, c, data, step, l_peak, z):
+def model_ranged(hubble, c, data, step, l_peak, z, O_L):
     """ Using model with a generated linspace. """ 
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
-    hubble = hubble / (10**6)
+    O_L = 0.87
     l_peak = l_peak * l_sol
-    O_L = 0.84
+    #O_L = 0.84
     print O_L, l_peak, c, z, hubble
     m = m_function(hubble, c, z, l_peak, O_L)
     return m
@@ -63,11 +62,15 @@ def model_ranged(hubble, c, data, step, l_peak, z):
 def plot_redmag(hubble, c, data, step, l_peak):
     """ Plotting redshift vs magnitude, data and model. """
 
+    hubble = hubble / (10**6)
+    print l_peak
+    O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
+    
     z = np.linspace(0, 1, num=100) # Generating redshift values to plot agianst
     fn_r = np.zeros([len(z),1]) # Storing calculated magnitudes
 
     for i in range(len(z)):
-        fn_r[i] = model_ranged(hubble, c, data, step, l_peak, z[i])
+        fn_r[i] = model_ranged(hubble, c, data, step, l_peak, z[i], O_L)
 
     fig = pyplot.figure()
     pyplot.title('magnitude against redshift')
