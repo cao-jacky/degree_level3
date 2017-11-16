@@ -132,5 +132,4 @@ def chi_sq_min(hubble, c, data, step, l_peak):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     O_L_min = chi_sq_data[:,0][min_index] # Finding minimum value of Omega_lambda
-    print chi_sq_min, O_L_min
     return chi_sq_min, O_L_min
