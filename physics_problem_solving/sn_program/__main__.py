@@ -5,8 +5,13 @@ import plotter
 
 """ Module to calculate the dark energy density, Omega_Lambda."""
 
+<<<<<<< HEAD
 #pc = 3.09 * 10 ** 16 # Parsec in m
 # l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+=======
+pc = 3.09 * 10 ** 16 # Parsec in m
+l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
+>>>>>>> parent of 688431f... back-up before another unit removal
 
 file_name = 'sn_data.txt'
 cm_data = [75, (3*(10**8))] # In the order [hubbles_constant (km s^-1 Mpc^-1), speed_of_light (ms^-1)]
