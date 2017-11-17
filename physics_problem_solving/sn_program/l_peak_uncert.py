@@ -26,6 +26,8 @@ def data(hubble, c, data, step):
                 print min_index
                 print min_a, min_b
                 break
-        break 
+        break
+
+
 
 
