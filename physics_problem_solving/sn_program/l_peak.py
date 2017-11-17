@@ -2,10 +2,9 @@
 import numpy as np
 
 def f(mag):
-    """ Units of flux initially in erg cm^(-2)s^(-1)Angstrom^(-1). """
+    """ Flux in units of erg cm^(-2)s^(-1)Angstrom^(-1). """    
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
-    # CONVERT FLUX TO SI
     return (10 ** (-ex))
 
 def flux(data):
@@ -70,7 +69,6 @@ def luminosity_range(hubble, c, data):
     l_vals = luminosity_peak(hubble, c, data) # Calls previous function
     l_mean = np.min(l_vals) # Min value in our L_peak range
     l_max = np.max(l_vals) # Max value in our L_peak range
-    print l_mean, l_max
     return l_mean, l_max
 
 def flux_model(hubble, c, data, i, l_peak):
@@ -118,6 +116,5 @@ def chi_sq_min(hubble, c, data, step):
     chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
-    l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
-   
+    l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2 
     return chi_sq_min, (l_peak_min)

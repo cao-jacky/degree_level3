@@ -2,34 +2,42 @@
 import numpy as np
 from scipy.integrate import quad
 
+import matplotlib.pyplot as pyplot
+from matplotlib import rc
+rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+## for Palatino and other serif fonts use:
+#rc('font',**{'family':'serif','serif':['Palatino']})
+rc('text', usetex=True)
+
 import l_peak
 import omega_lambda
-import matplotlib.pyplot as pyplot
+
+pyplot.rc('text', usetex=True)
+pyplot.rc('font', family='serif')
+pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
 
 def plot_l(hubble, c, data, step):
     """ Plotting the chi^2 against L_peak. """
     dt = l_peak.chi_sq_l_peak(hubble, c, data, step)
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
     
-    fig = pyplot.figure()
-    pyplot.title('chi^2 against L_peak')
-    pyplot.xlabel('L_peak')
-    pyplot.ylabel('chi^2')
-    pyplot.plot(dt[:,0],dt[:,1])
-    pyplot.savefig('luminosity_peak.pdf')
-    #pyplot.show()
+    fig = pyplot.figure()  
+    pyplot.title(r"\textbf{$\chi$$^2$ against L$_{peak}$}")
+    pyplot.xlabel(r'\textbf{L$_{peak}$}')
+    pyplot.ylabel(r'$\chi$$^2$')
+    pyplot.plot(dt[:,0],dt[:,1], color = '0.1')
+    pyplot.savefig('graphs/luminosity_peak.pdf')
 
 def plot_o(hubble, c, data, step, l_peak):
     """ Plotting chi^2 against Omega_Lambda. """
     dat = omega_lambda.chi_sq_omg_lam(hubble, c, data, step, l_peak)
 
     fig = pyplot.figure()
-    pyplot.title('chi^2 against Omega_Lambda')
-    pyplot.xlabel('Omega_lambda')
-    pyplot.ylabel('chi^2')
-    pyplot.plot(dat[:,0],dat[:,1])
-    pyplot.savefig('omega_lambda.pdf')
-    #pyplot.show()
+    pyplot.title(r"\textbf{$\chi$$^2$ against $\Omega$$_{\Lambda}$}")
+    pyplot.xlabel(r'$\Omega_{\Lambda}$')
+    pyplot.ylabel(r'$\chi$$^2$')
+    pyplot.plot(dat[:,0],dat[:,1], color = '0.1')
+    pyplot.savefig('graphs/omega_lambda.pdf')
 
 def com_integral(x, O_L):
     """ The integral required to find the comoving distance, with: 
@@ -47,36 +55,30 @@ def m_function(hubble, c, z, l_peak, O_L):
     cmv = (c / hubble) * cmv[0]
     val_d = 4 * np.pi * (cmv**2) * ((1+z)**2) # Denominator of fraction
     frac = val_n / val_d # Calculating the fraction
-    return m_0 - (2.5 * np.log10(frac * (10**7)))
+    return m_0 - (2.5 * np.log10(frac))
 
 def model_ranged(hubble, c, data, step, l_peak, z, O_L):
     """ Using model with a generated linspace. """ 
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    O_L = 0.87
-    l_peak = l_peak * l_sol
-    #O_L = 0.84
-    #print O_L, l_peak, c, z, hubble
     m = m_function(hubble, c, z, l_peak, O_L)
     return m
 
 def plot_redmag(hubble, c, data, step, l_peak):
     """ Plotting redshift vs magnitude, data and model. """
 
-    hubble = hubble / (10**6)
-    print l_peak
     O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
     
     z = np.linspace(0, 1, num=100) # Generating redshift values to plot agianst
     fn_r = np.zeros([len(z),1]) # Storing calculated magnitudes
 
+    # Creating data to plot the model
     for i in range(len(z)):
         fn_r[i] = model_ranged(hubble, c, data, step, l_peak, z[i], O_L)
 
     fig = pyplot.figure()
-    pyplot.title('magnitude against redshift')
-    pyplot.ylabel('magnitude')
-    pyplot.xlabel('redshift')
-    pyplot.scatter(data[0][:,1],data[0][:,2])
-    pyplot.scatter(data[1][:,1],data[1][:,2])
-    pyplot.plot(z, fn_r)
-    pyplot.savefig('redmag.pdf')
+    pyplot.title(r"\textbf{Magnitude agaisnt Redshift}")
+    pyplot.xlabel(r'$z$')
+    pyplot.ylabel(r'\textbf{mag}')
+    pyplot.scatter(data[0][:,1],data[0][:,2], marker=".", color="0.1")
+    pyplot.scatter(data[1][:,1],data[1][:,2], marker=".", color="0.1")
+    pyplot.plot(z, fn_r, color="0.1")
+    pyplot.savefig('graphs/mag_redshift.pdf')
