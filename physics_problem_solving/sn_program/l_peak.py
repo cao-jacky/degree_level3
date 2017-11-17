@@ -49,6 +49,7 @@ def comoving_distances(hubble, c, data):
     for i in range(lzsn_data.shape[0]):
         redshift = lzsn_data[i][1]
         cmv_store[i] = (c * redshift) / hubble
+    #print cmv_store
     return cmv_store
 
 def luminosity_peak(hubble, c, data):
@@ -69,6 +70,7 @@ def luminosity_range(hubble, c, data):
     l_vals = luminosity_peak(hubble, c, data) # Calls previous function
     l_mean = np.min(l_vals) # Min value in our L_peak range
     l_max = np.max(l_vals) # Max value in our L_peak range
+    print l_mean, l_max
     return l_mean, l_max
 
 def flux_model(hubble, c, data, i, l_peak):
@@ -88,8 +90,8 @@ def chi_sq_l_peak(hubble, c, data, step):
     l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
     
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    l_mean = l_lims[0] / l_sol # Mean luminosity in terms of Solar Luminosity
-    l_max = l_lims[1] / l_sol # Max luminosity in terms of Solar Luminosity
+    l_mean = l_lims[0] # Mean luminosity in terms of Solar Luminosity
+    l_max = l_lims[1] # Max luminosity in terms of Solar Luminosity
     l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
 
     chi_sq_store = np.zeros([l_range.size,2]) # Stores the value for chi^2 for each step
@@ -121,4 +123,5 @@ def chi_sq_min(hubble, c, data, step):
    
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
 
+    print l_peak_min
     return chi_sq_min, (l_peak_min)

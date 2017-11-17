@@ -15,7 +15,7 @@ def plot_l(hubble, c, data, step):
     pyplot.title('chi^2 against L_peak')
     pyplot.xlabel('L_peak')
     pyplot.ylabel('chi^2')
-    pyplot.plot(dt[:,0]*l_sol,dt[:,1])
+    pyplot.plot(dt[:,0],dt[:,1])
     pyplot.savefig('luminosity_peak.pdf')
     #pyplot.show()
 
@@ -55,7 +55,7 @@ def model_ranged(hubble, c, data, step, l_peak, z, O_L):
     O_L = 0.87
     l_peak = l_peak * l_sol
     #O_L = 0.84
-    print O_L, l_peak, c, z, hubble
+    #print O_L, l_peak, c, z, hubble
     m = m_function(hubble, c, z, l_peak, O_L)
     return m
 
