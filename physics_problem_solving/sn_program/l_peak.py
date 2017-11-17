@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy as np
 
 def f(mag):
@@ -5,7 +6,7 @@ def f(mag):
     m_0 = -20.45 # Comparative magnitude
     ex = (mag-m_0) / (2.5) # The exponent
     # CONVERT FLUX TO SI
-    return (10 ** (-ex)) * (10**7)
+    return (10 ** (-ex))
 
 def flux(data):
     """ Used with low redshift data, calculating the flux from the given magnitudes. """
@@ -49,7 +50,6 @@ def comoving_distances(hubble, c, data):
     for i in range(lzsn_data.shape[0]):
         redshift = lzsn_data[i][1]
         cmv_store[i] = (c * redshift) / hubble
-    #print cmv_store
     return cmv_store
 
 def luminosity_peak(hubble, c, data):
@@ -88,10 +88,9 @@ def chi_sq_l_peak(hubble, c, data, step):
     flx_unct = flux_uncert(data) # Calling the uncertainties
 
     l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
-    
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-    l_mean = l_lims[0] # Mean luminosity in terms of Solar Luminosity
-    l_max = l_lims[1] # Max luminosity in terms of Solar Luminosity
+
+    l_mean = l_lims[0] / (10**35) # Mean luminosity in terms of 10^35
+    l_max = l_lims[1] / (10**35) # Max luminosity in terms of 10^35
     l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
 
     chi_sq_store = np.zeros([l_range.size,2]) # Stores the value for chi^2 for each step
@@ -99,12 +98,12 @@ def chi_sq_l_peak(hubble, c, data, step):
     for i in range(l_range.size):
         """ Outer loop to test for each value for L_peak for our models. """
         l_peak = l_range[i] # Selecting L_peak value to use
-        chi_sq_store[i][0] = l_peak # Stores current using L_peak value in first column
+        chi_sq_store[i][0] = l_peak * (10**35) # Stores current using L_peak value in first column
         current = [] # List to sum up all the chi^2 values
         for j in range(lzsn_data.shape[0]):
             """ Inner loop to calculate chi^2 over supernova. """
             f_obs = flx[j] # Observed flux from low redshift data
-            f_mdl = flux_model(hubble, c, data, j, l_peak * l_sol) # Model flux
+            f_mdl = flux_model(hubble, c, data, j, l_peak * (10**35)) # Model flux
 
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
@@ -121,7 +120,4 @@ def chi_sq_min(hubble, c, data, step):
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
    
-    l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
-
-    print l_peak_min
     return chi_sq_min, (l_peak_min)
