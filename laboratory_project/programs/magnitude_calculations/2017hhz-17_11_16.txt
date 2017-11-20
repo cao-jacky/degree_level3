@@ -1,0 +1,4 @@
+Supernova: 2017hhz
+Date of observations: 17_11_16
+b-band magnitude and error: 18.6108474109 +- 0.21722049179
+v-band magnitude and error: 17.7898444846 +- 0.121496926867

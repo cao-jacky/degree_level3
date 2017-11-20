@@ -1,0 +1,4 @@
+Supernova: 2017hle
+Date of observations: 17_11_18
+b-band magnitude and error: 19.1310381333 +- 0.385374490278
+v-band magnitude and error: 18.6592299781 +- 0.260401052702
