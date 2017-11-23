@@ -99,9 +99,12 @@ def plot(sne):
     fig1 = pyplot.figure()
     fig1.gca().invert_yaxis()  
     
-    pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}')
-    pyplot.ylabel(r'\textbf{Magnitude}')
+    pyplot.xlabel(r'\textbf{Time Elapsed Since Observing}', fontsize=15)
+    pyplot.ylabel(r'\textbf{Magnitude}', fontsize=15)
 
+    pyplot.tick_params(axis='y', which='major', labelsize=15)
+    pyplot.tick_params(axis='x', labelsize=15)
+    
     # Plotting B band data
     pyplot.errorbar(data_in_B[:,0], data_in_B[:,1], 
             yerr=data_in_B[:,2], color='0.1', linestyle='None', fmt='.', 
