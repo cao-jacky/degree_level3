@@ -22,9 +22,12 @@ def b_v(sn):
     bv_value = data[:,1] - data[:,3]
     bv_value = np.delete(bv_value, [0,1], axis=0)
     bv_value = np.abs(bv_value)
+
+    print('B-V for each data point: ', bv_value)
+
     bv_value = np.average(bv_value)
 
-    print(bv_value)
+    print('averaged: ', bv_value)
 
 if __name__ == '__main__':
     b_v('2017hhz')

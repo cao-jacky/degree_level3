@@ -15,6 +15,8 @@ image_data = hdu_list[0].data
 print(type(image_data))
 print(image_data.shape)
 
+print(len(image_data))
+
 print(image_data)
 
 np.savetxt('data.txt', image_data)
