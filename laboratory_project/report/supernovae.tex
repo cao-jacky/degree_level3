@@ -107,7 +107,7 @@ In the classification of supernovae and in determining their redshifts, spectros
 \subsection{Application to Cosmology} \label{appcosmo}
 \vspace{-2ex}
 
-In discovering supernovae we can calculate the rates at which supernovae occur.
+In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
 
 Type Ia supernovae are useful to us as they can be classed as standard candles [cite]. With this we can use them to calculate a value for Hubble's Constant, $H_0$, and thus calculate the expansion rate of the Universe.
 
@@ -151,7 +151,16 @@ Observing supernova explosions requires instruments which are sensitive enough t
 
 In collecting the data for our supernova we used three different types of telescopes. Two of them based in Durham on the Department of Physic's Roof, and one in La Palma. 
 
-As we were observing objects which were faint we required that we either have a large telescope to collect as much light as possible, or have good seeing conditions which allowed us to collect as much light as possible over a large observation time.
+As we were observing objects which were faint we required that we either have a large telescope to collect as much light as possible [reference], or have good seeing conditions which allowed us to collect as much light as possible over a large observation time.
+
+In performing our observations, Far-East-16 and pt5m (give basic broad descriptions of these telescopes - tell how they are big and thus how much light they can collect?) was used. 
+
+Talk about the CCDs, their specs, and what that implies. Any uncertainties work should be either stated here, or in the uncertainties section, or spoken about in both. 
+
+Reliant on weather conditions being acceptable to observe in, define acceptable, discuss clouds, seeing, atmospheric turbulence, Lumiere, temperature, ...etc
+
+in observations how has the moon affected us
+
 
 \vspace{-3ex}
 \subsection{Observations Made}
@@ -171,13 +180,21 @@ As we collected our supernova day by day we performed various photometry techniq
 
 Once we had collected our data we then proceeded to perform analysis
 
-Data reduction, what was required, blah blah blah. What was used. Don't say dstack script, say a script was used which allowed us to stack images together.
+Data reduction, what was required, blah blah blah. What was used. Don't say dstack script, say a script was used which allowed us to stack images together. should i just blend uncertainties into here? 
+
+fitting supernova templates using python programs, SNoopy - in depth analysis of snoopy should not be mentioned here, probably not
+
+understanding type ia models of data and how from our data we cannot be sure.  
+
+Photometry work 
 
 \vspace{-3ex}
 \subsection{Data Uncertainties}
 \vspace{-2ex}
 
 Throughout the experiment it was important that we kept in mind the uncertainties which may arise from different areas of the experiment. Quantifying these errors allows us to judge whether the data and fittings that we created were good or not. 
+
+Uncertainties from the CCD and those type of astronomy data noise: mention here their effect, and how they were dealt with. 
 
 \vspace{-3ex}
 \subsection{Final Data}
@@ -191,10 +208,10 @@ asdasd
 \subsection{Supernovae Models}
 \vspace{-2ex}
 
-The fitting of the templates/models to our observations.
+The fitting of the templates/models to our observations. Highlight SNooPy again? Usage of different models, if I can, find different models and fit them to our data and see how it would differ. What kind of techniques would be required to do so. 
 
 \vspace{-3ex}
-\subsection{Resuluts}
+\subsection{Results}
 \vspace{-2ex}
 
 sdfsdfsa
@@ -215,7 +232,42 @@ It is highly unlikely that we will see supernova remnants for the supernova that
 
 [neutrino studying]?
 
-asdasd
+in using snoopy, how does it really fit the models to the data, what kind of parameters does it constrain. what is it's reliance on different parameters
+
+try and produce some sort of covariance relation plot?
+
+performing incorrect photometry and how that affects our results - not realising that we had to set a zero point, then having to find the zero point ourselves. 
+
+confusion in observations, novae, cataclysmic variables 
+
+there are other scripts which provide an automated way in finding the zero points from the data. what would this produce? why would this be beneficial to use this as opposed to our method?
+
+justification of using the uncertainty equation, functional approach, why not use the uncertainty that was provided by the software? mention how it's one of the photon statistics things.
+
+dstack, taking the median not mean , and why this is better - if I haven't discussed this already
+
+what science have we addressed? well, we have limitations on the telescopes in terms of how 'deep' we can see:  the limiting magnitude, how that was calculated - longer exposure times...etc
+
+has it been possible to plot a light curve with reasonable uncertainties? how best could this experiment be changed? 
+
+big picture: justification of the uncertainties 
+
+using the jackknife method to discover the range of uncertainties after we had used snoopy to fit a model, the whole different parameters relating to each other
+
+covariance and correlations between parameters
+
+statisitcal, experimental - different uncertainties
+
+extinction and galaxy extinction taking them into calculations
+
+hubble flow????
+
+how does SNooPy actually work - maybe just give this a section
+
+how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
+
+
+
 
 \vspace{-5ex}
 \section{Conclusions}
