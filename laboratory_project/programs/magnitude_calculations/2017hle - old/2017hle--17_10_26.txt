@@ -1,0 +1,21 @@
+# supernova data
+# 2017hle 17_10_26
+
+# star catalogue objects
+# name, V-mag, B-mag, r-mag, i-mag
+613-003374 16.107 17.718 15.490 14.616
+613-003367 15.920 16.905 15.466 15.017
+
+# v-band
+# name, relative mag, relative mag error, sky value
+613-003374 119.72 1.2784 556.12
+613-003367 132.31 1.1586 560.99
+
+2017hle 59.286 1.5381 552.91
+
+# b-band
+# name, relative-mag, relative mag error, sky value
+613-003374 18.072 1.4843 175.63
+613-003367 29.645 1.4640 177.74
+
+2017hle 14.734 1.3217 177.17
