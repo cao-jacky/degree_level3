@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 NOV 2017 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 NOV 2017 12:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -606,55 +606,82 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \c@nlinenum=\count205
 \TeXr@lab=\toks25
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count206
+\Gm@cntv=\count207
+\c@Gm@tempcnt=\count208
+\Gm@bindingoffset=\dimen161
+\Gm@wd@mp=\dimen162
+\Gm@odd@mp=\dimen163
+\Gm@even@mp=\dimen164
+\Gm@layoutwidth=\dimen165
+\Gm@layoutheight=\dimen166
+\Gm@layouthoffset=\dimen167
+\Gm@layoutvoffset=\dimen168
+\Gm@dimlist=\toks26
+)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box51
 \UL@hyphenbox=\box52
 \UL@skip=\skip69
-\UL@hook=\toks26
-\UL@height=\dimen161
-\UL@pe=\count206
-\UL@pixel=\dimen162
+\UL@hook=\toks27
+\UL@height=\dimen169
+\UL@pe=\count209
+\UL@pixel=\dimen170
 \ULC@box=\box53
 Package: ulem 2012/05/18
-\ULdepth=\dimen163
+\ULdepth=\dimen171
 )
 (./supernovae.aux)
 \openout1 = `supernovae.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 14.
-Class revtex4 Info: Patching array package. on input line 14.
-Class revtex4 Info: cite was not loaded (OK!) on input line 14.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 14.
+LaTeX Font Info:    ... okay on input line 15.
+Class revtex4 Info: Patching array package. on input line 15.
+Class revtex4 Info: cite was not loaded (OK!) on input line 15.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 15.
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count207
-\scratchdimen=\dimen164
+\scratchcounter=\count210
+\scratchdimen=\dimen172
 \scratchbox=\box54
-\nofMPsegments=\count208
-\nofMParguments=\count209
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count210
-\MPscratchDim=\dimen165
-\MPnumerator=\count211
-\makeMPintoPDFobject=\count212
-\everyMPtoPDFconversion=\toks28
+\nofMPsegments=\count211
+\nofMParguments=\count212
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count213
+\MPscratchDim=\dimen173
+\MPnumerator=\count214
+\makeMPintoPDFobject=\count215
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -662,10 +689,6 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -705,20 +728,54 @@ e
 ))
 \symgns@font=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 14.
-Package gensymb Info: Math companion symbols declared on input line 14.
-LaTeX Info: Redefining \degree on input line 14.
-LaTeX Info: Redefining \celsius on input line 14.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 15.
+Package gensymb Info: Math companion symbols declared on input line 15.
+LaTeX Info: Redefining \degree on input line 15.
+LaTeX Info: Redefining \celsius on input line 15.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 14.
-LaTeX Info: Redefining \ohm on input line 14.
-Package gensymb Info: Using \textohm for \ohm on input line 14.
-Package gensymb Info: Using \textmu for \micro on input line 14.
+erthousand on input line 15.
+LaTeX Info: Redefining \ohm on input line 15.
+Package gensymb Info: Using \textohm for \ohm on input line 15.
+Package gensymb Info: Using \textmu for \micro on input line 15.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 14.
+. Activating mapping `default' on line 15.
 .................................................
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(52.63777pt, 492.23233pt, 52.63777pt)
+* v-part:(T,H,B)=(52.63777pt, 739.7713pt, 52.63777pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=492.23233pt
+* \textheight=739.7713pt
+* \oddsidemargin=-19.63222pt
+* \evensidemargin=-19.63222pt
+* \topmargin=-60.63222pt
+* \headheight=25.0pt
+* \headsep=16.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=30.0pt
+* \marginparsep=6.0pt
+* \columnsep=18.0pt
+* \skip\footins=39.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
 Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, AstroLabs Michael
@@ -726,44 +783,29 @@ mas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 17/03
 /2017, Date of report: 19/03/2017.
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] <results/2017hhz.pdf, id=24, 462.52798pt x 346.89601pt>
+[2] <results/2017hhz.pdf, id=23, 462.52798pt x 346.89601pt>
 File: results/2017hhz.pdf Graphic file (type pdf)
 
 <use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 217.
+Package pdftex.def Info: results/2017hhz.pdf used on input line 211.
 (pdftex.def)             Requested size: 270.30118pt x 202.73485pt.
 
-Overfull \hbox (24.30118pt too wide) in paragraph at lines 217--218
+Overfull \hbox (33.18501pt too wide) in paragraph at lines 211--212
  [] 
  []
 
-[3 <./results/2017hhz.pdf>] (./supernovae.bbl
-Underfull \hbox (badness 2134) in paragraph at lines 20--25
- \OT1/cmr/m/n/9 vey for Su-per-novae (ASAS-SN) Light Curve Server
- []
-
-) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
+[3 <./results/2017hhz.pdf>] (./supernovae.bbl) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
-
-Underfull \hbox (badness 2384) in paragraph at lines 316--316
-[]|\OT1/cmr/m/n/9 Not view-able from Durham or La
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 316--316
-[]|\OT1/cmr/m/n/9 Unobservable, too close to galac-tic
- []
-
 [5]
-Underfull \hbox (badness 2894) in paragraph at lines 366--366
-\OT1/cmr/m/n/9 ob-ject tran-sited across the frame while
+Underfull \hbox (badness 1762) in paragraph at lines 360--360
+[]|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 414.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 408.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -771,49 +813,42 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7] [8] [9] [10] (./supernovae.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- )
+[6] [7] [8] [9] [10] (./supernovae.aux) )
 (\end occurred inside a group at level 4)
 
-### simple group (level 4) entered at line 416 ({)
-### simple group (level 3) entered at line 370 ({)
-### simple group (level 2) entered at line 329 ({)
-### simple group (level 1) entered at line 292 ({)
+### simple group (level 4) entered at line 410 ({)
+### simple group (level 3) entered at line 364 ({)
+### simple group (level 2) entered at line 323 ({)
+### simple group (level 1) entered at line 286 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12725 strings out of 493089
- 230544 string characters out of 6134841
- 321794 words of memory out of 5000000
- 16075 multiletter control sequences out of 15000+600000
- 10077 words of font info for 36 fonts, out of 8000000 for 9000
+ 13200 strings out of 493089
+ 237588 string characters out of 6134841
+ 337156 words of memory out of 5000000
+ 16541 multiletter control sequences out of 15000+600000
+ 9769 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,14n,47p,10379b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
--super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (10 pages, 263128 bytes).
+ 42i,14n,47p,10436b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on supernovae.pdf (10 pages, 255476 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
