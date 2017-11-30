@@ -94,7 +94,7 @@ The free electrons which had been supporting the star through degeneracy pressur
 \vspace{-3ex}
 \subsection{Supernova Discovery}
 \vspace{-2ex}
-In discovering supernovae it is important that the search is not focussed on a singular part of the sky. There is a possibility that they could occur in any region of the sky. What is required is a survey which covers the entire visible sky. Then, the general method that is employed is that each night's data can be compared on a day-to-day basis and any new objects that appear could be classified as a supernovae. Follow up observations are required though to verify if it actually is a new object exploding. [reference] 
+In discovering supernovae it is important that the search is not focussed on a singular part of the sky as there is a possibility that they could occur in any region of the sky. What is required is a survey which covers the entire visible sky. Then, the general method that is employed is that each night's data can be compared on a day-to-day basis and any new objects that appear could be classified as a supernovae. Follow up observations are required though to verify if it actually is a new object exploding or whether it is an anomalous object such as a cataclysmic variable. [reference] 
 
 One such survey that employs this is the \em{All-Sky Automated Survey for Supernovae }\em (or ASAS-SN). Their setup (??) involves two stations based in Halekala Observatory in Hawaii, and Cerro Tololo International Observatory in Chile. Together they can produce a survey of the entire visible sky up to a depth of $\sim 17$ mag \cite{asn_lc}.
 
@@ -161,7 +161,24 @@ In Appendix \ref{objectslog} is detailed all the objects that we chose to view o
 \subsection{Data Analysis}
 \vspace{-2ex}
 
-As we collected our supernova day by day we performed various photometry techniques to try and calculate the magnitudes of the explosions. 
+[[WHAT TENSE AM I SUPPOSED TO USE? PAST OR PRESENT??]]
+
+As we collected our supernova data over our experimental period we were then required to perform various photometry techniques to calculate the magnitudes of the explosions. It is important that this method was correct as we wanted accurate representations of the light curves. 
+
+With our \em{raw}\em data we firstly needed to identify our supernoa object, as these objects can blend in with the background of stars we had to look it up for the right ascenscion and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
+
+Once we had found our object we needed to find the magnitude of it. Using an astronomical analysis package such as GAIA [[reference and improve this]], we used various tools to perform this. We had to understand that we wanted to find the absolute mangitude of the supernoiva, this value being the 'actual magnitude', and not relative to other objects [[?]]. To perform this we had to choose at least two calibration stars which have known absolute magnitiudes.
+
+To count the number of counts that we are receiving from our supernova and calibration objects we have to choose an apperture size to place over these objects. It is important thatthe radius that is chosen maximises the signal whilst reducing the amount of noise that we are receving as well, it is important that we have the cleanest signal possible.
+
+To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to inclid
+
+\begin{equation}
+    m = z - 2.5 \log_{10}{C},
+\label{mag_counts}
+\end{equation}
+
+where $m$ is the absolute magnitude that we are trying to find, $z$ is the 'zero-point' of our frame [[is it how much it's offset by??]], and $C$ is the number of counts we receive from our object.
 
 Once we had collected our data we then proceeded to perform analysis
 
