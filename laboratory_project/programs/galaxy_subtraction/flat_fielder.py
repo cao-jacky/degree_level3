@@ -71,7 +71,7 @@ def de():
                                         cur_loc + "/V")
                                 # Making tmp directory
                                 if os.path.isdir(cur_loc + "/V/tmp") == 1:
-                                    with cd(cur_loc + "/B"):
+                                    with cd(cur_loc + "/V"):
                                         os.system("cp fd*.sdf tmp")
                                         os.system("rm fd*.sdf")
                                 else:
