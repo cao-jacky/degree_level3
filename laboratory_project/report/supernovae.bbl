@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{lascumbres}
 T.~M. Brown et~al.
@@ -9,7 +9,7 @@ T.~M. Brown et~al.
 \bibitem{car_snoopy}
 C.~R. Burns et~al.
 \newblock {The Carnegie Supernova Project: Light-Curve Fitting with SnooPy}.
-\newblock {\em The Astronomical Journal}, 141(19):20, 2011.
+\newblock {\em The Astronomical Journal}, 141(1):20, 2011.
 
 \bibitem{mod_ast}
 B.~W. Carroll and D.~A. Ostlie.
@@ -20,6 +20,11 @@ B.~W. Carroll and D.~A. Ostlie.
 W.~Hillebrandt and J.~C. Niemeyer.
 \newblock {Type Ia Supernova Explosion Models}.
 \newblock {\em Annual Review of Astronomy and Astrophysics}, 38:191--230, 2000.
+
+\bibitem{jha}
+S.~Jha et~al.
+\newblock {UBVRI Light Curves of 44 Type Ia Supernovae}.
+\newblock {\em The Astronomical Journal}, 131:526--554, 2006.
 
 \bibitem{asn_lc}
 C.~S. Kochanek et~al.
@@ -32,6 +37,11 @@ C.~S. Kochanek et~al.
 M.~Longair.
 \newblock {\em High Energy Astrophysics}.
 \newblock Cambridge University Press, 3rd edition, 2011.
+
+\bibitem{matheson}
+T.~Matheson et~al.
+\newblock {Optical Spectroscopy of Type Ia Supernovae}.
+\newblock {\em The Astronomical Journal}, 135:1598--1615, 2008.
 
 \bibitem{abs_phil}
 M.~M. Phillips.

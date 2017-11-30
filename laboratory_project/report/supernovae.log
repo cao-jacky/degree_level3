@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 NOV 2017 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 NOV 2017 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -782,43 +782,45 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, AstroLabs Michael
 mas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 17/03
 /2017, Date of report: 19/03/2017.
 
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-Underfull \hbox (badness 1024) in paragraph at lines 164--165
-[]\OT1/cmr/m/n/10 [[WHAT TENSE AM I SUP-POSED TO USE?
- []
-
-<results/2017hhz.pdf, id=23, 462.52798pt x 346.89601pt>
-File: results/2017hhz.pdf Graphic file (type pdf)
-
-<use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 228.
+<intro/typeia.pdf, id=1, 462.52798pt x 346.89601pt>
+File: intro/typeia.pdf Graphic file (type pdf)
+ <use intro/typeia.pdf>
+Package pdftex.def Info: intro/typeia.pdf used on input line 67.
 (pdftex.def)             Requested size: 270.30118pt x 202.73485pt.
 
-Overfull \hbox (33.18501pt too wide) in paragraph at lines 228--229
+Overfull \hbox (33.18501pt too wide) in paragraph at lines 67--68
  [] 
  []
 
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./int
+ro/typeia.pdf>] [2]
+Underfull \hbox (badness 1024) in paragraph at lines 171--172
+[]\OT1/cmr/m/n/10 [[WHAT TENSE AM I SUP-POSED TO USE?
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+[3] <results/2017hhz.pdf, id=49, 462.52798pt x 346.89601pt>
+File: results/2017hhz.pdf Graphic file (type pdf)
 
-[3]
+<use results/2017hhz.pdf>
+Package pdftex.def Info: results/2017hhz.pdf used on input line 235.
+(pdftex.def)             Requested size: 270.30118pt x 202.73485pt.
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 240.
+Overfull \hbox (33.18501pt too wide) in paragraph at lines 235--236
+ [] 
+ []
 
-(./supernovae.bbl) [4 <./results/2017hhz.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
+(./supernovae.bbl [4 <./results/2017hhz.pdf>]) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
-[5]
-Underfull \hbox (badness 1762) in paragraph at lines 377--377
+[6]
+Underfull \hbox (badness 1762) in paragraph at lines 384--384
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 425.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 432.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -826,28 +828,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7] [8] [9] [10] (./supernovae.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- )
+[7] [8] [9] [10] [11] (./supernovae.aux) )
 (\end occurred inside a group at level 4)
 
-### simple group (level 4) entered at line 427 ({)
-### simple group (level 3) entered at line 381 ({)
-### simple group (level 2) entered at line 340 ({)
-### simple group (level 1) entered at line 303 ({)
+### simple group (level 4) entered at line 434 ({)
+### simple group (level 3) entered at line 388 ({)
+### simple group (level 2) entered at line 347 ({)
+### simple group (level 1) entered at line 310 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13201 strings out of 493089
- 237600 string characters out of 6134841
- 337156 words of memory out of 5000000
- 16542 multiletter control sequences out of 15000+600000
+ 13215 strings out of 493089
+ 237807 string characters out of 6134841
+ 337217 words of memory out of 5000000
+ 16554 multiletter control sequences out of 15000+600000
  9769 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,47p,10436b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -863,10 +861,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (10 pages, 258339 bytes).
+Output written on supernovae.pdf (11 pages, 296772 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
