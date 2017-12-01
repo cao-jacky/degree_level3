@@ -2,7 +2,10 @@ import logging
 import numpy as np
 import os 
 
-""" Not an elegant program, but it works"""
+""" Not an elegant program, but it works
+    UPDATE, 011217: it never worked... I was too ambitious! """
+
+
 
 # Stuff to log the whole process
 LOG_FILENAME = 'data_copy.log'
