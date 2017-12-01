@@ -39,7 +39,6 @@ Observing these events and measuring their magnitude over a period of time allow
 \vspace{-3ex}
 \subsection{Supernovae Classification}
 \vspace{-2ex}
-With supernovae, there are two basic classifications which are Type I and Type II explosions. The main distinction between them both is that the Type I supernova explosion has an absence of the Balmer series of hydrogen in their optical spectrum at maximum light, and Type II supernovae includes this hydrogen feature \cite{mod_ast, longair}.
 
 However, as we study the different spectra and light curve shapes of supernovae we begin to recognise that there are further sub-classifications \cite{longair}. Table \ref{sn_classes} highlights some of these subtypes. 
 
@@ -114,7 +113,7 @@ In the classification of supernovae and in determining their redshifts, spectros
 \vspace{-2ex}
 In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
 
-Type Ia supernovae are useful to us as they can be classed as standard candles [cite]. With this we can use them to calculate a value for Hubble's Constant, $H_0$, and thus calculate the expansion rate of the Universe.
+
 
 asdasd \cite{abs_phil}
 \begin{equation}
@@ -178,7 +177,13 @@ Once we had found our object we needed to find the magnitude of it. Using an ast
 
 To count the number of counts that we are receiving from our supernova and calibration objects we have to choose an apperture size to place over these objects. It is important thatthe radius that is chosen maximises the signal whilst reducing the amount of noise that we are receving as well, it is important that we have the cleanest signal possible.
 
-To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to inclid
+To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to include unessecary data that would produce an errorneous result. 
+
+After a sky aperture had been chosen we would then try and find the best radius to use when doing our photometry. This radius would be constant for our calibration objects and for our supernova as well, and also for each day's data frames. This would ensure that we would be not 'cherrypicking' the signal that we are receving and that it would be an 'equal opportunity' for the signal to be detected to be the same each time [[??]]. 
+
+This radius would be chosen by adjusting it from one to twenty in integer steps of one, noting down number of counts, the uncertainty on that value, and the sky noise counts. After these values had been collected we would plot the signal to noise against radius. In the plot, where the graph reaches a peak and decreases after this pooint would be our radius size as this would be the radius where we would achieve maximum signal to noise.
+
+Then we can collect the values for the counts of the supernova and calibration objects, once we have this data we can use equation \ref{mag_counts} to find the absolute magnitude of the supernova. [[give a reference for the equation from a paper]]
 
 \begin{equation}
     m = z - 2.5 \log_{10}{C},
@@ -187,6 +192,14 @@ To do this an object was selected which was close to the supernova and appeared 
 
 where $m$ is the absolute magnitude that we are trying to find, $z$ is the 'zero-point' of our frame [[is it how much it's offset by??]], and $C$ is the number of counts we receive from our object.
 
+In using this equation we must have the correct zero-point, $z$, otherwise we would not be finding the absolute magnitude, instead the apparent magnitude relative to our calibration stars. So, rearranging the equation for $z$ we can calculate the zero-points for the calibration objects in the required observation bands. We have the counts for each object and we have their known magntidue which has been found by other astronomers. Then we can average the $z$-values togehter for their respective bands. 
+
+With this $z$ value we can then use the form of the equation as given in equation \ref{mag_counts} and calculate the absolute magnitude of our supernovae.
+
+Now with our magnitude values and the date that the data was taken on, we can plot a basic light curve. 
+
+In fitting templates and models it can be manually done, or you could use a software package light \em{SNooPy }\em. All it requires is the data, redshift, and the right ascension and declination of the supernova object. It will fit Type Ia templates to the data and then return what it thinks is the best fitting.
+
 Once we had collected our data we then proceeded to perform analysis
 
 Data reduction, what was required, blah blah blah. What was used. Don't say dstack script, say a script was used which allowed us to stack images together. should i just blend uncertainties into here? 
@@ -194,7 +207,7 @@ Data reduction, what was required, blah blah blah. What was used. Don't say dsta
 fitting supernova templates using python programs, SNoopy - in depth analysis of snoopy should not be mentioned here, probably not
 
 understanding type ia models of data and how from our data we cannot be sure.  
-
+ cb
 Photometry work 
 
 \vspace{-3ex}
@@ -244,6 +257,16 @@ sdfsdfsa
 \vspace{-2ex}
 
 It is highly unlikely that we will see supernova remnants for the supernova that we have been studying, in the shape of the Crab Nebula. Much longer time periods would be required for this. 
+
+In observing objects which are so faint we have the problem of trying to observe them. We need to balance the observing time to ensure that we do not oversaturate our frame with other stars. From the databases that we use, for this observation period the majority of our objects had been around the magnitudes of $\sim 18$ mag. But, we do not achieve this magnitude as there are various factors such as extinction affectinb data collection. 
+
+We can calculate the limitiing magnitude that our telescopes could detect by using two different methods, one method is to us the following equation,
+
+\begin{equation}
+    L_{mag} = 2 + 5 \log{D_0},
+\end{equation}
+
+with $D_0$ being the diameter of our telescopes [[add a table and link to thje derivation]].
 
 [neutrino studying]?
 
