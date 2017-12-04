@@ -1,11 +1,49 @@
+import glob
 import numpy as np
+from astropy.io import fits
 
-import sys
-sys.path.insert(0, '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/aligner')
+def data_namer(loc):
+    """ Outputting the data in location, loc. """
+    print(glob.glob(loc + "/*.fits"))
+    return glob.glob(loc + "/*.fits")
 
-import aligner # Importing aligner module from a different folder
+def data(loc, fl):
+    """ Opens the files and stores data as arrays. """
+    f_1 = fits.open(loc + '/' + fl[0]) # Frame 1 to remove galaxy from
+    f_2 = fits.open(loc + '/' + fl[1]) # Frame 2 to use as the remover
 
-def data():
-    """ Imports data from the HD location and then copies out the data array. """
+    # Selecting the data out of the fits files
+    f_1_d = f_1[0].data 
+    f_2_d = f_2[0].data
+    
+    # Closing the fits files
+    f_1.close()
+    f_2.close()
+    return f_1_d, f_2_d
 
-    return
+def scaler(data, counts):
+    """ Scales the second frame so that it correct removes the galaxy. """
+
+    f_1_c = counts[0] # Counts of object from frame 1
+    f_2_c = counts[1] # Counts of object from frame 2
+
+    ratio = f_2_c / f_1_c # The ratio we would need to get from frame 1 to frame 2
+    sc = data[0] * ratio # Frame 1 scaled to frame 2
+    return sc
+
+def subtractor(data, counts):
+    """ Performing the galaxy subtraction and returning subtracted frame. """
+    d_scl = scaler(data, counts) # Scaled data for frame 1
+    return d_scl - data[1]
+
+def saver(loc, fl, counts):
+    """ Saves galaxy subtracted data to a fits file. """
+    dt = data(loc, fl) # Returning data to variable
+
+    f_1_sub = subtractor(dt, counts) # Subtracted data
+    
+    new = fits.PrimaryHDU(f_1_sub)
+    new_n = fits.HDUList([new])
+    new_n.writeto(loc + '/subtracted.fits')
+    
+
