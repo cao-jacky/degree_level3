@@ -2,7 +2,7 @@ import numpy as np
 from astropy.io import fits
 
 import sys
-sys.path.insert(0, '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/aligner/marks_scripts')
+sys.path.insert(0, '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/marks_scripts')
 
 import hcongrid
 
