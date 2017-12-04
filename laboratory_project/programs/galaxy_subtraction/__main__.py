@@ -8,7 +8,8 @@ def commands():
     files = ['171022_v_al.fits', '171123_v.fits'] 
 
     obj = ['512-002599'] # Object used to compare counts
-    counts = [103.87, 149.53]
+    counts = [103.87, 149.53] # Counts of that object
+    x_peak = [719.379575841567, 941.085645403181] # Peak value for the counts 
     
     src = '/Volumes/JACKY_CAO_H/'
     dest = '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/galaxy_subtraction/' 

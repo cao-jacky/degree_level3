@@ -107,7 +107,7 @@ def data_return(data):
     data = data_file(data)
     sc_data = data[0]
 
-    print sc_data
+    print(sc_data)
 
     v_band_cal = v_band[2]
     b_band_cal = b_band[2]
@@ -129,7 +129,7 @@ def data_return(data):
     m_v_uncert = 2.5 * np.log10(1 + (1 / np.sqrt(v_band[0])))
     m_b_uncert = 2.5 * np.log10(1 + (1 / np.sqrt(b_band[0])))
 
-    print m_v_uncert, m_b_uncert
+    print(m_v_uncert, m_b_uncert)
 
     file_name = '%s-%s.txt' % (v_band[3], b_band[4])
     f = open(file_name, 'w')
@@ -142,5 +142,5 @@ def data_return(data):
 
 if __name__ == '__main__':
 
-    data_return("2017hle/2017hle--17_11_12.txt")
+    data_return("2017hle/2017hle--17_11_18.txt")
 

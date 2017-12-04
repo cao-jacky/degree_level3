@@ -1,6 +1,7 @@
 import glob
 import numpy as np
 from astropy.io import fits
+from scipy.ndimage.filters import gaussian_filter
 
 def data_namer(loc):
     """ Outputting the data in location, loc. """
@@ -31,10 +32,16 @@ def scaler(data, counts):
     sc = data[0] * ratio # Frame 1 scaled to frame 2
     return sc
 
+def psf(data, counts):
+    """ Tries to change the PSF so that it is perfectly subtracted. """
+    dt = scaler(data, counts)
+    return gaussian_filter(dt, sigma=3)
+
 def subtractor(data, counts):
     """ Performing the galaxy subtraction and returning subtracted frame. """
-    d_scl = scaler(data, counts) # Scaled data for frame 1
-    return d_scl - data[1]
+    d_psf = psf(data, counts) # Applying the PSF scaler thing
+    #d_scl = scaler(data, counts) # Scaled data for frame 1
+    return d_psf - data[1]
 
 def saver(loc, fl, counts):
     """ Saves galaxy subtracted data to a fits file. """
@@ -44,6 +51,6 @@ def saver(loc, fl, counts):
     
     new = fits.PrimaryHDU(f_1_sub)
     new_n = fits.HDUList([new])
-    new_n.writeto(loc + '/subtracted.fits')
+    new_n.writeto(loc + '/subtracted_psfed6.fits')
     
 
