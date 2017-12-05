@@ -2,6 +2,8 @@ import glob
 import numpy as np
 from astropy.io import fits
 from scipy.ndimage.filters import gaussian_filter
+from astropy.convolution import convolve, Gaussian2DKernel, AiryDisk2DKernel
+from astropy.modeling.models import Gaussian2D
 
 def data_namer(loc):
     """ Outputting the data in location, loc. """
@@ -35,7 +37,9 @@ def scaler(data, counts):
 def psf(data, counts):
     """ Tries to change the PSF so that it is perfectly subtracted. """
     dt = scaler(data, counts)
-    return gaussian_filter(dt, sigma=3)
+    gauss_kernel = Gaussian2DKernel(2) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1)
+    smoothed_data_gauss = convolve(dt, gauss_kernel)
+    return smoothed_data_gauss
 
 def subtractor(data, counts):
     """ Performing the galaxy subtraction and returning subtracted frame. """
@@ -51,6 +55,4 @@ def saver(loc, fl, counts):
     
     new = fits.PrimaryHDU(f_1_sub)
     new_n = fits.HDUList([new])
-    new_n.writeto(loc + '/subtracted_psfed6.fits')
-    
-
+    new_n.writeto(loc + '/subtracted_psfed38.fits')
