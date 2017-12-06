@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  4 DEC 2017 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  5 DEC 2017 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -816,17 +816,17 @@ Overfull \hbox (33.18501pt too wide) in paragraph at lines 248--249
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./results/2017hhz.pdf>] (./supernovae.bbl) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
 [6]
-Underfull \hbox (badness 1762) in paragraph at lines 409--409
+Underfull \hbox (badness 1762) in paragraph at lines 404--404
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 457.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 452.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -837,10 +837,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [7] [8] [9] [10] [11] (./supernovae.aux) )
 (\end occurred inside a group at level 4)
 
-### simple group (level 4) entered at line 459 ({)
-### simple group (level 3) entered at line 413 ({)
-### simple group (level 2) entered at line 372 ({)
-### simple group (level 1) entered at line 335 ({)
+### simple group (level 4) entered at line 454 ({)
+### simple group (level 3) entered at line 408 ({)
+### simple group (level 2) entered at line 367 ({)
+### simple group (level 1) entered at line 330 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  13215 strings out of 493089
@@ -867,7 +867,7 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (11 pages, 301025 bytes).
+Output written on supernovae.pdf (11 pages, 299369 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
