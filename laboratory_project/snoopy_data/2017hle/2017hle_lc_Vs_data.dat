@@ -1,0 +1,9 @@
+#  column 1:  time
+#  column 2:  oberved magnitude
+#  column 3:  error in observed magnitude
+#  column 4:  Flag:  0=OK  1=Invalid S/K-correction
+0.00  16.800  0.100  0
+3.00  17.000  0.100  0
+4.00  17.100  0.100  0
+21.00  18.900  0.200  0
+23.00  19.700  0.300  0
