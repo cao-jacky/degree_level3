@@ -24,27 +24,35 @@ def data(loc, fl):
     f_2.close()
     return f_1_d, f_2_d
 
+def cnt(data, counts):
+    """ Counts. """
+
+    f_1_c = counts[0] # Counts of object from frame 1
+    f_2_c = counts[1] # Counts of object from frame 2
+    return f_1_c, f_2_c
+
+def psf(data, counts):
+    """ Tries to change the PSF so that it is perfectly subtracted. """
+    dt = data[0]
+    gauss_kernel = Gaussian2DKernel(1.44)     
+    smoothed_data_gauss = convolve(dt, gauss_kernel)
+    return smoothed_data_gauss
+
 def scaler(data, counts):
     """ Scales the second frame so that it correct removes the galaxy. """
+
+    psfed = psf(data, counts)
 
     f_1_c = counts[0] # Counts of object from frame 1
     f_2_c = counts[1] # Counts of object from frame 2
 
     ratio = f_2_c / f_1_c # The ratio we would need to get from frame 1 to frame 2
-    sc = data[0] * ratio # Frame 1 scaled to frame 2
+    sc = psfed * ratio # Frame 1 scaled to frame 2
     return sc
-
-def psf(data, counts):
-    """ Tries to change the PSF so that it is perfectly subtracted. """
-    dt = scaler(data, counts)
-    gauss_kernel = Gaussian2DKernel(2) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1) + Gaussian2DKernel(1)
-    smoothed_data_gauss = convolve(dt, gauss_kernel)
-    return smoothed_data_gauss
 
 def subtractor(data, counts):
     """ Performing the galaxy subtraction and returning subtracted frame. """
-    d_psf = psf(data, counts) # Applying the PSF scaler thing
-    #d_scl = scaler(data, counts) # Scaled data for frame 1
+    d_psf = scaler(data, counts) # Data PSFed then scaled
     return d_psf - data[1]
 
 def saver(loc, fl, counts):
@@ -55,4 +63,4 @@ def saver(loc, fl, counts):
     
     new = fits.PrimaryHDU(f_1_sub)
     new_n = fits.HDUList([new])
-    new_n.writeto(loc + '/subtracted_psfed38.fits')
+    new_n.writeto(loc + '/subtracted_newseries.fits')

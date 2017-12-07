@@ -16,7 +16,7 @@ def commands():
 
     for i in range(len(sn)):
         # Copying files over 
-        data_copy.copy_fol(src + sn[i], dest)
+        #data_copy.copy_fol(src + sn[i], dest)
         #print("Folder from data storage has been copied to this module folder. ")
     # ----------------------------------------------------------------------------#
         # Performs the galaxy subtraction
