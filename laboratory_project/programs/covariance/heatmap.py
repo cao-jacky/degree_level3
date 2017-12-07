@@ -47,7 +47,7 @@ def plotter(loc_sn):
     fig1 = pyplot.figure()
     pyplot.imshow(dt, norm=matplotlib.colors.LogNorm(vmin=0.001, vmax=1.5))
     pyplot.colorbar()
-    pyplot.savefig("heatmap.pdf")
+    pyplot.savefig("heatmap_" + sn[0] +".pdf")
 
 if  __name__ == '__main__':
     plotter(path + sn[0] + '_covariance.txt')
