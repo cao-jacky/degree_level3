@@ -7,12 +7,14 @@ pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
 pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
 
+path = '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/templated_light_curves/' 
+
 def data(sne):
     # Reading in the SN data for B and V bands
-    DataInModelB = 'data/' + sne + '/' + sne + '_lc_Bs_model.dat'
-    DataInModelV = 'data/' + sne + '/' + sne + '_lc_Vs_model.dat'
-    DataInB = 'data/' + sne + '/' + sne + '_lc_Bs_data.dat'
-    DataInV = 'data/' + sne + '/' + sne + '_lc_Vs_data.dat'
+    DataInModelB = path + 'data/' + sne + '/' + sne + '_lc_Bs_model.dat'
+    DataInModelV = path + 'data/' + sne + '/' + sne + '_lc_Vs_model.dat'
+    DataInB = path + 'data/' + sne + '/' + sne + '_lc_Bs_data.dat'
+    DataInV = path + 'data/' + sne + '/' + sne + '_lc_Vs_data.dat'
 
     # For the SN B data
     with open(DataInB) as f:
