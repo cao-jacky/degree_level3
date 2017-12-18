@@ -9,7 +9,7 @@ pyplot.rc('font', family='serif')
 pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
 
 path = '/Users/jackycao/Documents/Projects/degree_level3/laboratory_project/programs/covariance/'
-sn = ['2017hhz']
+sn = ['2017hhz', '2017hle']
 
 def data(loc_sn):
     """ Reads the file. """
@@ -40,14 +40,15 @@ def data_array(loc_sn):
             dt_n[i][j] = re.findall(r"[-+]?\d*\.\d+|\d+", dt[count-1])[0]
     return dt_n
 
-def plotter(loc_sn):
+def plotter(loc_sn, sn):
     """ Plots data into a heat map. """
     dt = data_array(loc_sn)
 
     fig1 = pyplot.figure()
     pyplot.imshow(dt, norm=matplotlib.colors.LogNorm(vmin=0.001, vmax=1.5))
     pyplot.colorbar()
-    pyplot.savefig("heatmap_" + sn[0] +".pdf")
+    pyplot.savefig("heatmap_" + sn +".pdf")
 
 if  __name__ == '__main__':
-    plotter(path + sn[0] + '_covariance.txt')
+    for i in range(len(sn)):
+        plotter(path + sn[i] + '_covariance.txt', sn[i])

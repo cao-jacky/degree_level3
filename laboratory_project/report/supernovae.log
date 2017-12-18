@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  18 DEC 2017 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  18 DEC 2017 18:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -649,6 +649,9 @@ Package: ulem 2012/05/18
 
 LaTeX Warning: Label `2017hhz-table' multiply defined.
 
+
+LaTeX Warning: Label `2017hle-data' multiply defined.
+
 )
 \openout1 = `supernovae.aux'.
 
@@ -851,18 +854,49 @@ Overfull \hbox (33.18501pt too wide) in paragraph at lines 286--287
  [] 
  []
 
-[4 <./results/2017hhz.pdf>] (./supernovae.bbl) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
+<results/2017hle.pdf, id=50, 462.52798pt x 346.89601pt>
+File: results/2017hle.pdf Graphic file (type pdf)
+
+<use results/2017hle.pdf>
+Package pdftex.def Info: results/2017hle.pdf used on input line 294.
+(pdftex.def)             Requested size: 270.30118pt x 202.73485pt.
+
+Overfull \hbox (33.18501pt too wide) in paragraph at lines 294--295
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<results/covariance/covariance.pdf, id=51, 322.20375pt x 269.005pt>
+File: results/covariance/covariance.pdf Graphic file (type pdf)
+
+<use results/covariance/covariance.pdf>
+Package pdftex.def Info: results/covariance/covariance.pdf used on input line 3
+02.
+(pdftex.def)             Requested size: 213.39566pt x 178.16776pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./results/2017hhz.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 318.
+
+(./supernovae.bbl) [5 <./results/2017hle.pdf> <./results/covariance/covariance.
+pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
 [6]
-Underfull \hbox (badness 1762) in paragraph at lines 444--444
+Underfull \hbox (badness 1762) in paragraph at lines 459--459
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 492.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 507.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -880,16 +914,16 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 4)
 
-### simple group (level 4) entered at line 494 ({)
-### simple group (level 3) entered at line 448 ({)
-### simple group (level 2) entered at line 407 ({)
-### simple group (level 1) entered at line 368 ({)
+### simple group (level 4) entered at line 509 ({)
+### simple group (level 3) entered at line 463 ({)
+### simple group (level 2) entered at line 422 ({)
+### simple group (level 1) entered at line 383 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13242 strings out of 493089
- 238076 string characters out of 6134841
- 339270 words of memory out of 5000000
- 16570 multiletter control sequences out of 15000+600000
+ 13253 strings out of 493089
+ 238370 string characters out of 6134841
+ 339284 words of memory out of 5000000
+ 16578 multiletter control sequences out of 15000+600000
  13249 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,47p,10436b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -912,10 +946,10 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on supernovae.pdf (11 pages, 314913 bytes).
+Output written on supernovae.pdf (11 pages, 961317 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 184 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

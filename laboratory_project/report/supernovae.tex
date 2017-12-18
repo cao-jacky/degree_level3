@@ -229,15 +229,15 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
 \begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
  \hline
  \textbf{Date Observed} & \textbf{$\boldsymbol{m_B}$} & \textbf{$\boldsymbol{\Delta{m_B}}$} & \textbf{$\boldsymbol{m_V}$} & \textbf{$\boldsymbol{\Delta{m_V}}$} \\ [0.5ex] 
- 17/10/20 & 16.8 & 0.1 & 17.1 & 0.1 \\
- 17/10/22 & 16.9 & 0.1 & 16.8 & 0.1 \\
- 17/10/23 & 16.8 & 0.2 & 16.9 & 0.1 \\
- 17/10/26 & 17.0 & 0.2 & 17.0 & 0.1 \\
- 17/10/29 & 17.2 & 0.1 & 17.0 & 0.1 \\
- 17/10/30 & 17.3 & 0.1 & 17.1 & 0.1 \\
- 17/11/05 & 17.7 & 0.2 & 17.3 & 0.2 \\
- 17/11/11 & 18.2 & 0.4 & 17.5 & 0.2 \\
- 17/11/16 & 18.6 & 0.2 & 17.8 & 0.1 \\
+ 20/10/17 & 16.8 & 0.1 & 17.1 & 0.1 \\
+ 22/10/17 & 16.9 & 0.1 & 16.8 & 0.1 \\
+ 23/10/17 & 16.8 & 0.2 & 16.9 & 0.1 \\
+ 26/10/17 & 17.0 & 0.2 & 17.0 & 0.1 \\
+ 29/10/17 & 17.2 & 0.1 & 17.0 & 0.1 \\
+ 30/10/17 & 17.3 & 0.1 & 17.1 & 0.1 \\
+ 05/11/17 & 17.7 & 0.2 & 17.3 & 0.2 \\
+ 11/11/17 & 18.2 & 0.4 & 17.5 & 0.2 \\
+ 16/11/17 & 18.6 & 0.2 & 17.8 & 0.1 \\
  17/11/17 & 18.8 & 0.2 & 18.2 & 0.4 \\
  \hline
 \end{tabular}
@@ -250,12 +250,12 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
 \begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
  \hline
  \textbf{Date Observed} & \textbf{$\boldsymbol{m_B}$} & \textbf{$\boldsymbol{\Delta{m_B}}$} & \textbf{$\boldsymbol{m_V}$} & \textbf{$\boldsymbol{\Delta{m_V}}$} \\ [0.5ex] 
- 17/10/26 & 17.8 & 0.3 & 16.8 & 0.1 \\
- 17/10/29 & 18.4 & 0.2 & 17.0 & 0.1 \\
- 17/10/30 & 18.6 & 0.2 & 17.1 & 0.1 \\
- 17/11/16 & 19.5 & 0.3 & 18.9 & 0.2 \\
+ 26/10/17 & 17.8 & 0.3 & 16.8 & 0.1 \\
+ 29/10/17 & 18.4 & 0.2 & 17.0 & 0.1 \\
+ 30/10/17 & 18.6 & 0.2 & 17.1 & 0.1 \\
+ 16/11/17 & 19.5 & 0.3 & 18.9 & 0.2 \\
  17/11/17 & 19.3 & 0.4 & 18.7 & 0.3 \\
- 17/11/18 & 19.6 & 0.5 & 18.7 & 0.3 \\
+ 18/11/17 & 19.6 & 0.5 & 18.7 & 0.3 \\
  \hline
 \end{tabular}
 \caption{The B and V band magnitudes and their uncertainties for SNe 2017hle on the given dates. The former values were calculated using equation \ref{eqn1} and the latter using equation \ref{eqn2}.}
@@ -284,8 +284,24 @@ sdfsdfsa
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.5cm]{results/2017hhz}
-\caption[]{The light curves for supernova 2017hhz. In the B band, the data has been plotted with the uncertainty in the magnitude plotted as well, }
+\caption[]{The light curves for supernova 2017hhz. In the B band, the data has been plotted with the uncertainty in the magnitude plotted as well. The first observation, for day zero, was made on Friday 20th October 2017.}
 \label{2017hhz-data}
+\end{center}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.5cm]{results/2017hle}
+\caption[]{The light curves for supernova 2017hle. In the B band, the data has been plotted with the uncertainty in the magnitude plotted as well, }
+\label{2017hle-data}
+\end{center}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=7.5cm]{results/covariance/covariance}
+\caption[]{COVARIANCE PLOT INNIT}
+\label{2017hle-data}
 \end{center}
 \end{figure}
 
@@ -299,7 +315,6 @@ It is highly unlikely that we will see supernova remnants for the supernova that
 In observing objects which are so faint we have the problem of trying to observe them. We need to balance the observing time to ensure that we do not oversaturate our frame with other stars. From the databases that we use, for this observation period the majority of our objects had been around the magnitudes of $\sim 18$ mag. But, we do not achieve this magnitude as there are various factors such as extinction affectinb data collection. 
 
 We can calculate the limitiing magnitude that our telescopes could detect by analysing our frames
-
 
 [neutrino studying]?
 
