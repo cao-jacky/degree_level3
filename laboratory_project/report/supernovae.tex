@@ -22,7 +22,7 @@
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 05/01/2018}
 
 \begin{abstract}              
-We have measured the magnitude of supernova explosions over an extended period of 34 days using $0.5$ m and $?.?$ m telescopes situated in Durham and La Palma. We have plotted several light curves and identified Type Ia, Type II, and ?? supernovae. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccesful due to redsjhift of something.
+We have measured the magnitude of supernova explosions over an extended period of 34 days using $0.5$ m and $?.?$ m telescopes situated in Durham and La Palma. We have plotted several light curves and identified Type Ia, Type II, and ?? supernovae. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
 \end{abstract}
 
 \maketitle
@@ -31,40 +31,40 @@ We have measured the magnitude of supernova explosions over an extended period o
 \section{Introduction} 
 \label{intro}
 \vspace{-2ex}
+In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, as a star runs out of nuclear fuel to burn, there is a possibility that the equilibrium configurations for a star will cease to exist. This leads to a final cataclysmic event, a supernova explosion, the luminosity of which, when at it's peak, can be as bright as a small galaxy \cite{longair}.
 
-In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, there is a possibility that the equilibrium configurations for a star will cease to exist after it has ran out of nuclear fuel to burn. This leads to a final awesome event, a supernova explosion, the luminosity of which (when at it's peak) can be as bright as a small galaxy \cite{longair}.
-
-Observing these events and measuring their magnitude over a period of time allows us to then plot light curves. The likes of which can then be used to visualise the evolution of a supernova, from this we can draw the conclusion that there is some order in the explosions. We find that if our sample of supernovae is large enough [find a value?], we see that they can be grouped together into different types just by features from their light curves, for example their shape.
+Observing these events and measuring their magnitude over a period of time allows us to then plot light curves. The likes of which can then be used to visualise the evolution of a supernova. With this we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova groups are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}.
 
 \vspace{-3ex}
 \subsection{Supernovae Classification}
 \vspace{-2ex}
 
-However, as we study the different spectra and light curve shapes of supernovae we begin to recognise that there are further sub-classifications \cite{longair}. Table \ref{sn_classes} highlights some of these subtypes. 
+However, as we further study the light curve shapes and also the spectra of supernovae we can begin to recognise that there are further sub-classifications within Type I and Type II. Table \ref{sn_classes} highlights some of these subtypes. 
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{c@{\hskip 20pt}c} 
  \hline
  \textbf{Type} & \textbf{Characteristic} \\ 
- Type Ia		& Si II line at $616.0$ nm \\
- 			& \em Type Ib and Type Ic also exist \em \\
- Type IIP 		& Reaches a plateau in it's light curve \\
- Type IIL		& Displays a linear decrease in it's light curve \\
- 			& \em Type IIn and Type IIb also exist \em \\
+ Ia		& Si II line at $616.0$ nm \\
+ Ia-91bg	& asdasd \\
+ 		& \em Type Ib and Type Ic also exist \em \\
+ IIP 		& Reaches a plateau in it's light curve \\
+ IIL		& Displays a linear decrease in it's light curve \\
+ 		& \em Type IIn and Type IIb also exist \em \\
  \hline
 \end{tabular}
-\caption{Some of the subclassifications of supernova \cite{longair}.}
+\caption{Some of the subclassifications of supernova and their characteristics which distinguish between them \cite{longair}.}
 \label{sn_classes}
 \end{table}
 
-In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be effectively used as standard candles, thus providing another distance measure in the universe. With this we could work out the geometry of the universe by calculating the cosmological parameters, Hubble's Constant ($H_0$), and the proportion of the universe that is dark matter ($\Omega_{\Lambda}$). 
+In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be effectively used as standard candles, thus providing another distance measure alongside cepheid variables. With this we could compute the geometry of the universe by calculating the cosmological parameters, Hubble's Constant ($H_0$), and the proportion of the universe that is dark matter ($\Omega_{\Lambda}$). 
 
-In Figure \ref{typeia-standard} we can see from multiple observation data, the light curves in B and V bands are generally homogenous. it must be noted that this graph which has been produced from archival supernova data, the actual magnitude peak at maximum brightness occurs at different days in different colour bands. More shall be explored of this in section [[whatever]].
+In Figure \ref{typeia-standard} we can see that if we superimpose multiple sets of Type Ia data, the light curves in the B and V bands follow a general relationship [[?]]. it must be noted that this graph which has been produced from archival supernova data, the actual magnitude peak at maximum brightness occurs at different days in different colour bands. More shall be explored of this in section [[whatever]].
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.5cm]{intro/typeia}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. The supernovae used are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}.}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. The archival supernovae data used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
 \label{typeia-standard}
 \end{center}
 \end{figure}
@@ -87,15 +87,6 @@ From spectral fits, we can calculate the velocities of the ejecta material which
 As this process relies on the Chandrasekhar limit, each Type Ia supernova which occurs will be the same as they would follow the same process of collapsing. They are useful as they  
 
 When plotting their magnitudes against time passed we see that their light curves are generally homogeneous. These objects are the most luminous supernovae known, their absolute magnitudes in the B band are typically $M_B = -19.5 \pm 0.1$ \cite{posn}. Using light curve relationships and models we can determine precisely the magnitudes of very distant SNe, this has allowed astronomers to determine the redshift-distance relation for redshifts high redshift objects ($z>1$). Then, with these calculated values it is then possible to estimate the cosmological parameters $\Omega_0$ and $\Omega_\Lambda$. In doing so, it has been found that using Type Ia SNe has produced agreement with the literature value. so and so (cite paper) have done this and produced values of. 
-
-\vspace{-3ex}
-\subsubsection{Type II Supernovae}
-\vspace{-2ex}
-Somehow retie in Type II, it's not as important as Type Ia for our experiment but it should suffice to be mentioned!
-
-For a star to end it's life as a Type II supernova explosion, it's core must collapse to produce the enormous amounts of energy that we associate with a SNe. For stars more massive than $8 M_{\odot}$, their post-main-sequence evolution relies on the continual burning of carbon, oxygen, and silicon burning. As this process continues to heat up the core to larger temperatures, photodisintegration will start to occur. Photons have enough energy to breakup heavier elements such as iron (\ce{^{56}_{26}Fe}) and helium (\ce{^{4}_{2}He}), this process is endothermic so energy is removed from the gas that would have created the pressure required to support the core of the star \cite{mod_ast}. 
-
-The free electrons which had been supporting the star through degeneracy pressure are now captured by heavy nuclei and by the protons that were produced through photodisintegration. Through the photodisintegration of iron, and combined with electron capture by other elements, most of the core's support disappears and then the core begins to collapse extremely rapidly. 
 
 \vspace{-3ex}
 \subsection{Supernova Discovery}
