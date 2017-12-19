@@ -162,13 +162,13 @@ In Appendix \ref{objectslog} is detailed all the objects that we chose to view o
 
 As we collected our supernova data over our experimental period we were then required to perform various photometry techniques to calculate the magnitudes of the explosions. It is important that this method was correct as we wanted accurate representations of the light curves. 
 
-With our \em{raw}\em data we firstly needed to identify our supernoa object, as these objects can blend in with the background of stars we had to look it up for the right ascenscion and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
+With our \em{raw}\em data we firstly needed to identify our supernova object, as these objects can blend in with the background of stars we had to look it up for the right ascension and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
 
-Once we had found our object we needed to find the magnitude of it. Using an astronomical analysis package such as GAIA [[reference and improve this]], we used various tools to perform this. We had to understand that we wanted to find the absolute mangitude of the supernoiva, this value being the 'actual magnitude', and not relative to other objects [[?]]. To perform this we had to choose at least two calibration stars which have known absolute magnitiudes.
+Once we had found our object we needed to find the magnitude of it. Using an astronomical analysis package such as GAIA [[reference and improve this]], we used various tools to perform this. We had to understand that we wanted to find the absolute magnitude of the supernova, this value being the 'actual magnitude', and not relative to other objects [[?]]. To perform this we had to choose at least two calibration stars which have known absolute magnitiudes.
 
 To count the number of counts that we are receiving from our supernova and calibration objects we have to choose an apperture size to place over these objects. It is important thatthe radius that is chosen maximises the signal whilst reducing the amount of noise that we are receving as well, it is important that we have the cleanest signal possible.
 
-To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to include unessecary data that would produce an errorneous result. 
+To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to include unnecessary data that would produce an erroneous result. 
 
 After a sky aperture had been chosen we would then try and find the best radius to use when doing our photometry. This radius would be constant for our calibration objects and for our supernova as well, and also for each day's data frames. This would ensure that we would be not 'cherrypicking' the signal that we are receving and that it would be an 'equal opportunity' for the signal to be detected to be the same each time [[??]]. 
 
@@ -200,14 +200,6 @@ fitting supernova templates using python programs, SNoopy - in depth analysis of
 understanding type ia models of data and how from our data we cannot be sure.  
  cb
 Photometry work 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=8.25cm]{images/collage_rectangle}
-\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt was made to remove the background galaxy for the data from 23rd November 2017.}
-\label{2017hhz_collage}
-\end{center}
-\end{figure}
 
 \vspace{-3ex}
 \subsection{Data Uncertainties}
@@ -261,6 +253,16 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
 \label{2017hhz-table}
 \end{table}
 
+asdfsdfsadfsdf
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=8.25cm]{images/collage_rectangle}
+\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt was made to remove the background galaxy for the data from 23rd November 2017.}
+\label{2017hhz_collage}
+\end{center}
+\end{figure}
+
 \vspace{-3ex}
 \section{Analysis}
 \label{analysis}
@@ -299,7 +301,7 @@ sdfsdfsa
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{results/covariance/covariance}
-\caption[]{COVARIANCE PLOT INNIT}
+\caption[]{Covariance between four variables, [[give them]], state which ones have been excluded and why we chose to view these one. These plots were produced using the fitMCMC function in SNooPy and they used the B and V band data for supernova 2017hhz.}
 \label{2017hle-data}
 \end{center}
 \end{figure}
