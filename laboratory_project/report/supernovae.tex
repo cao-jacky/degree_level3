@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
 \usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
@@ -17,7 +17,7 @@
 \textheight=26.385cm
 %Change textheight as the last resort...
 
-\title{Producing light curves for Type Ia supernova explosions and exploring their uncertainties}
+\title{Producing and fitting light curves for Type Ia supernova explosions }
  
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 05/01/2018}
 
@@ -31,31 +31,37 @@ We have measured the magnitude of supernova explosions over an extended period o
 \section{Introduction} 
 \label{intro}
 \vspace{-2ex}
-In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, as a star runs out of nuclear fuel to burn, there is a possibility that the equilibrium configurations for a star will cease to exist. This leads to a final cataclysmic event, a supernova explosion, the luminosity of which, when at it's peak, can be as bright as a small galaxy \cite{longair}.
+In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, as a star runs out of nuclear fuel to burn, there is a possibility that the equilibrium configurations for a star will cease to exist. This leads to a final cataclysmic event, a supernova explosion. The luminosity of such, when at it's peak, can be as bright as a small galaxy \cite{longair}.
 
-Observing these events and measuring their magnitude over a period of time allows us to then plot light curves. The likes of which can then be used to visualise the evolution of a supernova. With this we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova groups are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}.
+Observing these events and measuring their magnitude over a period of time allows us to plot light curves. The likes of which can then be used to visualise the evolution of a supernova. Using these plots we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}, and that Type II events are very hydrogen-rich \cite{obs_phys_class_sn}.
 
 \vspace{-3ex}
 \subsection{Supernovae Classification}
 \vspace{-2ex}
 
-However, as we further study the light curve shapes and also the spectra of supernovae we can begin to recognise that there are further sub-classifications within Type I and Type II. Table \ref{sn_classes} highlights some of these subtypes. 
+If we were to further study the light curve shapes and also the spectra of the supernovae from our sample, we would begin to recognise that there are further sub-classifications within Type I and Type II. In Table \ref{sn_classes} some of these subtypes are specified.
 
 \begin{table}[h!]
 \centering
+\begin{threeparttable}
 \begin{tabular}{c@{\hskip 20pt}c} 
  \hline
  \textbf{Type} & \textbf{Characteristic} \\ 
- Ia		& Si II line at $616.0$ nm \\
- Ia-91bg	& asdasd \\
+ Ia		& Si II line at $616.0$ nm \tnote{\dag} \\
+ Ia-91bg	& Absorption trough at $400-450$ nm \tnote{\dag} \\
  		& \em Type Ib and Type Ic also exist \em \\
  IIP 		& Reaches a plateau in it's light curve \\
  IIL		& Displays a linear decrease in it's light curve \\
  		& \em Type IIn and Type IIb also exist \em \\
  \hline
 \end{tabular}
-\caption{Some of the subclassifications of supernova and their characteristics which distinguish between them \cite{longair}.}
+\footnotesize
+\begin{tablenotes}
+\caption{Some of the subclassifications of supernova and their respective characteristics which distinguish between them from each other \cite{longair, obs_phys_class_sn}.}
+{\item[\dag] in the optical spectra of the supernovae.}
+\end{tablenotes}
 \label{sn_classes}
+\end{threeparttable}
 \end{table}
 
 In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be effectively used as standard candles, thus providing another distance measure alongside cepheid variables. With this we could compute the geometry of the universe by calculating the cosmological parameters, Hubble's Constant ($H_0$), and the proportion of the universe that is dark matter ($\Omega_{\Lambda}$). 
@@ -64,7 +70,7 @@ In Figure \ref{typeia-standard} we can see that if we superimpose multiple sets 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.5cm]{intro/typeia}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. The archival supernovae data used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. The archival supernovae data used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. The data has not been transformed apart from translated.}
 \label{typeia-standard}
 \end{center}
 \end{figure}
@@ -258,7 +264,7 @@ asdfsdfsadfsdf
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.25cm]{images/collage_rectangle}
-\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt was made to remove the background galaxy for the data from 23rd November 2017.}
+\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt has been made to remove the background galaxy for the data from 20th October 2017.}
 \label{2017hhz_collage}
 \end{center}
 \end{figure}
@@ -298,6 +304,19 @@ sdfsdfsa
 \end{center}
 \end{figure}
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c} 
+ \hline
+ \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2}$} & \textbf{$\boldsymbol{\chi^2_{\nu}}$} \\ [0.5ex] 
+ 2017hhz & 1 & 1 \\
+ 2017hle & 2 & 2 \\
+ \hline
+\end{tabular}
+\caption{$\chi^2$ and $\chi^2_{\nu}$ values that have been calculated for supernovae 2017hhz and 2017hle.}
+\label{chi2-table}
+\end{table}
+
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{results/covariance/covariance}
@@ -312,7 +331,7 @@ sdfsdfsa
 \vspace{-2ex}
 
 \subsection{Using SNooPy to fit templates to supernovae}
-dfasdfasdf
+SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
 
 \subsection{Observing supernovae}
 sdasd
@@ -327,7 +346,7 @@ We can calculate the limitiing magnitude that our telescopes could detect by ana
 
 [neutrino studying]?
 
-SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
+
 
 in using snoopy, how does it really fit the models to the data, what kind of parameters does it constrain. what is it's reliance on different parameters
 
@@ -351,15 +370,11 @@ big picture: justification of the uncertainties
 
 using the jackknife method to discover the range of uncertainties after we had used snoopy to fit a model, the whole different parameters relating to each other
 
-covariance and correlations between parameters
-
 statisitcal, experimental - different uncertainties
 
 extinction and galaxy extinction taking them into calculations
 
 hubble flow????
-
-how does SNooPy actually work - maybe just give this a section
 
 how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
 
