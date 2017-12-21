@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
 \usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
@@ -33,7 +33,7 @@ We have measured the magnitude of supernova explosions over an extended period o
 \vspace{-2ex}
 In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, as a star runs out of nuclear fuel to burn, there is a possibility that the equilibrium configurations for a star will cease to exist. This leads to a final cataclysmic event, a supernova explosion. The luminosity of such, when at it's peak, can be as bright as a small galaxy \cite{longair}.
 
-Observing these events and measuring their magnitude over a period of time allows us to plot light curves. The likes of which can then be used to visualise the evolution of a supernova. Using these plots we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}, and that Type II events are very hydrogen-rich \cite{obs_phys_class_sn}.
+Observing these events and measuring their magnitude over a period of time allows us to plot light curves. The likes of which can then be used to visualise the evolution of a supernova. Using these plots we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}, and that Type II events are very hydrogen-rich \cite{obs_phys_class_sn}. \ref{2017hhz-table}
 
 \vspace{-3ex}
 \subsection{Supernovae Classification}
@@ -43,41 +43,35 @@ If we were to further study the light curve shapes and also the spectra of the s
 
 \begin{table}[h!]
 \centering
-\begin{threeparttable}
 \begin{tabular}{c@{\hskip 20pt}c} 
  \hline
  \textbf{Type} & \textbf{Characteristic} \\ 
- Ia		& Si II line at $616.0$ nm \tnote{\dag} \\
- Ia-91bg	& Absorption trough at $400-450$ nm \tnote{\dag} \\
+ Ia		& Si II line present at $616.0$ nm in spectra \\
+ Ia-91bg	& Absorption trough at $400-450$ nm in spectra \\
  		& \em Type Ib and Type Ic also exist \em \\
- IIP 		& Reaches a plateau in it's light curve \\
- IIL		& Displays a linear decrease in it's light curve \\
+ IIP 		& Reaches a plateau in it's light curve  \\
+ IIL		& Rapid linear decrease in light curve \\
  		& \em Type IIn and Type IIb also exist \em \\
  \hline
 \end{tabular}
-\footnotesize
-\begin{tablenotes}
 \caption{Some of the subclassifications of supernova and their respective characteristics which distinguish between them from each other \cite{longair, obs_phys_class_sn}.}
-{\item[\dag] in the optical spectra of the supernovae.}
-\end{tablenotes}
 \label{sn_classes}
-\end{threeparttable}
 \end{table}
 
-In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be effectively used as standard candles, thus providing another distance measure alongside cepheid variables. With this we could compute the geometry of the universe by calculating the cosmological parameters, Hubble's Constant ($H_0$), and the proportion of the universe that is dark matter ($\Omega_{\Lambda}$). 
+In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be used as standard candles, thus providing a reliable distance indicator. 
 
-In Figure \ref{typeia-standard} we can see that if we superimpose multiple sets of Type Ia data, the light curves in the B and V bands follow a general relationship [[?]]. it must be noted that this graph which has been produced from archival supernova data, the actual magnitude peak at maximum brightness occurs at different days in different colour bands. More shall be explored of this in section [[whatever]].
+We can see this homogeneity in Figure \ref{typeia-standard}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{typeia-standard}.
+
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.5cm]{intro/typeia}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. The archival supernovae data used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. The data has not been transformed apart from translated.}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time axis and magnitude axis to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
 \label{typeia-standard}
 \end{center}
 \end{figure}
 
-\vspace{-3ex}
-\subsubsection{Type I Supernovae}
-\vspace{-2ex}
+In understanding the consistency of Type Ia light curves, we must explore and understand the mechanisms which lead to these events. 
+
 In understanding why the optical spectra of Type I supernovae do not contain the Balmer hydrogen features, we must look at the physical composition of the objects. Type I SNe occur with stars which have lost their hydrogen envelopes, either from strong mass-loss from their surface layers, or because they involve the explosion of white dwarfs which lost their hydrogen envelopes when they were formed \cite{longair} [[does that make sense??]]. 
 
 With the important of Type Ia supernovae as distance moduli we will explore the systems that lead up to their explosion, the explosion mechanism, and what occurs post explosion.
@@ -110,7 +104,7 @@ In the classification of supernovae and in determining their redshifts, spectros
 \vspace{-2ex}
 In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
 
-
+Using samples of nearby (redshift $z \lesssim0.1$) Type Ia supernovae, we can derive a value for Hubble's Constant, $H_0$, by plotting them on a a Hubble diagram \cite{exp_uni_sn}. It would also be possible to use Type Ia's to provide statistical constraints on cosmological models, for example with an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. On top of that you, could measure the time-averaged equation of state of dark energy \cite{sn_consts}, $w$, a value which can be used to characterise the state of the universe. For an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. [[paragraph to use as a basis for this section]]
 
 asdasd \cite{abs_phil}
 \begin{equation}
@@ -256,7 +250,7 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
  \hline
 \end{tabular}
 \caption{The B and V band magnitudes and their uncertainties for SNe 2017hle on the given dates. The former values were calculated using equation \ref{eqn1} and the latter using equation \ref{eqn2}.}
-\label{2017hhz-table}
+\label{2017hle-table}
 \end{table}
 
 asdfsdfsadfsdf
