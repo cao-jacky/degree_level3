@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  23 DEC 2017 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  23 DEC 2017 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,11 +866,12 @@ LaTeX Warning: Reference `eqn1' on page 4 undefined on input line 274.
 
 LaTeX Warning: Reference `eqn2' on page 4 undefined on input line 274.
 
-<images/collage_rectangle.pdf, id=51, 999.735pt x 579.60541pt>
-File: images/collage_rectangle.pdf Graphic file (type pdf)
+<images/collage_rectangle_small.pdf, id=51, 999.735pt x 579.60541pt>
+File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
-<use images/collage_rectangle.pdf>
-Package pdftex.def Info: images/collage_rectangle.pdf used on input line 282.
+<use images/collage_rectangle_small.pdf>
+Package pdftex.def Info: images/collage_rectangle_small.pdf used on input line 
+282.
 (pdftex.def)             Requested size: 234.73523pt x 136.08347pt.
 
 
@@ -923,8 +924,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 352.
 
-[5 <./images/collage_rectangle.pdf> <./results/2017hhz.pdf> <./results/2017hle.
-pdf
+[5 <./images/collage_rectangle_small.pdf> <./results/2017hhz.pdf> <./results/20
+17hle.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./results/2017hle.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
@@ -971,7 +972,7 @@ LaTeX Warning: There were multiply-defined labels.
 ### bottom level 
 Here is how much of TeX's memory you used:
  13607 strings out of 493089
- 242843 string characters out of 6134841
+ 242873 string characters out of 6134841
  351955 words of memory out of 5000000
  16907 multiletter control sequences out of 15000+600000
  15321 words of font info for 56 fonts, out of 8000000 for 9000
@@ -1000,10 +1001,10 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on supernovae.pdf (13 pages, 18736947 bytes).
+Output written on supernovae.pdf (13 pages, 1336798 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 223 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
