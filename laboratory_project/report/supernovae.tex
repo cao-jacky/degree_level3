@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb,relsize}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
 \usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
@@ -112,37 +112,35 @@ These programs do not detract from the work that astronomers have to perform in 
 \vspace{-3ex}
 \subsection{Application to Cosmology} \label{appcosmo}
 \vspace{-2ex}
-Once we have our optical observations of Type Ia supernovae, we can then proceed to produce light curves and use them for cosmology. 
+Once optical observations for Type Ia supernovae have been obtained, light curves can then be produced and their results can be used them for cosmology. 
 
-Their usage is important as they 
+We find that before Type Ia supernovae data has been corrected for the correlation between maximum luminosity and the width of the light curve about maximum luminosity \cite{longair, abs_phil}, the dispersion of the absolute magnitudes at peak is less than 0.5 magnitudes. Once this correlation is accounted for, there is little dispersion and the light curves lie on top of one another, they are homogeneous. 
+
+With this in mind, if a new Type Ia supernova is discovered and enough data has been collected to produce a light curve, using that and the width-luminosity relation it would be possible to calculate their absolute magnitudes, thus they can be used to determine the redshift-distance relation \cite{mod_ast}.
+
+If we had a sample of nearby Type Ia supernovae with redshifts of $\mathrel{\mathsmaller{\lesssim}} 0.1$, we could derive a value for Hubble's Constant by plotting them on a a Hubble diagram \cite{exp_uni_sn}, or we could use a rearranged form of Hubble's Law. Given as,
+\begin{equation}
+v = H_0 d, 
+\label{h_nought}
+\end{equation}
+where $v$ is the recessional velocity of the supernova, $H_0$ is the value for Hubble's Constant, and $d$ is the distance to the supernova \cite{mod_ast}. 
+
+It would also be possible to use Type Ia's to provide statistical constraints on cosmological models, for example with an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. On top of that you, could measure the time-averaged equation of state of dark energy \cite{sn_consts}, $w$, a value which can be used to characterise the state of the universe. For an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. 
 
 In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
 
 They expect to see $\sim 200$ Type Ia supernovae per year \cite{assasn-rev}, 
 
-Using samples of nearby (redshift $z \lesssim0.1$) Type Ia supernovae, we can derive a value for Hubble's Constant, $H_0$, by plotting them on a a Hubble diagram \cite{exp_uni_sn} and then using a rearranged form of equation \ref{h_nought}. 
-asdasd \cite{abs_phil}
-\begin{equation}
-v = H_0 d, 
-\label{h_nought}
-\end{equation}
-with $v$ as the velocity of the receding object, $H_0$ as the value for Hubble's 
-find a reference for this.
-
- It would also be possible to use Type Ia's to provide statistical constraints on cosmological models, for example with an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. On top of that you, could measure the time-averaged equation of state of dark energy \cite{sn_consts}, $w$, a value which can be used to characterise the state of the universe. For an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. [[paragraph to use as a basis for this section]]
-
-When plotting their magnitudes against time passed we see that their light curves are generally homogeneous. These objects are the most luminous supernovae known, their absolute magnitudes in the B band are typically $M_B = -19.5 \pm 0.1$ \cite{posn}. Using light curve relationships and models we can determine precisely the magnitudes of very distant SNe, this has allowed astronomers to determine the redshift-distance relation for redshifts high redshift objects ($z>1$). Then, with these calculated values it is then possible to estimate the cosmological parameters $\Omega_0$ and $\Omega_\Lambda$. In doing so, it has been found that using Type Ia SNe has produced agreement with the literature value. so and so (cite paper) have done this and produced values of. 
-
-
-
 \vspace{-3ex}
 \subsection{Project Aims}
 \vspace{-2ex}
-This paper outlines the study that was undertaken in an attempt to understand the evolution of the magnitudes of different supernovae over a time period [[?]]. From collected data it would be possible to produce light curves which we can use to identify the type of supernova that we were observing. In also understanding the uncertainties further analysis could be performed such as galaxy subtraction or [[think of something for here...]].
+This paper discusses the study that was undertaken to observe Type Ia supernovae and the different approaches employed to fit template light curves onto collected data. Our motivations were to [[?]]
 
-Section \ref{obsver} describes the methods used to collect and analyse the data, plus the uncertainties that arise during the experiment and how they were dealt with. Our final light curves, and the methods that were used to fit these models to the observations is summarised in Section \ref{analysis}. Section \ref{discussion} discusses the different blahj blah blah, and explores potential work that could be performed. With Section \ref{conclusions} provididng a summary and conlusion.
+In Section \ref{obsver} the methods used to collect and analyse the data are described, plus the uncertainties that arose during the experiment and how they were accounted for. Our final light curves, and the methods that were used to fit these models to the observations is summarised in Section \ref{analysis}. Section \ref{discussion} discusses the different blahj blah blah, and explores potential work that could be performed. With Section \ref{conclusions} providing a summary and conclusion to our work.
 
 We also focussed on understanding the sources of uncertainties and attempted to reduce them within our analysis to produce magnitudes which would be more true to what they should be [[?]]. 
+
+%From collected data it would be possible to produce light curves which we can use to identify the type of supernova that we were observing. In also understanding the uncertainties further analysis could be performed such as galaxy subtraction or [[think of something for here...]].
 
 \vspace{-3ex}
 \section{Observations} 
