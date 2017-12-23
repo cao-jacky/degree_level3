@@ -5,6 +5,12 @@ P.~Astier.
 \newblock {The expansion of the universe observed with supernovae}.
 \newblock {\em Reports on Progress in Physics}, 75(116901), 2012.
 
+\bibitem{assasn-rev}
+D.~Bersier et~al.
+\newblock {The All-Sky Automated Survey for Supernovae}.
+\newblock {\em Revista Mexicana de Astronomia y Astrofisica}, 48(1):78--82,
+  2016.
+
 \bibitem{lascumbres}
 T.~M. Brown et~al.
 \newblock {Las Cumbres Observatory Global Telescope Network}.
@@ -33,11 +39,6 @@ A.~Gal-Yam.
   Classification of Supernovae}.
 \newblock Springer International Publishing AG, 2017.
 
-\bibitem{ia_vel}
-W.~Hillebrandt and J.~C. Niemeyer.
-\newblock {Type Ia Supernova Explosion Models}.
-\newblock {\em Annual Review of Astronomy and Astrophysics}, 38:191--230, 2000.
-
 \bibitem{jha}
 S.~Jha et~al.
 \newblock {UBVRI Light Curves of 44 Type Ia Supernovae}.
@@ -62,7 +63,7 @@ T.~Matheson et~al.
 
 \bibitem{abs_phil}
 M.~M. Phillips.
-\newblock {The Absolute Magnitudes of Type Ia Supernovae}.
+\newblock {The absolute magnitudes of Type Ia supernovae}.
 \newblock {\em The Astrophysics Journal}, 413(2):105--108, 1993.
 
 \bibitem{posn}
