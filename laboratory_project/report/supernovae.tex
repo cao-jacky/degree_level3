@@ -17,7 +17,7 @@
 \textheight=26.385cm
 %Change textheight as the last resort...
 
-\title{Producing and fitting light curves for Type Ia supernova explosions }
+\title{Observing Type Ia supernovae and fitting templated light curves}
  
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 05/01/2018}
 
@@ -58,7 +58,7 @@ If we were to further study the light curve shapes and also the spectra of the s
 \label{sn_classes}
 \end{table}
 
-In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be used as standard candles, thus providing a reliable distance indicator. 
+In the application to cosmology one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be used as standard candles, thus providing a reliable distance indicator.  
 
 We can see this homogeneity in Figure \ref{typeia-standard}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{typeia-standard}.
 
@@ -101,16 +101,18 @@ In attempting to discover supernovae it is important that the search is not conf
 
 A general method which can be employed to discover new supernovae is one which involves data comparison. If a survey takes an image of the entire night sky for every night, then to find new supernovae all that would be required is to subtract one night's data from the previous' and any objects which remain would be objects that could be new supernovae \cite{assasn-rev}. In reality it is not that simple, frames need to be cleaned of noise and they also require to be transformed in response to the point spread function. Plus, follow up observations would have to be made to verify if the object is supernovae or whether it is an anomalous object such as a cataclysmic variable. 
 
-One such survey which employs this is the \em{All-Sky Automated Survey for Supernovae }\em (or ASAS-SN). Having Together they can produce a survey of the entire visible sky up to a depth of $\sim 17$ mag \cite{asn_lc}.
+One such survey which employs this is the \em{All-Sky Automated Survey for Supernovae }\em (or ASAS-SN). With a coverage of around $48,000$ square degrees of the night sky and being able to see up to a depth of $\sim 17$ mag \cite{asn_lc}, ASAS-SN is able to find many more supernovae and also supernovae which are close to the cores of galaxies, vastly increasing the discovery rate of bright supernova explosions. 
 
-With this case specifically it has been set so that the data is taken automatically, but it requires humans to go over it. Another method that can be used is to observe a location such as a galactic cluster and do essentially the same method.
+However, the majority of the supernovae are close enough to the detection limit that they need to be validated by other astronomers \cite{asn_lc}. This human review of transients has led to projects such as \textit{Supernova Hunters} \cite{cit-sci}, a citizen science program where volunteers are asked to classify objects which could be potential supernova candidates.  
 
-In the classification of supernovae and in determining their redshifts, spectroscopic observations are required on the objects after they have been discovered \cite{lascumbres}. While we can use light curves to find the type of a supernova, it is more effective to use their spectra as that will allow us to be more certain [??].
+These programs do not detract from the work that astronomers have to perform in the classification of supernovae, but it is equally important as it allows for the improvement of neural networks so that automatic surveys such as ASAS-SN could work more efficiently and autonomously \cite{cit-sci}.  
 
 \vspace{-3ex}
 \subsection{Application to Cosmology} \label{appcosmo}
 \vspace{-2ex}
 In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
+
+They expect to see $\sim 200$ Type Ia supernovae per year \cite{assasn-rev}, 
 
 Using samples of nearby (redshift $z \lesssim0.1$) Type Ia supernovae, we can derive a value for Hubble's Constant, $H_0$, by plotting them on a a Hubble diagram \cite{exp_uni_sn}. It would also be possible to use Type Ia's to provide statistical constraints on cosmological models, for example with an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. On top of that you, could measure the time-averaged equation of state of dark energy \cite{sn_consts}, $w$, a value which can be used to characterise the state of the universe. For an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. [[paragraph to use as a basis for this section]]
 
