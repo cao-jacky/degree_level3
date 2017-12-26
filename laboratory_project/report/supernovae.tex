@@ -105,27 +105,37 @@ One such survey which employs this is the \em{All-Sky Automated Survey for Super
 
 However, the majority of the supernovae are close enough to the detection limit that they need to be validated by other astronomers \cite{asn_lc}. This human review of transients has led to projects such as \textit{Supernova Hunters} \cite{cit-sci}, a citizen science program where volunteers are asked to classify objects which could be potential supernova candidates.  
 
-These programs do not detract from the work that astronomers have to perform in the classification of supernovae, but it is equally important as it allows for the improvement of neural networks so that automatic surveys such as ASAS-SN can work more autonomously and efficiently \cite{cit-sci}.  
+These programs do not detract from the work that astronomers have to perform in the classification of supernovae, but it is equally important as it allows for the improvement of neural networks so that automatic surveys such as ASAS-SN could work more autonomously and efficiently \cite{cit-sci}.  
 
 %In all of this, we must keep in mind that telescopes are the key instruments in observing supernovae, or any astronomical object for that matter. To view objects which are 
 
 \vspace{-3ex}
 \subsection{Application to Cosmology} \label{appcosmo}
 \vspace{-2ex}
-Once optical observations for Type Ia supernovae have been obtained, light curves can then be produced and their results can be used them for cosmology. 
+Once optical observations for Type Ia supernovae have been obtained, light curves can then be produced - the conversion of a time series of photometric observations into a set of model parameters for each supernova \cite{sn_consts}, this can then be used for cosmology. 
 
-We find that before Type Ia supernovae data has been corrected for the correlation between maximum luminosity and the width of the light curve about maximum luminosity \cite{longair, abs_phil}, the dispersion of the absolute magnitudes at peak is less than 0.5 magnitudes. Once this correlation is accounted for, there is little dispersion and the light curves lie on top of one another, they are homogeneous. 
+We find that before Type Ia supernovae data has been corrected for the correlation between maximum luminosity and the width of the light curve about maximum luminosity \cite{longair, abs_phil}, the dispersion of the absolute magnitudes at peak is less than 0.5 magnitudes. Once this correlation is accounted for, there is little dispersion and the light curves lie on top of one another, they are homogeneous in nature. 
 
 With this in mind, if a new Type Ia supernova is discovered and enough data has been collected to produce a light curve, using that and the width-luminosity relation it would be possible to calculate their absolute magnitudes, thus they can be used to determine the redshift-distance relation \cite{mod_ast}.
 
-If we had a sample of nearby Type Ia supernovae with redshifts of $\mathrel{\mathsmaller{\lesssim}} 0.1$, we could derive a value for Hubble's Constant by plotting them on a a Hubble diagram \cite{exp_uni_sn}, or we could use a rearranged form of Hubble's Law. Given as,
+For example, if we had a sample of nearby Type Ia supernovae with redshifts of $\mathrel{\mathsmaller{\lesssim}} 0.1$, we could derive a value for Hubble's Constant by plotting them on a Hubble diagram \cite{exp_uni_sn}, and in turn use a rearranged form of Hubble's Law,
 \begin{equation}
-v = H_0 d, 
+H_0 = \frac{v}{d}, 
 \label{h_nought}
 \end{equation}
-where $v$ is the recessional velocity of the supernova, $H_0$ is the value for Hubble's Constant, and $d$ is the distance to the supernova \cite{mod_ast}. 
+where $H_0$ is the value for Hubble's Constant, $v$ is the recessional velocity of the supernova, and $d$ is the distance to the supernova \cite{mod_ast}. 
 
-It would also be possible to use Type Ia's to provide statistical constraints on cosmological models, for example with an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. On top of that you, could measure the time-averaged equation of state of dark energy \cite{sn_consts}, $w$, a value which can be used to characterise the state of the universe. For an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. 
+To calculate the recessional velocity, the redshift of the supernova has to be obtained, this could be obtained by making spectroscopic observations of the supernovae, and then $v$ would be calculated using,
+ \begin{equation}
+v = zc,
+\label{redshift}
+\end{equation}
+
+where $v$ is the recessional velocity of the supernova, $z$ is the redshift of the supernova, and $c$ is the speed of light in a vacuum \cite{mod_ast}.
+
+% redshift equation is only valid for low speeds? mention this?
+
+Extending the usage of Type Ia's in cosmology, they could also be used to provide statistical constraints on cosmological models, for example for an $\Omega_M$, $\Omega_{\Lambda}$ Universe (where $\Omega_M$ is the mass density which includes ordinary and dark matter, and $\Omega_{\Lambda}$ is the effective mass density of dark energy) \cite{mod_ast, exp_uni_sn}. Additionally, the time-averaged equation of state of dark energy, $w$, could be measured \cite{sn_consts}. This is a value which can be used to characterise the state of the universe - for an accelerating, dark energy dominated universe we would find that $w \approx -1$ \cite{longair}. 
 
 In discovering supernovae we can calculate the rates at which supernovae occur. Surveying different parts of the sky we can produce an estimate for the rate at which supernova explosions happen.
 
@@ -134,7 +144,7 @@ They expect to see $\sim 200$ Type Ia supernovae per year \cite{assasn-rev},
 \vspace{-3ex}
 \subsection{Project Aims}
 \vspace{-2ex}
-This paper discusses the study that was undertaken to observe Type Ia supernovae and the different approaches employed to fit template light curves onto collected data. Our motivations were to [[?]]
+This paper discusses the study that was undertaken to observe Type Ia supernovae and the approaches employed to fit template light curves onto collected data. Our motivations were to [[?]]
 
 In Section \ref{obsver} the methods used to collect and analyse the data are described, plus the uncertainties that arose during the experiment and how they were accounted for. Our final light curves, and the methods that were used to fit these models to the observations is summarised in Section \ref{analysis}. Section \ref{discussion} discusses the different blahj blah blah, and explores potential work that could be performed. With Section \ref{conclusions} providing a summary and conclusion to our work.
 
