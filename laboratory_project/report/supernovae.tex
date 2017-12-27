@@ -22,7 +22,7 @@
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 05/01/2018}
 
 \begin{abstract}              
-We have measured the magnitude of supernova explosions over an extended period of 34 days using $0.5$ m and $?.?$ m telescopes situated in Durham and La Palma. We have plotted several light curves and identified Type Ia, Type II, and ?? supernovae. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
+We have measured the magnitude of supernova explosions over an extended period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. We have plotted several light curves and have identified a Type Ia and Type Ia-91bg supernova. Our fittings have had $\chi^2$ analysis has performed, and it has produced values of ?, ?, ?. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
 \end{abstract}
 
 \maketitle
@@ -61,7 +61,7 @@ If we were to further study the light curve shapes and also the spectra of the s
 
 In the application to cosmology, one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be used as standard candles, thus providing a reliable distance indicator.  
 
-We can see this homogeneity in Figure \ref{typeia-standard}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{typeia-standard}.
+We can see this homogeneity in Figure \ref{typeia-standard}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands (further discussion on bands and photometric filters in Section \ref{observer-collection}) follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{typeia-standard}.
 
 \squeezeup
 \begin{figure}[!h]
@@ -163,6 +163,7 @@ In Section \ref{obsver} we describe the how we collected and analysed our supern
 \label{obsver}
 \vspace{-2ex}
 \subsection{Data Collection}
+\label{observer-collection}
 \vspace{-2ex}
 To observe supernova explosions our main pieces of experimental equipment were telescopes which had been fitted with CCD cameras.
 
@@ -170,39 +171,27 @@ We employed three out of the four telescopes based on the Department of Physic's
 
 For the vast majority of our observations we used the 16$''$ telescope (Far-East-16, or FE16) from the Durham array and the robotic 0.5 m telescope (pt5m) from La Palma. We used these two telescopes predominantly as they allowed us the best resolution and illumination on our faint objects. Compared to the 14$''$ telescopes which are also part of the Durham array, having a larger aperture means that a more sufficient number of photons could be obtained so that we could study our targets more clearly. 
 
-Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{cassegrain}. With this design, the telescope can produce good quality images over a field of view of several tens of arc-minutes across, as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
+Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{cassegrain}. With this design, the telescope can produce good quality images over a field of view of several tens of arc-minutes across as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=8cm]{observations/cassegrain}
-\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be mounted.}
+\includegraphics[width=7.5cm]{observations/cassegrain}
+\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed.}
 \label{cassegrain}
 \end{center}
 \end{figure}
 \squeezeup
 \squeezeup
 
-It is important to note that in our experimental data collection, being able to collect as much light as possible is what was most important?
+To record and make use of the collected light from our supernova targets we had to use CCD cameras which were mounted at the focal points of our telescopes. In a simplified manner, these cameras would convert the photons into electrons and then the electron signal would be processed by a computer into an image \cite{mod_ast, tel_tech}. This could then be manipulated and analysed using software packages such as \textit{GAIA} \cite{starlink}.
 
-Having collected the light using a telescope, to observe the supernova explosions we requires instruments which can record the photons, thus the CCD's were used to capture the data which was then subsequently stored onto servers. 
+For our project in particular, we wanted to produce light curves of supernovae within different colour bands. By using photometric filters on our CCDs we were able to observe supernovae within these bands. Meaning that we were only able to view specific wavelengths of light from our objects, this would correspond to particular energies in the elements present in astronomical bodies \cite{astro_filters}. 
 
-are sensitive enough to receive the photons which have travelled for vast distances before being recorded. 
+% Mention how different type of information is encoded into different bands?
 
-In Table \ref{telescope-ccd-specs} we give a summary of the specifications of the telescopes
-\begin{table}[h!]
-\centering
-\begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
- \hline
- \textbf{Telescope} & \textbf{Pixel Width} & \textbf{Plate Scale} \\ [0.5ex] 
- Far-East-16 & 17.8 & 0.3 \\
- pt5m & ?? & ?? \\
- East-14 & ?? & ?? \\
- West-14 & ?? & ?? \\
- \hline
-\end{tabular}
-\caption{A summary of the specifications for the telescopes that were used to collect data.}
-\label{telescope-ccd-specs}
-\end{table}
+Once we had selected our observation filters and when we were actually observing, we had to be aware of the possible over-saturation of the CCDs. As our objects were faint and observing conditions often could be bad, we had to collect as much light as possible before our images became oversaturated due to a brighter object within the same field of view. This would be mitigated by lowering the time that we would be observing for, thus there would be less photons collected from the secondary object.
+
+But, having just one image of our faint supernovae to analyse would not be representative of it's magnitude, through the process of image stacking (more in Section \ref{observer-observations}) we were able to improve the quality of the image by compositing together several images of the same area of sky. So during observation we had to take multiple exposures for the set given exposure time and also for each photometric filter. 
 
 As we were observing objects which were faint we required that we either have a large telescope to collect as much light as possible [reference], or have good seeing conditions which allowed us to collect as much light as possible over a large observation time.
 
@@ -215,6 +204,7 @@ in observations how has the moon affected us
 
 \vspace{-3ex}
 \subsection{Observations Made}
+\label{observer-observations}
 \vspace{-2ex}
 
 Over a period of 34 days we took images of SNe, however this also depended on the conditions and whether it was worth observing if the seeing was bad e.g. obscured by bad weather.
@@ -459,6 +449,8 @@ sdfsdfasdas
 We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank R. Wilson for the maintenance of the robotic telescope at La Palma.
 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
+
+The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}

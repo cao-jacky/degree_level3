@@ -27,11 +27,22 @@ A.~Conley et~al.
   three years of the Supernova Legacy Survey}.
 \newblock {\em The Astrophysical Journal Supplement Series}, 192(1):29, 2011.
 
+\bibitem{starlink}
+M.~J. Currie et~al.
+\newblock {Starlink Software in 2013}.
+\newblock {\em Astronomical Society of the Pacific Conference Series}, 485,
+  2013.
+
 \bibitem{obs_phys_class_sn}
 A.~Gal-Yam.
 \newblock {\em Handbook of Supernovae: Observational and Physical
   Classification of Supernovae}.
 \newblock Springer International Publishing AG, 2017.
+
+\bibitem{astro_filters}
+M.~Griffiths.
+\newblock {\em Choosing and Using Astronomical Filters}.
+\newblock Springer, 2015.
 
 \bibitem{jha}
 S.~Jha et~al.

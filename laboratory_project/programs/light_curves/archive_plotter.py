@@ -93,7 +93,7 @@ def plot():
     pyplot.ylim((20,13))
 
     pyplot.xlabel(r'\textbf{Days Since Peak Magnitude}', fontsize=13)
-    pyplot.ylabel(r'\textbf{Absolute Magnitude (plus offset)}', fontsize=15)
+    pyplot.ylabel(r'\textbf{Absolute Magnitude}', fontsize=15)
 
     pyplot.tick_params(axis='y', which='major', labelsize=15)
     pyplot.tick_params(axis='x', labelsize=15)
