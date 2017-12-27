@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 DEC 2017 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 DEC 2017 14:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -977,10 +977,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 465 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13683 strings out of 493089
- 243995 string characters out of 6134841
- 353974 words of memory out of 5000000
- 16977 multiletter control sequences out of 15000+600000
+ 13682 strings out of 493089
+ 243974 string characters out of 6134841
+ 353958 words of memory out of 5000000
+ 16976 multiletter control sequences out of 15000+600000
  15321 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,47p,10436b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1007,7 +1007,7 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on supernovae.pdf (14 pages, 1363896 bytes).
+Output written on supernovae.pdf (14 pages, 1363893 bytes).
 PDF statistics:
  240 PDF objects out of 1000 (max. 8388607)
  159 compressed objects within 2 object streams
