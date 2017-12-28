@@ -163,12 +163,12 @@ We employed three out of the four telescopes based on the Department of Physic's
 
 For the vast majority of our observations we used the 16$''$ telescope (Far-East-16, or FE16) from the Durham array and the robotic 0.5 m telescope (pt5m) from La Palma. We used these two telescopes predominantly as they allowed us the best resolution and illumination on our faint objects. Compared to the 14$''$ telescopes which are also part of the Durham array, having a larger aperture means that a more sufficient number of photons could be obtained so that we could study our targets more clearly. 
 
-Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{cassegrain}. With this design, the telescope can produce good quality images over a field of view of several tens of arc-minutes across as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
+Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{cassegrain}. With this design, the telescope can produce good quality images over a field of view of several tens of arcminutes across as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{observations/cassegrain}
-\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former deisgn the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed.}
+\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former deisgn the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed. \\ (\textit{This diagram has been adapted from Telescopes and Techniques} \cite{tel_tech}.)}
 \label{cassegrain}
 \end{center}
 \end{figure}
@@ -183,17 +183,23 @@ Once we had selected our observation filters and began observations, we had to b
 
 In spite of this, having just one image of our faint supernovae to analyse would not be representative of it's magnitude. Through the process of image stacking (more in Section \ref{observer-observations}) we were able to improve the quality of the image by compositing together several images of the same area of sky. Thus it was beneficial during our observation nights to take multiple exposures for our chosen given exposure time and also for each photometric filter that we were going to use. 
 
-As we progressed through our experimental period we came to realise that astronomical observations are heavily reliant on weather conditions. What happened to be occurring in the atmosphere that night would have an influence on what you could see with your telescope. 
+As we progressed through our experimental period we came to realise that astronomical observations are heavily reliant on weather conditions. What happened to be occurring in the atmosphere that night would have an influence on what you could see with your telescope. This overall effect of the atmosphere on images is called \textit{seeing} \cite{tel_tech}.
 
-In the first instance, having a night sky without any visible clouds would be a good initial step, as even the light from the brightest stars cannot penetrate through various layers of cloud. Once the conditions are clear, the biggest factor that would have to be considered is atmospheric turbulence. This is when air is turbulently mixed together at different temperatures, thus creating cells or pockets which have different refractive indexes to the area surrounding it \cite{princ_stell_inter}. The effect of which is lowering the quality of the image which is captured.
+In the first instance, having a night sky without any visible clouds would be a good initial step. Once the conditions appear to be clear, the atmospheric turbulence would have to be considered next. This is the process when air is turbulently mixed together at different temperatures, thus creating cells or pockets which have different refractive indexes when compared to their surrounding area \cite{princ_stell_inter}. The effect of this is to produce an image which is blurred and appears to have moved.
 
-To account for this, one could use an adaptive optic system to correct for these atmospheric distortions. For example, an artificial laser guide star could be created and then the amount that is being perturbed by can be applied to the main object that is being observed.
+In quantifying this seeing as a value, the full width at half maximum (FWHM) can be given for each observation made. The FWHM is a resolution criterion which can be defined as, $``$the diameter of the Airy disk at half of its maximum intensity'' \cite{princ_stell_inter}. The Airy disk is the central spot of the diffraction pattern which occurs when light from a distant point source has been diffracted by a circular aperture, say, by a telescope. 
 
-However, as we were using small observatories, we could not account for these disturbances as they are not equipped to do so.
+Given in arcseconds, the best observing sites produce a stellar image about $0.25''$ across, for an average site it will be typically $2''$ \cite{tel_tech}. What we found was that for Far-East-16, our seeing ranged from $3''$ on a clear night to $\sim6''$ on a cloudy and turbulent night. For pt5m, we found that seeing was generally better on good nights as it is in a better location for astronomical observations. [[why]]
 
-Reliant on weather conditions being acceptable to observe in, define acceptable, discuss clouds, seeing, atmospheric turbulence, Lumiere, temperature, ...etc
+Then to account for atmospheric turbulence, one could use an adaptive optic system to correct for the distortions. For example, an artificial laser guide star could be created and then the amount that it is being perturbed by can be applied to the main object that is being observed \cite{princ_stell_inter}.
 
-focussing of a telescope, seeing and all that gubbins
+However, as Far-East-16 and pt5m are not equipped to perform these measurements, these disturbances could not be accounted for by us. As a result of this, we had to choose nights when the wind was calm, and at times the telescopes had to be refocussed to adapt to the changing atmosphere.
+
+We note that this latter solution was only possible when we were observing in Durham and not La Palma as the CCD settings could be manually altered on the fly from the Durham control room.
+
+During our observations bad seeing was not the only factor which would affect our observations.
+
+Reliant on weather conditions being acceptable to observe in, define acceptable, discuss clouds,Lumiere, ...etc
 
 in observations how has the moon affected us
 
@@ -202,14 +208,15 @@ in observations how has the moon affected us
 \subsection{Observations Made}
 \label{observer-observations}
 \vspace{-2ex}
+Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, others Type II, and even some cataclysmic variables. These objects can be found in our objects log in Appendix A, and our individual observations are detailed in Appendix B.
 
-Over a period of 34 days we took images of SNe, however this also depended on the conditions and whether it was worth observing if the seeing was bad e.g. obscured by bad weather.
+After considering which objects would provide the best basis for producing Type Ia light curves, our criteria being whether they would be bright enough and if they were close to their host galaxy. In the end chose to observe two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively.
+
+ this also depended on the conditions and whether it was worth observing if the seeing was bad e.g. obscured by bad weather.
 
 In making observations there were various factors which required to be known.
 
 Choosing our targets we used blah blah blah
-
-In Appendix \ref{objectslog} is detailed all the objects that we chose to view over our experimental period, and in Appendix \ref{obslogs} is a more detailed description of the data that we took.
 
 \vspace{-3ex}
 \subsection{Data Analysis}
