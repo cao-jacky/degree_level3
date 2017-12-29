@@ -4,6 +4,8 @@ sys.path.insert(0, '/Users/jackycao/Documents/Projects/degree_level3/laboratory_
 
 import plotter # Importing plotter program which has a function wcih reads data
 
+""" TO CHANGE BETWEEN 2017hhz and 2017hle, YOU MUST CHANGE 0.1 TO 0.8, OR VICE-VERSA!"""
+
 def data():
     """ Returns data from our plotter module. """
     sn = ['2017hle']
