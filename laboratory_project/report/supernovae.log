@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  29 DEC 2017 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  29 DEC 2017 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -837,80 +837,81 @@ File: observations/cassegrain.pdf Graphic file (type pdf)
 <use observations/cassegrain.pdf>
 Package pdftex.def Info: observations/cassegrain.pdf used on input line 170.
 (pdftex.def)             Requested size: 213.39566pt x 109.35226pt.
- [3 <./observations/cassegrain.pdf>]
-Underfull \hbox (badness 1024) in paragraph at lines 224--225
-[]\OT1/cmr/m/n/10 [[WHAT TENSE AM I SUP-POSED TO USE?
- []
-
-[4]
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 283--298
+ [3 <./observations/cassegrain.pdf>] [4]
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 286--301
  []$[]$ 
  []
 
 
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 298.
+LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 301.
 
 
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 298.
+LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 301.
 
 
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 298.
+LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 301.
 
 
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 298.
+LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 301.
 
 
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 304--315
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 307--318
  []$[]$ 
  []
 
 
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 315.
+LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 318.
 
 
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 315.
+LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 318.
 
 
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 315.
+LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 318.
 
 
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 315.
+LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 318.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <images/collage_rectangle_small.pdf, id=68, 999.735pt x 579.60541pt>
 File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
 <use images/collage_rectangle_small.pdf>
 Package pdftex.def Info: images/collage_rectangle_small.pdf used on input line 
-323.
+326.
 (pdftex.def)             Requested size: 234.73523pt x 136.08347pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/2017hhz.pdf, id=69, 462.52798pt x 346.89601pt>
-File: results/2017hhz.pdf Graphic file (type pdf)
-
-<use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 350.
-(pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
-
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 350--351
- [] 
- []
-
 [5]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 355.
+ on input line 342.
+
+<results/2017hhz.pdf, id=74, 462.52798pt x 346.89601pt>
+File: results/2017hhz.pdf Graphic file (type pdf)
+
+<use results/2017hhz.pdf>
+Package pdftex.def Info: results/2017hhz.pdf used on input line 353.
+(pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
+
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 353--354
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <results/2017hle.pdf, id=75, 462.52798pt x 346.89601pt>
 File: results/2017hle.pdf Graphic file (type pdf)
 
 <use results/2017hle.pdf>
-Package pdftex.def Info: results/2017hle.pdf used on input line 358.
+Package pdftex.def Info: results/2017hle.pdf used on input line 361.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 358--359
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 361--362
  [] 
  []
 
@@ -922,7 +923,7 @@ File: results/covariance/covariance.pdf Graphic file (type pdf)
 
 <use results/covariance/covariance.pdf>
 Package pdftex.def Info: results/covariance/covariance.pdf used on input line 3
-79.
+82.
 (pdftex.def)             Requested size: 213.39566pt x 173.3869pt.
 
 
@@ -933,24 +934,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./results/2017hle.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
-> <./results/covariance/covariance.pdf>] (./supernovae.bbl) [7]
-Underfull \hbox (badness 10000) in paragraph at lines 493--493
+>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 411.
+
+(./supernovae.bbl [7 <./results/covariance/covariance.pdf>]) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
-[8]
-Underfull \hbox (badness 1762) in paragraph at lines 543--543
+[9]
+Underfull \hbox (badness 1762) in paragraph at lines 546--546
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 591.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 594.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Float too large for page by 4.69336pt on input line 638.
+LaTeX Warning: Float too large for page by 4.69336pt on input line 641.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -958,7 +964,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10] [11] [12] [13] [14] (./supernovae.aux)
+[10] [11] [12] [13] [14] [15] (./supernovae.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -968,49 +974,48 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 5)
 
-### simple group (level 5) entered at line 640 ({)
-### simple group (level 4) entered at line 593 ({)
-### simple group (level 3) entered at line 547 ({)
-### simple group (level 2) entered at line 506 ({)
-### simple group (level 1) entered at line 467 ({)
+### simple group (level 5) entered at line 643 ({)
+### simple group (level 4) entered at line 596 ({)
+### simple group (level 3) entered at line 550 ({)
+### simple group (level 2) entered at line 509 ({)
+### simple group (level 1) entered at line 470 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13686 strings out of 493089
- 244059 string characters out of 6134841
- 353974 words of memory out of 5000000
- 16980 multiletter control sequences out of 15000+600000
+ 13690 strings out of 493089
+ 244129 string characters out of 6134841
+ 352992 words of memory out of 5000000
+ 16984 multiletter control sequences out of 15000+600000
  15321 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,47p,10436b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib
-6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
-mmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (14 pages, 1369871 bytes).
+cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmi
+b6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on supernovae.pdf (15 pages, 1340797 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

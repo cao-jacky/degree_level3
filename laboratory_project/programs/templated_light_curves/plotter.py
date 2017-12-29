@@ -112,8 +112,7 @@ def plot(sne):
             yerr=data_in_B[:,2], color='0.1', linestyle='None', fmt='.', 
             markersize=5, capsize=5)
     pyplot.plot(data_in_model_B[:,0], data_in_model_B[:,1], color='0.1', label='B')
-    pyplot.text(data_in_model_B[:,0][-1]+0.4, data_in_model_B[:,1][-1]+0.05, 
-            r'\textbf{B}')
+    #pyplot.text(data_in_model_B[:,0][-1]+0.4, data_in_model_B[:,1][-1]+0.05, r'\textbf{B}')
 
     # Plotting V band data
     pyplot.errorbar(data_in_V[:,0], data_in_V[:,1]-1, 
@@ -121,7 +120,6 @@ def plot(sne):
             markersize=5, capsize=5)
     pyplot.plot(data_in_model_V[:,0], data_in_model_V[:,1]-1, color='0.1', 
             linestyle='dashed', label='V')
-    pyplot.text(data_in_model_V[:,0][-1]+0.4, data_in_model_V[:,1][-1]-0.9, 
-            r'\textbf{V-1}')
+    #pyplot.text(data_in_model_V[:,0][-1]+0.4, data_in_model_V[:,1][-1]-0.9, r'\textbf{V-1}')
 
     pyplot.savefig('graphs/' + sne + '.pdf')

@@ -143,7 +143,7 @@ We thus find that Type Ia supernovae are a useful tool which can be applied and 
 \vspace{-2ex}
 This paper discusses the study that was undertaken to observe Type Ia supernovae using ground based telescopes, to learn about the approaches which can be employed to fit template light curves onto collected data, and to evaluate these analytical methods.
 
-In Section \ref{obsver} we describe the how we collected and analysed our supernova data, and how we accounted for the uncertainties that arose during the experiment. Our final light curves, and the methods that were used to fit models to the observations is summarised in Section \ref{analysis}. Then in Section \ref{discussion} we further discuss the model fitting, primarily our usage of the fitter program, \textit{SNooPy}, we then discuss the usage of our data for supernova cosmology, and finally we analyse the methods and techniques which we employed to produce our light curves and we explore the potential work that could be performed.
+In Section \ref{obsver} we describe how we collected and analysed our supernova data, and how we accounted for the uncertainties that arose during the experiment. Our final light curves, and the methods that were used to fit models to the observations is summarised in Section \ref{analysis}. Then in Section \ref{discussion} we further discuss the model fitting, primarily our usage of the fitter program, \textit{SNooPy}, we then discuss the usage of our data for supernova cosmology, and finally we analyse the methods and techniques which we employed to produce our light curves and we explore the potential work that could be performed.
 
 %We also focussed on understanding the sources of uncertainties and attempted to reduce them within our analysis to produce magnitudes which would be more true to what they should be [[?]]. 
 
@@ -197,7 +197,7 @@ However, as Far-East-16 and pt5m are not equipped to perform these measurements,
 
 We note that this latter solution was only possible when we were observing in Durham (and not La Palma) as the CCD settings could be manually altered on the fly from the Durham control room.
 
-During our observations bad seeing due to weather conditions was not the only factor which would affect us. Light pollution is a common problem in astronomy and we were no exception to it. With Far-East-16, as the telescope is elevated onto the Department of Physics' roof, the light pollution from the majority of the City of Durham could be avoided. Our problems arose when our objects were in the night sky above Durham Cathedral. This historic building uses spotlights to illuminate parts of itself, some of this light inevitably bleeds off into the sky which creates a halo of light, something not beneficial for magnitude based observations.
+During our observations bad seeing due to changing weather conditions was not the only factor which would affect us and which we could not account for. Light pollution is a common problem in astronomy and we were no exception to it. With Far-East-16, as the telescope is elevated onto the Department of Physics' roof, the light pollution from the majority of the City of Durham could be avoided. Our problems arose when our objects were in the night sky above Durham Cathedral. This historic building uses spotlights to illuminate parts of itself, some of this light inevitably bleeds off into the sky which creates a halo of light, something not beneficial for magnitude based observations.
 
 Similarly, if our targets were within $40\degree$ or less to the Moon on the celestial sphere, then observations would not be possible as the reflected sunlight would create a disc of light and drown out the supernovae. This effect would especially be magnified if the Moon was in a Full Moon phase.
 
@@ -207,9 +207,15 @@ We thus find that there are multiple factors which we have to be aware of and al
 \subsection{Observations Made}
 \label{observer-observations}
 \vspace{-2ex}
-Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, others Type II, and even some cataclysmic variables. These objects can be found in our objects log in Appendix A, and our individual observations are detailed in Appendix B.
+Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, a few Type II, and some cataclysmic variables. These objects are given in our objects log in Appendix A, and our individual observations from the entire experiment are detailed in Appendix B.
 
-After considering which objects would provide the best basis for producing Type Ia light curves, our criteria being whether they would be bright enough and if they were close to their host galaxy. In the end chose to observe two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively.
+It was realised early on in our project that it would not feasible for us to track multiple objects for an extended period. This was firstly because observation time had to be distributed equally amongst all the projects within AstroLabs it would be unfair to observe just supernovae for the whole night; secondly with such a large amount of data, we would not be able to process and analyse it all; and thirdly, some of the targets were just not worth observing at all - these objects would be too close to their host galaxy, or they would be too low on the horizon and so could not be viewed from the telescopes in Durham or La Palma.
+
+In choosing which objects to observe, we would initially check supernovae lists which have new discoveries submitted by astronomers. The \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} Lists were the two main sources for us.
+
+For general criterion in choosing supernovae to observe we chose 
+
+After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, our criteria being whether they would be bright enough and if they were close to their host galaxy. In the end chose to observe two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively.
 
  this also depended on the conditions and whether it was worth observing if the seeing was bad e.g. obscured by bad weather.
 
@@ -220,9 +226,6 @@ Choosing our targets we used blah blah blah
 \vspace{-3ex}
 \subsection{Data Analysis}
 \vspace{-2ex}
-
-[[WHAT TENSE AM I SUPPOSED TO USE? PAST OR PRESENT??]]
-
 As we collected our supernova data over our experimental period we were then required to perform various photometry techniques to calculate the magnitudes of the explosions. It is important that this method was correct as we wanted accurate representations of the light curves. 
 
 With our \em{raw}\em data we firstly needed to identify our supernova object, as these objects can blend in with the background of stars we had to look it up for the right ascension and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
