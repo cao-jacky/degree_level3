@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  29 DEC 2017 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  29 DEC 2017 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -838,38 +838,14 @@ File: observations/cassegrain.pdf Graphic file (type pdf)
 Package pdftex.def Info: observations/cassegrain.pdf used on input line 170.
 (pdftex.def)             Requested size: 213.39566pt x 109.35226pt.
  [3 <./observations/cassegrain.pdf>] [4]
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 286--301
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 281--296
  []$[]$ 
  []
 
 
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 301.
-
-
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 301.
-
-
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 301.
-
-
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 301.
-
-
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 307--318
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 302--313
  []$[]$ 
  []
-
-
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 318.
-
-
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 318.
-
-
-LaTeX Warning: Reference `eqn1' on page 5 undefined on input line 318.
-
-
-LaTeX Warning: Reference `eqn2' on page 5 undefined on input line 318.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -879,7 +855,7 @@ File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
 <use images/collage_rectangle_small.pdf>
 Package pdftex.def Info: images/collage_rectangle_small.pdf used on input line 
-326.
+321.
 (pdftex.def)             Requested size: 234.73523pt x 136.08347pt.
 
 
@@ -888,16 +864,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [5]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 342.
+ on input line 335.
 
 <results/2017hhz.pdf, id=74, 462.52798pt x 346.89601pt>
 File: results/2017hhz.pdf Graphic file (type pdf)
 
 <use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 353.
+Package pdftex.def Info: results/2017hhz.pdf used on input line 348.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 353--354
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 348--349
  [] 
  []
 
@@ -908,10 +884,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: results/2017hle.pdf Graphic file (type pdf)
 
 <use results/2017hle.pdf>
-Package pdftex.def Info: results/2017hle.pdf used on input line 361.
+Package pdftex.def Info: results/2017hle.pdf used on input line 356.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 361--362
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 356--357
  [] 
  []
 
@@ -923,7 +899,7 @@ File: results/covariance/covariance.pdf Graphic file (type pdf)
 
 <use results/covariance/covariance.pdf>
 Package pdftex.def Info: results/covariance/covariance.pdf used on input line 3
-82.
+77.
 (pdftex.def)             Requested size: 213.39566pt x 173.3869pt.
 
 
@@ -937,26 +913,37 @@ inclusion: multiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 411.
+ on input line 399.
 
-(./supernovae.bbl [7 <./results/covariance/covariance.pdf>]) [8]
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
+(./supernovae.bbl
+Underfull \hbox (badness 4096) in paragraph at lines 59--64
+ []\OT1/cmr/m/n/9 T. Holoien and J. Brown.  ASAS-SN Su-per-
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 59--64
+ \OT1/cmr/m/n/9 novae.  $\OT1/cmtt/m/n/9 http : / / www . astronomy . ohio-[]st
+ate . edu /
+ []
+
+[7 <./results/covariance/covariance.pdf>]) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
 [9]
-Underfull \hbox (badness 1762) in paragraph at lines 546--546
+Underfull \hbox (badness 1762) in paragraph at lines 541--541
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 594.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 589.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Float too large for page by 4.69336pt on input line 641.
+LaTeX Warning: Float too large for page by 4.69336pt on input line 636.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -966,26 +953,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11] [12] [13] [14] [15] (./supernovae.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred inside a group at level 5)
 
-### simple group (level 5) entered at line 643 ({)
-### simple group (level 4) entered at line 596 ({)
-### simple group (level 3) entered at line 550 ({)
-### simple group (level 2) entered at line 509 ({)
-### simple group (level 1) entered at line 470 ({)
+### simple group (level 5) entered at line 638 ({)
+### simple group (level 4) entered at line 591 ({)
+### simple group (level 3) entered at line 545 ({)
+### simple group (level 2) entered at line 504 ({)
+### simple group (level 1) entered at line 465 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13690 strings out of 493089
- 244129 string characters out of 6134841
- 352992 words of memory out of 5000000
- 16984 multiletter control sequences out of 15000+600000
- 15321 words of font info for 56 fonts, out of 8000000 for 9000
+ 13693 strings out of 493089
+ 244187 string characters out of 6134841
+ 354008 words of memory out of 5000000
+ 16986 multiletter control sequences out of 15000+600000
+ 15488 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,47p,10436b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
@@ -1010,12 +994,13 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (15 pages, 1340797 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on supernovae.pdf (15 pages, 1351360 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 242 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

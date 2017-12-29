@@ -207,28 +207,24 @@ We thus find that there are multiple factors which we have to be aware of and al
 \subsection{Observations Made}
 \label{observer-observations}
 \vspace{-2ex}
-Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, a few Type II, and some cataclysmic variables. These objects are given in our objects log in Appendix A, and our individual observations from the entire experiment are detailed in Appendix B.
+Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, a few Type II, and some cataclysmic variables. These objects are noted in our objects log in Appendix A, and our individual observations from the entire experiment are detailed in Appendix B.
 
-It was realised early on in our project that it would not feasible for us to track multiple objects for an extended period. This was firstly because observation time had to be distributed equally amongst all the projects within AstroLabs it would be unfair to observe just supernovae for the whole night; secondly with such a large amount of data, we would not be able to process and analyse it all; and thirdly, some of the targets were just not worth observing at all - these objects would be too close to their host galaxy, or they would be too low on the horizon and so could not be viewed from the telescopes in Durham or La Palma.
+It was realised early on in our project that it would not feasible for us to track multiple objects for an extended period. This was firstly because observation time had to be distributed equally amongst all the projects within AstroLabs, it would be unfair to observe just supernovae for the entire night; secondly with such a large amount of data, we would not be able to process and analyse it all; and thirdly, some of the targets were just not worth observing at all. These objects would be too close to their host galaxy, or they would be too low on the horizon for the telescopes in Durham or La Palma to view them.
 
-In choosing which objects to observe, we would initially check supernovae lists which have new discoveries submitted by astronomers. The \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} Lists were the two main sources for us.
+In choosing which objects to observe we used the \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} \cite{asassn_sn} Lists. These are databases which are updated by astronomers with the latest discovered supernovae. For our observations we aimed to choose supernovae which had a discovery magnitude of around 18 or less, anything greater than this would be too faint to observe with our telescopes.
 
-For general criterion in choosing supernovae to observe we chose 
+After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, we chose two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively. Both being not too close to their host galaxy's nucleus and they appeared to the brightest supernova objects discovered at the time.
 
-After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, our criteria being whether they would be bright enough and if they were close to their host galaxy. In the end chose to observe two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively.
-
- this also depended on the conditions and whether it was worth observing if the seeing was bad e.g. obscured by bad weather.
-
-In making observations there were various factors which required to be known.
-
-Choosing our targets we used blah blah blah
+However, they were still faint objects so we had to vary the exposure time between 60s and 120s, and often take more than 2 exposures for each band. In doing so we would later be able to improve the quality and brightness of the supernovae seen in the image through noise reduction and image stacking.
 
 \vspace{-3ex}
 \subsection{Data Analysis}
 \vspace{-2ex}
-As we collected our supernova data over our experimental period we were then required to perform various photometry techniques to calculate the magnitudes of the explosions. It is important that this method was correct as we wanted accurate representations of the light curves. 
+As data was continually collected over the experimental period, we had to simultaneously analyse it to ensure that the magnitudes obtained for the supernovae would fit light curves.
 
-With our \em{raw}\em data we firstly needed to identify our supernova object, as these objects can blend in with the background of stars we had to look it up for the right ascension and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
+Photometry was thus performed on each of our frames. Our goals in this were to take an image of a supernova, reduce unwanted noise, and then obtain a magnitude value with a related uncertainty. After this, we could use our data in template fittings and then attempt to perform cosmology.
+
+With our \textit{raw} data we firstly needed to identify our supernova object, as these objects can blend in with the background of stars we had to look it up for the right ascension and declination reference. All of our supernova objects were discovered by other astronomers so they had an initial set of information we could use like, astronomical location on the celestial sphere, initial magnitude and the discovery date.
 
 Once we had found our object we needed to find the magnitude of it. Using an astronomical analysis package such as GAIA [[reference and improve this]], we used various tools to perform this. We had to understand that we wanted to find the absolute magnitude of the supernova, this value being the 'actual magnitude', and not relative to other objects [[?]]. To perform this we had to choose at least two calibration stars which have known absolute magnitiudes.
 
@@ -278,8 +274,7 @@ Uncertainties from the CCD and those type of astronomy data noise: mention here 
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-
-Below is the final data set for supernova 2017hhz, and 2017hle. 
+Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their uncertainties. This was the data which we used to plot our light curves.
 
 \begin{table}[h!]
 \centering
@@ -298,7 +293,7 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
  17/11/17 & 18.8 & 0.2 & 18.2 & 0.4 \\
  \hline
 \end{tabular}
-\caption{The B and V band magnitudes and their uncertainties for SNe 2017hhz on the given dates. The former values were calculated using equation \ref{eqn1} and the latter using equation \ref{eqn2}.}
+\caption{Magnitude values and their uncertainties calculated for the B and V photometric bands from our data for Type Ia supernova, 2017hhz.}
 \label{2017hhz-table}
 \end{table}
 
@@ -315,7 +310,7 @@ Below is the final data set for supernova 2017hhz, and 2017hle.
  18/11/17 & 19.6 & 0.5 & 18.7 & 0.3 \\
  \hline
 \end{tabular}
-\caption{The B and V band magnitudes and their uncertainties for SNe 2017hle on the given dates. The former values were calculated using equation \ref{eqn1} and the latter using equation \ref{eqn2}.}
+\caption{The B and V band magnitudes and their uncertainties have been calculated for Type Ia-91bg supernovae 2017hle.}
 \label{2017hle-table}
 \end{table}
 
