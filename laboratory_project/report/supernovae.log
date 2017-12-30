@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 DEC 2017 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 DEC 2017 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,9 +904,6 @@ Overfull \hbox (26.07182pt too wide) in paragraph at lines 380--381
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <results/covariance/covariance.pdf, id=99, 321.2pt x 260.975pt>
 File: results/covariance/covariance.pdf Graphic file (type pdf)
 
@@ -921,7 +918,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [6 <./images/collage_rectangle_small.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 418.
+ on input line 415.
 
 [7 <./results/2017hhz.pdf> <./results/2017hle.pdf
 
@@ -1009,7 +1006,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (15 pages, 1413597 bytes).
+Output written on supernovae.pdf (15 pages, 1413638 bytes).
 PDF statistics:
  267 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams
