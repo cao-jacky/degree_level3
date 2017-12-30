@@ -222,29 +222,46 @@ However, they were still faint objects so we had to vary the exposure time betwe
 \vspace{-2ex}
 As data was continually collected over the experimental period, we had to simultaneously analyse it to ensure that the magnitudes we were obtaining would fit supernova light curves.
 
-Photometry was thus performed on each of our frames. Our goals were to, take one of our supernova images, reduce unwanted noise, and then obtain a magnitude value with a related uncertainty. After this, we could use these values in template fittings and then, attempt to perform cosmology.
+Photometry was thus performed on each of our frames. Our goals were to: take our supernova images, reduce unwanted noise, and then obtain a magnitude value with a related uncertainty. After this, we could use these values in template fittings, and then attempt to perform cosmology.
 
-Taking our raw frames we had to reduce the noise from unwanted sources. Two sources which we did not have to consider was the bias and dark current. The bias arises due to the readout of a CCD, it creates noise when it is converting the signal from analogue to digital. To account for this, bias frames of zero second exposures are taken and subtracted from the data. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD, these electrons would register as a signal. However, the chips are normally cooled to about $-10\degree$ to prevent any such noise from forming.
+Taking our raw frames we had to reduce the noise from unwanted sources. Two sources which we did not have to consider directly was the bias and dark current. The bias arises due to the readout of a CCD, it creates noise when it is converting the captured signal from analogue to digital. To account for this, bias frames of zero second exposures are taken and subtracted from the data before the data is stored. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD, these electrons would be read as a signal. However, the chips are normally cooled to about $-10\degree$ to prevent any such noise from forming.
 
 % CITE CITE CITE!!!!
 
-The CCD produces one other type of noise which can be account for, each pixel on the CCD varies slightly from each other in terms of sensitivity, something which arises due to the manufacturing process. This sensitivity is normally removed by producing frames of a uniformly lit area, the twilight sky or the inside of the telescope dome, this can then be subtracted from our data.
+The CCD produces one other type of noise which can be account for, each pixel on the CCD varies slightly from each other in terms of sensitivity, something which arises due to the manufacturing process. This sensitivity is normally removed by producing frames of a uniformly lit area, flat-fields. The twilight sky or the inside of the telescope dome can be imaged, and this can then be subtracted from our data.
  
-Cosmic rays which register onto the camera can be removed by stacking (combining) multiple frames of the same field and same exposure time together. This is a process where the median value for each pixel is found from the stack of images, thus any anomalously high values from cosmic rays can be removed.
+Cosmic rays which register onto the camera can be removed by stacking (combining) multiple frames of the same field and same exposure time together. This is a process where the median value for each pixel is found from the stack of images, thus any anomalously high values which arise from cosmic rays can be removed.
 
-Once we had our frames which had been cleaned of noise we could then begin to perform photometry, more specifically, aperture photometry. Identifying our supernova object we wanted to calculate the absolute magnitude of it and see how it progressed with time. To perform this we had to choose at least two calibration stars, which were of similar size to the supernova and in the general proximity of it.  This was so that when performing aperture photometry a similar signal could be obtained (???) and a similar sky background noise could be obtained. Noise which arose from the night sky and which could not be directly removed.
+Once our frames had been cleaned of noise we could then begin to perform photometry, more specifically, aperture photometry. After identifying the supernova in our images, we then wanted to calculate the absolute magnitude of it and see how it progressed with time. To perform this we had to choose at least two calibration stars, of which they had to be of similar size to the supernova and be in the general proximity of it.  This was so that when performing aperture photometry a similar signal could be obtained across all objects and a similar sky background noise could be obtained as well. Noise which arose from the night sky and which could not be directly removed through subtraction techniques.
 
-These calibration objects must have their absolute magnitudes known in order to calculate the magnitude of the supernova, we employed the \textit{UCAC4 Catalog} to find the photometric data for the stars in the B and V bands. The following equation is what we wanted to use to calculate the magnitudes, 
+Another important criterion for these calibration objects is that their absolute magnitudes must already be known. This was required in the calculation of the magnitudes for the supernova. So, we used the \textit{UCAC4 Catalog} to find the photometric data for the calibration stars in the B and V bands. Once we had our data and calibration stars, we could use the following equation, 
 \begin{equation}
     m = z - 2.5 \log_{10}{C},
 \label{mag_counts}
 \end{equation}
 
-where $m$ is the absolute magnitude an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
+where $m$ is the absolute magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
 
-To use this equation we required the zero-point for the image that we were working with. Measuring the number of counts that was received for the the known calibration stars, we could solve equation \ref{mag_counts} for $z$, for each star within each band, and then average together the $z$ values for each specific band. Now this zero-point could then be used with the number of counts for the supernova to produce an absolute magnitude value.
+In using this equation we first required the zero-point for the image that we were working with. What we imaged would not be the actual magnitudes of the objects, they would all be offset by a certain amount, $z$, due to light being absorbed by dust in it's host galaxy, through the interstellar medium, or by our own galaxy's dust. [[?]]
 
-In obtaining a value for the number of counts that we were receiving from our supernova and calibration objects, we had to choose a fixed aperture size to count the signal that is contained within in. It was important that the radius was chosen which would maximise the signal whilst reducing the amount of sky noise, one type of noise which we could not remove from the frame.
+To begin with then, the counts $C$ for the calibration stars were measured, with this and the absolute magnitudes $m$ we could solve equation \ref{mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an absolute magnitude value for the supernova.
+
+With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
+
+This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ratio would change as the radius was increased. 
+
+% produce an image which shows the S/N graph and how it alters through time! Also put an example of the star underneath it - kind of like the residuals plots 
+
+\squeezeup
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.25cm]{observations/2017hhz}
+\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former deisgn the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed. \\ (\textit{This diagram has been adapted from Telescopes and Techniques} \cite{tel_tech}.)}
+\label{2017hhz_radii}
+\end{center}
+\end{figure}
+\squeezeup
+\squeezeup
 
 To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to include unnecessary data that would produce an erroneous result. 
 
