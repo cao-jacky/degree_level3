@@ -105,7 +105,7 @@ def data_return(data):
     b_band = rel_mag_b(data)
 
     data = data_file(data)
-    sc_data = data[0]
+    sc_data = data[0] #sc = 'star catalogue'
 
     print(sc_data)
 
