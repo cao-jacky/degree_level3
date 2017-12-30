@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 DEC 2017 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  30 DEC 2017 18:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -838,19 +838,19 @@ File: observations/cassegrain.pdf Graphic file (type pdf)
 Package pdftex.def Info: observations/cassegrain.pdf used on input line 170.
 (pdftex.def)             Requested size: 213.39566pt x 109.35226pt.
  [3 <./observations/cassegrain.pdf>] [4]
-<observations/2017hhz.pdf, id=68, 578.16pt x 216.81pt>
+<observations/2017hhz.pdf, id=68, 503.8825pt x 212.795pt>
 File: observations/2017hhz.pdf Graphic file (type pdf)
 
 <use observations/2017hhz.pdf>
-Package pdftex.def Info: observations/2017hhz.pdf used on input line 258.
-(pdftex.def)             Requested size: 263.18799pt x 98.695pt.
+Package pdftex.def Info: observations/2017hhz.pdf used on input line 255.
+(pdftex.def)             Requested size: 241.84842pt x 102.13393pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 258--259
+Overfull \hbox (4.73225pt too wide) in paragraph at lines 255--256
  [] 
  []
 
 [5 <./observations/2017hhz.pdf>]
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 308--323
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 305--320
  []$[]$ 
  []
 
@@ -858,58 +858,61 @@ Overfull \hbox (0.91705pt too wide) in paragraph at lines 308--323
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 329--340
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 326--337
  []$[]$ 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/collage_rectangle_small.pdf, id=77, 999.735pt x 579.60541pt>
+<images/collage_rectangle_small.pdf, id=96, 999.735pt x 579.60541pt>
 File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
 <use images/collage_rectangle_small.pdf>
 Package pdftex.def Info: images/collage_rectangle_small.pdf used on input line 
-348.
+345.
 (pdftex.def)             Requested size: 234.73523pt x 136.08347pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/2017hhz.pdf, id=78, 462.52798pt x 346.89601pt>
+<results/2017hhz.pdf, id=97, 462.52798pt x 346.89601pt>
 File: results/2017hhz.pdf Graphic file (type pdf)
 
 <use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 375.
+Package pdftex.def Info: results/2017hhz.pdf used on input line 372.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 375--376
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 372--373
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/2017hle.pdf, id=79, 462.52798pt x 346.89601pt>
+<results/2017hle.pdf, id=98, 462.52798pt x 346.89601pt>
 File: results/2017hle.pdf Graphic file (type pdf)
 
 <use results/2017hle.pdf>
-Package pdftex.def Info: results/2017hle.pdf used on input line 383.
+Package pdftex.def Info: results/2017hle.pdf used on input line 380.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 383--384
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 380--381
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/covariance/covariance.pdf, id=80, 321.2pt x 260.975pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<results/covariance/covariance.pdf, id=99, 321.2pt x 260.975pt>
 File: results/covariance/covariance.pdf Graphic file (type pdf)
 
 <use results/covariance/covariance.pdf>
 Package pdftex.def Info: results/covariance/covariance.pdf used on input line 4
-04.
+01.
 (pdftex.def)             Requested size: 213.39566pt x 173.3869pt.
 
 
@@ -936,23 +939,23 @@ ate . edu /
  []
 
 ) [8]
-Underfull \hbox (badness 10000) in paragraph at lines 518--518
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
 []|\OT1/cmr/m/n/9 Cataclysmic Vari-able, stopped
  []
 
 [9]
-Underfull \hbox (badness 1762) in paragraph at lines 568--568
+Underfull \hbox (badness 1762) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/9 FE16: Ob-ject too close to galac-tic
  []
 
 
-LaTeX Warning: Float too large for page by 6.25342pt on input line 616.
+LaTeX Warning: Float too large for page by 6.25342pt on input line 613.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Float too large for page by 4.69336pt on input line 663.
+LaTeX Warning: Float too large for page by 4.69336pt on input line 660.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -967,11 +970,11 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 5)
 
-### simple group (level 5) entered at line 665 ({)
-### simple group (level 4) entered at line 618 ({)
-### simple group (level 3) entered at line 572 ({)
-### simple group (level 2) entered at line 531 ({)
-### simple group (level 1) entered at line 492 ({)
+### simple group (level 5) entered at line 662 ({)
+### simple group (level 4) entered at line 615 ({)
+### simple group (level 3) entered at line 569 ({)
+### simple group (level 2) entered at line 528 ({)
+### simple group (level 1) entered at line 489 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  13697 strings out of 493089
@@ -1006,10 +1009,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (15 pages, 1356027 bytes).
+Output written on supernovae.pdf (15 pages, 1413597 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 267 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

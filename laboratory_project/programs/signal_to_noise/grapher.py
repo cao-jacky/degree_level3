@@ -46,19 +46,19 @@ def calculations():
         new_data[i][0] = curr_rad # Storing radius
         new_data[i][1] = s_n # Storing signal to noise
 
-    new_data = np.delete(new_data, [16,17,18,19], axis=0)
+    new_data = np.delete(new_data, [10,11,12,13,14,15,16,17,18,19], axis=0)
     return new_data
 
 def plot():
     dt = calculations()
 
-    fig1 = pyplot.figure(figsize=(8, 3))
+    fig1 = pyplot.figure(figsize=(5.3, 3))
 
-    pyplot.xlabel(r'\textbf{Radius of the aperture (arcseconds)}', fontsize=13)
+    pyplot.xlabel(r'\textbf{Radius of the aperture (pixels)}', fontsize=13)
     pyplot.ylabel(r'\textbf{S/N}', fontsize=15)
 
     pyplot.tick_params(axis='y', which='major', labelsize=15)
-    pyplot.tick_params(axis='x', labelsize=12.5)
+    pyplot.tick_params(axis='x', labelsize=15)
 
     pyplot.xticks(np.arange(0, 21, 1))
 
