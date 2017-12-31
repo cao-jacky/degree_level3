@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: supernovae.aux
 The style file: abbrv.bst
 Database file #1: supernovae.bib
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            606 strings with 5972 characters,
-and the built_in function-call counts, 5164 in all, are:
-= -- 495
-> -- 215
+            611 strings with 6042 characters,
+and the built_in function-call counts, 5384 in all, are:
+= -- 514
+> -- 223
 < -- 0
-+ -- 86
-- -- 66
-* -- 318
-:= -- 909
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 78
++ -- 89
+- -- 68
+* -- 327
+:= -- 948
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 209
-empty$ -- 444
-format.name$ -- 66
-if$ -- 1081
+cite$ -- 20
+duplicate$ -- 222
+empty$ -- 467
+format.name$ -- 68
+if$ -- 1128
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 24
-newline$ -- 99
-num.names$ -- 38
-pop$ -- 84
+int.to.str$ -- 20
+missing$ -- 25
+newline$ -- 104
+num.names$ -- 41
+pop$ -- 91
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 66
 quote$ -- 0
-skip$ -- 146
+skip$ -- 152
 stack$ -- 0
-substring$ -- 267
-swap$ -- 19
+substring$ -- 272
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 66
 warning$ -- 0
-while$ -- 48
-width$ -- 21
-write$ -- 208
+while$ -- 50
+width$ -- 22
+write$ -- 218

@@ -224,9 +224,7 @@ As data was continually collected over the experimental period, we had to simult
 
 Photometry was thus performed on each of our frames. Our goals were to: take our supernova images, reduce unwanted noise, and then obtain a magnitude value with a related uncertainty. After this, we could use these values in template fittings, and then attempt to perform cosmology.
 
-Taking our raw frames we had to reduce the noise from unwanted sources. Two sources which we did not have to consider directly was the bias and dark current. The bias arises due to the readout of a CCD, it creates noise when it is converting the captured signal from analogue to digital. To account for this, bias frames of zero second exposures are taken and subtracted from the data before the data is stored. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD, these electrons would be read as a signal. However, the chips are normally cooled to about $-10\degree$ to prevent any such noise from forming.
-
-% CITE CITE CITE!!!!
+Taking our raw frames we had to reduce the noise from unwanted sources. Two sources which we did not have to consider directly was the bias and dark current. The bias arises due to the readout of a CCD, it creates noise when it is converting the captured signal from analogue to digital \cite{obs_uni}. To account for this, bias frames of zero second exposures are taken and subtracted from the data before the data is stored. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD, these electrons would be read as a signal \cite{obs_uni}. However, the chips are normally cooled to about $-10\degree$ to prevent any such noise from forming.
 
 The CCD produces one other type of noise which can be account for, each pixel on the CCD varies slightly from each other in terms of sensitivity, something which arises due to the manufacturing process. This sensitivity is normally removed by producing frames of a uniformly lit area, flat-fields. The twilight sky or the inside of the telescope dome can be imaged, and this can then be subtracted from our data.
  
@@ -248,7 +246,7 @@ To begin with then, the counts $C$ for the calibration stars were measured, with
 
 With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
 
-This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ratio would change as the radius was increased. In Figure \ref{2017hhz_radii}(a)
+This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ratio would change as the radius was increased. In Figure \ref{2017hhz_radii}(a) we show the plot that was created for the 2017hhz frames, the calibration star (512-002598, UCAC4 identifier) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
@@ -260,32 +258,13 @@ This was done by selecting one of the calibration stars and then plotting how th
 \squeezeup
 \squeezeup
 
-To do this an object was selected which was close to the supernova and appeared to be similar in size, this was normally one of the calibration stars that we would be using. With our software package [[and for astronomy?]] we also had to choose a size for the 'sky aperture', this was so that the sky noise could be removed from the counts as well. In choosing this we had to account for the proximity of the supernova to its host galaxy's nucleus and also on how close the calibration stars are to other stars. We did not want to include unnecessary data that would produce an erroneous result. 
+The point where the plot decreases was chosen to be the radius as this would produce an optimal value for the signal to noise. In the case for 2017hhz this was chosen to be 4 pixels and for 2017hle it was 3 pixels. 
 
-After a sky aperture had been chosen we would then try and find the best radius to use when doing our photometry. This radius would be constant for our calibration objects and for our supernova as well, and also for each day's data frames. This would ensure that we would be not 'cherrypicking' the signal that we are receving and that it would be an 'equal opportunity' for the signal to be detected to be the same each time [[??]]. 
+Figure \ref{2017hhz_radii}(b) shows the aperture tool that was used extensively for the aperture photometry. With the white circle as the main aperture that we varied, and the two outer yellow circles being the sky annuli. The area enclosed in the sky would be sampled and then as quantified amount of noise, it would be removed away from the main counts value. The size of these rings were chosen as the radius scaled by factors $\times 1.5$ and $\times 2$. These numbers were justified as we wanted to avoid taking other stars as part of the sky background, and whilst this did mean we had to take part of the galaxy when we were working with our supernovae, we chose to be consistent with our calibration stars as it was difficult to balance just having sky in each individual annuli.
 
-This radius would be chosen by adjusting it from one to twenty in integer steps of one, noting down number of counts, the uncertainty on that value, and the sky noise counts. After these values had been collected we would plot the signal to noise against radius. In the plot, where the graph reaches a peak and decreases after this pooint would be our radius size as this would be the radius where we would achieve maximum signal to noise.
+For the placements of these apertures, we took a histogram profile of the vertical and horizontal directions of the object, and then placed the centre of the aperture to the centre of the maximum brightness. 
 
-Then we can collect the values for the counts of the supernova and calibration objects, once we have this data we can use equation \ref{mag_counts} to find the absolute magnitude of the supernova. [[give a reference for the equation from a paper]]
-
-
-In using this equation we must have the correct zero-point, $z$, otherwise we would not be finding the absolute magnitude, instead the apparent magnitude relative to our calibration stars. So, rearranging the equation for $z$ we can calculate the zero-points for the calibration objects in the required observation bands. We have the counts for each object and we have their known magntidue which has been found by other astronomers. Then we can average the $z$-values togehter for their respective bands. 
-
-With this $z$ value we can then use the form of the equation as given in equation \ref{mag_counts} and calculate the absolute magnitude of our supernovae.
-
-Now with our magnitude values and the date that the data was taken on, we can plot a basic light curve. 
-
-In fitting templates and models it can be manually done, or you could use a software package light \em{SNooPy }\em. All it requires is the data, redshift, and the right ascension and declination of the supernova object. It will fit Type Ia templates to the data and then return what it thinks is the best fitting.
-
-Once we had collected our data we then proceeded to perform analysis
-
-Data reduction, what was required, blah blah blah. What was used. Don't say dstack script, say a script was used which allowed us to stack images together. should i just blend uncertainties into here? 
-
-fitting supernova templates using python programs, SNoopy - in depth analysis of snoopy should not be mentioned here, probably not
-
-understanding type ia models of data and how from our data we cannot be sure.  
- cb
-Photometry work 
+After we had calculated magnitude values we could then plot light curves with our data. In fitting templates and models it could be manually performed, but we chose to use a Python package \textit{SNooPy}, specifically made to fit Type Ia curves. It would take our data and apply a templated light curve, as long as you provided a redshift as well. If it was given the right ascension and declination of the object, it would be able to produce a more accurate result as then it could calculate the host extinction in that area.   
 
 \vspace{-3ex}
 \subsection{Data Uncertainties}
