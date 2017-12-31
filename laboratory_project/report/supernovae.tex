@@ -218,7 +218,7 @@ After reviewing and considering which objects would provide the best basis for p
 However, they were still faint objects so we had to vary the exposure time between 60s and 120s, and often take more than 2 exposures for each band. In doing so we would later be able to improve the quality and brightness of the supernovae seen in the image through noise reduction and image stacking.
 
 \vspace{-3ex}
-\subsection{Data Analysis}
+\subsection{Data Analysis} \label{data_analysis}
 \vspace{-2ex}
 As data was continually collected over the experimental period, we had to simultaneously analyse it to ensure that the magnitudes we were obtaining would fit supernova light curves.
 
@@ -246,7 +246,14 @@ To begin with then, the counts $C$ for the calibration stars were measured, with
 
 With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
 
-This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ratio would change as the radius was increased. In Figure \ref{2017hhz_radii}(a) we show the plot that was created for the 2017hhz frames, the calibration star (512-002598, UCAC4 identifier) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
+This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ($S/N$) ratio would change as the radius was increased. Derived from High Energy Astrophysics \cite{longair}, we used the following equation for the signal to noise,
+\begin{equation}
+\frac{S}{N} = \frac{N_{\gamma}}{\sqrt{N_{\gamma}+N_{b}+N_{d}+R^2}},
+\end{equation}
+
+where $N_{\gamma}$ is the supernova signal, $N_{b}$ the sky background noise, $N_{d}$ the noise due to dark current, and $R$ the readout noise. The latter two sources of noise were reduced and could be ignored in our calculations.
+
+In Figure \ref{2017hhz_radii}(a) we show the $S/N$ plot that was created for the 2017hhz frames, the calibration star (512-002598, UCAC4 identifier) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
@@ -269,18 +276,18 @@ After we had calculated magnitude values we could then proceed to plot supernova
 \vspace{-3ex}
 \subsection{Data Uncertainties}
 \vspace{-2ex}
-Throughout the experiment it was important that we kept in mind the uncertainties which arose as this would allow us to produce a final result which could be used to judge the quality of the data, and in turn the entire experiment.
+Throughout the experiment it was important that we kept in mind the uncertainties which could affect the accuracy of our results. Various steps were undertaken to ensure that the sources of errors could be reduced, some of these methods have already been detailed in Section \ref{data_analysis} however we would like to discuss other random and systematic uncertainties.
+
+In collecting data, we have already learnt how a CCD could count extra noise in the form of bias and dark current if it is not accounted for. But, we found that as our Type Ia supernovae progressed along their evolutionary path we found that as they progressively dimmed, it became increasingly difficult for us to produce a precise result. This random error is a result of the observation limits of the telescopes, as they can only observe to a certain magnitude it would be expected that less certain magnitudes would be produced.
+
+Having access to a larger telescope, one with a greater aperture, would allow us to collect more light and thus produce a more accurate and precise value for the magnitudes.
 
 
-
-Quantifying these errors allows us to judge whether the data and fittings that we created were good or not. 
-
-Uncertainties from the CCD and those type of astronomy data noise: mention here their effect, and how they were dealt with. 
 
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their uncertainties. This was the data which we used to plot our light curves.
+Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their  associated uncertainties. This was the data which we used to plot our light curves.
 
 \begin{table}[h!]
 \centering
@@ -440,6 +447,7 @@ hubble flow????
 
 how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
 
+
 \subsection{Improvements and extensions}
 How could we improve upon our experiment, what else could we work on for extension projects.
 
@@ -458,6 +466,8 @@ We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
 
 The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
+
+As a personal show of gratitude, I thank Duncan for his putting up of my nagging, my incessant tirade of anything that we did, and my really awful humour.
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
