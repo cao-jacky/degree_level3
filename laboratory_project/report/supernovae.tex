@@ -251,7 +251,7 @@ This was done by selecting one of the calibration stars and then plotting how th
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.5cm]{observations/2017hhz}
-\caption[]{(a) Plot of signal to noise against the radius of the aperture, this was used to identify which fixed radius to use. (b) Image of the aperture 'tool' used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is star, 512-002598.}
+\caption[]{(a) Plot of signal to noise against the radius of the aperture for 2017hhz frames, this was used to identify which fixed radius to use. (b) Image of the aperture tool used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is star, 512-002598 (UCAC4 Identification).}
 \label{2017hhz_radii}
 \end{center}
 \end{figure}
@@ -264,13 +264,16 @@ Figure \ref{2017hhz_radii}(b) shows the aperture tool that was used extensively 
 
 For the placements of these apertures, we took a histogram profile of the vertical and horizontal directions of the object, and then placed the centre of the aperture to the centre of the maximum brightness. 
 
-After we had calculated magnitude values we could then plot light curves with our data. In fitting templates and models it could be manually performed, but we chose to use a Python package \textit{SNooPy}, specifically made to fit Type Ia curves. It would take our data and apply a templated light curve, as long as you provided a redshift as well. If it was given the right ascension and declination of the object, it would be able to produce a more accurate result as then it could calculate the host extinction in that area.   
+After we had calculated magnitude values we could then proceed to plot supernova light curves with our data, the process of which can be found in Section \ref{supernovae_models}.
 
 \vspace{-3ex}
 \subsection{Data Uncertainties}
 \vspace{-2ex}
+Throughout the experiment it was important that we kept in mind the uncertainties which arose as this would allow us to produce a final result which could be used to judge the quality of the data, and in turn the entire experiment.
 
-Throughout the experiment it was important that we kept in mind the uncertainties which may arise from different areas of the experiment. Quantifying these errors allows us to judge whether the data and fittings that we created were good or not. 
+
+
+Quantifying these errors allows us to judge whether the data and fittings that we created were good or not. 
 
 Uncertainties from the CCD and those type of astronomy data noise: mention here their effect, and how they were dealt with. 
 
@@ -319,21 +322,14 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
 
 asdfsdfsadfsdf
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=8.25cm]{images/collage_rectangle_small}
-\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt has been made to remove the background galaxy for the data from 20th October 2017.}
-\label{2017hhz_collage}
-\end{center}
-\end{figure}
-
 \vspace{-3ex}
 \section{Analysis}
 \label{analysis}
 \vspace{-2ex}
 \subsection{Supernovae Models}
+\label{supernovae_models}
 \vspace{-2ex}
-In fitting the supernova templates to our data sets we used the software package SNooPy
+In fitting templates and models it could be manually performed, but we chose to use a Python package \textit{SNooPy}, specifically made to fit Type Ia curves. It would take our data and apply a templated light curve, as long as you provided a redshift as well. If it was given the right ascension and declination of the object, it would be able to produce a more accurate result as then it could calculate the host extinction in that area.   
 
 Discuss how SNooPy fit's its models here? \cite{car_snoopy}
 
@@ -380,6 +376,14 @@ sdfsdfsa
 \includegraphics[width=7.5cm]{results/covariance/covariance}
 \caption[]{Covariance between four variables, [[give them]], state which ones have been excluded and why we chose to view these one. These plots were produced using the fitMCMC function in SNooPy and they used the B and V band data for supernova 2017hhz.}
 \label{2017hle-data}
+\end{center}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=8.25cm]{images/collage_rectangle_small}
+\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the surrounding area. (a) Data was taken on the 20th October 2017. The calibration stars that were chosen have been labelled, 1 corresponds to star 512-002598, and 2 to 512-002599. These classifications were taken from the UCAC4 Catalog [[reference]]. The supernova 2017hhz has been shown with an arrow and label SNe. (b) Data from 23rd November 2017. (c) Data has been flat fielded for the 23rd November 2017. (d) An attempt has been made to remove the background galaxy for the data from 20th October 2017.}
+\label{2017hhz_collage}
 \end{center}
 \end{figure}
 
