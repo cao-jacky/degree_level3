@@ -278,16 +278,20 @@ After we had calculated magnitude values we could then proceed to plot supernova
 \vspace{-2ex}
 Throughout the experiment it was important that we kept in mind the uncertainties which could affect the accuracy of our results. Various steps were undertaken to ensure that the sources of errors could be reduced, some of these methods have already been detailed in Section \ref{data_analysis} however we would like to discuss other random and systematic uncertainties.
 
-In collecting data, we have already learnt how a CCD could count extra noise in the form of bias and dark current if it is not accounted for. Alternatively, we found that as our Type Ia supernovae progressed along their evolutionary path we found that as they progressively dimmed, it became increasingly difficult for us to produce a precise result. This random error is a result of the observation limits of the telescopes, as they can only observe to a certain magnitude it would be expected that the magnitudes produced would have a larger uncertainty.
+In collecting data, we have already learnt how a CCD could count extra noise in the form of bias and dark current if it is not accounted for. Alternatively, we found that as our Type Ia supernovae progressed along their evolutionary path we found that as they continually dimmed, it became increasingly difficult for us to produce a precise result. This random error is a result of the observational limits of the telescopes, as they could only observe to a certain magnitude it would be expected that the magnitudes produced would have a larger uncertainty.
 
-Having access to a larger telescope, one with a greater aperture, would allow us to collect more light and thus produce a more accurate and precise value for the supernova magnitudes.
+Having access to a larger telescope, one with a greater aperture would allow us to collect more light and thus produce a more accurate and precise value for the supernova magnitudes.
 
+If we consider the systematic errors of our experiment, the greatest source would be as a result of our aperture photometry. Whilst we tried to ensure that we used a set method and set conditions, we may still have accidentally misplaced the positioning of one of the apertures. 
 
+We chose to perform the photometry manually, however to reduce the potential systematic error, we should have automated the process with a script. In doing so, we would be more certain that the counts and magnitudes that we obtained would be more accurate to the true value of the magnitude of the supernova.
+
+On the other hand, we could have repeated the photometry and then took an average value for the counts to reduce any random and systematic errors which may occur. However, as we tried to ensure that our apertures were on the position of peak brightness of their respective objects, hopefully it would make no difference. 
 
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their  associated uncertainties. This was the data which we used to plot our light curves.
+Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their  associated uncertainties. Equations \ref{mag_counts} and  From this we could then plot our Type Ia supernova light curves and then attempt to perform cosmology with our results.
 
 \begin{table}[h!]
 \centering
@@ -306,7 +310,7 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
  17/11/17 & 18.8 & 0.2 & 18.2 & 0.4 \\
  \hline
 \end{tabular}
-\caption{Magnitude values and their uncertainties calculated for the B and V photometric bands from our data for Type Ia supernova, 2017hhz.}
+\caption{10 days worth of data was analysed to produce magnitudes and their uncertainties for the B and V photometric bands for Type Ia supernova, 2017hhz. }
 \label{2017hhz-table}
 \end{table}
 
@@ -323,11 +327,9 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
  18/11/17 & 19.6 & 0.5 & 18.7 & 0.3 \\
  \hline
 \end{tabular}
-\caption{The B and V band magnitudes and their uncertainties have been calculated for Type Ia-91bg supernovae 2017hle.}
+\caption{6 days worth of data was analysed for the Type Ia-91bg supernova, 2017hle. For the B and V band, their magnitudes are shown with their associated uncertainties.}
 \label{2017hle-table}
 \end{table}
-
-asdfsdfsadfsdf
 
 \vspace{-3ex}
 \section{Analysis}
@@ -687,5 +689,14 @@ asdasda
 \vspace{-3ex}
 \section*{Appendix D - Uncertainties}
 \vspace{-2ex}
+Our magnitude values had an associated uncertainty which was found by using the following equation,
+\begin{equation}
+\delta{m} = 2.5 \log_{10} \Big(1 + \frac{1}{\sqrt{C}} \Big),
+\label{m_uncert}
+\end{equation}
+
+where $\delta{m}$ is the uncertainty on the magnitude, and $C$ is the value obtained for the counts of the supernova explosion.
+
+\clearpage
 
 \end{document}
