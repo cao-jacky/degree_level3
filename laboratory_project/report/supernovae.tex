@@ -168,14 +168,14 @@ Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Rit
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{observations/cassegrain}
-\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former deisgn the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed. \\ (\textit{This diagram has been adapted from Telescopes and Techniques} \cite{tel_tech}.)}
+\caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former design the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed. \\ (\textit{This diagram has been adapted from Telescopes and Techniques} \cite{tel_tech}.)}
 \label{cassegrain}
 \end{center}
 \end{figure}
 \squeezeup
 \squeezeup
 
-To record and make use of the collected light from our supernova targets we had to use CCD cameras which were mounted at the focal points of our telescopes. In a simplified manner, these cameras would convert the photons into electrons and then the electron signal would be processed by a computer into an image \cite{mod_ast, tel_tech}. This could then be manipulated and analysed using software packages such as \textit{GAIA} \cite{starlink}.
+To record and make use of the collected light from our supernova targets we had to use CCD cameras which were mounted at the focal points of our telescopes. On Far-East-16, a QSI 583ws CCD was used with an LX200R telescope, and with pt5m a Kodak KAF-3200ME CCD with an Officina Stellare 0.5m Ritchey-Chr\'{e}tein telescope. In a simplified manner, these CCD cameras would convert the photons into electrons and then the electron signal would be processed by a computer into an image \cite{mod_ast, tel_tech}. This could then be manipulated and analysed using software packages such as \textit{GAIA} \cite{starlink}.
 
 For our project in particular, we wanted to produce light curves of supernovae within different colour bands. By using photometric filters on our CCDs we were able to observe supernovae within these bands. Meaning that we were only able to view specific wavelengths of light from our objects, this would correspond to particular energies in the elements present in astronomical bodies \cite{astro_filters}. 
 
@@ -291,7 +291,7 @@ On the other hand, we could have repeated the photometry and then took an averag
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes values with their  associated uncertainties. Equations \ref{mag_counts} and  From this we could then plot our Type Ia supernova light curves and then attempt to perform cosmology with our results.
+Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes with their associated uncertainties. We note again that Equation \ref{mag_counts} was used for the magnitude, and Equation \ref{m_uncert} for the uncertainty. From this we could then plot Type Ia supernova light curves and then attempt to perform cosmology with the results.
 
 \begin{table}[h!]
 \centering
@@ -338,24 +338,22 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
 \subsection{Supernovae Models}
 \label{supernovae_models}
 \vspace{-2ex}
-In fitting templates and models it could be manually performed, but we chose to use a Python package \textit{SNooPy}, specifically made to fit Type Ia curves. It would take our data and apply a templated light curve, as long as you provided a redshift as well. If it was given the right ascension and declination of the object, it would be able to produce a more accurate result as then it could calculate the host extinction in that area.   
+In fitting templates and models to our data, the process could be manually performed, however we chose to use a Python package \textit{SNooPy} \cite{car_snoopy}. SNooPy is an automated fitter for Type Ia light curves, our magnitudes would be parsed and then a template would be transformed to fit that set of data. 
 
-Discuss how SNooPy fit's its models here? \cite{car_snoopy}
+The routine would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension and declination of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}. 
 
-Usage of different models, if I can, find different models and fit them to our data and see how it would differ. What kind of techniques would be required to do so. 
-
+The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift $z$ that they obtained.
 
 \vspace{-3ex}
 \subsection{Results}
 \vspace{-2ex}
-
-sdfsdfsa
+After running our data through SNooPy, we were able to fit light curves. In Figure \ref{2017hhz-lc} and Figure \ref{2017hle-lc}
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hhz}
 \caption[]{The light curves for supernova 2017hhz. In the B band, the data has been plotted with the uncertainty in the magnitude plotted as well. The first observation, for day zero, was made on Friday 20th October 2017.}
-\label{2017hhz-data}
+\label{2017hhz-lc}
 \end{center}
 \end{figure}
 
@@ -363,7 +361,7 @@ sdfsdfsa
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hle}
 \caption[]{The light curves for supernova 2017hle. In the B band, the data has been plotted with the uncertainty in the magnitude plotted as well, }
-\label{2017hle-data}
+\label{2017hle-lc}
 \end{center}
 \end{figure}
 
@@ -678,12 +676,17 @@ Given below are all the observations which were made during our observation peri
 
 \twocolumngrid
 \vspace{-3ex}
-\section*{Appendix C - Set of Sample Data}
+\section*{Appendix C - Sample Data and Code}
 \vspace{-2ex}
+\subsection{Data}
 
-asdasda
+asdas
+
+\subsection{Programmes}
 
 \clearpage
+
+
 
 \twocolumngrid
 \vspace{-3ex}

@@ -11,6 +11,14 @@ D.~Bersier et~al.
 \newblock {\em Revista Mexicana de Astronomia y Astrofisica}, 48(1):78--82,
   2016.
 
+\bibitem{snoopy_docs}
+C.~Burns.
+\newblock {Using SNooPy}.
+\newblock
+  \url{http://csp.obs.carnegiescience.edu/data/snpy/documentation/snoopy-manual-pdf},
+  February 2015.
+\newblock [Online; accessed 1st January 2018].
+
 \bibitem{car_snoopy}
 C.~R. Burns et~al.
 \newblock {The Carnegie Supernova Project: Light-Curve Fitting with SnooPy}.
