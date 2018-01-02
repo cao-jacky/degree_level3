@@ -369,6 +369,8 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \label{2017hhz-lc}
 \end{center}
 \end{figure}
+\squeezeup
+\squeezeup
 
 \begin{figure}[!h]
 \begin{center}
@@ -406,6 +408,8 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \label{2017hhz_collage}
 \end{center}
 \end{figure}
+\squeezeup
+\squeezeup
 
 \vspace{-3ex}
 \section{Discussion}
@@ -413,7 +417,13 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \vspace{-2ex}
 
 \subsection{Using SNooPy to fit templates to supernovae}
-When we look at the fittings that SNooPy have performed, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we initially see by eye that it appears to be a decent fitting. However if we take a moment and step back and consider the look at Figure \ref{2017hle-lc} 
+% Deffo need to rewrite all of this at one point
+
+When we look at the fittings that SNooPy produced, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line, and the uncertainties enclose that[[?]]. However if we take a moment to step back and consider Figure \ref{2017hle-lc}, we see that whilst SNooPy has managed to fit the first three of our data points in the B and V bands, the latter three appear to not fit the model that well. 
+
+This then raises the question, how well does this program actually fit templates to data, and could we believe and use their results in cosmology for example?
+
+In earlier analysis of 2017hle, before we had collected and analysed the last three points, we found that the model was fitted slightly differently. 
 
 SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
 
