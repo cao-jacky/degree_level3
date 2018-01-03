@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb,relsize}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb,relsize,csquotes}
 \usepackage{listings}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
 \usepackage[normalem]{ulem}
@@ -440,7 +440,7 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 
 \subsection{SNooPy: the Type Ia SNe template fitter}
 \vspace{-2ex}
-\subsubsection{The initial quality of the fit }
+\subsubsection{What is the initial quality of the fit?}
 \vspace{-2ex}
 % Deffo need to rewrite all of this at one point
 
@@ -475,7 +475,7 @@ If we return to our discussion on the quality of the fit, numerically, we can qu
 Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. Now we would like to understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
 
 \vspace{-2ex}
-\subsubsection{How is the fit done?}
+\subsubsection{How is the fitting actually performed?}
 \vspace{-2ex}
 
 In fitting templates there are many well-established methods which can be employed to fit data in a broad number of photometric bands. We must start though at the beginning, and understand the very basics behind fitting Type Ia light curves.
@@ -484,22 +484,24 @@ Within the B and to an extent V-band, light curves can generally be fitted by us
 
 So, a single-parameter family of curves became the accepted base method instead of using the stretch-like correction. This single parameter would be used to describe the shape of the light curve and would be employed when the template is being fitted.
 
-With 
+One package which we have not used, SALT2 \cite{salt2}, uses a stretch-like parameter $x_1$ to describe a sequence of spectral energy distributions of Type Ia supernovae which is further modified by a colour-like parameter $c$. Another fitter on the other hand uses a luminosity parameter $\Delta$, MLCS2k2 \cite{prec_indic, mlcs2k2}. 
 
-As well as the Carnegie Supernova Project's (CSP) system in SNooPy, there is also SALT2 \cite{salt2} and MLCS2k2 \cite{prec_indic, mlcs2k2}. 
+With SNooPy none of these parameters are used, instead, the decline-rate parameter ($\Delta m_{15}(B)$) is employed in SNooPy's templates. Compared to the other two methods, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be not universal.
 
-The latter two were chosen not to be used by CSP as they are all optimised to work in the optical wavelengths, and in some cases in different passbands to what CSP use \cite{car_snoopy}. 
+Detailed by Burns et al (2011) \cite{car_snoopy}, the theory and methods which build upon $\Delta m_{15}$ are beyond the scope of our knowledge and the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
 
-They employed observations of 71 high redshift Type Ia supernovae in the near-infrared bands Y and J, and 
+What is actually useful for us to know is that after the creators of SNooPy had created the light curve templates, they arrived at the following conclusion:
 
-Whilst we ourselves did not collect data in the Johnson I or Sloan i bands, in the fitting of templates 
+\textquote{If we use the above procedure to generate a B light-curve template with a particular $\Delta m_{15}$, there is no guarantee that the \textit{measured} change in magnitude of the template from peak to day 15 will exactly match the input $\Delta m_{15}(B)$.} \cite{car_snoopy}.
 
-As described by Burns et al (2010) \cite{car_snoopy} supernova events are typically triggered in the optical bands and the light curves when observed in the near infrared peak earlier than in other photometric bands, thus it is often required to 
+In other words, for the values of the decline-rate parameter which we obtained from the summary output after SNooPy had performed it's fitting, these do not actually correspond to the values which were used in the production of the templates. It is also noted that the final fitting takes into account all the data from each individual filter provided and not just the B-band data close to maximum and day 15.
+
+The implications that arise because of these conclusions firstly take the form of a higher probability that the intrinsic peak magnitudes $M_{\max}(B)$ that we calculated previously are in fact not accurate as the output values for $\Delta m_{15}$ do not reflect what was used in the actual modelling, and secondly due to the random and systematic deviations of the template-derived value for $\Delta m_{15}$ an additional statistical uncertainty should be accounted for as well.   
 
 SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
 
 \vspace{-2ex}
-\subsubsection{The quality of the fit, revisited}
+\subsubsection{So, how is the quality of fit now?}
 \vspace{-2ex}
 
 after all that theory and description on how snoopy functions as a fitter for type Ia supernovae 
