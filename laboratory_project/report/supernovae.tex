@@ -445,7 +445,7 @@ This then raises the questions, how does this program actually fit templates to 
 
 Before we consider the inner workings of SNooPy, we must look at the possibility that the data we collected for those three days was just poor, and this appears to be the most likely case. With these points, the data was collected around two weeks after our initial observations, the supernova would have more than likely dimmed past the limit to which our telescopes could see. Therefore what we had collected would not have been an accurate magnitude, and this does show with the template fitting.
 
-Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce the Philips parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after this parameter \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
+Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce Philips' parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after this parameter \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
 \begin{equation}
 M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 \label{intrinsic_b}
@@ -453,9 +453,21 @@ M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 
 where $\Delta m_{15}(B)$ is the decline rate parameter \cite{high_en_astro}.
 
-Using Equation \ref{intrinsic_b} and the values from Table \ref{snoopy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement.
+Using Equation \ref{intrinsic_b} and the values from Table \ref{snoopy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
 
-From this, we find that with our data and with SNooPy's fitting we produce absolute magnitude values which lie within the typical found values.
+From this, we find that with our data and with SNooPy's fitting we produce absolute magnitude values which lie within the typical found values. Yet we still have to further question the quality of this fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
+
+We can thus draw our first conclusion about SNooPy (and about supernova template fitting in general), a complete set of data is required to effectively produce a light curve. Data which covers the majority of the evolution of the Type Ia supernova - from before peak magnitude to afterwards when it is in decline. 
+
+Removing the latter three points for 2017hhz and running SNooPy we find, $\Delta m_{15}=1.036\pm0.243$ and thus $M_B = -18.9\pm0.7$. This is more inline with what is typical, we could say this is because we still have seven points which form the general profile of the light curve, thus a fitting would be more likely to be accurate.
+
+But for our final plots, we still have to remain skeptical. The positioning of the peak magnitude in the B and V bands is the main contending issue, whilst it appears for 2017hhz we capture our initial data when it is at it's peak magnitude, we cannot truly be sure if this is the case. We require more data before our first point on the 20th October 2017. 
+
+We did attempt to add additional points by looking at the entry and initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
+
+Without data covering the initial rise to peak brightness, SNooPy has still managed to fit templates to our data.
+
+If we do quantify the fit numerically, i.e. finding $\chi^2$ statistics, from Table \ref{chi2-table}
 
 SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
 
