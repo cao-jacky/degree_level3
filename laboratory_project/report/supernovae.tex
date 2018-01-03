@@ -231,19 +231,19 @@ The CCD produces one other type of noise which can be account for, each pixel on
  
 Cosmic rays which register onto the camera can be removed by stacking (combining) multiple frames of the same field and same exposure time together. This is a process where the median value for each pixel is found from the stack of images, thus any anomalously high values which arise from cosmic rays can be removed.
 
-Once our frames had been cleaned of noise we could then begin to perform photometry, more specifically, aperture photometry. After identifying the supernova in our images, we then wanted to calculate the absolute magnitude of it and see how it progressed with time. To perform this we had to choose at least two calibration stars, of which they had to be of similar size to the supernova and be in the general proximity of it.  This was so that when performing aperture photometry a similar signal could be obtained across all objects and a similar sky background noise could be obtained as well. Noise which arose from the night sky and which could not be directly removed through subtraction techniques.
+Once our frames had been cleaned of noise we could then begin to perform photometry, more specifically, aperture photometry. After identifying the supernova in our images, we then wanted to calculate the apparent magnitude of it and see how it progressed with time. To perform this we had to choose at least two calibration stars, of which they had to be of similar size to the supernova and be in the general proximity of it.  This was so that when performing aperture photometry a similar signal could be obtained across all objects and a similar sky background noise could be obtained as well. Noise which arose from the night sky and which could not be directly removed through subtraction techniques.
 
-Another important criterion for these calibration objects is that their absolute magnitudes must already be known. This was required in the calculation of the magnitudes for the supernova. So, we used the \textit{UCAC4 Catalog} to find the photometric data for the calibration stars in the B and V bands. For the 2017hhz frames we chose calibration stars 512-002598 and 512-002599, and for 2017hle we used 613-003374 and 613-003367. These names are the identifiers used by UCAC4. Once we had our data and calibration stars, we could use the following equation, 
+Another important criterion for these calibration objects is that their apparent magnitudes must already be known. This was required in the calculation of the magnitudes for the supernova. So, we used the \textit{UCAC4 Catalog} to find the photometric data for the calibration stars in the B and V bands. For the 2017hhz frames we chose calibration stars 512-002598 and 512-002599, and for 2017hle we used 613-003374 and 613-003367. These names are the identifiers used by UCAC4. Once we had our data and calibration stars, we could use the following equation, 
 \begin{equation}
     m = z - 2.5 \log_{10}{C},
 \label{mag_counts}
 \end{equation}
 
-where $m$ is the absolute magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
+where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
 
 In using this equation we first required the zero-point for the image that we were working with. What we imaged would not be the actual magnitudes of the objects, they would be offset by a certain amount, $z$, due to light being absorbed by dust in the supernova's host galaxy, through the interstellar medium, and by the dust that is in our own galaxy.
 
-To begin with then, the counts $C$ for the calibration stars were measured, with this and the absolute magnitudes $m$ we could solve equation \ref{mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an absolute magnitude value for the supernova.
+To begin with then, the counts $C$ for the calibration stars were measured, with this and their apparent magnitudes $m$ we could solve equation \ref{mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an apparent magnitude value for the supernova.
 
 With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
 
@@ -312,6 +312,7 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
  \hline
 \end{tabular}
 \caption{10 days worth of data was analysed to produce magnitudes and their uncertainties for the B and V photometric bands for Type Ia supernova, 2017hhz. }
+\vspace{-0.5em}
 \label{2017hhz-table}
 \end{table}
 
@@ -329,6 +330,7 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
  \hline
 \end{tabular}
 \caption{6 days worth of data was analysed for the Type Ia-91bg supernova, 2017hle. For the B and V band, their magnitudes are shown with their associated uncertainties.}
+\vspace{-1.5em}
 \label{2017hle-table}
 \end{table}
 
@@ -354,37 +356,55 @@ A full example of how SNooPy was used has been provided in Appendix C.
 \vspace{-3ex}
 \subsection{Results}
 \vspace{-2ex}
-After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{2017hhz-lc} and Figure \ref{2017hle-lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands.
+After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{2017hhz-lc} and Figure \ref{2017hle-lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands. Table \ref{snoopy_summary} provides a summary of the parameters that was used by SNooPy for these fittings.
 
 In Table \ref{chi2-table} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands.
 
 Figure \ref{covar-plots} shows some of the covariance plots produced by \texttt{fitMCMC()} in SNoopy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter.
 
-With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of  images.
+With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of images.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hhz}
 \caption[]{Plot showing the light curves fitted by SNooPy for supernova 2017hhz. The raw magnitude data has been plotted with their uncertainty in the B and V photometric bands - the V band has been offset by 1 to more clearly show both sets of data. The zero position on the $x$- axis represents the first observation made on Friday 20th October 2017.}
+\vspace{-1.5em}
 \label{2017hhz-lc}
 \end{center}
 \end{figure}
-\squeezeup
-\squeezeup
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hle}
 \caption[]{The calculated magnitude and uncertainties for the supernova 2017hle has been plotted along with the SNooPy fitted light curve for the B and V bands. The set of data for the V band has been offset by 1 to produce a clearer plot. Thursday 26th October 2017 represents the zero point on our $x$- axis.}
 \label{2017hle-lc}
+\vspace{-1.5em}
 \end{center}
 \end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
+ \hline
+ \textbf{Supernova} & \textbf{EBV} & \textbf{$\boldsymbol{T_{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
+ 2017hhz & 0.049 & 2.080 &  36.121 & 0.798 \\
+  & $\pm$0.083 & $\pm$1.158 & $\pm$0.106 & $\pm$0.138 \\
+  
+ 2017hle & 0.614 & -3.976 &  34.096 & 1.929 \\
+  & $\pm$0.225 & $\pm$1.538 & $\pm$0.455 & $\pm$0.238 \\
+ \hline
+\end{tabular}
+\caption{The parameters that were used by SNooPy in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
+\vspace{-1.5em}
+\label{snoopy_summary}
+\end{table}
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{results/covariance/covariance}
 \caption[]{Four out of the six covariance plots produced by the \texttt{fitMCMC()} function in SNooPy for supernova 2017hhz. The plots show the correlations between four parameters: Tmax, the time for B-maximum; EBVhost, the host galaxy extinction; DM, the distance modulus; and dm15, the decline-rate parameter.}
 \label{covar-plots}
+\vspace{-1.5em}
 \end{center}
 \end{figure}
 
@@ -398,6 +418,7 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
  \hline
 \end{tabular}
 \caption{$\chi^2$ and reduced $\chi^2$ ($\chi^2_{\nu}$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
+\vspace{-1.5em}
 \label{chi2-table}
 \end{table}
 
@@ -406,10 +427,9 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \includegraphics[width=8.25cm]{images/collage_rectangle_small}
 \caption[]{Images of the supernova 2017hhz, it's host galaxy, and the stars in the same field in the V band. (a) Our first frame for this supernova from the 20th October 2017. Supernova 2017hhz has been labelled as SNe, and our calibration stars, 512-002598 as 1, and 512-002599 as 2. (b) Our last frame of data taken on 23rd November 2017. (c) Data from 23rd November 2017 when flat-fielded. (d) An attempt was made as an extension project to remove the background galaxy for the data from 20th October 2017, supernova 2017hhz has been labelled for your convenience.}
 \label{2017hhz_collage}
+\vspace{-1.5em}
 \end{center}
 \end{figure}
-\squeezeup
-\squeezeup
 
 \vspace{-3ex}
 \section{Discussion}
@@ -419,11 +439,23 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \subsection{Using SNooPy to fit templates to supernovae}
 % Deffo need to rewrite all of this at one point
 
-When we look at the fittings that SNooPy produced, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line, and the uncertainties enclose that[[?]]. However if we take a moment to step back and consider Figure \ref{2017hle-lc}, we see that whilst SNooPy has managed to fit the first three of our data points in the B and V bands, the latter three appear to not fit the model that well. 
+When we look at the plots that SNooPy produced, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{2017hle-lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
 
-This then raises the question, how well does this program actually fit templates to data, and could we believe and use their results in cosmology for example?
+This then raises the questions, how does this program actually fit templates to data, and how well does it do so? Could we believe and use their results in cosmology?
 
-In earlier analysis of 2017hle, before we had collected and analysed the last three points, we found that the model was fitted slightly differently. 
+Before we consider the inner workings of SNooPy, we must look at the possibility that the data we collected for those three days was just poor, and this appears to be the most likely case. With these points, the data was collected around two weeks after our initial observations, the supernova would have more than likely dimmed past the limit to which our telescopes could see. Therefore what we had collected would not have been an accurate magnitude, and this does show with the template fitting.
+
+Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce the Philips parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after this parameter \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
+\begin{equation}
+M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
+\label{intrinsic_b}
+\end{equation}
+
+where $\Delta m_{15}(B)$ is the decline rate parameter \cite{high_en_astro}.
+
+Using Equation \ref{intrinsic_b} and the values from Table \ref{snoopy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement.
+
+From this, we find that with our data and with SNooPy's fitting we produce absolute magnitude values which lie within the typical found values.
 
 SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
 
@@ -805,6 +837,13 @@ We now detail the steps that we took when using this Python package.
 \end{enumerate}
 
 N.B.: The full stops and commas at the end of the functions should not be included, they have been added for grammatical and aesthetic reasons.
+
+For other types of Type Ia supernovae, a different form of the standard template has to be selected, that can be done with this command,
+\begin{equation*}
+\texttt{s.k\_version = 'type'},
+\end{equation*}
+
+where \texttt{type} could be \texttt{91bg} to represent Type Ia-91bg supernovae.
 
 \clearpage
 
