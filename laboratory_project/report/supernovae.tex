@@ -40,7 +40,7 @@ Observing these events and measuring their magnitude over a period of time allow
 \subsection{Supernovae Classification}
 \vspace{-2ex}
 
-If we were to further study the light curve shapes and also the spectra of the supernovae from our sample, we would begin to recognise that there are further sub-classifications within Type I and Type II. In Table \ref{sn_classes} some of these subtypes are specified.
+If we were to further study the light curve shapes and also the spectra of the supernovae from our sample, we would begin to recognise that there are further sub-classifications within Type I and Type II. In Table \ref{table:sn_classes} some of these subtypes are specified.
 
 \begin{table}[h!]
 \centering
@@ -56,20 +56,20 @@ If we were to further study the light curve shapes and also the spectra of the s
  \hline
 \end{tabular}
 \caption{Some of the subclassifications of supernova and their respective characteristics which distinguish between them from each other \cite{longair, obs_phys_class_sn}.}
-\label{sn_classes}
+\label{table:sn_classes}
 \end{table}
 \squeezeup
 
 In the application to cosmology, one of the most used types of supernovae are Type Ia, their light curve profiles are generally homogenous which allows them to be used as standard candles, thus providing a reliable distance indicator.  
 
-We can see this homogeneity in Figure \ref{typeia-standard}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands (further discussion on bands and photometric filters in Section \ref{observer-collection}) follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{typeia-standard}.
+We can see this homogeneity in Figure \ref{fig:typeia}. This plot was produced by superimposing and translating multiple sets of Type Ia data. The light curves in the B and V bands (further discussion on bands and photometric filters in Section \ref{observer-collection}) follow a general path in their evolution: they initially increase in brightness until they reach a peak magnitude, after this point the magnitude of the supernova decreases until no noticeable change can be detected by our telescopes. We note that whilst Type Ia's do peak at different magnitudes in when observed from in different bands, it is not as pronounced as is shown in Figure \ref{fig:typeia}.
 
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{intro/typeia}
 \caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time axis and magnitude axis to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
-\label{typeia-standard}
+\label{fig:typeia}
 \end{center}
 \end{figure}
 \squeezeup
@@ -92,9 +92,9 @@ The process continues until the heaviest element that nuclear fusion can produce
 \ce{^{56}Ni} \xrightarrow{\text{ec}} \ce{^{56}Co} \xrightarrow{\text{ec, $\beta^{+}$}} \ce{^{56}Fe}.
 \end{equation*}
 
-With these processes, they can be used to explain the form of the Type Ia light curves. The luminosity at peak maximum can be explained as the energy which has been deposited into the expanding envelope from the decay of the \ce{^{56}Ni} nuclei \cite{mod_ast}. We can highlight other features as seen in Figure \ref{typeia-standard}: the increase to peak magnitude is a fast process, it increases roughly half a magnitude a day; and the maximum of the light curve can be approximated as a Gaussian function \cite{mod_ast}. 
+With these processes, they can be used to explain the form of the Type Ia light curves. The luminosity at peak maximum can be explained as the energy which has been deposited into the expanding envelope from the decay of the \ce{^{56}Ni} nuclei \cite{mod_ast}. We can highlight other features as seen in Figure \ref{fig:typeia}: the increase to peak magnitude is a fast process, it increases roughly half a magnitude a day; and the maximum of the light curve can be approximated as a Gaussian function \cite{mod_ast}. 
 
-However, there are some peculiar types of Type Ia supernovae. For example, as featured in Table \ref{sn_classes}, Type Ia-91bg are a class of supernovae which have spectra which resembles those of Type Ia, however, they have an absorption band at $400-450$ nm. This arises due to a blend of Fe-group elements which is dominated by Ti II \cite{obs_phys_class_sn}. With their light curves they also lack the secondary maximum as found in normal Type Ia's within the I and R bands.
+However, there are some peculiar types of Type Ia supernovae. For example, as featured in Table \ref{table:sn_classes}, Type Ia-91bg are a class of supernovae which have spectra which resembles those of Type Ia, however, they have an absorption band at $400-450$ nm. This arises due to a blend of Fe-group elements which is dominated by Ti II \cite{obs_phys_class_sn}. With their light curves they also lack the secondary maximum as found in normal Type Ia's within the I and R bands.
 
 Observing objects and recognising that they are Type Ia supernovae thus requires not only spectroscopic observations but also observations in the optical. 
 
@@ -123,14 +123,14 @@ With this in mind, if a new Type Ia supernova is discovered and enough data has 
 For example, if we had a sample of nearby Type Ia supernovae with redshifts of $\mathrel{\mathsmaller{\lesssim}} 0.1$, we could derive a value for Hubble's Constant by plotting them on a Hubble diagram \cite{exp_uni_sn}, and in turn use a rearranged form of Hubble's Law,
 \begin{equation}
 H_0 = \frac{v}{d}, 
-\label{h_nought}
+\label{eqn:h_0}
 \end{equation}
 where $H_0$ is the value for Hubble's Constant, $v$ is the recessional velocity of the supernova, and $d$ is the distance to the supernova \cite{mod_ast}. 
 
 To calculate the recessional velocity, the redshift of the supernova has to be obtained, this could be obtained by making spectroscopic observations of the supernovae, and then $v$ would be calculated using,
  \begin{equation}
 v = zc,
-\label{redshift}
+\label{eqn:redshift}
 \end{equation}
 
 where $v$ is the recessional velocity of the supernova, $z$ is the redshift of the supernova, and $c$ is the speed of light in a vacuum \cite{mod_ast}.
@@ -164,13 +164,13 @@ We employed three out of the four telescopes based on the Department of Physic's
 
 For the vast majority of our observations we used the 16$''$ telescope (Far-East-16, or FE16) from the Durham array and the robotic 0.5 m telescope (pt5m) from La Palma. We used these two telescopes predominantly as they allowed us the best resolution and illumination on our faint objects. Compared to the 14$''$ telescopes which are also part of the Durham array, having a larger aperture means that a more sufficient number of photons could be obtained so that we could study our targets more clearly. 
 
-Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{cassegrain}. With this design, the telescope can produce good quality images over a field of view of several tens of arcminutes across as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
+Both Far-East-16 and pt5m are variants of the Cassegrain Telescope, they are Ritchey-Chr\'{e}tein Telescopes. This derivative is composed of a hyperboloidal primary and secondary mirror \cite{tel_tech} as can be seen in Figure \ref{fig:cass_spec}. With this design, the telescope can produce good quality images over a field of view of several tens of arcminutes across as opposed to just a few minutes of arc when a basic Cassegrain design is used \cite{tel_tech}. 
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{observations/cassegrain}
 \caption[]{A schematic overview of a Cassegrain/Ritchey-Chr\'{e}tein Telescope, in the former design the primary mirror is paraboloidal, and in the latter the primary mirror is hyperboloidal. In both types of telescope the secondary mirror is a convex hyperboloidal and F is the focal point of the telescope where a CCD camera can be placed. \\ (\textit{This diagram has been adapted from Telescopes and Techniques} \cite{tel_tech}.)}
-\label{cassegrain}
+\label{fig:cass_spec}
 \end{center}
 \end{figure}
 \squeezeup
@@ -236,14 +236,14 @@ Once our frames had been cleaned of noise we could then begin to perform photome
 Another important criterion for these calibration objects is that their apparent magnitudes must already be known. This was required in the calculation of the magnitudes for the supernova. So, we used the \textit{UCAC4 Catalog} to find the photometric data for the calibration stars in the B and V bands. For the 2017hhz frames we chose calibration stars 512-002598 and 512-002599, and for 2017hle we used 613-003374 and 613-003367. These names are the identifiers used by UCAC4. Once we had our data and calibration stars, we could use the following equation, 
 \begin{equation}
     m = z - 2.5 \log_{10}{C},
-\label{mag_counts}
+\label{eqn:mag_counts}
 \end{equation}
 
 where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
 
 In using this equation we first required the zero-point for the image that we were working with. What we imaged would not be the actual magnitudes of the objects, they would be offset by a certain amount, $z$, due to light being absorbed by dust in the supernova's host galaxy, through the interstellar medium, and by the dust that is in our own galaxy.
 
-To begin with then, the counts $C$ for the calibration stars were measured, with this and their apparent magnitudes $m$ we could solve equation \ref{mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an apparent magnitude value for the supernova.
+To begin with then, the counts $C$ for the calibration stars were measured, with this and their apparent magnitudes $m$ we could solve equation \ref{eqn:mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an apparent magnitude value for the supernova.
 
 With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
 
@@ -254,13 +254,13 @@ This was done by selecting one of the calibration stars and then plotting how th
 
 where $N_{\gamma}$ is the supernova signal, $N_{b}$ the sky background noise, $N_{d}$ the noise due to dark current, and $R$ the readout noise. The latter two sources of noise were reduced and could be ignored in our calculations.
 
-In Figure \ref{2017hhz_radii}(a) we show the $S/N$ plot that was created for the 2017hhz frames, the calibration star (512-002599) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
+In Figure \ref{fig:2017_stn}(a) we show the $S/N$ plot that was created for the 2017hhz frames, the calibration star (512-002599) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
 \squeezeup
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.5cm]{observations/2017hhz}
 \caption[]{(a) Plot of signal to noise against the radius of the aperture for 2017hhz frames, this was used to identify which fixed radius to use. (b) Image of the aperture tool used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is star, 512-002599.}
-\label{2017hhz_radii}
+\label{fig:2017_stn}
 \end{center}
 \end{figure}
 \squeezeup
@@ -268,7 +268,7 @@ In Figure \ref{2017hhz_radii}(a) we show the $S/N$ plot that was created for the
 
 The point where the plot decreases was chosen to be the radius as this would produce an optimal value for the signal to noise. In the case for 2017hhz this was chosen to be 4 pixels and for 2017hle it was 3 pixels. 
 
-Figure \ref{2017hhz_radii}(b) shows the aperture tool that was used extensively for the aperture photometry. With the white circle as the main aperture that we varied, and the two outer yellow circles being the sky annuli. The area enclosed in the sky would be sampled and then as quantified amount of noise, it would be removed away from the main counts value. The size of these rings were chosen as the radius scaled by factors $\times 1.5$ and $\times 2$. These numbers were justified as we wanted to avoid taking other stars as part of the sky background, and whilst this did mean we had to take part of the galaxy when we were working with our supernovae, we chose to be consistent with our calibration stars as it was difficult to balance just having sky in each individual annuli.
+Figure \ref{fig:2017_stn}(b) shows the aperture tool that was used extensively for the aperture photometry. With the white circle as the main aperture that we varied, and the two outer yellow circles being the sky annuli. The area enclosed in the sky would be sampled and then as quantified amount of noise, it would be removed away from the main counts value. The size of these rings were chosen as the radius scaled by factors $\times 1.5$ and $\times 2$. These numbers were justified as we wanted to avoid taking other stars as part of the sky background, and whilst this did mean we had to take part of the galaxy when we were working with our supernovae, we chose to be consistent with our calibration stars as it was difficult to balance just having sky in each individual annuli.
 
 For the placements of these apertures, we took a histogram profile of the vertical and horizontal directions of the object, and then placed the centre of the aperture to the centre of the maximum brightness. 
 
@@ -292,7 +292,7 @@ On the other hand, we could have repeated the photometry and then took an averag
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnitudes with their associated uncertainties. We note again that Equation \ref{mag_counts} was used for the magnitude, and Equation \ref{m_uncert} for the uncertainty. From this we could then plot Type Ia supernova light curves and then attempt to perform cosmology with the results.
+Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the calculated magnitudes with their associated uncertainties. We note again that Equation \ref{eqn:mag_counts} was used for the magnitude, and Equation \ref{m_uncert} for the uncertainty. From this we could then plot Type Ia supernova light curves and then attempt to perform cosmology with the results.
 
 \begin{table}[h!]
 \centering
@@ -313,7 +313,7 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
 \end{tabular}
 \caption{10 days worth of data was analysed to produce magnitudes and their uncertainties for the B and V photometric bands for Type Ia supernova, 2017hhz. }
 \vspace{-0.5em}
-\label{2017hhz-table}
+\label{table:2017hhz_data}
 \end{table}
 
 \begin{table}[h!]
@@ -331,7 +331,7 @@ Tables \ref{2017hhz-table} and \ref{2017hle-table} contain the calculated magnit
 \end{tabular}
 \caption{6 days worth of data was analysed for the Type Ia-91bg supernova, 2017hle. For the B and V band, their magnitudes are shown with their associated uncertainties.}
 \vspace{-1.5em}
-\label{2017hle-table}
+\label{table:2017hle_data}
 \end{table}
 
 \vspace{-3ex}
@@ -358,20 +358,20 @@ A full example of how SNooPy was used has been provided in Appendix C.
 \vspace{-3ex}
 \subsection{Results}
 \vspace{-2ex}
-After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{2017hhz-lc} and Figure \ref{2017hle-lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands. Table \ref{snoopy_summary} provides a summary of the parameters that was used by SNooPy for these fittings.
+After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that was used by SNooPy for these fittings.
 
-In Table \ref{chi2-table} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands.
+In Table \ref{table:chi2} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands.
 
-Figure \ref{covar-plots} shows some of the covariance plots produced by \texttt{fitMCMC()} in SNoopy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter.
+Figure \ref{fig:covar_plots} shows some of the covariance plots produced by \texttt{fitMCMC()} in SNoopy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter.
 
-With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of images.
+With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of images.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hhz}
 \caption[]{Plot showing the light curves fitted by SNooPy for supernova 2017hhz. The raw magnitude data has been plotted with their uncertainty in the B and V photometric bands - the V band has been offset by 1 to more clearly show both sets of data. The zero position on the $x$- axis represents the first observation made on Friday 20th October 2017.}
 \vspace{-1.5em}
-\label{2017hhz-lc}
+\label{fig:2017hhz_lc}
 \end{center}
 \end{figure}
 
@@ -379,7 +379,7 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hle}
 \caption[]{The calculated magnitude and uncertainties for the supernova 2017hle has been plotted along with the SNooPy fitted light curve for the B and V bands. The set of data for the V band has been offset by 1 to produce a clearer plot. Thursday 26th October 2017 represents the zero point on our $x$- axis.}
-\label{2017hle-lc}
+\label{fig:2017hle_lc}
 \vspace{-1.5em}
 \end{center}
 \end{figure}
@@ -398,14 +398,14 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \end{tabular}
 \caption{The parameters that were used by SNooPy in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
 \vspace{-1.5em}
-\label{snoopy_summary}
+\label{table:snpy_summary}
 \end{table}
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=7.5cm]{results/covariance/covariance}
 \caption[]{Four out of the six covariance plots produced by the \texttt{fitMCMC()} function in SNooPy for supernova 2017hhz. The plots show the correlations between four parameters: Tmax, the time for B-maximum; EBVhost, the host galaxy extinction; DM, the distance modulus; and dm15, the decline-rate parameter.}
-\label{covar-plots}
+\label{fig:covar_plots}
 \vspace{-1.5em}
 \end{center}
 \end{figure}
@@ -421,14 +421,14 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \end{tabular}
 \caption{$\chi^2$ and reduced $\chi^2$ ($\chi^2_{\nu}$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
 \vspace{-1.5em}
-\label{chi2-table}
+\label{table:chi2}
 \end{table}
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.25cm]{images/collage_rectangle_small}
 \caption[]{Images of the supernova 2017hhz, it's host galaxy, and the stars in the same field in the V band. (a) Our first frame for this supernova from the 20th October 2017. Supernova 2017hhz has been labelled as SNe, and our calibration stars, 512-002598 as 1, and 512-002599 as 2. (b) Our last frame of data taken on 23rd November 2017. (c) Data from 23rd November 2017 when flat-fielded. (d) An attempt was made as an extension project to remove the background galaxy for the data from 20th October 2017, supernova 2017hhz has been labelled for your convenience.}
-\label{2017hhz_collage}
+\label{fig:2017hhz_collage}
 \vspace{-1.5em}
 \end{center}
 \end{figure}
@@ -444,7 +444,7 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \vspace{-2ex}
 % Deffo need to rewrite all of this at one point
 
-When we look at the plots that SNooPy produced, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{2017hle-lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
+When we look at the plots that SNooPy produced, in Figures \ref{fig:2017hhz_lc} and \ref{fig:2017hle_lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{fig:2017hle_lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
 
 This then raises the questions, how does this program actually fit templates to data, and how well does it do so? Could we believe and use their results in cosmology?
 
@@ -458,7 +458,7 @@ M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 
 where $\Delta m_{15}(B)$ is the decline rate parameter \cite{high_en_astro}.
 
-Using Equation \ref{intrinsic_b} and the values from Table \ref{snoopy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
+Using Equation \ref{intrinsic_b} and the values from Table \ref{table:snpy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
 
 From this, we find that with our data and with SNooPy's fitting we produce absolute magnitude values which lie within the typical found values. Yet we still have to further question the quality of this fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
 
@@ -470,7 +470,7 @@ But for our final plots, we still have to remain skeptical. The positioning of t
 
 We did attempt to add additional points by looking at the initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
 
-If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{chi2-table} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits or due to the frames not being entirely clean of noise. So, the values produced would be far from unity. 
+If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits or due to the frames not being entirely clean of noise. So, the values produced would be far from unity. 
 
 Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. Now we would like to understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
 
