@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: supernovae.aux
+The style file: abbrv.bst
+Database file #1: supernovae.bib
+You've used 27 entries,
+            2118 wiz_defined-function locations,
+            645 strings with 6919 characters,
+and the built_in function-call counts, 7145 in all, are:
+= -- 682
+> -- 308
+< -- 0
++ -- 122
+- -- 94
+* -- 426
+:= -- 1263
+add.period$ -- 83
+call.type$ -- 27
+change.case$ -- 109
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 294
+empty$ -- 612
+format.name$ -- 94
+if$ -- 1496
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 33
+newline$ -- 140
+num.names$ -- 55
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 89
+quote$ -- 0
+skip$ -- 211
+stack$ -- 0
+substring$ -- 322
+swap$ -- 27
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 90
+warning$ -- 0
+while$ -- 65
+width$ -- 29
+write$ -- 294

@@ -23,7 +23,7 @@
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 07/01/2018}
 
 \begin{abstract}              
-We have measured the magnitude of supernova explosions over an extended period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. We have plotted several light curves and have identified a Type Ia and Type Ia-91bg supernova, 2017hhz and 2017hle. With our data we have fitted template light curves with the Python routine, \textit{SNooPy}. These fittings have produced reduced $\chi^2$ values in the B and V bands of 1.68 and 2.78 for 2017hhz, and 1.29 and 3.02 for 2017hle. This indicating that the fittings are good in the V band but really good in the V band. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
+We have measured the magnitude of supernova explosions over an extended period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. We have plotted several light curves and have identified a Type Ia and Type Ia-91bg supernova, 2017hhz and 2017hle. With our data we have fitted template light curves with the Python routine, \textit{SNooPy}. These fittings have produced reduced $\chi^2$ values in the B and V bands of 1.68 and 2.78 for 2017hhz, and 1.29 and 3.02 for 2017hle. This indicating that the fittings are good in the V band but really good in the V band. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
 \end{abstract}
 
 \maketitle
@@ -34,7 +34,7 @@ We have measured the magnitude of supernova explosions over an extended period o
 \vspace{-2ex}
 In astronomy, one of the most violent and luminous events which can occur are supernova explosions. At the end of a massive star's lifetime, as a star runs out of nuclear fuel to burn, there is a possibility that the equilibrium configurations for a star will cease to exist. This leads to a final cataclysmic event, a supernova explosion. The luminosity of such, when at it's peak, can be as bright as a small galaxy \cite{longair}.
 
-Observing these events and measuring their magnitude over a period of time allows us to plot light curves. The likes of which can then be used to visualise the evolution of a supernova. Using these plots we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}, and that Type II events are very hydrogen-rich \cite{obs_phys_class_sn}.
+Observing these events and measuring their magnitude over a period of time allows us to plot light curves. The likes of which can then be used to visualise the evolution of a supernova. Using these plots we can draw the conclusion that there is order in the explosions. We find that if our sample of supernovae (SNe) is large enough, we see that they can be grouped together into different types just by features from their light curves. The two general types of supernova are Type I and Type II, the difference between them being that Type I lacks the Balmer hydrogen features in it's spectra \cite{longair}, and that Type II events are very hydrogen-rich \cite{obs_phys_class_sn}.
 
 \vspace{-3ex}
 \subsection{Supernovae Classification}
@@ -214,7 +214,7 @@ It was realised early on in our project that it would not feasible for us to tra
 
 In choosing which objects to observe we used the \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} \cite{asassn_sn} Lists. These are databases which are updated by astronomers with the latest discovered supernovae. For our observations we aimed to choose supernovae which had a discovery magnitude of around 18 or less, anything greater than this would be too faint to observe with our telescopes.
 
-After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, we chose two supernovae targets, 2017hhz and 2017hle, a Type Ia and Type Ia-91bg respectively. Both being not too close to their host galaxy's nucleus and they appeared to the brightest supernova objects discovered at the time.
+After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, we chose two supernovae targets: 2017hhz, a Type Ia in galaxy UGC 01218; and 2017hle a Type Ia-91bg in NGC 0387. Both being not too close to their host galaxy's nucleus and they appeared to the brightest supernova objects discovered at the time.
 
 However, they were still faint objects so we had to vary the exposure time between 60s and 120s, and often take more than 2 exposures for each band. In doing so we would later be able to improve the quality and brightness of the supernovae seen in the image through noise reduction and image stacking.
 
@@ -347,7 +347,9 @@ For the basic fitting function, \texttt{snpy.fit()}, it would only work if we pr
 
 The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift that they obtained.
 
-After it had managed to apply the template light curves, this fitting could then be exported and plotted. In addition to this, the final parameters that had been selected by SNooPy could be obtained as well. These included the host galaxy extinction (EBVhost), the time for B-maximum (Tmax), the distance modulus to the supernova (DM), and the decline-rate parameter (dm15). Values which would be useful to us when we attempted to perform some cosmology.
+For 2017hhz we used a redshift of $0.0392$, and for 2017hle, $0.015$ was used.
+
+After SNooPy had managed to apply the template light curves, this fitting could then be exported and plotted. In addition to this, the final parameters that had been selected by SNooPy could be obtained as well. These included the host galaxy extinction (EBVhost), the time for B-maximum (Tmax), the distance modulus to the supernova (DM), and the decline-rate parameter (dm15). Values which would be useful to us when we attempted to perform some cosmology.
 
 To see the correlations between these four parameters, covariance plots could be produced using the \texttt{fitMCMC()} function with the argument \texttt{plot\_triangle} selected as \texttt{True}. A covariance matrix with the values could be retrieved and then potentially plotted to produce a heat map as an alternative to the triangle plots. 
 
@@ -436,7 +438,10 @@ With Figure \ref{2017hhz_collage} two samples of our data, a frame of our analys
 \label{discussion}
 \vspace{-2ex}
 
-\subsection{Using SNooPy to fit templates to supernovae}
+\subsection{SNooPy: the Type Ia SNe template fitter}
+\vspace{-2ex}
+\subsubsection{The initial quality of the fit }
+\vspace{-2ex}
 % Deffo need to rewrite all of this at one point
 
 When we look at the plots that SNooPy produced, in Figures \ref{2017hhz-lc} and \ref{2017hle-lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{2017hle-lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
@@ -445,7 +450,7 @@ This then raises the questions, how does this program actually fit templates to 
 
 Before we consider the inner workings of SNooPy, we must look at the possibility that the data we collected for those three days was just poor, and this appears to be the most likely case. With these points, the data was collected around two weeks after our initial observations, the supernova would have more than likely dimmed past the limit to which our telescopes could see. Therefore what we had collected would not have been an accurate magnitude, and this does show with the template fitting.
 
-Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce Philips' parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after this parameter \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
+Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce Philips' parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after peak \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
 \begin{equation}
 M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 \label{intrinsic_b}
@@ -463,13 +468,42 @@ Removing the latter three points for 2017hhz and running SNooPy we find, $\Delta
 
 But for our final plots, we still have to remain skeptical. The positioning of the peak magnitude in the B and V bands is the main contending issue, whilst it appears for 2017hhz we capture our initial data when it is at it's peak magnitude, we cannot truly be sure if this is the case. We require more data before our first point on the 20th October 2017. 
 
-We did attempt to add additional points by looking at the entry and initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
+We did attempt to add additional points by looking at the initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
 
-Without data covering the initial rise to peak brightness, SNooPy has still managed to fit templates to our data.
+If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{chi2-table} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits or due to the frames not being entirely clean of noise. So, the values produced would be far from unity. 
 
-If we do quantify the fit numerically, i.e. finding $\chi^2$ statistics, from Table \ref{chi2-table}
+Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. Now we would like to understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
+
+\vspace{-2ex}
+\subsubsection{How is the fit done?}
+\vspace{-2ex}
+
+In fitting templates there are many well-established methods which can be employed to fit data in a broad number of photometric bands. We must start though at the beginning, and understand the very basics behind fitting Type Ia light curves.
+
+Within the B and to an extent V-band, light curves can generally be fitted by using a single template which has been stretched along the time axis to fit the observed data \cite{highred_perl}. However, applying this to longer wavelengths would be more difficult as other features would be present, for example, an inflection observed in the r band after 20 days will evolve into a secondary maximum when viewed in the i band \cite{car_snoopy}. More templates have to be derived and produced for observations made in other photometric filters.
+
+So, a single-parameter family of curves became the accepted base method instead of using the stretch-like correction. This single parameter would be used to describe the shape of the light curve and would be employed when the template is being fitted.
+
+With 
+
+As well as the Carnegie Supernova Project's (CSP) system in SNooPy, there is also SALT2 \cite{salt2} and MLCS2k2 \cite{prec_indic, mlcs2k2}. 
+
+The latter two were chosen not to be used by CSP as they are all optimised to work in the optical wavelengths, and in some cases in different passbands to what CSP use \cite{car_snoopy}. 
+
+They employed observations of 71 high redshift Type Ia supernovae in the near-infrared bands Y and J, and 
+
+Whilst we ourselves did not collect data in the Johnson I or Sloan i bands, in the fitting of templates 
+
+As described by Burns et al (2010) \cite{car_snoopy} supernova events are typically triggered in the optical bands and the light curves when observed in the near infrared peak earlier than in other photometric bands, thus it is often required to 
 
 SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
+
+\vspace{-2ex}
+\subsubsection{The quality of the fit, revisited}
+\vspace{-2ex}
+
+after all that theory and description on how snoopy functions as a fitter for type Ia supernovae 
+
 
 \subsection{Observing supernovae}
 sdasd
@@ -520,12 +554,12 @@ how using different fitting models to check the quality of the data, right now w
 \subsection{Improvements and extensions}
 How could we improve upon our experiment, what else could we work on for extension projects.
 
-\vspace{-5ex}
+\vspace{-3ex}
 \section{Conclusions}
 \label{conclusions}
 \vspace{-2ex}
 
-sdfsdfasdas
+In conclusion
 
 \vspace{-5ex}
 \section*{Acknowledgements}
@@ -749,7 +783,7 @@ Given below are all the observations which were made during our observation peri
 \vspace{-2ex}
 \textit{A brief overview and tutorial of how SNooPy can be used to fit Type Ia light curves.} \\
 
-\textit{Example files can be obtained from either the Carnegie Supernova Project} \url{http://csp.obs.carnegiescience.edu/data/snpy} \textit{or from} \url{http://community.dur.ac.uk/jacky.cao/#l3lp}. \\
+\textit{Example files can be obtained from either the Carnegie Supernova Project} \url{https://csp.obs.carnegiescience.edu/data/snpy} \textit{or from} \url{https://community.dur.ac.uk/jacky.cao/#l3lp}. \\
 
 For SNooPy to fit Type Ia light curves, the correct file format to store our data was required. Below we give an example of the type of file that would contain B and V band data, \texttt{supernova.txt}.
 \begin{center}

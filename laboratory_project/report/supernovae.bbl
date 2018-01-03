@@ -15,7 +15,7 @@ D.~Bersier et~al.
 C.~Burns.
 \newblock {Using SNooPy}.
 \newblock
-  \url{http://csp.obs.carnegiescience.edu/data/snpy/documentation/snoopy-manual-pdf},
+  \url{https://csp.obs.carnegiescience.edu/data/snpy/documentation/snoopy-manual-pdf},
   February 2015.
 \newblock [Online; accessed 1st January 2018].
 
@@ -63,17 +63,34 @@ M.~Griffiths.
 \newblock {\em Choosing and Using Astronomical Filters}.
 \newblock Springer, 2015.
 
+\bibitem{salt2}
+J.~Guy et~al.
+\newblock {SALT2: using distant supernovae to improve the use of type Ia
+  supernovae as distance indicators}.
+\newblock {\em Astronomy and Astrophysics}, 466(1):11--21, 2007.
+
 \bibitem{asassn_sn}
 T.~Holoien and J.~Brown.
 \newblock {ASAS-SN Supernovae}.
-\newblock \url{http://www.astronomy.ohio-state.edu/~assassin/sn_list.html},
+\newblock \url{https://www.astronomy.ohio-state.edu/~assassin/sn_list.html},
   2017.
 \newblock [Online; accessed 29th December 2017].
+
+\bibitem{hugheshase}
+I.~G. Hughes and T.~P.~A. Hase.
+\newblock {\em {Measurements and their Uncertainties}}.
+\newblock Oxford University Press, 2010.
 
 \bibitem{jha}
 S.~Jha et~al.
 \newblock {UBVRI Light Curves of 44 Type Ia Supernovae}.
 \newblock {\em The Astronomical Journal}, 131:526--554, 2006.
+
+\bibitem{mlcs2k2}
+S.~Jha et~al.
+\newblock {Improved Distances to Type Ia Supernovae with Multicolor Light-Curve
+  Shapes: MLCS2k2}.
+\newblock {\em The Astrophysical Journal}, 659(1), 2007.
 
 \bibitem{tel_tech}
 C.~R. Kitchin.
@@ -102,10 +119,22 @@ A.~J. Norton, editor.
 \newblock {\em {Observing the Universe}}.
 \newblock The Open University, 2004.
 
+\bibitem{highred_perl}
+S.~Perlmutter et~al.
+\newblock {Measurements of $\Omega$ and $\Lambda$ from 42 High-Redshift
+  Supernovae}.
+\newblock {\em The Astrophysical Journal}, 517(2), 1999.
+
 \bibitem{abs_phil}
 M.~M. Phillips.
 \newblock {The absolute magnitudes of Type Ia supernovae}.
 \newblock {\em The Astrophysics Journal}, 413(2):105--108, 1993.
+
+\bibitem{prec_indic}
+A.~G. Riess et~al.
+\newblock {A Precise Distance Indicator: Type Ia Supernova Multicolor
+  Light-Curve Shapes}.
+\newblock {\em The Astrophysical Journal}, 473(1), 1996.
 
 \bibitem{high_en_astro}
 S.~Rosswod and M.~Br{\"u}ggen.
