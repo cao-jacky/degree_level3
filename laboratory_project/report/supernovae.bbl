@@ -17,6 +17,7 @@ C.~Burns.
 \newblock
   \url{https://users.obs.carnegiescience.edu/cburns/SNooPyDocs/html/index.html},
   2015.
+\newblock [Online; accessed 4th January 2018].
 
 \bibitem{snoopy_docs}
 C.~Burns.
@@ -147,6 +148,18 @@ A.~G. Riess et~al.
 S.~Rosswod and M.~Br{\"u}ggen.
 \newblock {\em {Introduction to high-energy astrophysics}}.
 \newblock Cambridge University Press, 2007.
+
+\bibitem{reddening}
+E.~F. Schafly and D.~P. Finkbeiner.
+\newblock { Measuring Reddening with Sloan Digital Sky Survey Stellar Spectra
+  and Recalibrating SFD}.
+\newblock {\em The Astrophysical Journal}, 737(2):13, 2011.
+
+\bibitem{tully_fish_catalogue}
+C.~M. Springob et~al.
+\newblock {Erratum: "SFI++ II: A New I-Band Tully-Fisher Catalog, Derivation of
+  Peculiar Velocities and Data Set Properties" }.
+\newblock {\em The Astrophysical Journal Supplement}, 182(1), 2009.
 
 \bibitem{posn}
 S.~E. Woosley and T.~A. Weaver.

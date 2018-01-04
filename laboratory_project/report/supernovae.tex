@@ -23,7 +23,7 @@
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 07/01/2018}
 
 \begin{abstract}              
-We have measured the magnitude of supernova explosions over an extended period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. We have plotted several light curves and have identified a Type Ia and Type Ia-91bg supernova, 2017hhz and 2017hle. With our data we have fitted template light curves with the Python routine, \textit{SNooPy}. These fittings have produced reduced $\chi^2$ values in the B and V bands of 1.68 and 2.78 for 2017hhz, and 1.29 and 3.02 for 2017hle. This indicating that the fittings are good in the V band but really good in the V band. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
+We have monitored and collected data for supernova explosions over a period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. Calculating the magnitudes for a Type Ia and Type Ia-91bg supernova objects, 2017hhz and 2017hle, we then fitted fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit with the \texttt{fit()} function was judged to be acceptable in accordance to the  reduced $\chi^2$ values calculated: 2017hhz with $\chi^2_{\nu,B}=1.68$ and $\chi^2_{V,\nu}=2.78$, and 2017hle with $\chi^2_{\nu,B}=1.29$ and $\chi^2_{V,\nu}=3.02$. Indicating that This indicating that the fittings are good in the V band but really good in the V band. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
 \end{abstract}
 
 \maketitle
@@ -343,11 +343,11 @@ Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the calcula
 \vspace{-2ex}
 In fitting templates and models to our data, the process could be manually performed, however we chose to use a Python package \textit{SNooPy} \cite{car_snoopy}. SNooPy is an automated fitter for Type Ia light curves, our magnitudes would be parsed and then a template would be transformed to fit that set of data. 
 
-For the basic fitting function, \texttt{snpy.fit()}, it would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension and declination of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}. 
+For the basic fitting function, \texttt{snpy.fit()}, it would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension (RA) and declination (dec) of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}. 
 
 The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift that they obtained.
 
-For 2017hhz we used a redshift of $0.0392$, and for 2017hle, $0.015$ was used.
+For 2017hhz we used a redshift of $0.0392$, and for 2017hle $0.015$ was used.
 
 After SNooPy had managed to apply the template light curves, this fitting could then be exported and plotted. In addition to this, the final parameters that had been selected by SNooPy could be obtained as well. These included the host galaxy extinction (EBVhost), the time for B-maximum (Tmax), the distance modulus to the supernova (DM), and the decline-rate parameter (dm15). Values which would be useful to us when we attempted to perform some cosmology.
 
@@ -403,7 +403,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=7.5cm]{results/covariance/covariance}
+\includegraphics[width=8.25cm]{results/covariance/covariance}
 \caption[]{Four out of the six covariance plots produced by the \texttt{fitMCMC()} function in SNooPy for supernova 2017hhz. The plots show the correlations between four parameters: Tmax, the time for B-maximum; EBVhost, the host galaxy extinction; DM, the distance modulus; and dm15, the decline-rate parameter.}
 \label{fig:covar_plots}
 \vspace{-1.5em}
@@ -427,7 +427,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \centering
 \begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
  \hline
- \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2_B}$} & \textbf{$\boldsymbol{\chi^2_{B,\nu}}$} & \textbf{$\boldsymbol{\chi^2_V}$} & \textbf{$\boldsymbol{\chi^2_{V,\nu}}$} \\ [0.5ex] 
+ \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2_B}$} & \textbf{$\boldsymbol{\chi^2_{\nu,B}}$} & \textbf{$\boldsymbol{\chi^2_V}$} & \textbf{$\boldsymbol{\chi^2_{\nu,V}}$} \\ [0.5ex] 
  2017hhz & 5.03 & 1.68 & 8.23 & 2.74 \\
  2017hle & 3.86 & 1.29 & 9.05 & 3.02 \\
  \hline
@@ -520,20 +520,39 @@ Considering all of this, we find that the main tool used by SNooPy in the fittin
 
 We now arrive at the point where we have some understanding of how SNooPy and template fitters work, we shall therefore return to our earlier discussion on the quality of the fitting. 
 
-\vspace{-2ex}
+\vspace{-3ex}
 \subsubsection{So, how is the quality of fit now?}
 \vspace{-2ex}
 
 As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other in a range from $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we were to use our results in cosmology we would use the summary output from \texttt{fitMCMC()} as it uses a less biased estimator of the parameters.
 
-Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As 
+Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As the host extinction (the reddening of the light) increases then the apparent magnitude of the supernova that can be observed decreases. 
 
-\subsection{Observing supernovae}
-sdasd
+With the other parameters, we can see from the covariance plots that they have very little correlation to each other. This can be extended for the relations between dm15-DM and EBVhost-Tmax which we have not presented, they too show no correlations.
+
+The point to make here then is that we should have constrained the parameters for the host extinction or for the distance modulus. We gave SNooPY free reign in finding the parameters, using methods such as minimising $\chi^2$ and calling up the Schlegel maps to find the extinction with our given RA and dec. 
+
+This does mean that we can now compare what SNooPy outputs with known information and use this as an extra judge of the quality of fit. Focussing on the results for 2017hhz, we begin with the distance modulus. For \texttt{fit()} and \texttt{fitMCMC()} we get $36.121\pm0.106$ mag and $36.096\pm0.113$ mag, and retrieved from NED the Tully-Fisher determined value for UGC 01218 is $35.64\pm0.43$ mag \cite{tully_fish_catalogue}. Comparing these values we see that whilst they are not completely different, within the SNooPy uncertainties, they do not agree with the Tully-Fisher distance modulus.
+ 
+A similar comparison can be attempted for the host extinction. SNooPy produced $0.049\pm0.083$ and $0.047\pm0.067$, whilst a galactic extinction of 0.043 can be quoted from Schlafly and Finkbeiner (2011) \cite{reddening}. As the statistical uncertainties are larger than the actual values obtained, this further highlights the need that we should have initially constrained the templates.
+
+We find that overall, whilst SNooPy is able to produce templates and fit them to a certain degree of accuracy, steps have to be taken to ensure that this accuracy can be further improved. Steps such as providing our own constraining parameters, and also using the MCMC based fitter as that provides a more accurate result than \texttt{fit()}.
+
+% Not sure that MCMC is more accurate, write something about that!
+
+\vspace{-2ex}
+\subsubsection{Can we use our results for cosmology then?}
+\vspace{-2ex}
+
+We have the parameters from our final SNooPy fittings and we concluded that they not entirely inaccurate, could we use these them for cosmology then?
+
+Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy.
+
+we find that it would be a fruitless and cyclic process. For the production of the Type Ia templates, cosmological parameters were employed \cite{car_snoopy}, $H_0 =$
+ 
+What can be drawn from this then is that 
 
 
-
-\subsection{Supernovae in cosmology}
 
 For cosmology blah blah blah:
 In the sample of 24 low redshift Type Ia supernovae which were employed in the templates, we must note that their absolute magnitudes had been calibrated with a value for the distance modulus for each supernova. Within this they have used the Cosmic Microwave Background redshift, and standard values for the cosmological parameters. 
@@ -591,6 +610,9 @@ extinction and galaxy extinction taking them into calculations
 hubble flow????
 
 how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
+
+\subsection{Observing supernovae}
+sdasd
 
 
 \subsection{Improvements and extensions}
