@@ -521,7 +521,7 @@ Considering all of this, we find that the main tool used by SNooPy in the fittin
 We now arrive at the point where we have some understanding of how SNooPy and template fitters work, we shall therefore return to our earlier discussion on the quality of the fitting. 
 
 \vspace{-3ex}
-\subsubsection{So, how is the quality of fit now?}
+\subsubsection{So, how do we view the quality of the fit now?}
 \vspace{-2ex}
 
 As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other in a range from $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we were to use our results in cosmology we would use the summary output from \texttt{fitMCMC()} as it uses a less biased estimator of the parameters.
