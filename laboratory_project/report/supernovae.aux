@@ -93,23 +93,25 @@
 \newlabel{fig:2017hhz_lc}{{4}{7}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces }}{7}{}}
 \newlabel{fig:2017hle_lc}{{5}{7}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces The parameters that were used by SNooPy in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\qopname  \relax m{max}}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }}{7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces The parameters that were used by \texttt  {fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\qopname  \relax m{max}}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }}{7}{}}
 \newlabel{table:snpy_summary}{{IV}{7}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces }}{7}{}}
 \newlabel{fig:covar_plots}{{6}{7}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces $\chi ^2$ and reduced $\chi ^2$ ($\chi ^2_{\nu }$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}}{7}{}}
-\newlabel{table:chi2}{{V}{7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Discussion}{7}{}}
+\newlabel{discussion}{{IV}{7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {a}SNooPy: the Type Ia SNe template fitter}{7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}What is the initial quality of the fit?}{7}{}}
 \citation{abs_phil}
 \citation{high_en_astro}
 \citation{longair}
 \citation{abs_phil}
 \citation{hugheshase}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Output of the parameters used for \texttt  {fitMCMC()} fitting. Where EBV is the host galaxy extinction, $T_{\qopname  \relax m{max}}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy in the fitting. }}{8}{}}
+\newlabel{table:snpy_mcmc_summary}{{V}{8}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces $\chi ^2$ and reduced $\chi ^2$ ($\chi ^2_{\nu }$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}}{8}{}}
+\newlabel{table:chi2}{{VI}{8}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces }}{8}{}}
 \newlabel{fig:2017hhz_collage}{{7}{8}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Discussion}{8}{}}
-\newlabel{discussion}{{IV}{8}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {a}SNooPy: the Type Ia SNe template fitter}{8}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}What is the initial quality of the fit?}{8}{}}
 \newlabel{intrinsic_b}{{5}{8}{}{}{}}
 \citation{highred_perl}
 \citation{car_snoopy}
@@ -118,6 +120,8 @@
 \citation{car_snoopy}
 \citation{car_snoopy}
 \citation{car_snoopy}
+\citation{car_snoopy}
+\citation{snoopy_online_docs}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2}How is the fitting actually performed?}{9}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3}So, how is the quality of fit now?}{9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {b}Observing supernovae}{9}{}}
@@ -125,54 +129,55 @@
 \bibdata{supernovae}
 \bibcite{exp_uni_sn}{{1}{}{{}}{{}}}
 \bibcite{assasn-rev}{{2}{}{{}}{{}}}
-\bibcite{snoopy_docs}{{3}{}{{}}{{}}}
-\bibcite{car_snoopy}{{4}{}{{}}{{}}}
-\bibcite{mod_ast}{{5}{}{{}}{{}}}
-\bibcite{sn_consts}{{6}{}{{}}{{}}}
-\bibcite{starlink}{{7}{}{{}}{{}}}
-\bibcite{obs_phys_class_sn}{{8}{}{{}}{{}}}
-\bibcite{rochester_sn}{{9}{}{{}}{{}}}
-\bibcite{princ_stell_inter}{{10}{}{{}}{{}}}
-\bibcite{astro_filters}{{11}{}{{}}{{}}}
-\bibcite{salt2}{{12}{}{{}}{{}}}
-\bibcite{asassn_sn}{{13}{}{{}}{{}}}
-\bibcite{hugheshase}{{14}{}{{}}{{}}}
-\bibcite{jha}{{15}{}{{}}{{}}}
-\bibcite{mlcs2k2}{{16}{}{{}}{{}}}
-\bibcite{tel_tech}{{17}{}{{}}{{}}}
-\bibcite{asn_lc}{{18}{}{{}}{{}}}
-\bibcite{longair}{{19}{}{{}}{{}}}
-\bibcite{matheson}{{20}{}{{}}{{}}}
-\bibcite{obs_uni}{{21}{}{{}}{{}}}
-\bibcite{highred_perl}{{22}{}{{}}{{}}}
-\bibcite{abs_phil}{{23}{}{{}}{{}}}
-\bibcite{prec_indic}{{24}{}{{}}{{}}}
-\bibcite{high_en_astro}{{25}{}{{}}{{}}}
-\bibcite{posn}{{26}{}{{}}{{}}}
-\bibcite{cit-sci}{{27}{}{{}}{{}}}
-\global \chardef \firstnote@num27\relax 
+\bibcite{snoopy_online_docs}{{3}{}{{}}{{}}}
+\bibcite{snoopy_docs}{{4}{}{{}}{{}}}
+\bibcite{car_snoopy}{{5}{}{{}}{{}}}
+\bibcite{mod_ast}{{6}{}{{}}{{}}}
+\bibcite{sn_consts}{{7}{}{{}}{{}}}
+\bibcite{starlink}{{8}{}{{}}{{}}}
+\bibcite{obs_phys_class_sn}{{9}{}{{}}{{}}}
+\bibcite{rochester_sn}{{10}{}{{}}{{}}}
+\bibcite{princ_stell_inter}{{11}{}{{}}{{}}}
+\bibcite{astro_filters}{{12}{}{{}}{{}}}
+\bibcite{salt2}{{13}{}{{}}{{}}}
+\bibcite{asassn_sn}{{14}{}{{}}{{}}}
+\bibcite{hugheshase}{{15}{}{{}}{{}}}
+\bibcite{jha}{{16}{}{{}}{{}}}
+\bibcite{mlcs2k2}{{17}{}{{}}{{}}}
+\bibcite{tel_tech}{{18}{}{{}}{{}}}
+\bibcite{asn_lc}{{19}{}{{}}{{}}}
+\bibcite{longair}{{20}{}{{}}{{}}}
+\bibcite{matheson}{{21}{}{{}}{{}}}
+\bibcite{obs_uni}{{22}{}{{}}{{}}}
+\bibcite{highred_perl}{{23}{}{{}}{{}}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {d}Improvements and extensions}{10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions}{10}{}}
 \newlabel{conclusions}{{V}{10}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgements}{10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{10}{}}
-\newlabel{LastBibItem}{{27}{10}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Appendix A - Objects Log}{11}{}}
-\newlabel{objectslog}{{V}{11}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered in the V band. Objects marked with an asterisk $*$ were objects which we chose to stop observing, the reason provided in the notes.}}{11}{}}
-\newlabel{objects}{{VI}{11}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Appendix B - Observation Logs}{12}{}}
-\newlabel{obslogs}{{V}{12}{}{}{}}
-\newlabel{obs_logs1}{{V}{12}{}{}{}}
-\newlabel{obs_logs2}{{V}{13}{}{}{}}
-\newlabel{obs_logs3}{{V}{14}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Observation logs for the entire observation period for our experiment.}}{15}{}}
-\newlabel{obs_logs4}{{VII}{15}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Appendix C - Using SNooPy}{16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {a}A basic fit with \texttt  {fit()}}{16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {b}A more complex fit with \texttt  {fitMCMC()}}{16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Appendix D - Uncertainties}{17}{}}
-\newlabel{m_uncert}{{6}{17}{}{}{}}
+\bibcite{abs_phil}{{24}{}{{}}{{}}}
+\bibcite{prec_indic}{{25}{}{{}}{{}}}
+\bibcite{high_en_astro}{{26}{}{{}}{{}}}
+\bibcite{posn}{{27}{}{{}}{{}}}
+\bibcite{cit-sci}{{28}{}{{}}{{}}}
+\global \chardef \firstnote@num28\relax 
+\newlabel{LastBibItem}{{28}{11}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Appendix A - Objects Log}{12}{}}
+\newlabel{objectslog}{{V}{12}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered in the V band. Objects marked with an asterisk $*$ were objects which we chose to stop observing, the reason provided in the notes.}}{12}{}}
+\newlabel{objects}{{VII}{12}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Appendix B - Observation Logs}{13}{}}
+\newlabel{obslogs}{{V}{13}{}{}{}}
+\newlabel{obs_logs1}{{V}{13}{}{}{}}
+\newlabel{obs_logs2}{{V}{14}{}{}{}}
+\newlabel{obs_logs3}{{V}{15}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Observation logs for the entire observation period for our experiment.}}{16}{}}
+\newlabel{obs_logs4}{{VIII}{16}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Appendix C - Using SNooPy}{17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {a}A basic fit with \texttt  {fit()}}{17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {b}A more complex fit with \texttt  {fitMCMC()}}{17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Appendix D - Uncertainties}{18}{}}
+\newlabel{m_uncert}{{6}{18}{}{}{}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
 \bibstyle{abbrv}
-\newlabel{LastPage}{{}{17}}
+\newlabel{LastPage}{{}{18}}

@@ -358,11 +358,11 @@ A full example of how SNooPy was used has been provided in Appendix C.
 \vspace{-3ex}
 \subsection{Results}
 \vspace{-2ex}
-After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that was used by SNooPy for these fittings.
+After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that was used by SNooPy for the \texttt{fit()} fitting.
 
 In Table \ref{table:chi2} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands.
 
-Figure \ref{fig:covar_plots} shows some of the covariance plots produced by \texttt{fitMCMC()} in SNoopy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter.
+Figure \ref{fig:covar_plots} shows some of the covariance plots produced by \texttt{fitMCMC()} for 2017hhz in SNooPy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter. Table \ref{table:snpy_mcmc_summary} shows the parameter output for the fitting made with this function.
 
 With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of images.
 
@@ -396,7 +396,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
   & $\pm$0.225 & $\pm$1.538 & $\pm$0.455 & $\pm$0.238 \\
  \hline
 \end{tabular}
-\caption{The parameters that were used by SNooPy in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
+\caption{The parameters that were used by \texttt{fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
 \vspace{-1.5em}
 \label{table:snpy_summary}
 \end{table}
@@ -412,6 +412,19 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 
 \begin{table}[h!]
 \centering
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
+ \hline
+ \textbf{Supernova} & \textbf{EBV} & \textbf{$\boldsymbol{T_{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
+ 2017hhz & 0.047 & 2.250 &  36.096 & 0.815 \\
+  & $\pm$0.067 & $\pm$0.905 & $\pm$0.113 & $\pm$0.076 \\
+ \hline
+\end{tabular}
+\caption{Output of the parameters used for \texttt{fitMCMC()} fitting. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy in the fitting. }
+\label{table:snpy_mcmc_summary}
+\end{table}
+
+\begin{table}[h!]
+\centering
 \begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
  \hline
  \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2_B}$} & \textbf{$\boldsymbol{\chi^2_{B,\nu}}$} & \textbf{$\boldsymbol{\chi^2_V}$} & \textbf{$\boldsymbol{\chi^2_{V,\nu}}$} \\ [0.5ex] 
@@ -420,7 +433,6 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
  \hline
 \end{tabular}
 \caption{$\chi^2$ and reduced $\chi^2$ ($\chi^2_{\nu}$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
-\vspace{-1.5em}
 \label{table:chi2}
 \end{table}
 
@@ -442,9 +454,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \vspace{-2ex}
 \subsubsection{What is the initial quality of the fit?}
 \vspace{-2ex}
-% Deffo need to rewrite all of this at one point
-
-When we look at the plots that SNooPy produced, in Figures \ref{fig:2017hhz_lc} and \ref{fig:2017hle_lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{fig:2017hle_lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
+When we look at the plots that SNooPy produced using \texttt{fit()}, in Figures \ref{fig:2017hhz_lc} and \ref{fig:2017hle_lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{fig:2017hle_lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
 
 This then raises the questions, how does this program actually fit templates to data, and how well does it do so? Could we believe and use their results in cosmology?
 
@@ -458,9 +468,9 @@ M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 
 where $\Delta m_{15}(B)$ is the decline rate parameter \cite{high_en_astro}.
 
-Using Equation \ref{intrinsic_b} and the values from Table \ref{table:snpy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which our value for 2017hhz agrees with, and for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
+Using Equation \ref{intrinsic_b} and the values from Table \ref{table:snpy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. As a comparison we have calculated this with the \texttt{fitMCMC()} data from Table \ref{table:snpy_mcmc_summary}, $-19.5\pm0.2$. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which both our 2017hhz values agrees with. Plus for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
 
-From this, we find that with our data and with SNooPy's fitting we produce absolute magnitude values which lie within the typical found values. Yet we still have to further question the quality of this fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
+From this, we find that with our data and with SNooPy's \texttt{fit()} fitting we produce absolute magnitude values which lie within the typical found values. Yet we still have to further question the quality of this fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
 
 We can thus draw our first conclusion about SNooPy (and about supernova template fitting in general), a complete set of data is required to effectively produce a light curve. Data which covers the majority of the evolution of the Type Ia supernova - from before peak magnitude to afterwards when it is in decline. 
 
@@ -472,7 +482,7 @@ We did attempt to add additional points by looking at the initial observations p
 
 If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits or due to the frames not being entirely clean of noise. So, the values produced would be far from unity. 
 
-Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. Now we would like to understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
+Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. We have not yet explored the implications of the results from \texttt{fitMCMC()}, but we would like to first understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
 
 \vspace{-2ex}
 \subsubsection{How is the fitting actually performed?}
@@ -488,17 +498,31 @@ One package which we have not used, SALT2 \cite{salt2}, uses a stretch-like para
 
 With SNooPy none of these parameters are used, instead, the decline-rate parameter ($\Delta m_{15}(B)$) is employed in SNooPy's templates. Compared to the other two methods, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be not universal.
 
-Detailed by Burns et al (2011) \cite{car_snoopy}, the theory and methods which build upon $\Delta m_{15}$ are beyond the scope of our knowledge and the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
+Detailed by Burns et al (2011) \cite{car_snoopy}, the initial theory and methods which build upon $\Delta m_{15}$ are beyond the scope of our knowledge and the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
 
-What is actually useful for us to know is that after the creators of SNooPy had created the light curve templates, they arrived at the following conclusion:
+What is actually useful for us to know is that after the creators of SNooPy had created some basic light curve templates, they arrived at the following conclusion:
 
 \textquote{If we use the above procedure to generate a B light-curve template with a particular $\Delta m_{15}$, there is no guarantee that the \textit{measured} change in magnitude of the template from peak to day 15 will exactly match the input $\Delta m_{15}(B)$.} \cite{car_snoopy}.
 
-In other words, for the values of the decline-rate parameter which we obtained from the summary output after SNooPy had performed it's fitting, these do not actually correspond to the values which were used in the production of the templates. It is also noted that the final fitting takes into account all the data from each individual filter provided and not just the B-band data close to maximum and day 15.
+In other words, for the values of the decline-rate parameter which could be obtained after it had performed it's fitting, they do not correspond to the values which were used in the production of the templates. So to use these templates uncorrected for, inaccuracies would certainly arise if we were to use these $\Delta m_{15}$ values for calculating $M_{\max}(B)$. 
 
-The implications that arise because of these conclusions firstly take the form of a higher probability that the intrinsic peak magnitudes $M_{\max}(B)$ that we calculated previously are in fact not accurate as the output values for $\Delta m_{15}$ do not reflect what was used in the actual modelling, and secondly due to the random and systematic deviations of the template-derived value for $\Delta m_{15}$ an additional statistical uncertainty should be accounted for as well.   
+Building upon this, we noted earlier that it was difficult to accept a light curve which had been fitted for a few data points from the period when the supernova is in decline. It was recognised by the creators of SNooPy that with a single parameter family of curves, reproducing observations for templates away from maximum light is currently inadequate \cite{car_snoopy}. They suggest that at least another parameter should be introduced in the future to improve the fittings.  
 
-SNooPy uses the Levenberg-Marquardt least-squares fitter to fit the model to the data [[cite]]. 
+While in the mean time, they have just included the intrinsic variations as an extra error in the template, and as  the fitting of their templates incorporate contributions from every photometric band provided, there is an extra random and systematic uncertainty.
+
+Whilst the decline rate parameter is main parameter used in producing the light curves, fitting them requires  \texttt{fit()} function fits light curves to data. It uses a non-linear least-squares algorithm, Levenberg-Marquardt - it minimises $
+
+In the other parameters that SNooPy uses, they had to calibrate 
+
+We now arrive at a point where 
+
+If we were to perform these fittings ourselves, we most likely would have just performed a stretching of an averaged Type Ia light curve for both B and V bands. to produce an accurate result we would
+
+
+For the uncertainties outputted for the fitting, they are simply the quoted statistical errors which have been determined in the leas \cite{snoopy_online_docs}
+
+In an attempt to avoid this discussion 
+
 
 \vspace{-2ex}
 \subsubsection{So, how is the quality of fit now?}
@@ -511,6 +535,8 @@ after all that theory and description on how snoopy functions as a fitter for ty
 sdasd
 
 \subsection{Supernovae in cosmology}
+
+Is it actually a red supernova? What is the colour of our supernovae?
 
 It is highly unlikely that we will see supernova remnants for the supernova that we have been studying, in the shape of the Crab Nebula. Much longer time periods would be required for this. 
 

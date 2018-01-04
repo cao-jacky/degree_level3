@@ -11,6 +11,13 @@ D.~Bersier et~al.
 \newblock {\em Revista Mexicana de Astronomia y Astrofisica}, 48(1):78--82,
   2016.
 
+\bibitem{snoopy_online_docs}
+C.~Burns.
+\newblock {SNooPy 2.0 documentation}.
+\newblock
+  \url{https://users.obs.carnegiescience.edu/cburns/SNooPyDocs/html/index.html},
+  2015.
+
 \bibitem{snoopy_docs}
 C.~Burns.
 \newblock {Using SNooPy}.
