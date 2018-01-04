@@ -388,7 +388,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \centering
 \begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
  \hline
- \textbf{Supernova} & \textbf{EBV} & \textbf{$\boldsymbol{T_{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
+ \textbf{Supernova} & \textbf{EBV} & \textbf{T$_{\boldsymbol{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
  2017hhz & 0.049 & 2.080 &  36.121 & 0.798 \\
   & $\pm$0.083 & $\pm$1.158 & $\pm$0.106 & $\pm$0.138 \\
   
@@ -396,7 +396,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
   & $\pm$0.225 & $\pm$1.538 & $\pm$0.455 & $\pm$0.238 \\
  \hline
 \end{tabular}
-\caption{The parameters that were used by \texttt{fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
+\caption{The parameters that were used by \texttt{fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, T$_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
 \vspace{-1.5em}
 \label{table:snpy_summary}
 \end{table}
@@ -414,12 +414,12 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \centering
 \begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
  \hline
- \textbf{Supernova} & \textbf{EBV} & \textbf{$\boldsymbol{T_{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
+ \textbf{Supernova} & \textbf{EBV} & \textbf{T$_{\boldsymbol{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
  2017hhz & 0.047 & 2.250 &  36.096 & 0.815 \\
   & $\pm$0.067 & $\pm$0.905 & $\pm$0.113 & $\pm$0.076 \\
  \hline
 \end{tabular}
-\caption{Output of the parameters used for \texttt{fitMCMC()} fitting. Where EBV is the host galaxy extinction, $T_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy in the fitting. }
+\caption{Output of the parameters used for \texttt{fitMCMC()} fitting. Where EBV is the host galaxy extinction, T$_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy in the fitting. }
 \label{table:snpy_mcmc_summary}
 \end{table}
 
@@ -496,7 +496,7 @@ So, a single-parameter family of curves became the accepted base method instead 
 
 One package which we have not used, SALT2 \cite{salt2}, uses a stretch-like parameter $x_1$ to describe a sequence of spectral energy distributions of Type Ia supernovae which is further modified by a colour-like parameter $c$. Another fitter on the other hand uses a luminosity parameter $\Delta$, MLCS2k2 \cite{prec_indic, mlcs2k2}. 
 
-With SNooPy none of these parameters are used, instead, the decline-rate parameter ($\Delta m_{15}(B)$) is employed in SNooPy's templates. Compared to the other two methods, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be not universal.
+With SNooPy none of these parameters are used, instead, the decline-rate parameter ($\Delta m_{15}(B)$) is employed in the making of SNooPy's templates. Compared to the other two methods, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be not universal.
 
 Detailed by Burns et al (2011) \cite{car_snoopy}, the initial theory and methods which build upon $\Delta m_{15}$ are beyond the scope of our knowledge and the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
 
@@ -510,7 +510,33 @@ Building upon this, we noted earlier that it was difficult to accept a light cur
 
 While in the mean time, they have just included the intrinsic variations as an extra error in the template, and as  the fitting of their templates incorporate contributions from every photometric band provided, there is an extra random and systematic uncertainty.
 
-Whilst the decline rate parameter is main parameter used in producing the light curves, fitting them requires  \texttt{fit()} function fits light curves to data. It uses a non-linear least-squares algorithm, Levenberg-Marquardt - it minimises $
+Whilst the decline rate parameter is main parameter used in producing the light curves, fitting them requires the  \texttt{fit()} and \texttt{fitMCMC()} functions to find the best fit parameters for not just $\Delta m_{15}$, but for the host galaxy extinction EBVhost, time for B-maximum (Tmax), and the distance modulus (DM) as well. 
+
+\texttt{fit()} uses a non-linear least-squares algorithm in it's fitting, Levenberg-Marquardt. It minimises the variance-weighted residuals of the data from the model \cite{snoopy_online_docs} - it attempts to find the minimum $\chi^2$. 
+
+\texttt{fitMCMC()} on the other hand uses a Markov Chain Monte Carlo (MCMC) approach which provides an advantage of a less biased estimator of the regression parameters, and it can use more sophisticated models of the the statistical processes that produced the data \cite{car_snoopy}. 
+
+Considering all of this, we find that the main tool used by SNooPy in the fitting of supernova templates is statistical analysis but with considerations for other factors which compose a template. If we had performed these fittings manually, we most likely would have just performed a stretching of an averaged Type Ia light curve onto our data and calculated $\chi^2$ values to see if it would be a good fit or not.
+
+We now arrive at the point where we have some understanding of how SNooPy and template fitters work, we shall therefore return to our earlier discussion on the quality of the fitting. 
+
+\vspace{-2ex}
+\subsubsection{So, how is the quality of fit now?}
+\vspace{-2ex}
+
+As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other in a range from $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we were to use our results in cosmology we would use the summary output from \texttt{fitMCMC()} as it uses a less biased estimator of the parameters.
+
+Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As 
+
+\subsection{Observing supernovae}
+sdasd
+
+
+
+\subsection{Supernovae in cosmology}
+
+For cosmology blah blah blah:
+In the sample of 24 low redshift Type Ia supernovae which were employed in the templates, we must note that their absolute magnitudes had been calibrated with a value for the distance modulus for each supernova. Within this they have used the Cosmic Microwave Background redshift, and standard values for the cosmological parameters. 
 
 In the other parameters that SNooPy uses, they had to calibrate 
 
@@ -523,18 +549,6 @@ For the uncertainties outputted for the fitting, they are simply the quoted stat
 
 In an attempt to avoid this discussion 
 
-
-\vspace{-2ex}
-\subsubsection{So, how is the quality of fit now?}
-\vspace{-2ex}
-
-after all that theory and description on how snoopy functions as a fitter for type Ia supernovae 
-
-
-\subsection{Observing supernovae}
-sdasd
-
-\subsection{Supernovae in cosmology}
 
 Is it actually a red supernova? What is the colour of our supernovae?
 
