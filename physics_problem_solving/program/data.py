@@ -6,7 +6,8 @@ def data_input(data):
     arrays: distant supernova data and low redshift data. """
     with open(data) as f:
         lines = f.readlines()
-        #print(lines) 
+        #print(lines)
+    f.close()
     num_lines = sum(1 for line in open(data)) # Number of lines in the text file
     data_file = np.zeros(len(lines)) # Array to store the location of things
 

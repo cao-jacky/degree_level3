@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import data 
+import edata
+
 import l_peak
 import omega_lambda
 import l_peak_uncert
@@ -7,6 +9,9 @@ import omega_lambda_uncert
 import plotter
 
 """ Module to calculate the dark energy density, Omega_Lambda."""
+
+#---------- MILESTONE WORK ----------#
+"""
 
 file_name = 'program/data/sn_data.txt'
 cm_data = [75, (3*(10**8))] # In the order [hubbles_constant (km s^-1 Mpc^-1), speed_of_light (ms^-1)]
@@ -27,5 +32,9 @@ l_peak_uncert.data(cm_data[0], cm_data[1], data, 0.01)
 # Plotting the graphs that we need
 plotter.plot_l(cm_data[0], cm_data[1], data, 0.01)
 plotter.plot_o(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
-plotter.plot_redmag(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
+plotter.plot_redmag(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1])) """
 
+#---------- EXTENSION WORK ----------#
+
+efile_name = 'program/data/SCPUnion2.1_mu_vs_z.txt'
+edata = edata.data_input(efile_name)
