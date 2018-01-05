@@ -5,12 +5,13 @@ from scipy.integrate import quad
 import matplotlib.pyplot as pyplot
 from matplotlib import rc
 rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-## for Palatino and other serif fonts use:
-#rc('font',**{'family':'serif','serif':['Palatino']})
 rc('text', usetex=True)
 
 import l_peak
 import omega_lambda
+
+e = "extension"
+#e = "original"
 
 pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
@@ -26,7 +27,7 @@ def plot_l(hubble, c, data, step):
     pyplot.xlabel(r'\textbf{L$_{peak}$}')
     pyplot.ylabel(r'$\chi$$^2$')
     pyplot.plot(dt[:,0],dt[:,1], color = '0.1')
-    pyplot.savefig('program/graphs/luminosity_peak.pdf')
+    pyplot.savefig('program/graphs/luminosity_peak_'+e+'.pdf')
 
 def plot_o(hubble, c, data, step, l_peak):
     """ Plotting chi^2 against Omega_Lambda. """
@@ -37,7 +38,7 @@ def plot_o(hubble, c, data, step, l_peak):
     pyplot.xlabel(r'$\Omega_{\Lambda}$')
     pyplot.ylabel(r'$\chi$$^2$')
     pyplot.plot(dat[:,0],dat[:,1], color = '0.1')
-    pyplot.savefig('program/graphs/omega_lambda.pdf')
+    pyplot.savefig('program/graphs/omega_lambda_'+e+'.pdf')
 
 def com_integral(x, O_L):
     """ The integral required to find the comoving distance, with: 
@@ -63,7 +64,7 @@ def model_ranged(hubble, c, data, step, l_peak, z, O_L):
     return m
 
 def plot_redmag(hubble, c, data, step, l_peak):
-    """ Plotting redshift vs magnitude, data and model. """
+    """ Plotting magnitude vs redshift, data and model. """
 
     O_L = omega_lambda.chi_sq_min(hubble, c, data, step, l_peak)[1]
     
@@ -81,4 +82,4 @@ def plot_redmag(hubble, c, data, step, l_peak):
     pyplot.errorbar(data[0][:,1],data[0][:,2],yerr=data[0][:,3],marker=".",color="0.1",elinewidth=0.5,linestyle="None")
     pyplot.errorbar(data[1][:,1],data[1][:,2],yerr=data[1][:,3],marker=".",color="0.1",elinewidth=0.5,linestyle="None")
     pyplot.plot(z, fn_r, color="0.1")
-    pyplot.savefig('program/graphs/mag_redshift.pdf')
+    pyplot.savefig('program/graphs/mag_redshift_'+e+'.pdf')

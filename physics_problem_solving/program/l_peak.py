@@ -106,7 +106,12 @@ def chi_sq_l_peak(hubble, c, data, step):
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
-            current.append(val) # Adding all the current chi^2s value to the list
+            if val > 500:
+                pass # Ignores errorneous values for val, or supposed to
+            else:
+                #print(val_n, val_d, val, j)
+                current.append(val) # Adding all the current chi^2s value to the list
+        #print(len(current))
         chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
     return chi_sq_store
 

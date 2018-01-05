@@ -20,6 +20,8 @@ def chi_sqs(hubble, c, data, step):
 
     chi_diff = np.zeros([(rng-1)**2,3]) # Storing the chi^2 differences
     chi_diff_list = []
+    chi_diff_list_a = [] # For above
+    chi_diff_list_b = [] # For below
 
     for i in range(rng):
         min_a = min_index + i # Finding above chi^2
@@ -33,7 +35,6 @@ def chi_sqs(hubble, c, data, step):
                 else: 
                     chi_a = d[:,1][min_a] # Finding the corresponding chi^2 value for above
                     chi_b = d[:,1][min_b] # Finding the corresponding chi^2 value for below
-                    
                     chi_diff_list.append([chi_a,chi_b,chi_a-chi_b])
 
     # Converting list into an array and reshaping 
@@ -54,4 +55,11 @@ def one(hubble, c, data, step):
     print(lv, lv_row)
     print(lv_row[0], chi_sq_min)
     print(lv_row[0]-chi_sq_min, lv_row[1]-chi_sq_min)
+
+    lva = find_nearest(dt[:,0], chi_sq_min + 1.0) # Closest value from above
+    lvb = find_nearest(dt[:,1], chi_sq_min + 1.0) # Closest value from below
+
+    print(chi_sq_min)
+    print(lva, lvb)
+    print(lva - chi_sq_min, lvb - chi_sq_min)
 
