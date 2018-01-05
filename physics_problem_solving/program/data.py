@@ -6,15 +6,15 @@ def data_input(data):
     arrays: distant supernova data and low redshift data. """
     with open(data) as f:
         lines = f.readlines()
-        #print lines 
+        #print(lines) 
     num_lines = sum(1 for line in open(data)) # Number of lines in the text file
     data_file = np.zeros(len(lines)) # Array to store the location of things
 
     # For loop to find the where the data actually begins
     for i in range(len(lines)):
-        if lines[i] == '# distant supernova data.\r\n':
+        if lines[i] == '# distant supernova data.\n':
             data_file[i] = 1
-        if lines[i] == '# low redshift supernova data\r\n':
+        if lines[i] == '# low redshift supernova data\n':
             data_file[i] = 2 
 
     # Arrays to store where the data is in the file

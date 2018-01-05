@@ -8,7 +8,7 @@ import plotter
 
 """ Module to calculate the dark energy density, Omega_Lambda."""
 
-file_name = 'sn_data.txt'
+file_name = 'program/data/sn_data.txt'
 cm_data = [75, (3*(10**8))] # In the order [hubbles_constant (km s^-1 Mpc^-1), speed_of_light (ms^-1)]
 # Convert H_0 into SI
 cm_data[0] = (cm_data[0] / 3.09) * (1.0 / (10**19)) # Hubble's costant in units of s^-1
@@ -28,3 +28,4 @@ l_peak_uncert.data(cm_data[0], cm_data[1], data, 0.01)
 plotter.plot_l(cm_data[0], cm_data[1], data, 0.01)
 plotter.plot_o(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
 plotter.plot_redmag(cm_data[0], cm_data[1], data, 0.01, float(l_peak[1]))
+

@@ -21,10 +21,10 @@ def data(hubble, c, data, step):
             #print chi_a - chi_b
 
             if np.abs(chi_a - chi_b) >= 1:
-                print chi_a - chi_b
-                print chi_sq_min
-                print min_index
-                print min_a, min_b
+                print(chi_a - chi_b)
+                print(chi_sq_min)
+                print(min_index)
+                print(min_a, min_b)
                 break
         break
 

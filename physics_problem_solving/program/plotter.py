@@ -26,7 +26,7 @@ def plot_l(hubble, c, data, step):
     pyplot.xlabel(r'\textbf{L$_{peak}$}')
     pyplot.ylabel(r'$\chi$$^2$')
     pyplot.plot(dt[:,0],dt[:,1], color = '0.1')
-    pyplot.savefig('graphs/luminosity_peak.pdf')
+    pyplot.savefig('program/graphs/luminosity_peak.pdf')
 
 def plot_o(hubble, c, data, step, l_peak):
     """ Plotting chi^2 against Omega_Lambda. """
@@ -37,7 +37,7 @@ def plot_o(hubble, c, data, step, l_peak):
     pyplot.xlabel(r'$\Omega_{\Lambda}$')
     pyplot.ylabel(r'$\chi$$^2$')
     pyplot.plot(dat[:,0],dat[:,1], color = '0.1')
-    pyplot.savefig('graphs/omega_lambda.pdf')
+    pyplot.savefig('program/graphs/omega_lambda.pdf')
 
 def com_integral(x, O_L):
     """ The integral required to find the comoving distance, with: 
@@ -81,4 +81,4 @@ def plot_redmag(hubble, c, data, step, l_peak):
     pyplot.errorbar(data[0][:,1],data[0][:,2],yerr=data[0][:,3],marker=".",color="0.1",elinewidth=0.5,linestyle="None")
     pyplot.errorbar(data[1][:,1],data[1][:,2],yerr=data[1][:,3],marker=".",color="0.1",elinewidth=0.5,linestyle="None")
     pyplot.plot(z, fn_r, color="0.1")
-    pyplot.savefig('graphs/mag_redshift.pdf')
+    pyplot.savefig('program/graphs/mag_redshift.pdf')
