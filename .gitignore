@@ -1,5 +1,7 @@
 /laboratory_project/programs/astropy/2017hhz/collage.psd
 
+*.swp
+
 # Compiled source #
 ###################
 *.com
