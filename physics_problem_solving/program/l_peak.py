@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 
+#---------- FLUX SPACE CALCULATIONS ----------#
+
 def f(mag):
     """ Flux in units of erg cm^(-2)s^(-1)Angstrom^(-1). """    
     m_0 = -20.45 # Comparative magnitude
@@ -37,7 +39,8 @@ def flux_uncert(data):
 
         flux_error_store[i][0] = flux - flux_p # Storing the greater uncert value
         flux_error_store[i][1] = flux_n - flux # Storing lesser uncert value
-
+    
+    #print(flux_error_store)
     uncert_av = np.average(flux_error_store, axis=1) # Averaging both the uncert values together
     return uncert_av
 
@@ -79,8 +82,8 @@ def flux_model(hubble, c, data, i, l_peak):
     flux = l_peak / ( 4 * np.pi * (cmv[i])**2 * (1 + lzsn_data[i][1])**2) # Calculates flux
     return flux
 
-def chi_sq_l_peak(hubble, c, data, step):
-    """ Chi^2 function to find the suitable value for L_peak. """
+def fchi_sq_l_peak(hubble, c, data, step):
+    """ Flux space: chi^2 function to find the suitable value for L_peak. """
     lzsn_data = data[1] # Calling the low redshift data
     flx = flux(data) # Using flux data for the low redshift data
     flx_unct = flux_uncert(data) # Calling the uncertainties
@@ -106,7 +109,69 @@ def chi_sq_l_peak(hubble, c, data, step):
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
+            #print(val_n, val_d, val, j)
             if val > 500:
+                pass # Ignores errorneous values for val, or supposed to
+            else:
+                #print(val_n, val_d, val, j)
+                current.append(val) # Adding all the current chi^2s value to the list
+        #print(len(current))
+        chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
+    #print(chi_sq_store)
+    return chi_sq_store
+
+def fchi_sq_min(hubble, c, data, step):
+    """ Finding the minimum chi^2 value from our calculated data. """
+    chi_sq_data = fchi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
+    chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
+
+    min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
+    l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
+    return chi_sq_min, (l_peak_min)
+
+#---------- MAG SPACE CALCULATIONS ----------#
+
+def m(flux):
+    """ Flux in units of erg cm^(-2)s^(-1)Angstrom^(-1). """    
+    m_0 = -20.45 
+    return m_0 - (2.5 * np.log10(flux))
+
+def mchi_sq_l_peak(hubble, c, data, step):
+    """ Mag space: chi^2 function to find the L_peak value. An adapted version of 
+    fchi_sq_l_peak essentially. """
+
+    lzsn_data = data[1] # Calling the low redshift data
+    flx = flux(data) # Using flux data for the low redshift data
+    flx_unct = flux_uncert(data) # Calling the uncertainties
+
+    l_lims = luminosity_range(hubble, c, data) # Calls previous function for L range
+
+    l_mean = l_lims[0] / (10**35) # Mean luminosity in terms of 10^35
+    l_max = l_lims[1] / (10**35) # Max luminosity in terms of 10^35
+    l_range = np.arange(l_mean, l_max, step) # Produces a range of L_peak values to test
+
+    chi_sq_store = np.zeros([l_range.size,2]) # Stores the value for chi^2 for each step
+
+    for i in range(l_range.size):
+        """ Outer loop to test for each value for L_peak for our models. """
+        l_peak = l_range[i] # Selecting L_peak value to use
+        chi_sq_store[i][0] = l_peak * (10**35) # Stores current using L_peak value in first column
+        current = [] # List to sum up all the chi^2 values
+        for j in range(lzsn_data.shape[0]):
+            """ Inner loop to calculate chi^2 over supernova. """
+
+            # In flux
+            f_obs = flx[j] # Observed flux from low redshift data
+            f_mdl = flux_model(hubble, c, data, j, l_peak * (10**35)) # Model flux
+
+            # In mag
+            m_obs = m(f_obs)
+            m_mdl = m(f_mdl)
+
+            val_n = (m_obs - m_mdl) ** 2 # Numerator of chi^2 value
+            val_d = lzsn_data[:,3][j] ** 2 # Denominator of chi^2 value
+            val = val_n / val_d # Calculating the chi^2 value
+            if val > 50:
                 pass # Ignores errorneous values for val, or supposed to
             else:
                 #print(val_n, val_d, val, j)
@@ -115,11 +180,16 @@ def chi_sq_l_peak(hubble, c, data, step):
         chi_sq_store[i][1] = np.sum(current) # Store total chi^2 values into an array
     return chi_sq_store
 
-def chi_sq_min(hubble, c, data, step):
+def mchi_sq_min(hubble, c, data, step):
     """ Finding the minimum chi^2 value from our calculated data. """
-    chi_sq_data = chi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
+    chi_sq_data = mchi_sq_l_peak(hubble, c, data, step) # Data from chi^2 function
     chi_sq_min = np.min(chi_sq_data[:,1]) # Finding minimum chi^2 value from column
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
     return chi_sq_min, (l_peak_min)
+
+
+
+
+

@@ -19,7 +19,7 @@ pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
 
 def plot_l(hubble, c, data, step):
     """ Plotting the chi^2 against L_peak. """
-    dt = l_peak.chi_sq_l_peak(hubble, c, data, step)
+    dt = l_peak.fchi_sq_l_peak(hubble, c, data, step)
     l_sol = 3.84 * (10**26) # Luminosity of the Sun in Watts, W
     
     fig = pyplot.figure()  

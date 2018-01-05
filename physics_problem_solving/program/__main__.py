@@ -18,6 +18,7 @@ import numpy as np
 cm_data = [75, (3*(10**8))] # [H_0 (km s^-1 Mpc^-1), c (ms^-1)]
 # Convert H_0 into SI
 cm_data[0] = (cm_data[0] / 3.09) * (1.0 / (10**19)) # H_0 in units of s^-1
+step = 0.01 # Step for L_peak to be sought for
 rnge = [0,1] # Range to test Omega_Lambda values in
 
 #---------- MILESTONE WORK ----------#
@@ -27,10 +28,8 @@ def milestone():
     sn_data = data.data_input(file_name) # Calling data to use
 
     # Finding the best fit L_peak value, and best fit Omega_Lambda value
-    l_p = l_peak.chi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01)
-    omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01, float(l_p[1]))
-
-    print(l_p)
+    l_p = l_peak.chi_sq_min(cm_data[0], cm_data[1], sn_data, step)
+    omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
 
     # Finding the uncertainties on L_peak and Omega_Lambda
     #l_p_uncert = l_peak_uncert.one(cm_data[0], cm_data[1], sn_data, 0.01)
@@ -38,9 +37,9 @@ def milestone():
     omega_lambda_uncert = 1.0
 
     # Plotting the graphs that we need
-    plotter.plot_l(cm_data[0], cm_data[1], sn_data, 0.01)
-    plotter.plot_o(cm_data[0], cm_data[1], sn_data, 0.01, float(l_p[1]))
-    plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, 0.01, float(l_p[1]))
+    plotter.plot_l(cm_data[0], cm_data[1], sn_data, step)
+    plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
 
     #return l_p, l_p_uncert, omega_lambda, omega_lambda_uncert
 
@@ -56,16 +55,17 @@ def extension():
     # Combining both sets of data
     #tot_data = [np.append(odat[0], edat[0], axis=0), np.append(odat[1], edat[1], axis=0)]
 
-    #tot_data = odata
+    #tot_data = odat
     tot_data = edat
     
     #print(edat)
 
     # Finding the best fit L_peak value, and best fit Omega_Lambda value
-    l_p = l_peak.chi_sq_min(cm_data[0], cm_data[1], tot_data, 0.05)
-    #o_l = omega_lambda.chi_sq_min(cm_data[0], cm_data[1], tot_data, 0.01, float(l_p[1]))
+    fl_p = l_peak.fchi_sq_min(cm_data[0], cm_data[1], tot_data, 0.01)
+    #ml_p = l_peak.mchi_sq_min(cm_data[0], cm_data[1], tot_data, 0.01)
+    o_l = omega_lambda.chi_sq_min(cm_data[0], cm_data[1], tot_data, 0.01, float(fl_p[1]))
 
-    print(l_p)
+    print(fl_p, o_l)
 
     # Finding the uncertainties on L_peak and Omega_Lambda
     #l_p_uncert = l_peak_uncert.one(cm_data[0], cm_data[1], edat, 0.01)
@@ -73,16 +73,20 @@ def extension():
     #omega_lambda_uncert = 1.0
 
     # Plotting the graphs that we need
-    plotter.plot_l(cm_data[0], cm_data[1], tot_data, 0.05)
-    #plotter.plot_o(cm_data[0], cm_data[1], edat, 0.01, float(l_p[1]))
+    #plotter.plot_l(cm_data[0], cm_data[1], tot_data, 0.01)
+    plotter.plot_o(cm_data[0], cm_data[1], tot_data, 0.01, float(fl_p[1]))
     #plotter.plot_redmag(cm_data[0], cm_data[1], edat, 0.01, float(l_p[1]))
 
-    eplotter.plot_h([edat, odat])
+    #eplotter.plot_h([edat, odat])
 
 
+#---------- GRAPH PLOTTERS ----------#
+def plotting():
+    plotter.plot_l(cm_data[0], cm_data[1], sn_data, step)
+    plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
 
 
-    
 
 #---------- CALLING STUFF ----------#
 

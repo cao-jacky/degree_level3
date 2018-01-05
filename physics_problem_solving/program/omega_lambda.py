@@ -84,7 +84,11 @@ def chi_sq_omg_lam(hubble, c, data, step, l_peak):
             val_n = (f_obs - f_mdl) ** 2 # Numerator of chi^2 value
             val_d = flx_unct[j] ** 2 # Denominator of chi^2 value
             val = val_n / val_d # Calculating the chi^2 value
-            current.append(val) # Adding all the chi^2s into a list
+            if val > 2000:
+                pass # Ignores errorneous values for val, or supposed to
+            else:
+                #print(val_n, val_d, val, j)
+                current.append(val) # Adding all the current chi^2s value to the list
         chi_sq_store[i][1] = np.sum(current) # Storing the summed chi^2 into array
     return chi_sq_store
 
