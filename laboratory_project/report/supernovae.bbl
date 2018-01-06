@@ -144,6 +144,11 @@ A.~G. Riess et~al.
   Light-Curve Shapes}.
 \newblock {\em The Astrophysical Journal}, 473(1), 1996.
 
+\bibitem{hubble_constant}
+A.~G. Riess et~al.
+\newblock {A 2.4\% determination of the local value of the Hubble Constant}.
+\newblock {\em The Astrophysical Journal}, 826(56):31, 2016.
+
 \bibitem{high_en_astro}
 S.~Rosswod and M.~Br{\"u}ggen.
 \newblock {\em {Introduction to high-energy astrophysics}}.
@@ -151,7 +156,7 @@ S.~Rosswod and M.~Br{\"u}ggen.
 
 \bibitem{reddening}
 E.~F. Schafly and D.~P. Finkbeiner.
-\newblock { Measuring Reddening with Sloan Digital Sky Survey Stellar Spectra
+\newblock {Measuring Reddening with Sloan Digital Sky Survey Stellar Spectra
   and Recalibrating SFD}.
 \newblock {\em The Astrophysical Journal}, 737(2):13, 2011.
 

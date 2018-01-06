@@ -544,46 +544,42 @@ We find that overall, whilst SNooPy is able to produce templates and fit them to
 \subsubsection{Can we use our results for cosmology then?}
 \vspace{-2ex}
 
-We have the parameters from our final SNooPy fittings and we concluded that they not entirely inaccurate, could we use these them for cosmology then?
+We have the parameters from our final SNooPy fittings and we concluded that they are not entirely inaccurate, could we use these them for cosmology then?
 
-Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy.
+Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation we would be able to produce $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$, 
+\begin{equation}
+\mu = 5 \log_{10}(d) - 5,
+\end{equation}
 
-we find that it would be a fruitless and cyclic process. For the production of the Type Ia templates, cosmological parameters were employed \cite{car_snoopy}, $H_0 =$
+where $\mu$ is the distance modulus in magnitudes and $d$ is the distance in parsecs \cite{mod_ast}. 
+
+Comparing this to existing measurements, $H_0 = 73.24 \pm 1.74$ km s$^{-1}$ Mpc$^{-1}$ \cite{hubble_constant}, we see that whilst it appears to be consistent, the uncertainty entirely negates this fact. In our calculations we have had to estimate the uncertainty on the redshift and use SNooPy's provided statistical uncertainty for the distance modulus.
+
+If we wanted to use our results for cosmology we would firstly have to improve the original accuracy of our fitting and we would also have to find a value for the redshift which has a known uncertainty.  
  
-What can be drawn from this then is that 
+However, we must be aware that calculating $H_0$ is a partly cyclic process when using SNooPy. For the production of the Type Ia templates, cosmological parameters were employed in the calibration of the absolute magnitudes of their sample of Type Ia supernovae \cite{car_snoopy}. Whilst these parameters are not used in the actual fitting, we note that they might introduce an uncorrectable bias in our results. 
 
+In answering our question, we could use our results for cosmology, but we would have to introduce improvements and additional uncertainties. 
 
+We now arrive at a point where we have discussed the limitations and have judged the quality of fit that SNooPy provides, now we turn to the instruments that we used in collecting our data, the telescopes.
 
-For cosmology blah blah blah:
-In the sample of 24 low redshift Type Ia supernovae which were employed in the templates, we must note that their absolute magnitudes had been calibrated with a value for the distance modulus for each supernova. Within this they have used the Cosmic Microwave Background redshift, and standard values for the cosmological parameters. 
-
-In the other parameters that SNooPy uses, they had to calibrate 
-
-We now arrive at a point where 
-
-If we were to perform these fittings ourselves, we most likely would have just performed a stretching of an averaged Type Ia light curve for both B and V bands. to produce an accurate result we would
-
+\vspace{-2ex}
+\subsection{Observing supernovae}
+\vspace{-2ex}
 
 For the uncertainties outputted for the fitting, they are simply the quoted statistical errors which have been determined in the leas \cite{snoopy_online_docs}
 
-In an attempt to avoid this discussion 
-
-
 Is it actually a red supernova? What is the colour of our supernovae?
-
-It is highly unlikely that we will see supernova remnants for the supernova that we have been studying, in the shape of the Crab Nebula. Much longer time periods would be required for this. 
 
 In observing objects which are so faint we have the problem of trying to observe them. We need to balance the observing time to ensure that we do not oversaturate our frame with other stars. From the databases that we use, for this observation period the majority of our objects had been around the magnitudes of $\sim 18$ mag. But, we do not achieve this magnitude as there are various factors such as extinction affectinb data collection. 
 
-We can calculate the limitiing magnitude that our telescopes could detect by analysing our frames
+We can calculate the limiting magnitude that our telescopes could detect by analysing our frames
 
 [neutrino studying]?
 
 
 
 in using snoopy, how does it really fit the models to the data, what kind of parameters does it constrain. what is it's reliance on different parameters
-
-try and produce some sort of covariance relation plot?
 
 performing incorrect photometry and how that affects our results - not realising that we had to set a zero point, then having to find the zero point ourselves. 
 
@@ -611,10 +607,6 @@ hubble flow????
 
 how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
 
-\subsection{Observing supernovae}
-sdasd
-
-
 \subsection{Improvements and extensions}
 How could we improve upon our experiment, what else could we work on for extension projects.
 
@@ -623,8 +615,15 @@ How could we improve upon our experiment, what else could we work on for extensi
 \label{conclusions}
 \vspace{-2ex}
 
-In conclusion
+In conclusion it has been possible for us to observe supernovae
 
+We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank R. Wilson for the maintenance of the robotic telescope at La Palma.
+
+This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
+
+The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
+
+As a personal show of gratitude, I thank Duncan for his putting up of my nagging, my incessant tirade of anything that we did, and my really awful humour.
 \vspace{-5ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
