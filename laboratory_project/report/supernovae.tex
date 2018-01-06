@@ -546,12 +546,12 @@ We find that overall, whilst SNooPy is able to produce templates and fit them to
 
 We have the parameters from our final SNooPy fittings and we concluded that they are not entirely inaccurate, could we use these them for cosmology then?
 
-Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation we would be able to produce $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$, 
+Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation, 
 \begin{equation}
 \mu = 5 \log_{10}(d) - 5,
 \end{equation}
 
-where $\mu$ is the distance modulus in magnitudes and $d$ is the distance in parsecs \cite{mod_ast}. 
+where $\mu$ is the distance modulus in magnitudes and $d$ is the distance in parsecs \cite{mod_ast}. Using that and a value for speed of light in a vacuum from NIST \cite{speed_of_light} we would be able to produce $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$.
 
 Comparing this to existing measurements, $H_0 = 73.24 \pm 1.74$ km s$^{-1}$ Mpc$^{-1}$ \cite{hubble_constant}, we see that whilst it appears to be consistent, the uncertainty entirely negates this fact. In our calculations we have had to estimate the uncertainty on the redshift and use SNooPy's provided statistical uncertainty for the distance modulus.
 

@@ -122,6 +122,12 @@ T.~Matheson et~al.
 \newblock {Optical Spectroscopy of Type Ia Supernovae}.
 \newblock {\em The Astronomical Journal}, 135:1598--1615, 2008.
 
+\bibitem{speed_of_light}
+{NIST Standard Reference Database}.
+\newblock {CODATA value: speed of light in a vacuum}.
+\newblock \url{https://physics.nist.gov/cgi-bin/cuu/Value?c}, 2016.
+\newblock [Online; accessed 6th January 2018].
+
 \bibitem{obs_uni}
 A.~J. Norton, editor.
 \newblock {\em {Observing the Universe}}.
