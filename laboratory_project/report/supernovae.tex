@@ -450,7 +450,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \label{discussion}
 \vspace{-2ex}
 
-\subsection{SNooPy: the Type Ia SNe template fitter}
+\subsection{SNooPy, the Type Ia SNe template fitter}
 \vspace{-2ex}
 \subsubsection{What is the initial quality of the fit?}
 \vspace{-2ex}
@@ -526,13 +526,13 @@ We now arrive at the point where we have some understanding of how SNooPy and te
 
 As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other in a range from $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we were to use our results in cosmology we would use the summary output from \texttt{fitMCMC()} as it uses a less biased estimator of the parameters.
 
-Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As the host extinction (the reddening of the light) increases then the apparent magnitude of the supernova that can be observed decreases. 
+Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As the host extinction (the reddening of the light) increases then the apparent magnitude of the supernova that can be observed decreases. This may also be related to the fact that in the standard fitting, these two parameters are the only ones with systematic errors \cite{snoopy_online_docs} - the systematics in the distance modulus includes the intrinsic dispersion of the Phillips relation. 
 
 With the other parameters, we can see from the covariance plots that they have very little correlation to each other. This can be extended for the relations between dm15-DM and EBVhost-Tmax which we have not presented, they too show no correlations.
 
 The point to make here then is that we should have constrained the parameters for the host extinction or for the distance modulus. We gave SNooPY free reign in finding the parameters, using methods such as minimising $\chi^2$ and calling up the Schlegel maps to find the extinction with our given RA and dec. 
 
-This does mean that we can now compare what SNooPy outputs with known information and use this as an extra judge of the quality of fit. Focussing on the results for 2017hhz, we begin with the distance modulus. For \texttt{fit()} and \texttt{fitMCMC()} we get $36.121\pm0.106$ mag and $36.096\pm0.113$ mag, and retrieved from NED the Tully-Fisher determined value for UGC 01218 is $35.64\pm0.43$ mag \cite{tully_fish_catalogue}. Comparing these values we see that whilst they are not completely different, within the SNooPy uncertainties, they do not agree with the Tully-Fisher distance modulus.
+This does mean that we can now compare SNooPy's output with known information and use this as an extra judge of the quality of fit. Focussing on the results for 2017hhz, we begin with the distance modulus. For \texttt{fit()} and \texttt{fitMCMC()} we get $36.121\pm0.106$ mag and $36.096\pm0.113$ mag, and retrieved from NED the Tully-Fisher determined value for UGC 01218 is $35.64\pm0.43$ mag \cite{tully_fish_catalogue}. Comparing these values we see that whilst they are not completely different, within the SNooPy uncertainties, they do not agree with the Tully-Fisher distance modulus.
  
 A similar comparison can be attempted for the host extinction. SNooPy produced $0.049\pm0.083$ and $0.047\pm0.067$, whilst a galactic extinction of 0.043 can be quoted from Schlafly and Finkbeiner (2011) \cite{reddening}. As the statistical uncertainties are larger than the actual values obtained, this further highlights the need that we should have initially constrained the templates.
 
@@ -567,6 +567,16 @@ We now arrive at a point where we have discussed the limitations and have judged
 \subsection{Observing supernovae}
 \vspace{-2ex}
 
+In collecting data for this experiment we had to be extremely vary of the sources of noise that would arise and do our best to account for them. We have accounted for the uncertainties for bias and dark current, flat-fielded our data to remove the variations in sensitivity of the CCD pixels, and stacked our data to improve the supernova signal. 
+
+But from our SNooPy results we see that we required an improved data set for more accurate values. An important case to make here is if we were to repeat this experiment for new supernovae, we should use telescopes with a larger aperture. This is so that we could collect more data as the supernova dims, filling out that decline path and improving our SNooPy result. 
+
+On the other hand, an attempt could be make to take even more frames in the dimming period of the supernova. When the time came to combine the data, the fainter signals would be improved through this method.
+
+Using a longer exposure time could also be considered, but then there is a possibility that the images would become saturated and in a situation where our targets are already faint, this would not be ideal.
+
+Additionally, improvements could be made to our photometry methodology. We have previously discussed that we performed the photometry manually and this should have been made an automated process. We restate this and further suggest that in our calibration objects we should have used more than two to improve the accuracy of our zero-points.
+
 For the uncertainties outputted for the fitting, they are simply the quoted statistical errors which have been determined in the leas \cite{snoopy_online_docs}
 
 Is it actually a red supernova? What is the colour of our supernovae?
@@ -575,15 +585,7 @@ In observing objects which are so faint we have the problem of trying to observe
 
 We can calculate the limiting magnitude that our telescopes could detect by analysing our frames
 
-[neutrino studying]?
-
-
-
-in using snoopy, how does it really fit the models to the data, what kind of parameters does it constrain. what is it's reliance on different parameters
-
 performing incorrect photometry and how that affects our results - not realising that we had to set a zero point, then having to find the zero point ourselves. 
-
-confusion in observations, novae, cataclysmic variables 
 
 there are other scripts which provide an automated way in finding the zero points from the data. what would this produce? why would this be beneficial to use this as opposed to our method?
 
@@ -599,21 +601,23 @@ big picture: justification of the uncertainties
 
 using the jackknife method to discover the range of uncertainties after we had used snoopy to fit a model, the whole different parameters relating to each other
 
-statisitcal, experimental - different uncertainties
+statistical, experimental - different uncertainties
 
 extinction and galaxy extinction taking them into calculations
 
 hubble flow????
 
-how using different fitting models to check the quality of the data, right now we haven't really explored the quality of our data. 
-
-\subsection{Improvements and extensions}
+\vspace{-2ex}
+\subsection{Extension work}
+\vspace{-2ex}
 How could we improve upon our experiment, what else could we work on for extension projects.
 
 \vspace{-3ex}
 \section{Conclusions}
 \label{conclusions}
 \vspace{-2ex}
+
+We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves. 
 
 In conclusion it has been possible for us to observe supernovae
 
@@ -624,7 +628,7 @@ This research has made use of the CfA Supernova Archive, which is funded in part
 The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
 
 As a personal show of gratitude, I thank Duncan for his putting up of my nagging, my incessant tirade of anything that we did, and my really awful humour.
-\vspace{-5ex}
+\vspace{-3ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
 We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank R. Wilson for the maintenance of the robotic telescope at La Palma.
