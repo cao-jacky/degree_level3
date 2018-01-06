@@ -575,7 +575,15 @@ On the other hand, an attempt could be make to take even more frames in the dimm
 
 Using a longer exposure time could also be considered, but then there is a possibility that the images would become saturated and in a situation where our targets are already faint, this would not be ideal.
 
-Additionally, improvements could be made to our photometry methodology. We have previously discussed that we performed the photometry manually and this should have been made an automated process. We restate this and further suggest that in our calibration objects we should have used more than two to improve the accuracy of our zero-points.
+In Figure \ref{fig:2017hhz_collage} we present four images which we can use to highlight the differences in technique. At a first glance we note that flat-fielding our data vastly improves the quality of it. It cannot be seen in Figure \ref{fig:2017hhz_collage}(c) directly but the vignette effect has been removed and the data now has reduced noise. 
+
+With the comparison of the raw data, it is difficult to do so as different observation conditions would have been present. In Figure \ref{fig:2017hhz_collage}(a) five exposures each taken for 120s had been taken in La Palma. For Figure \ref{fig:2017hhz_collage}(b) the Durham site was used for 24 exposures at 60s each. 
+
+We notice in Figure \ref{fig:2017hhz_collage}(a) that all the objects appear to be slightly warped like a rugby ball, this potentially could be due to atmospheric turbulence. It was not atypical that our data would sometimes have aberrations such as this. We had some cases where a satellite or an aeroplane had transited through some of our frames, and it was not until we had stacked the multiple frames together that we would notice such a thing had occured.
+
+This is another advantage to collecting as many frames of our objects as possible, on top of reducing unwanted noise, we could circumnavigate problems such as this.
+
+Looking away from data collection, improvements could be made instead  to our photometry methodology. We have previously discussed that we performed the photometry manually and this should have been made an automated process. We restate this and further suggest that for our calibration objects we should have used more than two so that the accuracy of our zero-points would be improved, and in turn, our apparent magntiudes.
 
 For the uncertainties outputted for the fitting, they are simply the quoted statistical errors which have been determined in the leas \cite{snoopy_online_docs}
 
@@ -585,15 +593,15 @@ In observing objects which are so faint we have the problem of trying to observe
 
 We can calculate the limiting magnitude that our telescopes could detect by analysing our frames
 
+In our experiment we may have forgotten 
+
 performing incorrect photometry and how that affects our results - not realising that we had to set a zero point, then having to find the zero point ourselves. 
 
 there are other scripts which provide an automated way in finding the zero points from the data. what would this produce? why would this be beneficial to use this as opposed to our method?
 
 justification of using the uncertainty equation, functional approach, why not use the uncertainty that was provided by the software? mention how it's one of the photon statistics things.
 
-dstack, taking the median not mean , and why this is better - if I haven't discussed this already
-
-what science have we addressed? well, we have limitations on the telescopes in terms of how 'deep' we can see:  the limiting magnitude, how that was calculated - longer exposure times...etc
+what science have we addressed? 
 
 has it been possible to plot a light curve with reasonable uncertainties? how best could this experiment be changed? 
 
@@ -617,21 +625,13 @@ How could we improve upon our experiment, what else could we work on for extensi
 \label{conclusions}
 \vspace{-2ex}
 
-We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves. 
+We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves. We can now conclude that in fact, it is possible, and the fitting that has been produced with our data and SNooPy's templates are not a bad fit. Producing reduced $\chi^2$ of 
 
-In conclusion it has been possible for us to observe supernovae
 
-We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank R. Wilson for the maintenance of the robotic telescope at La Palma.
-
-This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
-
-The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
-
-As a personal show of gratitude, I thank Duncan for his putting up of my nagging, my incessant tirade of anything that we did, and my really awful humour.
 \vspace{-3ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
-We thank J. Lucey, M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank R. Wilson for the maintenance of the robotic telescope at La Palma.
+We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank Dr. R. Wilson for the maintenance of the robotic telescope at La Palma.
 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
 
