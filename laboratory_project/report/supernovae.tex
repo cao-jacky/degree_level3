@@ -259,7 +259,7 @@ In Figure \ref{fig:2017_stn}(a) we show the $S/N$ plot that was created for the 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.5cm]{observations/2017hhz}
-\caption[]{(a) Plot of signal to noise against the radius of the aperture for 2017hhz frames, this was used to identify which fixed radius to use. (b) Image of the aperture tool used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is star, 512-002599.}
+\caption[]{(a) Plot of signal to noise against the radius of the aperture for 2017hhz frames, this was used to identify which fixed radius to use. (b) Image of the aperture tool used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is the star 512-002599.}
 \label{fig:2017_stn}
 \end{center}
 \end{figure}
@@ -557,7 +557,7 @@ Comparing this to existing measurements, $H_0 = 73.24 \pm 1.74$ km s$^{-1}$ Mpc$
 
 If we wanted to use our results for cosmology we would firstly have to improve the original accuracy of our fitting and we would also have to find a value for the redshift which has a known uncertainty.  
  
-However, we must be aware that calculating $H_0$ is a partly cyclic process when using SNooPy. For the production of the Type Ia templates, cosmological parameters were employed in the calibration of the absolute magnitudes of their sample of Type Ia supernovae \cite{car_snoopy}. Whilst these parameters are not used in the actual fitting, we note that they might introduce an uncorrectable bias in our results. 
+However, we must be aware that calculating $H_0$ is a partly cyclic process when using SNooPy. For the production of the Type Ia templates, cosmological parameters ($H_0$, $\Omega_M$, and $\Omega_{\Lambda}$) were employed in the calibration of the absolute magnitudes of their sample of Type Ia supernovae \cite{car_snoopy} . Whilst these parameters are not used in the actual fitting, we note that they might introduce an uncorrectable bias in our results. 
 
 In answering our question, we could use our results for cosmology, but we would have to introduce improvements and additional uncertainties. 
 
@@ -591,13 +591,16 @@ Looking away from data collection, we can instead suggest improvements which cou
 
 Now, considering the tools we used for this photometry, GAIA was our main astronomical data analysis package. For the counts of our objects we did not make use of the quoted uncertainty from the program, instead we chose a functional approach which can be found in Appendix \ref{app:uncertainties}. A method opted for as we had control and an understanding of how it worked.
 
-GAIA's other measurement parameter that we utilised was the estimator for the sky background value. A value which we only used for our signal-to-noise calculations when we chose the radius of our apertures. The way in which this value is calculated can be changed within GAIA's photometry settings. Our calculations in particular make use of the 'clipped mean', a mean which disregards the extreme high and low values. Compared with the standard 'mean', there is only a $\sim 0.06 \%$ difference between both values, a difference too small to be a problem in our calculations.
+GAIA's other measurement parameter that we utilised was the estimator for the sky background value. A value which we only used for our signal-to-noise calculations when we chose the radius of our apertures. The way in which this value is calculated can be changed within GAIA's photometry settings. Our calculations in particular make use of the `clipped mean', a mean which disregards the extreme high and low values. Compared with the standard `mean', there is only a $\sim 0.06 \%$ difference between both values, a difference too small to be a problem in our calculations.
 
-Once we had gained a strong set of skills in operating telescopes and collecting and analysing data we attempted to apply what we had learnt to other side projects. 
+Once we had gained a strong set of skills in operating telescopes and collecting plus analysing data we attempted to apply what we had learnt to other related projects. 
 
 \vspace{-2ex}
 \subsection{Extension work}
 \vspace{-2ex}
+
+Using the data which we had already collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then before a subtraction could be performed, the images had to be accounted for the point spread function (PSF). This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful, we successfully removed the galaxy, but we did not manage to convolve a Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+
 How could we improve upon our experiment, what else could we work on for extension projects.
 
 In this experiment we have dealt
@@ -675,7 +678,7 @@ A list of the objects that were chosen to be observed, and then the subsequent n
     *AT2017hhq & 00:42:50.230 & +41:15:27.10 & 17.7 & 2017/10/30.599 & NV & {A nova close to M31}  \\
     AT2017htb & 22:09:38.520 & +17:39:39.56 & 15.7 & 2017/11/02.190 & unk & {-}  \\
     AT2017hzw & 02:05:18.337 & +53:12:13.16 & 17.3 & 2017/11/13.410 & Ia-CSM & {-}  \\
-    2017igf & 11:42:49.850 & +77:22:12.94 & 15.4 & 2017/11/18.590 & Ia & {Promising Type Ia object to observe}  \\
+    2017igf & 11:42:49.850 & +77:22:12.94 & 15.4 & 2017/11/18.590 & Ia & {Promising Type Ia target}  \\
     \hline      
 \end{tabularx}
 \caption{Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered in the V band. Objects marked with an asterisk $*$ were objects which we chose to stop observing, the reason provided in the notes.}
@@ -887,20 +890,20 @@ We now detail the steps that we took when using this Python package.
  \item SNooPy was initially loaded into a command line interface in the folder of \texttt{supernova.txt} with the command \texttt{snpy}.
  \item We then loaded the supernova text file with,
  \begin{equation*}
- \texttt{s = get\_sn('supernova.txt')} .
+ \texttt{s = get\_sn(`supernova.txt')} .
  \end{equation*}
  
  \item An optional step, but one which we chose to make was to use the Carnegie Supernova Project's passbands as they would include spectral corrections, \textit{S-corrections}, doing this for the B and V bands by using,
  \begin{equation*}
  \begin{split}
- \texttt{s = restbands['Bs'] = 'B' } , \\ 
- \texttt{s = restbands['Vs'] = 'V' } .
+ \texttt{s = restbands[`Bs'] = `B' } , \\ 
+ \texttt{s = restbands[`Vs'] = `V' } .
  \end{split}
  \end{equation*}
  
  \item Once this was done, the basic fit was performed, selecting the two photometric bands which we used,
  \begin{equation*}
- \texttt{s = s.fit(['Bs','Vs'])} . 
+ \texttt{s = s.fit([`Bs',`Vs'])} . 
  \end{equation*}
  
  A matplotlib interface would then appear and you could view the data which was plotted with their uncertainties plus the fitted light curve. The bands which were selected would correlate to what would be shown in the plots.
@@ -931,7 +934,7 @@ We now detail the steps that we took when using this Python package.
  
  \item To produce the covariance plots, the function \texttt{fitMCMC()} could be used. However, the \texttt{fit()} function must be called before doing so,
  \begin{equation*}
- \texttt{s = s.fit(['Bs','Vs'])} . 
+ \texttt{s = s.fit([`Bs',`Vs'])} . 
  \end{equation*}
  
  Once this function has been called the following command should then allow us to produce the covariance (triangle) plots,
@@ -955,7 +958,7 @@ N.B.: The full stops and commas at the end of the functions should not be includ
 
 For other types of Type Ia supernovae, a different form of the standard template has to be selected, that can be done with this command,
 \begin{equation*}
-\texttt{s.k\_version = 'type'},
+\texttt{s.k\_version = `type'},
 \end{equation*}
 
 where \texttt{type} could be \texttt{91bg} to represent Type Ia-91bg supernovae.
