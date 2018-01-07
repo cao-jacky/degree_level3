@@ -343,7 +343,7 @@ Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the calcula
 \vspace{-2ex}
 In fitting templates and models to our data, the process could be manually performed, however we chose to use a Python package \textit{SNooPy} \cite{car_snoopy}. SNooPy is an automated fitter for Type Ia light curves, our magnitudes would be parsed and then a template would be transformed to fit that set of data. 
 
-For the basic fitting function, \texttt{snpy.fit()}, it would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension (RA) and declination (dec) of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}. 
+For the basic fitting function, \texttt{snpy.fit()}, it would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension (RA) and declination (dec) of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}.
 
 The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift that they obtained.
 
@@ -567,7 +567,7 @@ We now arrive at a point where we have discussed the limitations and have judged
 \subsection{Observing supernovae}
 \vspace{-2ex}
 
-In collecting data for this experiment we had to be aware of the sources of noise that would arise and do our best to account for them. We have accounted for the uncertainties for bias and dark current, flat-fielded our data to remove the variations in sensitivity of the CCD pixels, and stacked our data to improve the supernova signal. 
+In collecting data for this experiment we had to be aware of the sources of noise that would arise and do our best to account for them. We had accounted for the uncertainties for bias and dark current, flat-fielded our data to remove the variations in sensitivity of the CCD pixels, and stacked our data to improve the supernova signal. 
 
 But from our SNooPy results we see that we required an improved data set for more accurate values. An important case to make here is if we were to repeat this experiment for new supernovae, we should use telescopes with a larger aperture. This is so that we could collect more data as the supernova dims, filling out that decline path and improving our SNooPy result. 
 
@@ -596,54 +596,42 @@ GAIA's other measurement parameter that we utilised was the estimator for the sk
 Once we had gained a strong set of skills in operating telescopes and collecting plus analysing data we attempted to apply what we had learnt to other related projects. 
 
 \vspace{-2ex}
-\subsection{Extension work}
+\subsection{Galaxy subtraction, the search for transients, and closing thoughts}
 \vspace{-2ex}
 
-Using the data which we had already collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then before a subtraction could be performed, the images had to be accounted for the point spread function (PSF). This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve a Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+Using the data which we had previously collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then one of the images had to be accounted for the point spread function (PSF) of the other. This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. The images could then be subtracted from each other. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve our Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
 
-For this to had been successful we should have measured the 
+If we had been successful in implementing this galaxy subtraction, we then would have rudimentarily attempted our own transients survey. Throughout the project, in addition to our supernova observations, we viewed areas where we thought supernovae may occur. We initially started with stellar clusters, Messier 7 and Messier 10, but we soon realised that there would be a low chance for their stars to explode. So, we took our observations to a galactic cluster, the Perseus Cluster (Abell 426). 
 
-How could we improve upon our experiment, what else could we work on for extension projects.
+We had intended to carry out a `background subtract' on our frames, new events would then be easily detected. We state these past intentions instead of presenting results as there was just not enough time. Our time was limited and in the end we decided it would be more important for us to focus our efforts on the main project, producing Type Ia light curves. 
 
-In this experiment we have dealt
+Looking at our objects log and observing logs we find that we observed many more objects than just 2017hhz and 2017hle. Not everything that we collected could be analysed as it would take an excessive amount of time to do so. 
 
-Is it actually a red supernova? What is the colour of our supernovae? 
-
-In our experiment we may have forgotten 
-
-what science have we addressed? 
-
-has it been possible to plot a light curve with reasonable uncertainties? how best could this experiment be changed? 
-
-big picture: justification of the uncertainties 
-
-using the jackknife method to discover the range of uncertainties after we had used snoopy to fit a model, the whole different parameters relating to each other
-
-statistical, experimental - different uncertainties
-
-extinction and galaxy extinction taking them into calculations
-
-hubble flow????
-
+We therefore suggest that if this project were to be revisited in the future, it would help if the photometry and the template fittings were automated. In doing so, more time could be devoted to focussing on the astrophysics behind supernovae and their applications. We also suggest that other fitters should be used as well as SNooPy, namely SALT2 and MLCS2k2, it would certainly be interesting to compare and contrast the uncertainties in their results and their initial parameters.
 
 \vspace{-3ex}
 \section{Conclusions}
 \label{conclusions}
 \vspace{-2ex}
 
-We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves? We can now conclude that in fact, it is possible, and the fitting that has been produced with our data and SNooPy's templates are not a bad fit. Producing reduced $\chi^2$ of 
+We asked ourselves at the beginning of this experiment whether it would be possible for us to observe Type Ia supernovae and reproduce their evolutionary light curves. Our conclusion is that it is possible, but the accuracy and uncertainties could certainly be improved. 
 
+Through the usage of SNooPy we managed to apply models to our data which were not entirely unacceptable, producing average reduced $\chi^2$ values of $\sim 1.49$ for the B band and $\sim 2.88$ for the V band. The calculated parameters used in the fittings, the distance modulus and galactic extinction, are consistent with known values, however, their uncertainties negate any agreement as the results become meaningless. 
+
+Therefore adjustments must be made to produce more reasonable uncertainties. With our observational method, an extensive data set should be collected with a larger telescope, one which covers the entire evolution of the supernova. Further, for our analysis, if SNooPy is to be used again for our fittings, known constraints should be placed on the templates as this would in turn produce more accurate results.
+
+Having a better set of results in hand, one could then achieve more consistent values for the geometry of the universe. We shall state once again that Type Ia supernovae are an important tool for cosmology, and it is important to produce accurate light curves.
 
 \vspace{-3ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
-We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for their continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the continual upkeep of the telescopes on the department's roof, and we thank Dr. R. Wilson for the maintenance of the robotic telescope at La Palma.
+We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for the continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the upkeep of the department's roof telescope array, and we thank Dr. R. Wilson for the usage of the robotic telescope at La Palma. 
 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
 
 The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
 
-As a personal show of gratitude, I thank Duncan for his eternal patience. Coping with my nagging, my incessant tirade of anything that we did, and my really awful humour.
+As a final show of gratitude, I thank Duncan Middlemiss for his patience and partnership during this project.
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
