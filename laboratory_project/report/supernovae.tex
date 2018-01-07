@@ -188,7 +188,7 @@ As we progressed through our experimental period we came to realise that astrono
 
 In the first instance, having a night sky without any visible clouds would be a good initial step. Once the conditions appear to be clear, the atmospheric turbulence would have to be considered next. This is the process when air is turbulently mixed together at different temperatures, thus creating cells or pockets which have different refractive indexes when compared to their surrounding area \cite{princ_stell_inter}. The effect of this is to produce an image which is blurred and appears to have moved.
 
-In quantifying this seeing as a value, the full width at half maximum (FWHM) can be given for each observation made. The FWHM is a resolution criterion which can be defined as, $``$the diameter of the Airy disk at half of its maximum intensity'' \cite{princ_stell_inter}. The Airy disk being the central spot of the diffraction pattern which occurs when light from a distant point source has been diffracted by a circular aperture, say, by a telescope. 
+In quantifying this seeing as a value, the full width at half maximum (FWHM) can be given for each observation made. The FWHM is a resolution criterion which can be defined as, \textquote{the diameter of the Airy disk at half of its maximum intensity} \cite{princ_stell_inter}. The Airy disk being the central spot of the diffraction pattern which occurs when light from a distant point source has been diffracted by a circular aperture, say, by a telescope. 
 
 Given in arcseconds, the best observing sites produce a stellar image about $0.25''$ across, for an average site it will be typically $2''$ \cite{tel_tech}. What we found was that for Far-East-16, our seeing ranged from $3''$ on a clear night to $\sim6''$ on a cloudy and turbulent night. For pt5m, we found that seeing was generally better on good nights as it is in a better location for astronomical observations. [[why]]
 
@@ -599,7 +599,9 @@ Once we had gained a strong set of skills in operating telescopes and collecting
 \subsection{Extension work}
 \vspace{-2ex}
 
-Using the data which we had already collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then before a subtraction could be performed, the images had to be accounted for the point spread function (PSF). This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful, we successfully removed the galaxy, but we did not manage to convolve a Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+Using the data which we had already collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then before a subtraction could be performed, the images had to be accounted for the point spread function (PSF). This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve a Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+
+For this to had been successful we should have measured the 
 
 How could we improve upon our experiment, what else could we work on for extension projects.
 
@@ -629,7 +631,7 @@ hubble flow????
 \label{conclusions}
 \vspace{-2ex}
 
-We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves. We can now conclude that in fact, it is possible, and the fitting that has been produced with our data and SNooPy's templates are not a bad fit. Producing reduced $\chi^2$ of 
+We asked ourselves at the beginning of this experiment whether it would be possible to observe Type Ia supernovae and produce their light curves? We can now conclude that in fact, it is possible, and the fitting that has been produced with our data and SNooPy's templates are not a bad fit. Producing reduced $\chi^2$ of 
 
 
 \vspace{-3ex}
@@ -641,7 +643,7 @@ This research has made use of the CfA Supernova Archive, which is funded in part
 
 The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
 
-As a personal show of gratitude, I thank Duncan for his putting up of my nagging, my incessant tirade of anything that we did, and my really awful humour.
+As a personal show of gratitude, I thank Duncan for his eternal patience. Coping with my nagging, my incessant tirade of anything that we did, and my really awful humour.
 
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
