@@ -18,12 +18,12 @@
 \textheight=26.385cm
 %Change textheight as the last resort...
 
-\title{Observing Type Ia supernovae and fitting templated light curves}
+\title{Observing Type Ia supernovae, fitting templated light curves, and their usage in cosmology}
  
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 07/01/2018}
 
 \begin{abstract}              
-We have monitored and collected data for supernova explosions over a period of 34 days using a $16''$ and a $0.5$ m telescope situated in Durham and La Palma. Calculating the magnitudes for a Type Ia and Type Ia-91bg supernova objects, 2017hhz and 2017hle, we then fitted fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit with the \texttt{fit()} function was judged to be acceptable in accordance to the  reduced $\chi^2$ values calculated: 2017hhz with $\chi^2_{\nu,B}=1.68$ and $\chi^2_{V,\nu}=2.78$, and 2017hle with $\chi^2_{\nu,B}=1.29$ and $\chi^2_{V,\nu}=3.02$. Indicating that This indicating that the fittings are good in the V band but really good in the V band. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something. We expect our biggest source of uncertainty arose due to the conditions and data analysis that we performed. Using a Type Ia supernova of brightness $00.00$ mag, we have managed to produce a value for Hubble's Constant, $H_0 = 74$ kms$^{-1}$ Mpc$^{-1}$. We attempted to calculate Einstein's coefficient, $\Lambda$, but this was unsuccessful due to redshift of something.
+Type Ia supernovae have the unique trait of being standard candles, their light curves can be used in cosmology to calculate and constrain cosmological parameters. In observing Type Ia supernovae and fitting model light curves to such data one can attempt to derive such values. We have monitored, collected, and analysed data for supernova explosions over a period of 34 days. A $16''$ and a $0.5$ m telescope situated in Durham and La Palma was used for this project. After calculating the magnitudes for a Type Ia (2017hhz) and Type Ia-91bg (2017hle) supernova object, we fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit for the program's \texttt{fit()} function was deemed to be acceptable in accordance to the average reduced $\chi^2$ values calculated for the B and V photometric bands, $\chi^2_{\nu,B} \approx 1.49$ and $\chi^2_{V,\nu} \approx 2.88$ - a good fit requiring $\chi^2_{\nu}=1$. The distance modulus to the supernova 2017hhz was calculated by SNooPy to be $36.121\pm0.106$ mag, using this value we were able to compute $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$. However, the quoted error negates the meaning of the value as it is too uncertain. In improving the accuracy and uncertainties we suggest that more observations of the supernovae were required, and constraining values should be used for the parameters in SNooPy's templates.
 \end{abstract}
 
 \maketitle
@@ -430,6 +430,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
  \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2_B}$} & \textbf{$\boldsymbol{\chi^2_{\nu,B}}$} & \textbf{$\boldsymbol{\chi^2_V}$} & \textbf{$\boldsymbol{\chi^2_{\nu,V}}$} \\ [0.5ex] 
  2017hhz & 5.03 & 1.68 & 8.23 & 2.74 \\
  2017hle & 3.86 & 1.29 & 9.05 & 3.02 \\
+ Average & - & 1.49 & - & 2.88 \\
  \hline
 \end{tabular}
 \caption{$\chi^2$ and reduced $\chi^2$ ($\chi^2_{\nu}$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
