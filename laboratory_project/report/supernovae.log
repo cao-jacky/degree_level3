@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 JAN 2018 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 JAN 2018 16:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -863,17 +863,17 @@ mas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12
 /2017, Date of report: 07/01/2018.
 
 
-Overfull \hbox (4.16638pt too wide) in paragraph at lines 47--58
+Overfull \hbox (4.16638pt too wide) in paragraph at lines 46--57
  []$[]$ 
  []
 
 <intro/typeia.pdf, id=1, 462.72874pt x 319.1925pt>
 File: intro/typeia.pdf Graphic file (type pdf)
  <use intro/typeia.pdf>
-Package pdftex.def Info: intro/typeia.pdf used on input line 68.
+Package pdftex.def Info: intro/typeia.pdf used on input line 66.
 (pdftex.def)             Requested size: 263.18799pt x 181.5471pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 68--69
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 66--67
  [] 
  []
 
@@ -883,17 +883,17 @@ ro/typeia.pdf>] [2]
 File: observations/cassegrain.pdf Graphic file (type pdf)
 
 <use observations/cassegrain.pdf>
-Package pdftex.def Info: observations/cassegrain.pdf used on input line 166.
+Package pdftex.def Info: observations/cassegrain.pdf used on input line 161.
 (pdftex.def)             Requested size: 213.39566pt x 109.35226pt.
  [3 <./observations/cassegrain.pdf>] [4]
 <observations/2017hhz.pdf, id=70, 503.8825pt x 212.795pt>
 File: observations/2017hhz.pdf Graphic file (type pdf)
 
 <use observations/2017hhz.pdf>
-Package pdftex.def Info: observations/2017hhz.pdf used on input line 254.
+Package pdftex.def Info: observations/2017hhz.pdf used on input line 249.
 (pdftex.def)             Requested size: 241.84842pt x 102.13393pt.
 
-Overfull \hbox (4.73225pt too wide) in paragraph at lines 254--255
+Overfull \hbox (4.73225pt too wide) in paragraph at lines 249--250
  [] 
  []
 
@@ -904,18 +904,18 @@ Missing character: There is no   in font cmr10!
 [5]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 263.
+ on input line 258.
 
 
-LaTeX Warning: Reference `m_uncert' on page 6 undefined on input line 286.
+LaTeX Warning: Reference `m_uncert' on page 6 undefined on input line 281.
 
 
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 290--305
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 285--300
  []$[]$ 
  []
 
 
-Overfull \hbox (0.91705pt too wide) in paragraph at lines 312--323
+Overfull \hbox (0.91705pt too wide) in paragraph at lines 307--318
  []$[]$ 
  []
 
@@ -924,10 +924,10 @@ Overfull \hbox (0.91705pt too wide) in paragraph at lines 312--323
 File: results/2017hhz.pdf Graphic file (type pdf)
 
 <use results/2017hhz.pdf>
-Package pdftex.def Info: results/2017hhz.pdf used on input line 362.
+Package pdftex.def Info: results/2017hhz.pdf used on input line 357.
 (pdftex.def)             Requested size: 263.18799pt x 178.12167pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 362--363
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 357--358
  [] 
  []
 
@@ -938,10 +938,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: results/2017hle.pdf Graphic file (type pdf)
 
 <use results/2017hle.pdf>
-Package pdftex.def Info: results/2017hle.pdf used on input line 371.
+Package pdftex.def Info: results/2017hle.pdf used on input line 366.
 (pdftex.def)             Requested size: 263.18799pt x 178.12167pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 371--372
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 366--367
  [] 
  []
 
@@ -953,7 +953,7 @@ File: results/covariance/covariance.pdf Graphic file (type pdf)
 
 <use results/covariance/covariance.pdf>
 Package pdftex.def Info: results/covariance/covariance.pdf used on input line 3
-97.
+92.
 (pdftex.def)             Requested size: 234.73523pt x 190.72919pt.
 
 
@@ -970,7 +970,7 @@ File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
 <use images/collage_rectangle_small.pdf>
 Package pdftex.def Info: images/collage_rectangle_small.pdf used on input line 
-433.
+428.
 (pdftex.def)             Requested size: 234.73523pt x 136.08347pt.
 
 
@@ -979,11 +979,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [7 <./results/2017hhz.pdf> <./results/2017hle.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 450.
+ on input line 445.
 
 [8 <./results/covariance/covariance.pdf> <./images/collage_rectangle_small.pdf>
 ] [9] [10]
-Underfull \hbox (badness 2005) in paragraph at lines 586--587
+Underfull \hbox (badness 2005) in paragraph at lines 581--582
 []\OT1/cmr/m/n/10 GAIA's other mea-sure-ment pa-ram-e-ter that we
  []
 
@@ -1020,27 +1020,27 @@ tate . edu /
  []
 
 ) [12]
-Underfull \hbox (badness 1014) in paragraph at lines 666--666
+Underfull \hbox (badness 1014) in paragraph at lines 661--661
 []|\OT1/cmr/m/n/9 Was later iden-ti-fied as a Cat-a-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 666--666
+Underfull \hbox (badness 1077) in paragraph at lines 661--661
 \OT1/cmr/m/n/9 ob-ject be-came too dim for our
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 666--666
+Underfull \hbox (badness 1360) in paragraph at lines 661--661
 []|\OT1/cmr/m/n/9 Was later clas-si-fied as a Cat-a-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 666--666
+Underfull \hbox (badness 1117) in paragraph at lines 661--661
 \OT1/cmr/m/n/9 chose to fo-cus on 2017hhz and
  []
 
 [13]
-Underfull \hbox (badness 1824) in paragraph at lines 715--715
+Underfull \hbox (badness 1824) in paragraph at lines 710--710
 \OT1/cmr/m/n/9 ob-ject tran-sited across the frame while
  []
 
@@ -1054,61 +1054,61 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14] [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 []\OT1/cmr/m/it/10 The SNooPy files which we used for pro-
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 841--842
+Underfull \hbox (badness 6141) in paragraph at lines 836--837
 \OT1/cmr/m/it/10 cess-ing 2017hhz and 2017hle can be found at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 \OT1/cmtt/m/n/10 https : / / community . dur . ac . uk / jacky . cao / #l3lp$\O
 T1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 \OT1/cmr/m/it/10 The stan-dard ex-am-ple files can be re-trieved
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 \OT1/cmr/m/it/10 from the Carnegie Su-per-nova Project, $\OT1/cmtt/m/n/10 https
  :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 
  []
 
 
-Overfull \hbox (7.88383pt too wide) in paragraph at lines 845--848
+Overfull \hbox (7.88383pt too wide) in paragraph at lines 840--843
  | 
  []
 
 
-Overfull \hbox (7.88383pt too wide) in paragraph at lines 862--863
+Overfull \hbox (7.88383pt too wide) in paragraph at lines 857--858
  | 
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 867.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 862.
 [18]
-Overfull \hbox (7.76767pt too wide) in paragraph at lines 977--980
+Overfull \hbox (7.76767pt too wide) in paragraph at lines 972--975
  | 
  []
 
 
-Overfull \hbox (7.76767pt too wide) in paragraph at lines 1006--1007
+Overfull \hbox (7.76767pt too wide) in paragraph at lines 1001--1002
  | 
  []
 
@@ -1119,18 +1119,18 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred inside a group at level 6)
 
-### simple group (level 6) entered at line 953 ({)
-### simple group (level 5) entered at line 808 ({)
-### simple group (level 4) entered at line 764 ({)
-### simple group (level 3) entered at line 719 ({)
-### simple group (level 2) entered at line 681 ({)
-### simple group (level 1) entered at line 640 ({)
+### simple group (level 6) entered at line 948 ({)
+### simple group (level 5) entered at line 803 ({)
+### simple group (level 4) entered at line 759 ({)
+### simple group (level 3) entered at line 714 ({)
+### simple group (level 2) entered at line 676 ({)
+### simple group (level 1) entered at line 635 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 15770 strings out of 493089
- 275042 string characters out of 6134841
+ 15771 strings out of 493089
+ 275053 string characters out of 6134841
  397988 words of memory out of 5000000
- 19036 multiletter control sequences out of 15000+600000
+ 19037 multiletter control sequences out of 15000+600000
  16300 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,17n,47p,10373b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1162,7 +1162,7 @@ live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (20 pages, 1521760 bytes).
+Output written on supernovae.pdf (20 pages, 1521396 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
