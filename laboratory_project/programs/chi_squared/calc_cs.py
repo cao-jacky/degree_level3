@@ -8,7 +8,7 @@ import plotter # Importing plotter program which has a function wcih reads data
 
 def data():
     """ Returns data from our plotter module. """
-    sn = ['2017hle']
+    sn = ['2017hhz']
     return plotter.data(sn[0])
 
 def chi_sq_data_b():
@@ -29,11 +29,11 @@ def chi_sq_data_b():
 
     for i in range(b_model.shape[0]):
         time = b_model[i][0] # Pulling times from time column 
-        if t_min + 0.8 <= time <= t_max + 0.8:
+        if t_min + 0.1 <= time <= t_max + 0.1:
             bm_count = bm_count + 1
             t_loc = np.where(b_model[:,0] == time)# Finding location of the time
             mag_model = b_model[:,1][t_loc] # Model magnitude
-            model_store[bm_count][0] = time - 0.8 # Storing time
+            model_store[bm_count][0] = time - 0.1 # Storing time
             model_store[bm_count][1] = mag_model # Storing magnitude
         else:
             pass
@@ -74,11 +74,11 @@ def chi_sq_data_v():
 
     for i in range(v_model.shape[0]):
         time = v_model[i][0] # Pulling times from time column 
-        if t_min + 0.8 <= time <= t_max + 0.8:
+        if t_min + 0.1 <= time <= t_max + 0.1:
             vm_count = vm_count + 1
             t_loc = np.where(v_model[:,0] == time)# Finding location of the time
             mag_model = v_model[:,1][t_loc] # Model magnitude
-            model_store[vm_count][0] = time - 0.8 # Storing time
+            model_store[vm_count][0] = time - 0.1 # Storing time
             model_store[vm_count][1] = mag_model # Storing magnitude
         else:
             pass
@@ -112,8 +112,8 @@ def final_chisq():
     print("V: ", v) 
     print("\n")
     print("reduced chi^2:")
-    print("B: ", b / 3)
-    print("V: ", v / 3)
+    print("B: ", b / (10-4))
+    print("V: ", v / (10-4))
 
 
 if __name__ == '__main__':

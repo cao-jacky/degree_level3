@@ -7,14 +7,14 @@
 512-002599 16.158 17.105 15.887 15.79
 
 # v-band
-# name, relative mag, relative mag error, sky value
+# name, mean counts, counts error, sky value
 512-002598 804.14 2.3613 137.46
 512-002599 119.41 1.0980 101.86
 
 2017hhz 77.5 1.5113 121.16
 
 # b-band
-# name, relative-mag, relative mag error, sky value
+# name, mean counts, mean counts error, sky value
 512-002598 206.53 1.4903 37.667
 512-002599 47.787 1.4286 28.199
 

@@ -23,7 +23,7 @@
 \author{Jacky Cao, AstroLabs Michaelmas, Lab Partner: Duncan Middlemiss \\ Dates of experiment: 19/10/2017 to 08/12/2017, Date of report: 07/01/2018}
 
 \begin{abstract}              
-Type Ia supernovae have the unique trait of being standard candles, their light curves can be used in cosmology to calculate and constrain cosmological parameters. In observing Type Ia supernovae and fitting model light curves to such data one can attempt to derive such values. We have monitored, collected, and analysed data for supernova explosions over a period of 34 days. A $16''$ and a $0.5$ m telescope situated in Durham and La Palma was used for this project. After calculating the magnitudes for a Type Ia (2017hhz) and Type Ia-91bg (2017hle) supernova object, we fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit for the program's \texttt{fit()} function was deemed to be acceptable in accordance to the average reduced $\chi^2$ values calculated for the B and V photometric bands, $\chi^2_{\nu,B} \approx 1.49$ and $\chi^2_{V,\nu} \approx 2.88$ - a good fit requiring $\chi^2_{\nu}=1$. The distance modulus to the supernova 2017hhz was calculated by SNooPy to be $36.121\pm0.106$ mag, using this value we were able to compute $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$. However, the quoted error negates the meaning of the value as it is too uncertain. In improving the accuracy and uncertainties we suggest that more observations of the supernovae were required, and constraining values should be used for the parameters in SNooPy's templates.
+Type Ia supernovae have the unique trait of being standard candles, their light curves can be used in cosmology to calculate and constrain cosmological parameters. In observing Type Ia supernovae and fitting model light curves to such data one can attempt to derive such values. We have monitored, collected, and analysed data for supernova explosions over a period of 34 days. A $16''$ and a $0.5$ m telescope situated in Durham and La Palma was used for this project. After calculating the magnitudes for a Type Ia (2017hhz) and Type Ia-91bg (2017hle) supernova object, we fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit for the program's \texttt{fit()} function was deemed to be acceptable in accordance to the average reduced $\chi^2$ values calculated for the B and V photometric bands, $\chi^2_{\nu,B} \approx 1.38$ and $\chi^2_{V,\nu} \approx 2.95$ - a good fit requiring $\chi^2_{\nu} \approx1$. The distance modulus to the supernova 2017hhz was calculated by SNooPy to be $36.121\pm0.106$ mag, using this value we were able to compute $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$. However, the quoted error negates the meaning of the value as it is too uncertain. In improving the accuracy and uncertainties we suggest that more observations of the supernovae were required, and constraining values should be used for the parameters in SNooPy's templates.
 \end{abstract}
 
 \maketitle
@@ -184,7 +184,7 @@ In the first instance, having a night sky without any visible clouds would be a 
 
 In quantifying this seeing as a value, the full width at half maximum (FWHM) can be given for each observation made. The FWHM is a resolution criterion which can be defined as, \textquote{the diameter of the Airy disk at half of its maximum intensity} \cite{princ_stell_inter}. The Airy disk being the central spot of the diffraction pattern which occurs when light from a distant point source has been diffracted by a circular aperture, say, by a telescope. 
 
-Given in arcseconds, the best observing sites produce a stellar image about $0.25''$ across, for an average site it will be typically $2''$ \cite{tel_tech}. What we found was that for Far-East-16, our seeing ranged from $3''$ on a clear night to $\sim6''$ on a cloudy and turbulent night. For pt5m, we found that seeing was generally better on good nights as it is in a better location for astronomical observations. [[why]]
+Given in arcseconds, the best observing sites produce a stellar image about $0.25''$ across, for an average site it will be typically $2''$ \cite{tel_tech}. What we found was that for Far-East-16, our seeing ranged from $3''$ on a clear night to $\sim6''$ on a cloudy and turbulent night. For pt5m, we found that seeing was generally better on good nights as it is in a purpose location for astronomical observations: it is away from light pollution, and it has better atmospheric conditions than in Durham.
 
 Then to account for atmospheric turbulence, one could use an adaptive optic system to correct for the distortions. For example, an artificial laser guide star could be created and then the amount that it is being perturbed by can be applied to the main object that is being observed \cite{princ_stell_inter}.
 
@@ -233,7 +233,7 @@ Another important criterion for these calibration objects is that their apparent
 \label{eqn:mag_counts}
 \end{equation}
 
-where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object.
+where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object \cite{astro_image_processing}.
 
 In using this equation we first required the zero-point for the image that we were working with. What we imaged would not be the actual magnitudes of the objects, they would be offset by a certain amount, $z$, due to light being absorbed by dust in the supernova's host galaxy, through the interstellar medium, and by the dust that is in our own galaxy.
 
@@ -351,7 +351,7 @@ A full example of how SNooPy was used has been provided in Appendix \ref{app:usi
 \vspace{-2ex}
 After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that was used by SNooPy for the \texttt{fit()} fitting.
 
-In Table \ref{table:chi2} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands.
+In Table \ref{table:chi2} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands. We also provide the average for $\chi^2_{\nu}$ in both bands. 
 
 Figure \ref{fig:covar_plots} shows some of the covariance plots produced by \texttt{fitMCMC()} for 2017hhz in SNooPy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter. Table \ref{table:snpy_mcmc_summary} shows the parameter output for the fitting made with this function.
 
@@ -419,12 +419,12 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \begin{tabular}{c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c@{\hskip 20pt}c} 
  \hline
  \textbf{Supernova} & \textbf{$\boldsymbol{\chi^2_B}$} & \textbf{$\boldsymbol{\chi^2_{\nu,B}}$} & \textbf{$\boldsymbol{\chi^2_V}$} & \textbf{$\boldsymbol{\chi^2_{\nu,V}}$} \\ [0.5ex] 
- 2017hhz & 5.03 & 1.68 & 8.23 & 2.74 \\
- 2017hle & 3.86 & 1.29 & 9.05 & 3.02 \\
- Average & - & 1.49 & - & 2.88 \\
+ 2017hhz & 5.03 & 0.84 & 8.23 & 1.37 \\
+ 2017hle & 3.86 & 1.93 & 9.05 & 4.52 \\
+ Average & - & 1.38 & - & 2.95 \\
  \hline
 \end{tabular}
-\caption{$\chi^2$ and reduced $\chi^2$ ($\chi^2_{\nu}$) values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
+\caption{$\chi^2$, reduced $\chi^2$ ($\chi^2_{\nu}$) and $\chi^2_{\nu}$ average values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
 \label{table:chi2}
 \end{table}
 
@@ -472,7 +472,7 @@ But for our final plots, we still have to remain skeptical. The positioning of t
 
 We did attempt to add additional points by looking at the initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
 
-If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits or due to the frames not being entirely clean of noise. So, the values produced would be far from unity. 
+If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits, the frames not being entirely clean of noise, or due to more data being required. So the values produced would naturally stray from unity. 
 
 Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. We have not yet explored the implications of the results from \texttt{fitMCMC()}, but we would like to first understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
 
@@ -538,7 +538,7 @@ We find that overall, whilst SNooPy is able to produce templates and fit them to
 
 We have the parameters from our final SNooPy fittings and we concluded that they are not entirely inaccurate, could we use these them for cosmology then?
 
-Take calculating a value for Hubble's constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation, 
+Take calculating a value for Hubble's Constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation, 
 \begin{equation}
 \mu = 5 \log_{10}(d) - 5,
 \end{equation}
@@ -587,11 +587,11 @@ GAIA's other measurement parameter that we utilised was the estimator for the sk
 
 Once we had gained a strong set of skills in operating telescopes and collecting plus analysing data we attempted to apply what we had learnt to other related projects. 
 
-\vspace{-2ex}
+\vspace{-3ex}
 \subsection{Galaxy subtraction, the search for transients, and closing thoughts}
 \vspace{-2ex}
 
-Using the data which we had previously collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then one of the images had to be accounted for the point spread function (PSF) of the other. This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. The images could then be subtracted from each other. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve our Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+Using the data which we had previously collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then one of the images had to be accounted for the point spread function (PSF) of the other. This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. The images could then be scaled and subtracted from each other. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve our Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
 
 If we had been successful in implementing this galaxy subtraction, we then would have rudimentarily attempted our own transients survey. Throughout the project, in addition to our supernova observations, we viewed areas where we thought supernovae may occur. We initially started with stellar clusters, Messier 7 and Messier 10, but we soon realised that there would be a low chance for their stars to explode. So, we took our observations to a galactic cluster, the Perseus Cluster (Abell 426). 
 
@@ -608,7 +608,7 @@ We therefore suggest that if this project were to be revisited in the future, it
 
 We asked ourselves at the beginning of this experiment whether it would be possible for us to observe Type Ia supernovae and reproduce their evolutionary light curves. Our conclusion is that it is possible, but the accuracy and uncertainties could certainly be improved. 
 
-Through the usage of SNooPy we managed to apply models to our data which were not entirely unacceptable, producing average reduced $\chi^2$ values of $\sim 1.49$ for the B band and $\sim 2.88$ for the V band. The calculated parameters used in the fittings, the distance modulus and galactic extinction, are consistent with known values, however, their uncertainties negate any agreement as the results become meaningless. 
+Through the usage of SNooPy we managed to apply models to our data which were not entirely unacceptable, producing average reduced $\chi^2$ values of $\sim 1.38$ for the B band and $\sim 2.95$ for the V band. The calculated parameters used in the fittings, the distance modulus and galactic extinction, are consistent with known values, however, their uncertainties negate any agreement as the results become meaningless. 
 
 Therefore adjustments must be made to produce more reasonable uncertainties. With our observational method, an extensive data set should be collected with a larger telescope, one which covers the entire evolution of the supernova. Further, for our analysis, if SNooPy is to be used again for our fittings, known constraints should be placed on the templates as this would in turn produce more accurate results.
 
@@ -625,6 +625,7 @@ The Starlink software (Currie et al 2014) is currently supported by the East Asi
 
 As a final show of gratitude, I thank Duncan Middlemiss for his patience and partnership during this project.
 
+\vspace{-2ex}
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
 
@@ -634,7 +635,7 @@ As a final show of gratitude, I thank Duncan Middlemiss for his patience and par
 \appendix
 \section{Objects Log} \label{app:objects_log}
 \vspace{-2ex}
-A list of the objects that were chosen to be observed, and then the subsequent notes on them. Not all objects were chosen to be observed for an extended period, the ones noted were observed for a couple of nights to ensure suitability. The subsequent observation logs can be found in Appendix \ref{app:observations_log}.
+In Table \ref{table:app_objects_log} we provide a chronological list of the objects that were chosen to be observed. We provide the celestial coordinates, the magnitude of the object on the discovery date, the discovery date, and notes providing extra information. Not all of the objects in the table were observed for an extended period, however most of them were observed for at least a couple of nights to ensure suitability. We also note that we did not just focus on Type Ia supernovae, as can be seen in Table \ref{table:app_objects_log} and in our subsequent observation logs in Appendix \ref{app:observations_log}.
 
 {\renewcommand{\arraystretch}{1.2}%
 \begin{table}[h!]
@@ -642,29 +643,29 @@ A list of the objects that were chosen to be observed, and then the subsequent n
 \begin{tabularx}{\textwidth}{c c c c @{\hskip 5pt} c c X}
     \hline
     \textbf{Object} & \textbf{RA} & \textbf{Dec} & \textbf{Magnitude} &\textbf{First Discovered} &\textbf{Type} & \textbf{Notes} \\ 
-    *ASASSN-17mz & 23:56:21.82 & +32:27:24.08 & 14.6 & 2017/09/30.500 & Ia & {Too close to galactic nucleus, cannot see}  \\
-    *AT2017hld & 22:18:22.849 & +34:45:08.46 & 16.1 & 2017/10/17.339 & CV & {Cataclysmic Variable, stopped observing}  \\
-    *2017hky & 11:23:30.514 & +63:21:59.43 & 16.2 & 2017/10/16.640 & II & {Not viewable from Durham or La Palma}  \\
-    2017hhz & 01:44:16.75 & +12:15:18.00 & 16.83 & 2017/10/16.140 & Ia & {A measured redshift, $z=0.0392$}  \\
-    AT2017gvb & 08:04:42.34 & +61:31:41.50 & 17.33 & 2017/09/26.59 & unk & {-}  \\
-    *ASASSN-17nb & 07:27:37.32 & +35:36:28.30 & 17.31 & 2017/09/25.59 & II & {Object is dwarfed by brightness of the galaxy}  \\
-    2017hle & 01:07:36.060 & +32:24:30.00 & 18.0 & 2017/10/18.684 & Ia-91bg & {-}  \\
-    2017hou & 04:09:02.140 & -01:09:36.40 & 17.9 & 2017/10/24.370 &Ia & {Viewable from La Palma}  \\
-    *AT2017hmw & 01:07:16.570 & +31:25:28.88 & 17.2 & 2017/10/19.415 & CV & {Cataclysmic Variable}  \\
-    2017hpa & 04:39:50.750 & +07:03:54.90 & 17.9 & 2017/10/15.346 & Ia & {Viewable from La Palma}  \\
-    *AT2017hnm & 01:42:03.24 & +42:31:08.50 & 16.69 & 2017/10/23.44 & unk & {Another star in the image dwarfs the SN in brightness}  \\
+    ASASSN-17mz & 23:56:21.82 & +32:27:24.08 & 14.6 & 2017/09/30.500 & Ia & {Too close to the galactic nucleus, cannot discern it. }  \\
+    AT2017hld & 22:18:22.849 & +34:45:08.46 & 16.1 & 2017/10/17.339 & CV & {Was later identified as a Cataclysmic Variable.}  \\
+    2017hky & 11:23:30.514 & +63:21:59.43 & 16.2 & 2017/10/16.640 & II & {Not viewable from Durham or La Palma. }  \\
+    2017hhz & 01:44:16.75 & +12:15:18.00 & 16.83 & 2017/10/16.140 & Ia & {Has a measured redshift of $z=0.0392$, this became the first of our main Type Ia targets.}  \\
+    AT2017gvb & 08:04:42.34 & +61:31:41.50 & 17.33 & 2017/09/26.59 & unk & {Magnitudes showed no change - object became too dim for our telescopes. }  \\
+    ASASSN-17nb & 07:27:37.32 & +35:36:28.30 & 17.31 & 2017/09/25.59 & II & {Object is dwarfed by brightness of the galaxy, was not worth following up on. }  \\
+    2017hle & 01:07:36.060 & +32:24:30.00 & 18.0 & 2017/10/18.684 & Ia-91bg & {Has a measured redshift of $z=0.015$, this object became our second main target.}  \\
+    2017hou & 04:09:02.140 & -01:09:36.40 & 17.9 & 2017/10/24.370 &Ia & {Viewable only from La Palma. }  \\
+    AT2017hmw & 01:07:16.570 & +31:25:28.88 & 17.2 & 2017/10/19.415 & CV & {Was later classified as a Cataclysmic Variable.}  \\
+    2017hpa & 04:39:50.750 & +07:03:54.90 & 17.9 & 2017/10/15.346 & Ia & {Viewable only from La Palma.}  \\
+    AT2017hnm & 01:42:03.24 & +42:31:08.50 & 16.69 & 2017/10/23.44 & unk & {Another star in the image dwarfs the supernova in brightness, could not adjust exposure times to avoid saturation. }  \\
     AT2017hpm & 08:04:15.100 & -00:03:58.03 & 16.4 & 2017/10/26.290 & unk & {-}  \\
-    *AT2017hqa & 01:08:59.160 & +32:38:04.10 & 17.3 & 2017/10/26.740 & unk & {Unobservable, too close to galactic centre}  \\
+    AT2017hqa & 01:08:59.160 & +32:38:04.10 & 17.3 & 2017/10/26.740 & unk & {Unobservable, too close to galactic centre.}  \\
     2017hqc & 23:23:08.210 & +10:38:54.63 & 18.0 & 2017/10/27.490 & Ia & {-}  \\
-    *AT2017hrr & 11:29:06.490 & -08:59:18.56 & 15.4 & 2017/10/30.607 & unk & {Cannot view from Durham or La Palma}  \\
-    *AT2017hhq & 00:42:50.230 & +41:15:27.10 & 17.7 & 2017/10/30.599 & NV & {A nova close to M31}  \\
-    AT2017htb & 22:09:38.520 & +17:39:39.56 & 15.7 & 2017/11/02.190 & unk & {-}  \\
+    AT2017hrr & 11:29:06.490 & -08:59:18.56 & 15.4 & 2017/10/30.607 & unk & {Could not be viewed from Durham or La Palma. }  \\
+    AT2017hhq & 00:42:50.230 & +41:15:27.10 & 17.7 & 2017/10/30.599 & NV & {A nova close to M31.}  \\
+    AT2017htb & 22:09:38.52 0 & +17:39:39.56 & 15.7 & 2017/11/02.190 & unk & {-}  \\
     AT2017hzw & 02:05:18.337 & +53:12:13.16 & 17.3 & 2017/11/13.410 & Ia-CSM & {-}  \\
-    2017igf & 11:42:49.850 & +77:22:12.94 & 15.4 & 2017/11/18.590 & Ia & {Promising Type Ia target}  \\
+    2017igf & 11:42:49.850 & +77:22:12.94 & 15.4 & 2017/11/18.590 & Ia & {Promising Type Ia target, but we chose to focus on 2017hhz and 2017hle.}  \\
     \hline      
 \end{tabularx}
-\caption{Objects that we chose to observe and notes on them. RA is the Right Ascension, given in units of hours : arcminutes : arcseconds. Dec is the Declination, degrees : minutes : seconds. The stated magnitude is the initial magnitude that the object was discovered in the V band. Objects marked with an asterisk $*$ were objects which we chose to stop observing, the reason provided in the notes.}
-\label{objects}
+\caption{Objects that we chose to observe and the notes on them. RA is the Right Ascension, given in units of (hours : arcminutes : arcseconds). Dec is the Declination quoted in the format of (degrees : minutes : seconds). The stated magnitude is the V band magnitude that the object was discovered at on the date of first discovery.}
+\label{table:app_objects_log}
 \end{table}
 
 
@@ -674,7 +675,9 @@ A list of the objects that were chosen to be observed, and then the subsequent n
 \vspace{-3ex}
 \section{Observation Logs} \label{app:observations_log}
 \vspace{-2ex}
-Given below are all the observations which were made during our observation periods. The exposures column is of the following format: ($x: y, z$ s), where $x$ is the band in which the images were taken in, $y$ the number of exposures taken, and $z$ the exposure time which was used, in units of seconds.
+Given in Table \ref{table:app_observation_logs} are all the observations which were made during the entirety of our observational period. The exposures column is of the following format: ($x: y, z$ s), where $x$ is the band in which the images were taken in, $y$ the number of exposures taken, and $z$ the exposure time expressed in units of seconds. With the information provided in the conditions column, they give a rough indication of the state of the weather during observations. In the notes column we provide which telescope was used and any extra information. Noting the acronyms used for the telescopes, for the Durham array: FE16: Far-East-16, E14: East-14, and W14: West-14. Additionally, for La Palma: pt5m: the $0.5$ m robotic telescope.
+
+\vspace{2ex}
 {\renewcommand{\arraystretch}{1.2}%
 \begin{table}[h!]
 \centering    
@@ -682,7 +685,7 @@ Given below are all the observations which were made during our observation peri
     \hline
     \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
     20/10/17 & 2017hhz & 22:25:34 to 22:58:50 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -}  \\
-    	& ASASSN-17nb &  02:56:08 to 03:23:36 & \makecell{B: 5, 60s \\ V: 5, 60s} & {Cloudy} & {pt5m: Data was unusable due to noise from cloud.} \\      
+    	& ASASSN-17nb &  02:56:08 to 03:23:36 & \makecell{B: 5, 60s \\ V: 5, 60s} & {Cloudy} & {pt5m: Data unusable due to noise from clouds.} \\      
 	
     21/10/17 & - & - & - & Cloudy & {\em No observations: weather not sufficient in Durham or La Palma for observations. \em} \\
     
@@ -700,17 +703,14 @@ Given below are all the observations which were made during our observation peri
     26/10/17 & 2017hle & 20:54:44 to 21:09:03 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {FE16: - }  \\
     & 2017hhz &  21:18:00 to 21:25:31 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {FE16: -} \\ 
     & AT2017hmw &  21:29:15 to 21:39:36 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Cloudy} & {FE16: -} \\
-    & Messier-7 &  21:50:23 to 21:54:47 & {C: 1, 60s} & {Slightly Cloudy} & {FE16: Test object for SN discovery.} \\
-    & Messier-10 &  21:55:47 to 22:00:13 & {C: 1, 60s} & {Cloudy} & {FE16: Test object for SN discovery.} \\
+    & Messier-7 &  21:50:23 to 21:54:47 & {C: 1, 60s} & {Slightly Cloudy} & {FE16: Test object for supernovae discovery.} \\
+    & Messier-10 &  21:55:47 to 22:00:13 & {C: 1, 60s} & {Cloudy} & {FE16: Test object for supernovae discovery.} \\
     & AT2017hnm &  23:27:22 to 23:41:55 & \makecell{B: 5, 120s \\ V: 3, 120s} & {Clear} & {pt5m: -} \\ 
-    & AT2017gvb &  - & - & {-} & {pt5m: Object pushed out of the queue in favour of others.} \\
+    & AT2017gvb &  - & - & {-} & {pt5m: Object was pushed out of the queue in favour of others.} \\
 
-    27/10/17 & AT2017hqa & 18:48:12 to 18:52:59 & \makecell{B: 4, 60s} & {Cloudy} & {FE16: Object too close to galactic nucleus. }  \\
-    & AT2017hnm &  18:56:34 to 19:00:23 & \makecell{C: 1, 60s} & {Slightly Cloudy} & {FE16: Object too dim, cloud cover reduced light we were receiving.} \\
-    & Abell 426 &  19:04:23 to 19:15:41 & \makecell{C: 1, 60s \\ B: 9, 60s \\ V: 9, 60s} & {Clear} & {E14: Object to observe to discover new SN.} \\
-    & 2017hhz &  20:11:35 to 20:22:43 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Cloudy and Windy} & {E14: Seeing is bad due to the weather.} \\
-    & 2017hle &  20:26:18 to 20:37:35 & \makecell{B: 4, 90s \\ V: 4, 90s} & {Slightly Cloudy} & {E14: Seeing is bad in these images as well.} \\
-    & 2017hou &  23:48:09 to 23:50:14 & \makecell{B: 2, 120s} & {-} & {pt5m: Only two frames taken, not sufficient data.} \\
+    27/10/17 & AT2017hqa & 18:48:12 to 18:52:59 & \makecell{B: 4, 60s} & {Cloudy} & {FE16: Object appears to be too close to it's galactic nucleus. }  \\
+    & AT2017hnm &  18:56:34 to 19:00:23 & \makecell{C: 1, 60s} & {Slightly Cloudy} & {FE16: Object too dim, cloud cover reduced the light we were receiving.} \\
+    & Abell 426 &  19:04:23 to 19:15:41 & \makecell{C: 1, 60s \\ B: 9, 60s \\ V: 9, 60s} & {Clear} & {E14: Perseus Cluster, a better target for a slightly larger chance at discovering new supernovae.} \\
     \hline      
 \end{tabularx}
 \label{obs_logs1}
@@ -722,12 +722,15 @@ Given below are all the observations which were made during our observation peri
 \begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
     \hline
     \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
-    27/10/17 & AT2017gvb &  02:16:01 to 03:03:05 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear/Cloudy} & {pt5m: Some images are more noisy due to clouds.} \\
+    27/10/17 & 2017hhz &  20:11:35 to 20:22:43 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Cloudy and Windy} & {E14: The seeing is bad due to the weather.} \\
+    & 2017hle &  20:26:18 to 20:37:35 & \makecell{B: 4, 90s \\ V: 4, 90s} & {Slightly Cloudy} & {E14: Seeing is also bad in these images as well.} \\
+    & 2017hou &  23:48:09 to 23:50:14 & \makecell{B: 2, 120s} & {-} & {pt5m: Only two frames taken, not sufficient data.} \\
+    & AT2017gvb &  02:16:01 to 03:03:05 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear/Cloudy} & {pt5m: Some images are noisy due to clouds.} \\
     
     28/10/17 & AT2017hnm &  21:41:55 to 22:21:25 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -} \\
     & 2017hhz &  21:28:50 to 21:30:50 & \makecell{B: 1, 120s} & {Clear} & {pt5m: -} \\
     
-    29/10/17 & 2017hle &  21:22:39 to 21:41:21 & \makecell{B: 10, 120s \\ V: 1, 120s} & {Clear} & {pt5m: Mistake on our part to take so many images in B band, and only one in V band.} \\
+    29/10/17 & 2017hle &  21:22:39 to 21:41:21 & \makecell{B: 10, 120s \\ V: 1, 120s} & {Clear} & {pt5m: Telescope had other objects to view, our target was partially completed in terms of observations. } \\
     & AT2017hnm &  21:55:34 to 22:35:04 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Slightly Cloudy} & {pt5m: -} \\
     & 2017hhz &  23:16:48 to 23:56:18 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -} \\
     & 2017hou &  00:33:33 to 01:13:02 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -} \\
@@ -736,7 +739,7 @@ Given below are all the observations which were made during our observation peri
     
     30/10/17 & 2017hle &  21:18:56 to 21:58:25 & \makecell{B: 10, 120s \\ V: 10, 120s} & {Clear} & {pt5m: -} \\
     & 2017hhz &  22:06:34 to 22:46:04 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -} \\
-    & AT2017gvb &  02:04:22 to 03:02:50 & \makecell{V: 20, 180s} & {Clear} & {pt5m: An human error, we re-selected this object from the previous night instead of the one with the correct number of required frames for each band.} \\
+    & AT2017gvb &  02:04:22 to 03:02:50 & \makecell{V: 20, 180s} & {Clear} & {pt5m: We wanted to see if we could detect any change in magnitude, photometry had shown it was constant. } \\
     
     31/10/17 & - & - & - & {Cloudy} & {\em No observations: too cloudy for observations in Durham and La Palma. \em} \\
     
@@ -753,10 +756,6 @@ Given below are all the observations which were made during our observation peri
     
    05/11/17 & ASASSN-17mz & 17:53:45 to 18:09:34 & \makecell{B: 8, 60s \\ V: 8, 60s} & {Clear} & {FE16: -} \\
    & 2017hhz & 18:50:39 to 19:24:43 & \makecell{B: 8, 120s \\ V: 8, 60s} & {Clear} & {FE16: -} \\
-   & AT2017htb & 19:38:14 to 20:02:16 & \makecell{B: 8, 60s \\ V: 8, 60s} & {Slightly Cloudy} & {W14: -} \\
-   & 2017hle & 20:05:49 to 20:08:28 & \makecell{V: 2, 60s} & {Cloudy} & {W14: Stopped taking exposures after the weather worsened.} \\
-   & 2017hqc & 20:14:16 to 20:18:25 & \makecell{V: 3, 60s} & {Cloudy} & {W14: Cleared up for a brief moment and then re-clouded over.} \\
-   & AT2017hhq & 20:33:58 to 20:42:26 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {W14: -} \\
        \hline      
 \end{tabularx}
 \label{obs_logs2}
@@ -768,7 +767,11 @@ Given below are all the observations which were made during our observation peri
 \begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
     \hline
     \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
-    05/11/17 & AT2017hhq & 19:38:14 to 20:02:16 & \makecell{B: 3, 30s \\ V: 3, 30s \\ R: 3, 30s} & {Cloudy} & {E14: Images taken so that we can produce a colour image. } \\
+    05/11/17 & AT2017htb & 19:38:14 to 20:02:16 & \makecell{B: 8, 60s \\ V: 8, 60s} & {Slightly Cloudy} & {W14: -} \\
+    & 2017hle & 20:05:49 to 20:08:28 & \makecell{V: 2, 60s} & {Cloudy} & {W14: As the progressively weather worsened, we decided to briefly halt our observations.} \\
+    & 2017hqc & 20:14:16 to 20:18:25 & \makecell{V: 3, 60s} & {Cloudy} & {W14: It had cleared up for a brief moment and then re-clouded over.} \\
+    & AT2017hhq & 20:33:58 to 20:42:26 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {W14: -} \\
+    & AT2017hhq & 19:38:14 to 20:02:16 & \makecell{B: 3, 30s \\ V: 3, 30s \\ R: 3, 30s} & {Cloudy} & {E14: Images taken so that we can produce a colour image. } \\
     
     06/11/17 & - & - & - & {Cloudy, and Rain} & {\em No observations: too cloudy for observations in Durham, and torrential rain in La Palma. \em} \\
     
@@ -786,36 +789,34 @@ Given below are all the observations which were made during our observation peri
     & 2017hle & 19:45:56 to 19:53:46 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {FE16: -} \\
     & 2017hqc & 19:55:31 to 20:02:59 & \makecell{B: 4, 60s \\ V: 4, 60s} & {Clear} & {FE16: -} \\
     & Abell 426 & 20:04:54 to 20:08:03 & \makecell{B: 4, 60s} & {Clear} & {FE16: -} \\
-    & 2017hhz & 20:09:53 to 20:34:55 & \makecell{B: 15, 60s \\ V: 7, 60s} & {Clear} & {FE16: It was made clear that having more frames would improve the quality of the final stacked frame. So more frames for this supernova were made.} \\
+    & 2017hhz & 20:09:53 to 20:34:55 & \makecell{B: 15, 60s \\ V: 7, 60s} & {Clear} & {FE16: It was further reinforced that having more frames would improve the quality of the final stacked frame. So more were taken.} \\
     
-    12/11/17 & 2017hhz & 20:35:15 to 20:53:08 & \makecell{V: 17, 60s} & {Clear} & {FE16: As the night progressed, conditions became more cloudy so we were unable to take in the B band.} \\
+    12/11/17 & 2017hhz & 20:35:15 to 20:53:08 & \makecell{V: 17, 60s} & {Clear} & {FE16: As the night progressed, conditions became cloudy so we were unable to take exposures in the B band.} \\
     & 2017hle & 21:03:54 to 21:22:36 & \makecell{B: 5: 120s \\ V: 5, 120s} & {Clear} & {pt5m: We decided to input our remaining targets into the telescope in La Palma for observation.} \\
     & 2017hqc & 21:26:00 to 21:57:13 & \makecell{B: 4: 120s \\ V: 4, 120s} & {Clear} & {pt5m: -} \\
     
     15/11/17 & 2017hhz & 21:01:09 to 21:40:40 & \makecell{B: 5, 120s \\ V: 5, 120s} & {Clear} & {pt5m: -} \\
     & 2017hou & 00:16:29 to 00:56:01 & \makecell{B: 4: 120s \\ V: 4, 120s} & {Clear} & {pt5m: -} \\
-    & AT2017gvb & 01:33:35 to 02:32:04 & \makecell{V: 20, 180s} & {Clear} & {pt5m: We made a mistake with our entry into the telescope queue- we selected too high of an exposure number.} \\
+    & AT2017gvb & 01:33:35 to 02:32:04 & \makecell{V: 20, 180s} & {Clear} & {pt5m: We made a mistake with our entry into the telescope queue - we selected our old test request.} \\
     
     16/11/17 & 2017hhz & 19:19:46 to 20:11:30 & \makecell{B: 8, 180s \\ V: 8, 180s} & {Clear} & {FE16: -} \\
-    & 2017hle & 20:20:05 to 20:48:31 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\
-    & Abell 426 & 21:01:35 to 21:17:03 & \makecell{B: 18, 30s} & {Clear} & {FE16: -} \\
-    
-    17/11/17 & 2017hhz & 18:52:28 to 19:49:50 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\
-    & 2017hle & 19:52:09 to 20:15:48 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\
-    & AT2017htb & 20:18:47 to 20:29:42 & \makecell{B: 4, 90s \\ V: 4, 90s} & {Clear} & {FE16: -} \\
-    
        \hline      
 \end{tabularx}
 \label{obs_logs3}
 \end{table}
 
-{\renewcommand{\arraystretch}{1.2}%
+{\renewcommand{\arraystretch}{1.3}%
 \begin{table}[h!]
 \centering    
 \begin{tabularx}{\textwidth}{c@{\hskip 5pt} c c@{\hskip 5pt} c@{\hskip 5pt} c@{\hskip 5pt} X}
     \hline
     \textbf{Date} & \textbf{Object} & \textbf{Time} & \textbf{Exposures} & \textbf{  Conditions  } & \textbf{Notes} \\ 
-    17/11/17& AT2017hzw & 20:40:43 to 21:00:19 & \makecell{B: 16, 60s} & {Cloudy} & {FE16: Stopped observations as it had become cloudy.} \\
+    16/11/17 & 2017hle & 20:20:05 to 20:48:31 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\
+    & Abell 426 & 21:01:35 to 21:17:03 & \makecell{B: 18, 30s} & {Clear} & {FE16: -} \\
+    17/11/17 & 2017hhz & 18:52:28 to 19:49:50 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\  
+    & 2017hle & 19:52:09 to 20:15:48 & \makecell{B: 8, 90s \\ V: 8, 90s} & {Clear} & {FE16: -} \\ 
+    & AT2017htb & 20:18:47 to 20:29:42 & \makecell{B: 4, 90s \\ V: 4, 90s} & {Clear} & {FE16: -} \\
+    & AT2017hzw & 20:40:43 to 21:00:19 & \makecell{B: 16, 60s} & {Cloudy} & {FE16: We halted observations as it had become cloudy.} \\
     
     18/11/17 & 2017hle & 18:13:52 to 19:01:03 & \makecell{B: 15, 60s \\ V: 24, 60s} & {Clear} & {FE16: -} \\
     & 2017hhz & 19:03:47 to 19:45:56 & \makecell{B: 16, 60s \\ V: 24, 60s} & {Clear} & {FE16: -} \\
@@ -824,8 +825,8 @@ Given below are all the observations which were made during our observation peri
     & 2017hle & 20:36:52 to 21:00:00 & \makecell{V: 15, 90s} & {Clear} & {FE16: Clouded over at the end of our observations for V band.} \\
        \hline      
 \end{tabularx}
-\caption{Observation logs for the entire observation period for our experiment.}
-\label{obs_logs4}
+\caption{Observation logs the entire observation period for our experiment, we provide the times which we observed for, the types of exposures taken where the format is give as ($x: y, z$ s), where $x$ is the band in which the images were taken in, $y$ the number of exposures taken, and $z$ the exposure time expressed in units of seconds. We also provide the conditions that were present during observations, and give additional notes on which telescopes were used and offer extra details.}
+\label{table:app_observation_logs}
 \end{table}
 
 
@@ -835,16 +836,15 @@ Given below are all the observations which were made during our observation peri
 \vspace{-3ex}
 \section{Using SNooPy} \label{app:using_snoopy}
 \vspace{-2ex}
-\textit{A brief overview and tutorial of how SNooPy can be used to fit Type Ia light curves.} \\
+\textit{A brief overview and tutorial of how SNooPy can be utilised to fit Type Ia light curves.} \\
 
-\textit{Example files can be obtained from either the Carnegie Supernova Project} \url{https://csp.obs.carnegiescience.edu/data/snpy} \textit{or from} \url{https://community.dur.ac.uk/jacky.cao/#l3lp}. \\
+\textit{The SNooPy files which we used for processing 2017hhz and 2017hle can be found at} \url{https://community.dur.ac.uk/jacky.cao/#l3lp}. \textit{The standard example files can be retrieved from the Carnegie Supernova Project,} \url{https://csp.obs.carnegiescience.edu/data/snpy}. \\
 
 For SNooPy to fit Type Ia light curves, the correct file format to store our data was required. Below we give an example of the type of file that would contain B and V band data, \texttt{supernova.txt}.
 \begin{center}
 supernova.txt
 \line(1,0){245}
-\squeezeup
-\squeezeup
+\vspace{-4ex}
 \end{center}
 \begin{lstlisting}
 sn_name sn_redshift sn_ra sn_dec
@@ -858,10 +858,7 @@ date_2   vmag_2   vmag_err_2
 date_3   vmag_3   vmag_err_3
 \end{lstlisting}
 \begin{center}
-\squeezeup
-\squeezeup
-\squeezeup
-\squeezeup
+\vspace{-7ex}
 \line(1,0){245}
 \end{center}
 
@@ -949,14 +946,67 @@ where \texttt{type} could be \texttt{91bg} to represent Type Ia-91bg supernovae.
 
 \onecolumngrid
 \vspace{-3ex}
-\section{Set of sample data}
-\vspace{-2ex}
-sdfsdfsdfsd
-
-\vspace{-3ex}
 \section{Programs created}
 \vspace{-2ex}
-Accessible from [[link]], in Table [[ref]] we provide a detailed list of the programs that were created for our experiment.
+Accessible from \url{https://community.dur.ac.uk/jacky.cao/#l3lp}, in Table \ref{table:programs} we provide a detailed list of the scripts that we created for our experiment, the majority of which are simple calculators or data processors.
+
+{\renewcommand{\arraystretch}{1.5}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 20pt}X}
+    \hline
+    \textbf{Script Name} & \textbf{Script Description} \\ 
+     \texttt{chi\_squared} & $\chi^2$ and reduced $\chi^2$ would be calculated for the B and V photometric bands for 2017hhz and 2017hle. \\
+     \texttt{covariance} & Before we had managed to output the covariance triangle plots from \texttt{fitMCMC()} we had managed to retrieve the covariance matrixes for 2017hhz and 2017hle. Here a script was made to plot a basic heat map of the data. \\
+     \texttt{flat\_fielder} & Contrary to the name, this script only successfully copied the data from my hard drive to my working folders. Commands had to be ran in a Terminal for the data to be flat fielded using our flats. \\
+     \texttt{galaxy\_subtraction} & Two frames had to have already been aligned for this program to work - we used the program kindly provided by Dr. M. Swinbank. This script would firstly attempt a Gaussian convolution on one of the frames, then it would scale the data by comparing two values for the counts of an object, one from each frame. After this had been done, the subtraction could then be performed. \\
+     \texttt{light\_curves} & This script was initially made to quickly show our calculated magnitudes as a light curve in matplotlib - before it had been ran through SNooPy. \\
+     \texttt{magnitude\_calculations} & After photometry had been performed, we would then run this script and obtain magnitudes for our supernovae with an uncertainty. It would accept a specific file format containing the known magnitudes of the calibration stars, and the counts for those stars and our supernova in the B and V photometric bands. \\
+    \hline      
+\end{tabularx}
+\caption{The scripts created to supplement and aid in our data analysis. }
+\label{table:programs}
+\end{table}
+
+\vspace{-3ex}
+\section{Set of sample data}
+\vspace{-2ex}
+Below, we provide an example of the data file that was used by the script \texttt{magnitude\_calculations} in calculating the magnitudes for a day's set of data.
+
+\begin{center}
+2017hhz--17\_10\_20.txt
+\line(1,0){500}
+\vspace{-4ex}
+\end{center}
+\begin{lstlisting}
+# supernova data
+# 2017hhz 17_10_20
+
+# star catalogue objects
+# name, V-mag, B-mag, r-mag, i-mag
+512-002598 14.952 15.719 14.129 13.953
+512-002599 16.158 17.105 15.887 15.79
+
+# v-band
+# name, mean counts, counts error, sky value
+512-002598 804.14 2.3613 137.46
+512-002599 119.41 1.0980 101.86
+
+2017hhz 77.5 1.5113 121.16
+
+# b-band
+# name, mean counts, mean counts error, sky value
+512-002598 206.53 1.4903 37.667
+512-002599 47.787 1.4286 28.199
+
+2017hhz 69.830 1.1861 42.177
+\end{lstlisting}
+\begin{center}
+\vspace{-7ex}
+\line(1,0){500}
+\end{center}
+
+Some of the data provided in the file had become obsolete as the project progressed. For example we did not need the magnitudes of the calibration stars in the r,i photometric bands. Plus the error in the counts from GAIA and the sky value was not required in the end. 
 
 \clearpage
 
@@ -964,17 +1014,67 @@ Accessible from [[link]], in Table [[ref]] we provide a detailed list of the pro
 \vspace{-3ex}
 \section{Uncertainties} \label{app:uncertainties}
 \vspace{-2ex}
-Our magnitude values had an associated uncertainty which was found by using the following equation,
+\subsection{Magnitudes}
+\vspace{-2ex}
+Our magnitude values each had an associated uncertainty which was found by using the following equation,
 \begin{equation}
-\delta{m} = 2.5 \log_{10} \Big(1 + \frac{1}{\sqrt{C}} \Big),
-\label{m_uncert}
+\alpha_{m} = 2.5 \log_{10} \Big(1 + \frac{1}{\sqrt{C}} \Big),
+\label{eqn:mag_uncert}
 \end{equation}
 
-where $\delta{m}$ is the uncertainty on the magnitude, and $C$ is the value obtained for the counts of the supernova explosion.
+where $\alpha_{m}$ is the uncertainty on the magnitude, and $C$ is the value obtained for the counts of the supernova explosion. This equation was obtained from \textit{Observing the Universe} [A. J. Norton. \textit{Observing the Universe}, The Open University, 2004].
 
-What other sources of uncertainty was there?
+\vspace{-2ex}
+\subsection{$\boldsymbol{\chi^2}$}
+\vspace{-2ex}
+In comparing the fit of the model to our data we used $\chi^2$ statistics in doing so, we now provide the method which was derived. The equations have been adapted from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
 
-SNooPy uncertainties on the parameters it uses
+An individual value for $\chi^2$ had to be calculated for each data point and their corresponding value from the model, together these were then summed together to produce a total $\chi^2$ value for each photometric band. The following equation summaries this,
+\begin{equation}
+\chi^2 = \sum_i \frac{(m_i - m(t_i))^2}{\alpha_i^2}, 
+\label{eqn:chisquared}
+\end{equation}
+
+where $m(t_i)$ represents the model magnitude from SNooPy's fitting, $m_i$ is the magnitude that we calculated from our collected data and $\alpha_i$ is the uncertainty on that magnitude.
+
+Then to use this as a quality of fit we had to reduce the final $\chi^2$ value using the number of degrees of freedom,
+\begin{equation}
+\nu = N - \mathcal{N},
+\end{equation}
+
+where $N$ is the number of independent data points with $\mathcal{N}$ parameters, this latter value was taken to be the number of parameters that SNooPy used in their fittings.
+
+Finally, the reduced $\chi^2$ values would be calculated as follows,
+\begin{equation}
+\chi^2_{\nu} = \frac{\chi^2}{\nu},
+\end{equation}
+
+where $\chi^2$ is as calculated in Equation \ref{eqn:chisquared}, and $\nu$ is the number of degrees of freedom.
+
+\vspace{-2ex}
+\subsection{Hubble's Constant, $\boldsymbol{H_0}$}
+\vspace{-2ex}
+The following calculations makes use of equations and theories derived from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
+ 
+For our calculation of Hubble's Constant we derived the uncertainty as follows.  
+
+To use Hubble's Law and the redshift-velocity relationship as defined by Equations \ref{eqn:h_0} and \ref{eqn:redshift}, we firstly had to retrieve values for the quoted redshifts for our supernovae. Their entries on the Transient Name Server (TNS) had no associated errors, so we looked at the spectrograph's manual in attempt to find a value. 
+
+We only used one of our objects to calculate $H_0$, 2017hhz, and the `SED Machine' was the spectrgraph which identified it's redshift. According to C. C. Ngeow et al [C. C. Ngeow et al. \textit{The SED Machine: A Spectrograph to Efficiently Classify Transient Events Discovered by PTF}. International Astronomical Union, 290, 2012.] this machine provides a spectrophotometric calibration of $\sim 5\%$. Therefore we took $5\%$ of our redshift value as it's uncertainty. 
+
+Our next uncertainty of concern was the value for the distance to the supernova, not the distance modulus. We derived the following equation for the uncertainty in the distance,
+\begin{equation}
+\alpha_{d} = 10^{\delta} \times \ln{10} \times \alpha_{\mu}, 
+\end{equation}
+
+where $\alpha_{d}$ is given in parsecs, $\delta= ([\mu/1]+1)$ and $\alpha_{\mu}$ as the uncertainty on the distance modulus, $\mu$, as found by SNooPy. 
+
+Putting all of this together, we then find a value for the uncertainty of Hubble's Constant,
+\begin{equation}
+\alpha_{H_0} = H_0 \sqrt{\Big(\frac{\alpha_z}{z}\Big)^2 + \Big(\frac{\alpha_d}{d}\Big)^2},
+\end{equation}
+
+where $H_0$ is the calculated value for Hubble's Constant, $\alpha_z$ is the uncertainty on redshift $z$, and $\alpha_d$ is the uncertainty on distance $d$.
 
 \clearpage
 
