@@ -4,62 +4,40 @@ import numpy as np
 
 import l_peak
 
-rng = 20 # Value above and below min chi^2 to look for
-
 def find_nearest(array,value):
     """ Function to find the nearest value. """
     idx = (np.abs(array-value)).argmin()
     return array[idx]
 
-def chi_sqs(hubble, c, data, step):
+def values(hubble, c, data, step):
     """ Returns data when looking above and below our minimum chi^2 value"""
-    chi_sq_min = l_peak.chi_sq_min(hubble, c, data, step)[0] # Calling the value for chi_sq_min and the corresponding L_peak
-    d = l_peak.chi_sq_l_peak(hubble, c, data, step) # Calling the data used to find the value of min chi^2
+    chi_sq_min = l_peak.fchi_sq_min(hubble, c, data, step)[0] # Calling the value for chi_sq_min and the corresponding L_peak
+    
+    d = l_peak.fchi_sq_l_peak(hubble, c, data, step) # Calling the data used to find the value of min chi^2
 
     min_index = np.where(d[:,1] == chi_sq_min)[0] # Finding index of min value
+    l_peak_min = d[:,0][min_index]
 
-    chi_diff = np.zeros([(rng-1)**2,3]) # Storing the chi^2 differences
-    chi_diff_list = []
-    chi_diff_list_a = [] # For above
-    chi_diff_list_b = [] # For below
+    diff_storage = [] # List to store the differences calculated in the following loop
 
-    for i in range(rng):
-        min_a = min_index + i # Finding above chi^2
-        if min_a == min_index:
-            pass # Skip if it is the same
-        else:
-            for j in range(rng):
-                min_b = min_index - j # Finding below chi^2
-                if min_b == min_index:
-                    pass # Skip if it is the same 
-                else: 
-                    chi_a = d[:,1][min_a] # Finding the corresponding chi^2 value for above
-                    chi_b = d[:,1][min_b] # Finding the corresponding chi^2 value for below
-                    chi_diff_list.append([chi_a,chi_b,chi_a-chi_b])
+    for i in np.arange(1,20,1):
+        above = min_index + i # Index, i values larger than min_index
+        below = min_index - i # Index, i values smaller than min_index
 
-    # Converting list into an array and reshaping 
-    chi_diff_list = np.asarray(chi_diff_list).reshape(((rng-1)**2, 3))
-    return chi_diff_list, chi_sq_min
+        above_chi = d[:,1][above] # Calling the chi^2 values
+        below_chi = d[:,1][below]
 
-def one(hubble, c, data, step):
-    """ Finding where the different is closest to one in the chi^2 values. """
-    d = chi_sqs(hubble, c, data, step) # Calling our data and min chi_sq
-    dt = d[0] # Calling the chi^2 data
-    chi_sq_min = d[1] # Calling minimum chi^2 orginally found
+        above_subt = above_chi - chi_sq_min # Subtracting the chi^2's together
+        below_subt = below_chi - chi_sq_min
+        diff_average = np.average([above_subt, below_subt])# Above, below difference average
 
-    lv = find_nearest(dt[:,2], 1.0) # Lowest value
-    lv_loc = np.where(dt[:,2] == lv) # Lowest value location
-    
-    lv_row = dt[lv_loc][0] # Calling the row that it is related to
+        diff_storage.append(diff_average) # Storing into our list 
 
-    print(lv, lv_row)
-    print(lv_row[0], chi_sq_min)
-    print(lv_row[0]-chi_sq_min, lv_row[1]-chi_sq_min)
+    diff_storage = np.asarray(diff_storage) # Converting list into an array
+    diff_nearest = find_nearest(diff_storage, 1.0) # Finding which difference is closest to one
 
-    lva = find_nearest(dt[:,0], chi_sq_min + 1.0) # Closest value from above
-    lvb = find_nearest(dt[:,1], chi_sq_min + 1.0) # Closest value from below
+    diff_index = np.where(diff_storage == diff_nearest)[0] + 1
 
-    print(chi_sq_min)
-    print(lva, lvb)
-    print(lva - chi_sq_min, lvb - chi_sq_min)
-
+    csqu_above = l_peak_min - d[:,0][min_index + diff_index] # Chi^2 uncertainty above
+    csqu_below = l_peak_min - d[:,0][min_index - diff_index] # Chi^2 uncertainty below
+    return csqu_below, csqu_above

@@ -11,8 +11,11 @@ import plotter
 import eplotter
 
 import numpy as np
+import datetime
 
 """ Module to calculate the dark energy density, Omega_Lambda."""
+
+now = datetime.datetime.now()
 
 #---------- STANDARD VALUES ----------#
 cm_data = [75, (3*(10**8))] # [H_0 (km s^-1 Mpc^-1), c (ms^-1)]
@@ -28,20 +31,14 @@ def milestone():
     sn_data = data.data_input(file_name) # Calling data to use
 
     # Finding the best fit L_peak value, and best fit Omega_Lambda value
-    l_p = l_peak.chi_sq_min(cm_data[0], cm_data[1], sn_data, step)
-    omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    l_p = l_peak.fchi_sq_min(cm_data[0], cm_data[1], sn_data, step)
+    o_l = omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
 
     # Finding the uncertainties on L_peak and Omega_Lambda
-    #l_p_uncert = l_peak_uncert.one(cm_data[0], cm_data[1], sn_data, 0.01)
-    #omega_lamba_uncert.data
-    omega_lambda_uncert = 1.0
-
-    # Plotting the graphs that we need
-    plotter.plot_l(cm_data[0], cm_data[1], sn_data, step)
-    plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
-    plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
-
-    #return l_p, l_p_uncert, omega_lambda, omega_lambda_uncert
+    l_p_uncert = l_peak_uncert.values(cm_data[0], cm_data[1], sn_data, 0.01)
+    o_l_uncert = omega_lambda_uncert.values(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    #o_l_uncert = 1
+    return l_p, l_p_uncert, o_l, o_l_uncert
 
 #---------- EXTENSION WORK ----------#
 def extension():
@@ -86,10 +83,27 @@ def plotting():
     plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
     plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
 
-
-
 #---------- CALLING STUFF ----------#
 
-#milestone()
-extension()
+calling_milestone = True 
+calling_extension = False
+graphs = False
 
+if graphs == True:
+    plotting()
+
+
+#---------- SAVING TO TEXT FILE ----------#
+# This should be an automatic process which outputs a file confirming stuff has been done
+
+file_name = "supernova_cosmology.txt"
+f = open(file_name, 'w')
+f.write("These values were generated at this date and time: " + str(now) + '\n')
+f.write('\n')
+if calling_milestone == True:
+    ml = milestone()
+    f.write("Using our milestone program we have calculated: " + '\n')
+    f.write("L_peak: " + str(ml[0][1]) + ", + " + str(np.abs(ml[1][1][0])) + ", - " + str(np.abs(ml[1][0][0])) + "\n")
+    #f.write("Omega_Lambda: " + str(ml[2][0] ))
+    f.write("Omega_Lambda: " + str(ml[2][1] ) + ", + " + str(np.abs(ml[3][1][0])) + ", - " + str(np.abs(ml[3][0][0]))  + "\n")
+f.close()

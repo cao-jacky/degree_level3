@@ -1,0 +1,5 @@
+These values were generated at this date and time: 2018-01-08 22:14:36.129580
+
+Using our milestone program we have calculated: 
+L_peak: [  3.08667980e+35], + 1.4e+34, - 1.4e+34
+Omega_Lambda: [ 0.86], + 0.04, - 0.04
