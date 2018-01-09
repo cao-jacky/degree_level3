@@ -102,7 +102,7 @@ def plot(sne):
     fig1.gca().invert_yaxis()  
     
     pyplot.xlabel(r'\textbf{Time Elapsed Since Observing (Days)}', fontsize=13)
-    pyplot.ylabel(r'\textbf{Apparent Magnitude}', fontsize=15)
+    pyplot.ylabel(r'\textbf{Apparent Magnitude (mag)}', fontsize=15)
 
     pyplot.tick_params(axis='y', which='major', labelsize=15)
     pyplot.tick_params(axis='x', labelsize=15)

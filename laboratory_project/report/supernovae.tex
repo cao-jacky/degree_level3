@@ -65,6 +65,7 @@ We can see this homogeneity in Figure \ref{fig:typeia}. This plot was produced b
 \begin{center}
 \includegraphics[width=9.25cm]{intro/typeia}
 \caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\vspace{-3ex}
 \label{fig:typeia}
 \end{center}
 \end{figure}
@@ -199,73 +200,74 @@ We thus find that there are multiple factors which we have to be aware of and al
 \vspace{-2ex}
 Over a period of 34 days we made observations of 19 different objects, some Type Ia supernovae, a few Type II, and some cataclysmic variables. These objects are noted in our objects log in Appendix \ref{app:objects_log}, and our individual observations from the entire experiment are detailed in Appendix \ref{app:observations_log}.
 
-It was realised early on in our project that it would not feasible for us to track multiple objects for an extended period. This was firstly because observation time had to be distributed equally amongst all the projects within AstroLabs, it would be unfair to observe just supernovae for the entire night; secondly with such a large amount of data, we would not be able to process and analyse it all; and thirdly, some of the targets were just not worth observing at all. These objects would be too close to their host galaxy, or they would be too low on the horizon for the telescopes in Durham or La Palma to view them.
+It was realised early on in our project that it would not feasible for us to track multiple objects for an extended period. This was firstly because observation time had to be distributed equally amongst all the projects within the laboratory, it would be unfair to observe just supernovae for an entire night; secondly with such a large amount of data, we would not be able to process or analyse it all; and thirdly, some of the targets were just not worth observing at all. These objects would be too close to their host galaxy, or they would be too low on the horizon for the telescopes in Durham or La Palma to view them.
 
-In choosing which objects to observe we used the \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} \cite{asassn_sn} Lists. These are databases which are updated by astronomers with the latest discovered supernovae. For our observations we aimed to choose supernovae which had a discovery magnitude of around 18 or less, anything greater than this would be too faint to observe with our telescopes.
+In choosing which objects to observe we used the \textit{Rochester Bright Supernova} \cite{rochester_sn} and \textit{ASAS-SN Supernovae} \cite{asassn_sn} Lists. These are databases which are updated by astronomers with the latest discovered supernovae. For our observations we aimed to choose supernovae which had a discovery magnitude of around 18 mag or less, anything greater than this would be too faint to observe with our telescopes.
 
-After reviewing and considering which objects would provide the best basis for producing Type Ia light curves, we chose two supernovae targets: 2017hhz, a Type Ia in galaxy UGC 01218; and 2017hle a Type Ia-91bg in NGC 0387. Both being not too close to their host galaxy's nucleus and they appeared to the brightest supernova objects discovered at the time.
+After reviewing our initial data and considering which objects would provide the best basis for producing Type Ia light curves, we chose two supernovae targets: 2017hhz, a Type Ia in galaxy UGC 01218; and 2017hle, a Type Ia-91bg in NGC 0387. Both being not too close to their host galaxy's nucleus and from the lists they appeared to be the brightest supernova objects discovered at the time.
 
-However, they were still faint objects so we had to vary the exposure time between 60s and 120s, and often take more than 2 exposures for each band. In doing so we would later be able to improve the quality and brightness of the supernovae seen in the image through noise reduction and image stacking.
+However, they were still quite faint so we had to vary the exposure time between 60s and 120s, and often take more than 4 exposures for each band. In doing so we would later be able to improve the quality and brightness of the supernovae seen in the image through noise reduction and image stacking.
 
 \vspace{-3ex}
 \subsection{Data Analysis} \label{data_analysis}
 \vspace{-2ex}
-As data was continually collected over the experimental period, we had to simultaneously analyse it to ensure that the magnitudes we were obtaining would fit supernova light curves.
+As we continually collected data over the experimental period, we had to simultaneously analyse it to ensure that the magnitudes we were obtaining would be useful in supernova light curves.
 
-Photometry was thus performed on each of our frames. Our goals were to: take our supernova images, reduce unwanted noise, and then obtain a magnitude value with a related uncertainty. After this, we could use these values in template fittings, and then attempt to perform cosmology.
+Photometry was thus performed on each of our frames. Our goals with this were to: take our supernova images, reduce unwanted noise, and then obtain a value for the magnitude with an associated uncertainty. After this, we could use these values in template fittings, and then attempt to perform cosmology.
 
-Taking our raw frames we had to reduce the noise from unwanted sources. Two sources which we did not have to consider directly was the bias and dark current. The bias arises due to the readout of a CCD, it creates noise when it is converting the captured signal from analogue to digital \cite{obs_uni}. To account for this, bias frames of zero second exposures are taken and subtracted from the data before the data is stored. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD, these electrons would be read as a signal \cite{obs_uni}. However, the chips are normally cooled to about $-10\degree$ to prevent any such noise from forming.
+So, taking our raw frames we firstly had to reduce the noise from unwanted sources. Two sources which we did not have to consider directly was the bias and dark current. The bias arose due to the readout of the CCD, noise is normally created when it is converting the captured photon signal from analogue to digital \cite{obs_uni}. To account for this, bias frames of zero second exposures were taken and subtracted from the data before the data is stored. On the other hand, dark current is the creation of electrons due to the thermal energy of the CCD \cite{obs_uni}. This was remedied by cooling the chips to about $-10\degree$ C, preventing any such noise from forming and being included in the total signal.
 
-The CCD produces one other type of noise which can be account for, each pixel on the CCD varies slightly from each other in terms of sensitivity, something which arises due to the manufacturing process. This sensitivity is normally removed by producing frames of a uniformly lit area, flat-fields. The twilight sky or the inside of the telescope dome can be imaged, and this can then be subtracted from our data.
+The CCD produced one other type of noise which was taken into account. Each pixel on the CCD varied slightly from one another in terms of it's sensitivity, something that arose due to the manufacturing process. This sensitivity was removed by producing and using frames of a uniformly lit area, `flat-fields'. The twilight sky was imaged, and this was then subtracted from our data. The inside of the telescope dome could also be imaged and used for this.
  
-Cosmic rays which register onto the camera can be removed by stacking (combining) multiple frames of the same field and same exposure time together. This is a process where the median value for each pixel is found from the stack of images, thus any anomalously high values which arise from cosmic rays can be removed.
+Finally, noise such as cosmic rays was removed from our data by stacking (combining) multiple frames of the same field and same exposure time together. This is a process where the median value for each pixel is found from the stack of images, thus any anomalously high values which arise due to cosmic rays can be removed.
 
-Once our frames had been cleaned of noise we could then begin to perform photometry, more specifically, aperture photometry. After identifying the supernova in our images, we then wanted to calculate the apparent magnitude of it and see how it progressed with time. To perform this we had to choose at least two calibration stars, of which they had to be of similar size to the supernova and be in the general proximity of it.  This was so that when performing aperture photometry a similar signal could be obtained across all objects and a similar sky background noise could be obtained as well. Noise which arose from the night sky and which could not be directly removed through subtraction techniques.
+Once our frames had been cleaned of noise we then began to perform photometry, more specifically, aperture photometry. After identifying the supernova in our images, we wanted to calculate the apparent magnitude and see how it progressed with time. To perform this we firstly had to choose (at least) two calibration stars, they had to be of similar size to the supernova and be in the general proximity of it.  This was so that when performing aperture photometry a similar `signal' could be obtained across all objects and a similar sky background noise could be obtained as well. Noise which arose from the night sky and which could not be directly removed through subtraction techniques.
 
-Another important criterion for these calibration objects is that their apparent magnitudes must already be known. This was required in the calculation of the magnitudes for the supernova. So, we used the \textit{UCAC4 Catalog} to find the photometric data for the calibration stars in the B and V bands. For the 2017hhz frames we chose calibration stars 512-002598 and 512-002599, and for 2017hle we used 613-003374 and 613-003367. These names are the identifiers used by UCAC4. Once we had our data and calibration stars, we could use the following equation, 
+Another important criterion for these calibration objects was that their apparent magnitudes had to be known already. This was required for the calculation of the supernova magnitudes. So, we used the \textit{UCAC4 Catalog} to find the photometric data for our calibration stars in the B and V bands. For the 2017hhz frames we chose calibration stars 512-002598 and 512-002599, and for 2017hle we used 613-003374 and 613-003367. These names are the identifiers that are used by UCAC4. Once we had our data and calibration objects, we then used the following equation, 
 \begin{equation}
     m = z - 2.5 \log_{10}{C},
 \label{eqn:mag_counts}
 \end{equation}
 
-where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from the object \cite{astro_image_processing}.
+where $m$ is the magnitude of an object, $z$ is the zero-point of the frame, and $C$ is the number of counts we receive from said object \cite{astro_image_processing}.
 
-In using this equation we first required the zero-point for the image that we were working with. What we imaged would not be the actual magnitudes of the objects, they would be offset by a certain amount, $z$, due to light being absorbed by dust in the supernova's host galaxy, through the interstellar medium, and by the dust that is in our own galaxy.
+In using this equation we first required the zero-point for the image that we were working with. As what we imaged would not contain the actual magnitudes of the objects, instead they would be offset by a certain amount, $z$, due to factors such as the light being absorbed by dust in the supernova's host galaxy, through the interstellar medium, and by the dust that is in our own galaxy.
 
-To begin with then, the counts $C$ for the calibration stars were measured, with this and their apparent magnitudes $m$ we could solve equation \ref{eqn:mag_counts} for $z$. Once this was done for each star within each required band, the $z$ values could then be all averaged together within their respective observation bands. This zero-point could then be used with the number of counts for the supernova to produce an apparent magnitude value for the supernova.
+We therefore began by measuring the counts $C$ for the calibration stars. With this and their apparent magnitudes $m$ we could solve Equation \ref{eqn:mag_counts} for $z$. Once this was done for each star in each required band, the $z$ values were then all averaged together within their respective observation bands. This zero-point was used with the number of counts for the supernova to produce an apparent magnitude for it.
 
-With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within in, and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and annulus would maximise the signal whilst reducing the amount of sky noise measured.
+With obtaining a value for the counts, whether from the supernovae or from the calibration objects, we had to choose a fixed aperture size to count the signal that was contained within it and a fixed sky annulus to count the sky background noise. It was important that the radius of both the aperture and sky annulus would maximise the signal whilst reducing the amount of sky noise measured.
 
 This was done by selecting one of the calibration stars and then plotting how the signal-to-noise ($S/N$) ratio would change as the radius was increased. Derived from High Energy Astrophysics \cite{longair}, we used the following equation for the signal to noise,
 \begin{equation}
 \frac{S}{N} = \frac{N_{\gamma}}{\sqrt{N_{\gamma}+N_{b}+N_{d}+R^2}},
 \end{equation}
 
-where $N_{\gamma}$ is the supernova signal, $N_{b}$ the sky background noise, $N_{d}$ the noise due to dark current, and $R$ the readout noise. The latter two sources of noise were reduced and could be ignored in our calculations.
+where $N_{\gamma}$ is the signal of the star, $N_{b}$ the sky background noise, $N_{d}$ the noise due to dark current, and $R$ the readout noise. The latter two sources of noise were reduced and could be ignored from the calculations.
 
-In Figure \ref{fig:2017_stn}(a) we show the $S/N$ plot that was created for the 2017hhz frames, the calibration star (512-002599) was selected from the V band data from the 20th October 2017 as it appeared to have the least noise.
+In Figure \ref{fig:2017_stn}(a) we show the $S/N$ plot that was created for the 2017hhz frames, the calibration star (512-002599) was selected from the V band data from the 20th October 2017 as it had the least noise out of all the data we had taken already.
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.5cm]{observations/2017hhz}
 \caption[]{(a) Plot of signal to noise against the radius of the aperture for 2017hhz frames, this was used to identify which fixed radius to use. (b) Image of the aperture tool used: inner white circle around star is the main aperture, the outer yellow annuli is used to measure the sky background. Object shown is the star 512-002599.}
+\vspace{-5ex}
 \label{fig:2017_stn}
 \end{center}
 \end{figure}
 
 The point where the plot decreases was chosen to be the radius as this would produce an optimal value for the signal to noise. In the case for 2017hhz this was chosen to be 4 pixels and for 2017hle it was 3 pixels. 
 
-Figure \ref{fig:2017_stn}(b) shows the aperture tool that was used extensively for the aperture photometry. With the white circle as the main aperture that we varied, and the two outer yellow circles being the sky annuli. The area enclosed in the sky would be sampled and then as quantified amount of noise, it would be removed away from the main counts value. The size of these rings were chosen as the radius scaled by factors $\times 1.5$ and $\times 2$. These numbers were justified as we wanted to avoid taking other stars as part of the sky background, and whilst this did mean we had to take part of the galaxy when we were working with our supernovae, we chose to be consistent with our calibration stars as it was difficult to balance just having sky in each individual annuli.
+Figure \ref{fig:2017_stn}(b) shows the aperture tool that was used extensively for the aperture photometry. With the white circle as the main aperture we counted our object signal from, and the two outer yellow circles being the sky annuli for the sky noise. The area enclosed in the sky would be sampled and then as quantified amount of noise, it would be removed away from the main value for counts. The size of these sky rings were chosen as the radius scaled by factors $\times 1.5$ and $\times 2$. These numbers were justified as we wanted to avoid taking other stars as part of the sky background, and whilst this did mean we had to take part of the galaxy when we were working with our supernovae, we chose to favour our calibration stars as it was difficult to balance having only noise in the sky area.
 
-For the placements of these apertures, we took a histogram profile of the vertical and horizontal directions of the object, and then placed the centre of the aperture to the centre of the maximum brightness. 
+For the placements of these apertures, we took a histogram profile of the vertical and horizontal directions of the object, and then placed the centre of the aperture to the location of the peak. 
 
 After we had calculated magnitude values we could then proceed to plot supernova light curves with our data, the process of which can be found in Section \ref{supernovae_models}.
 
 \vspace{-3ex}
 \subsection{Data Uncertainties}
 \vspace{-2ex}
-Throughout the experiment it was important that we kept in mind the uncertainties which could affect the accuracy of our results. Various steps were undertaken to ensure that the sources of errors could be reduced, some of these methods have already been detailed in Section \ref{data_analysis} however we would like to discuss other random and systematic uncertainties.
+Throughout the experiment it was important that we kept in mind the uncertainties which could affect the accuracy of our results. Various steps were undertaken to ensure that the sources of errors could be reduced, some of these methods have already been detailed in Section \ref{data_analysis}, however we would like to discuss other random and systematic uncertainties.
 
-In collecting data, we have already learnt how a CCD could count extra noise in the form of bias and dark current if it is not accounted for. Alternatively, we found that as our Type Ia supernovae progressed along their evolutionary path we found that as they continually dimmed, it became increasingly difficult for us to produce a precise result. This random error is a result of the observational limits of the telescopes, as they could only observe to a certain magnitude it would be expected that the magnitudes produced would have a larger uncertainty.
+In collecting data, we have already learnt how a CCD could count extra noise in the forms of bias and dark current if it is not accounted for. Alternatively, we found that as our Type Ia supernovae progressed along their evolutionary path, it became increasingly difficult for us to produce a precise result as they became dimmer and dimmer. This random error is a result of the observational limits of the telescopes, they could only observe to a certain magnitude thus it would be expected that the magnitudes calculated would have a larger uncertainty.
 
 Having access to a larger telescope, one with a greater aperture would allow us to collect more light and thus produce a more accurate and precise value for the supernova magnitudes.
 
@@ -273,12 +275,12 @@ If we consider the systematic errors of our experiment, the greatest source woul
 
 We chose to perform the photometry manually, however to reduce the potential systematic error, we should have automated the process with a script. In doing so, we would be more certain that the counts and magnitudes that we obtained would be more accurate to the true value of the magnitude of the supernova.
 
-On the other hand, we could have repeated the photometry and then took an average value for the counts to reduce any random and systematic errors which may occur. However, as we tried to ensure that our apertures were on the position of peak brightness of their respective objects, hopefully it would make no difference. 
+On the other hand, we could have repeated the photometry and then took an average value for the counts to reduce any random and systematic errors which may occur. However, as we tried to ensure that our apertures were on the position of peak brightness for our objects, in theory, the results should be the same.
 
 \vspace{-3ex}
 \subsection{Final Data}
 \vspace{-2ex}
-Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the calculated magnitudes with their associated uncertainties. We note again that Equation \ref{eqn:mag_counts} was used for the magnitude, and Equation \ref{m_uncert} for the uncertainty. From this we could then plot Type Ia supernova light curves and then attempt to perform cosmology with the results.
+Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the final calculated magnitudes with their associated uncertainties. Equation \ref{eqn:mag_counts} was used to find the magnitudes, and Equation \ref{eqn:mag_uncert} for the uncertainties - both sets of values use units of magnitude. From this we could then plot Type Ia supernova light curves and attempt to perform cosmology with the results.
 
 \begin{table}[h!]
 \centering
@@ -327,35 +329,33 @@ Tables \ref{table:2017hhz_data} and \ref{table:2017hle_data} contain the calcula
 \subsection{Supernovae Models}
 \label{supernovae_models}
 \vspace{-2ex}
-In fitting templates and models to our data, the process could be manually performed, however we chose to use a Python package \textit{SNooPy} \cite{car_snoopy}. SNooPy is an automated fitter for Type Ia light curves, our magnitudes would be parsed and then a template would be transformed to fit that set of data. 
+In fitting templates and models to our data, the process could be done manually, however we chose to use the Python package \textit{SNooPy} \cite{car_snoopy}. SNooPy is an automated fitter for Type Ia light curves, it takes magnitude data as an input and then attempts to fit light curves to that data.
 
-For the basic fitting function, \texttt{snpy.fit()}, it would only work if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required a right ascension (RA) and declination (dec) of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it is required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}.
+For the basic fitting function, \texttt{fit()}, it would only operate if we provided a set of data in at least two different photometric bands out of the passbands of uBVgriYJHK. SNooPY also required the right ascension (RA) and declination (dec) of the supernova in order for it calculate the galactic extinction from Schlegel maps \cite{snoopy_docs}. On top of that, a value for the heliocentric redshift of the supernova was also needed for the fitting, this is because it was required for the computation of the K-corrections in each of the filters provided \cite{car_snoopy}.
 
-The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift that they obtained.
+The redshift values for our supernovae were obtained from the discovery notes that were attached to their entry's on the Rochester Bright Supernova List. As our objects were Type Ia they generally would be of interest for cosmology, spectroscopic observations would thus often be performed after their initial discovery, and so we could use the redshift that astronomers had obtained. Hence, for 2017hhz we used a redshift of $z=0.0392$, and for 2017hle $z=0.015$ was used.
 
-For 2017hhz we used a redshift of $0.0392$, and for 2017hle $0.015$ was used.
-
-After SNooPy had managed to apply the template light curves, this fitting could then be exported and plotted. In addition to this, the final parameters that had been selected by SNooPy could be obtained as well. These included the host galaxy extinction (EBVhost), the time for B-maximum (Tmax), the distance modulus to the supernova (DM), and the decline-rate parameter (dm15). Values which would be useful to us when we attempted to perform some cosmology.
+After SNooPy had managed to apply the template light curves, this fitting could then be exported and plotted. In addition to this, the final parameters that had been selected by SNooPy could be obtained as well. These included the host galaxy extinction (EBVhost), the time for B-maximum in days (Tmax), the distance modulus to the supernova in magnitudes (DM), and the decline-rate parameter (dm15). Values which would become useful in cosmology.
 
 To see the correlations between these four parameters, covariance plots could be produced using the \texttt{fitMCMC()} function with the argument \texttt{plot\_triangle} selected as \texttt{True}. A covariance matrix with the values could be retrieved and then potentially plotted to produce a heat map as an alternative to the triangle plots. 
 
-A full example of how SNooPy was used has been provided in Appendix \ref{app:using_snoopy}.
+\textit{A full walkthrough of how SNooPy was used has been provided in Appendix \ref{app:using_snoopy}.}
 
 \vspace{-3ex}
 \subsection{Results}
 \vspace{-2ex}
-After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show the respective light curves, their plotted magnitudes and their uncertainties for the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that was used by SNooPy for the \texttt{fit()} fitting.
+After running our data through SNooPy, we were able to produce Type Ia light curves with the \texttt{fit()} function for 2017hhz and 2017hle. In Figure \ref{fig:2017hhz_lc} and Figure \ref{fig:2017hle_lc} we show their respective light curves, their plotted magnitudes and their uncertainties for the B and V bands. Table \ref{table:snpy_summary} provides a summary of the parameters that were used by SNooPy for these \texttt{fit()} fittings.
 
-In Table \ref{table:chi2} the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands. We also provide the average for $\chi^2_{\nu}$ in both bands. 
+In Table \ref{table:chi2}, the $\chi^2$ and reduced $\chi^2$ statistics have been calculated for both supernovae, and for both B and V bands. We also provide the average for reduced $\chi^2$ in both bands. 
 
-Figure \ref{fig:covar_plots} shows some of the covariance plots produced by \texttt{fitMCMC()} for 2017hhz in SNooPy displaying the correlation between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter. Table \ref{table:snpy_mcmc_summary} shows the parameter output for the fitting made with this function.
+Figure \ref{fig:covar_plots} shows a fraction of the covariance plots produced by the SNooPy function \texttt{fitMCMC()} for 2017hhz. They display the correlations between the time for B-maximum, the host galaxy extinction, the distance modulus, and the decline-rate parameter. Table \ref{table:snpy_mcmc_summary} additionally shows the parameter output for the fitting made with this function.
 
-With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our analysed data, and one of our extension projects are shown together as a collage of images.
+With Figure \ref{fig:2017hhz_collage} we provide a collage of two examples of our data, a frame of our analysed data which has been flat-fielded, and our `galaxy subtraction' extension project.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hhz}
-\caption[]{Plot showing the light curves fitted by SNooPy for supernova 2017hhz. The raw magnitude data has been plotted with their uncertainty in the B and V photometric bands - the V band has been offset by 1 to more clearly show both sets of data. The zero position on the $x$- axis represents the first observation made on Friday 20th October 2017.}
+\caption[]{Plot showing the light curves fitted by SNooPy for supernova 2017hhz. The raw magnitude data has been plotted with their uncertainty in the B and V photometric bands. The V band in this graph has been offset by 1 for ease of viewng. The zero position on the $x$- axis represents the first observation made on Friday 20th October 2017.}
 \vspace{-1.5em}
 \label{fig:2017hhz_lc}
 \end{center}
@@ -364,7 +364,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/2017hle}
-\caption[]{The calculated magnitude and uncertainties for the supernova 2017hle has been plotted along with the SNooPy fitted light curve for the B and V bands. The set of data for the V band has been offset by 1 to produce a clearer plot. Thursday 26th October 2017 represents the zero point on our $x$- axis.}
+\caption[]{The calculated magnitudes and their uncertainties for the supernova 2017hle have been plotted along with the SNooPy fitted light curves for the B and V bands. The data for the V band in this plot has been offset by 1 to produce a clearer plot. Thursday 26th October 2017 represents the zero point on our $x$- axis.}
 \label{fig:2017hle_lc}
 \vspace{-1.5em}
 \end{center}
@@ -382,7 +382,7 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
   & $\pm$0.225 & $\pm$1.538 & $\pm$0.455 & $\pm$0.238 \\
  \hline
 \end{tabular}
-\caption{The parameters that were used by \texttt{fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction, T$_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. The values and their systematic uncertainties have been quoted in full as they were used in their entirety in SNooPy's fitting. }
+\caption{The parameters that were used by \texttt{fit()} in the fittings of light curves for 2017hhz and 2017hle. Where EBV is the host galaxy extinction in magnitudes, T$_{\max}$ is the time in days for B band maximum since our observations began, DM is the distance modulus in magnitudes, and $\Delta m_{15}$ is the decline rate parameter. These values and their systematic uncertainties have been directly taken from SNooPy's parameter output.}
 \vspace{-1.5em}
 \label{table:snpy_summary}
 \end{table}
@@ -390,24 +390,11 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.25cm]{results/covariance/covariance}
-\caption[]{Four out of the six covariance plots produced by the \texttt{fitMCMC()} function in SNooPy for supernova 2017hhz. The plots show the correlations between four parameters: Tmax, the time for B-maximum; EBVhost, the host galaxy extinction; DM, the distance modulus; and dm15, the decline-rate parameter.}
+\caption[]{Four out of the six covariance plots produced by the \texttt{fitMCMC()} function for the supernova 2017hhz. The plots show the correlations between four parameters: Tmax, the time for B-maximum; EBVhost, the host galaxy extinction; DM, the distance modulus; and dm15, the decline-rate parameter.}
 \label{fig:covar_plots}
 \vspace{-1.5em}
 \end{center}
 \end{figure}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
- \hline
- \textbf{Supernova} & \textbf{EBV} & \textbf{T$_{\boldsymbol{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
- 2017hhz & 0.047 & 2.250 &  36.096 & 0.815 \\
-  & $\pm$0.067 & $\pm$0.905 & $\pm$0.113 & $\pm$0.076 \\
- \hline
-\end{tabular}
-\caption{Output of the parameters used for \texttt{fitMCMC()} fitting. Where EBV is the host galaxy extinction, T$_{\max}$ is the time for B-maximum since our observations began, DM is the distance modulus, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy in the fitting. }
-\label{table:snpy_mcmc_summary}
-\end{table}
 
 \begin{table}[h!]
 \centering
@@ -419,16 +406,29 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
  Average & - & 1.38 & - & 2.95 \\
  \hline
 \end{tabular}
-\caption{$\chi^2$, reduced $\chi^2$ ($\chi^2_{\nu}$) and $\chi^2_{\nu}$ average values are shown for each photometric filter used in our observations (B,V) for each of our supernovae, 2017hhz and 2017hle.}
+\caption{$\chi^2$, reduced $\chi^2$ ($\chi^2_{\nu}$) and the average reduced $\chi^2$ values are shown for each photometric filter used in our observations (B,V) for each of our supernovae.}
 \label{table:chi2}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
+ \hline
+ \textbf{Supernova} & \textbf{EBV} & \textbf{T$_{\boldsymbol{\max}}$} & \textbf{DM} & \textbf{$\boldsymbol{\Delta m_{15}}$} \\ [0.5ex] 
+ 2017hhz & 0.047 & 2.250 &  36.096 & 0.815 \\
+  & $\pm$0.067 & $\pm$0.905 & $\pm$0.113 & $\pm$0.076 \\
+ \hline
+\end{tabular}
+\caption{Output of the parameters used for the \texttt{fitMCMC()} fitting. Where EBV is the host galaxy extinction in magnitudes, T$_{\max}$ is the time in days for B band maximum since our observations began, DM is the distance modulus in magnitudes, and $\Delta m_{15}$ is the decline rate parameter. Values and their systematic uncertainties have been quoted in their entirety as used by SNooPy. }
+\label{table:snpy_mcmc_summary}
 \end{table}
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=8.25cm]{images/collage_rectangle_small}
-\caption[]{Images of the supernova 2017hhz, it's host galaxy, and the stars in the same field in the V band. (a) Our first frame for this supernova from the 20th October 2017. Supernova 2017hhz has been labelled as SNe, and our calibration stars, 512-002598 as 1, and 512-002599 as 2. (b) Our last frame of data taken on 23rd November 2017. (c) Data from 23rd November 2017 when flat-fielded. (d) An attempt was made as an extension project to remove the background galaxy for the data from 20th October 2017, supernova 2017hhz has been labelled for your convenience.}
+\caption[]{V band images of the supernova 2017hhz, it's host galaxy, and the stars in the same field. (a) Our first frame for 2017hhz from the 20th October 2017. The supernova has been labelled as SNe, and our calibration stars, 512-002598 labelled as 1, and 512-002599 labelled as 2. (b) Our last frame of data taken on 23rd November 2017. (c) Data from 23rd November 2017 when flat-fielded. (d) An attempt was made as an extension project to remove the background galaxy for the data from 20th October 2017, supernova 2017hhz has been labelled for your convenience.}
 \label{fig:2017hhz_collage}
-\vspace{-1.5em}
+\vspace{-6ex}
 \end{center}
 \end{figure}
 
@@ -441,13 +441,13 @@ With Figure \ref{fig:2017hhz_collage} two samples of our data, a frame of our an
 \vspace{-2ex}
 \subsubsection{What is the initial quality of the fit?}
 \vspace{-2ex}
-When we look at the plots that SNooPy produced using \texttt{fit()}, in Figures \ref{fig:2017hhz_lc} and \ref{fig:2017hle_lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line with their uncertainties. However if we take a moment to step back and consider Figure \ref{fig:2017hle_lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data points in both of our required bands, the latter three points in the B band do not appear to have been well fitted at all.
+When we look at the plots that SNooPy produced using \texttt{fit()}, in Figures \ref{fig:2017hhz_lc} and \ref{fig:2017hle_lc} we can initially judge by eye that it appears to be a good fitting, the majority of the points seem to lie on the line within their uncertainties. However if we take a moment, step back, and consider Figure \ref{fig:2017hle_lc}, we see that whilst SNooPy has managed to fit a template to our Type Ia-91bg data, the latter three points in the B band do not appear to have been well fitted at all.
 
-This then raises the questions, how does this program actually fit templates to data, and how well does it do so? Could we believe and use their results in cosmology?
+This then raises the following questions, how does this program actually fit templates to data, and how well does it do so? Could we possibly believe and use their final results in some cosmological analysis?
 
-Before we consider the inner workings of SNooPy, we must look at the possibility that the data we collected for those three days was just poor, and this appears to be the most likely case. With these points, the data was collected around two weeks after our initial observations, the supernova would have more than likely dimmed past the limit to which our telescopes could see. Therefore what we had collected would not have been an accurate magnitude, and this does show with the template fitting.
+Before we consider the inner workings of SNooPy, we must look at the possibility that the data we collected for those three days was just poor, and this appears to be a likely scenario. With these latter three points, the data was collected around two weeks after our initial observations. The supernova would have more than likely dimmed past the limit to which our telescopes could see. Therefore what we had collected would not have been an accurate representation of the magnitude, and this does show with the template fitting.
 
-Returning to our initial discussion on SNooPy's ability to fit templates, for us to compare and contrast different results we will use the value for the peak intrinsic magnitude in the B band $m_B$, and the time for this maximum $t_{\max}$. With this we will introduce Philips' parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B light curve between maximum light and a time interval of 15 days after peak \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
+Returning to our initial discussion on SNooPy's ability to fit templates, as an initial way for us to compare and contrast different results, we will use the value for the peak intrinsic magnitude in the B band ($m_B$), and the time for this maximum ($t_{\max}$). With this we will introduce Philips' parameter, $\Delta m_{15}(B)$, the mean rate of decline of the B band light curve between maximum light and a time interval of 15 days after peak \cite{abs_phil}. Using this value which we can obtain from SNooPy we can then use the following equation to calculate the peak B band magnitude,
 \begin{equation}
 M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 \label{intrinsic_b}
@@ -455,122 +455,120 @@ M_{\max}(B) = -21.726 + 2.698 \Delta m_{15}(B),
 
 where $\Delta m_{15}(B)$ is the decline rate parameter \cite{high_en_astro}.
 
-Using Equation \ref{intrinsic_b} and the values from Table \ref{table:snpy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ for 2017hhz, and $-16.5\pm0.6$ for 2017hle. As a comparison we have calculated this with the \texttt{fitMCMC()} data from Table \ref{table:snpy_mcmc_summary}, $-19.5\pm0.2$. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ \cite{longair}, which both our 2017hhz values agrees with. Plus for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ which is also in agreement. 
+Hence, using Equation \ref{intrinsic_b} and the values from Table \ref{table:snpy_summary}, for our final fittings we find an absolute maximum magnitude of $-19.6\pm0.3$ mag for 2017hhz, and $-16.5\pm0.6$ mag for 2017hle. As a comparison we have calculated this with the \texttt{fitMCMC()} data from Table \ref{table:snpy_mcmc_summary}, $-19.5\pm0.2$ mag. The typical absolute B band magnitudes for Type Ia supernovae is $M_B = -19.5 \pm 0.1$ mag \cite{longair}, which both our 2017hhz values agrees with. Plus for our Type Ia-91bg, Phillips (1993) \cite{abs_phil} finds a value of $M_B = -16.38\pm0.2$ mag which is also in agreement. 
 
-From this, we find that with our data and with SNooPy's \texttt{fit()} fitting we produce absolute magnitude values which lie within the typical found values. Yet we still have to further question the quality of this fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
+From this, we find that with our data and with SNooPy's \texttt{fit()} fitting we produce absolute magnitude values which lie within the typical values. However, there is still a need to further question the quality of the fit. Earlier in the project, when we did not have the latter three values for 2017hle, we ran the SNooPy routine and found a value $\Delta m_{15}=0.073\pm0.039$ which produces $M_B = -21.5\pm0.1$ mag. Comparing this to our full data set value and Philips' value we see that it is not an accurate value whatsoever. 
 
 We can thus draw our first conclusion about SNooPy (and about supernova template fitting in general), a complete set of data is required to effectively produce a light curve. Data which covers the majority of the evolution of the Type Ia supernova - from before peak magnitude to afterwards when it is in decline. 
 
-Removing the latter three points for 2017hhz and running SNooPy we find, $\Delta m_{15}=1.036\pm0.243$ and thus $M_B = -18.9\pm0.7$. This is more inline with what is typical, we could say this is because we still have seven points which form the general profile of the light curve, thus a fitting would be more likely to be accurate.
+Removing the latter three points for 2017hhz and running SNooPy we find, $\Delta m_{15}=1.036\pm0.243$ and thus $M_B = -18.9\pm0.7$ mag. This is more inline with what is typical, we could say this is because we still have seven points which form the general profile of the light curve, a fitting would therefore be more likely to be accurate.
 
-But for our final plots, we still have to remain skeptical. The positioning of the peak magnitude in the B and V bands is the main contending issue, whilst it appears for 2017hhz we capture our initial data when it is at it's peak magnitude, we cannot truly be sure if this is the case. We require more data before our first point on the 20th October 2017. 
+Yet we still have to remain skeptical with our final plots. The positioning of the peak magnitude in the B and V bands is the main contending issue, whilst it appears for 2017hhz we capture our first data when it is at it's peak magnitude, we cannot truly be sure if this is the case. We require more data before that first point on the 20th October 2017. 
 
-We did attempt to add additional points by looking at the initial observations performed by other astronomers. However, their measurements were made in different photometric bands, and we were unsure on how to convert between different systems, thus we did not include them. 
+We did attempt to add additional points by looking at the initial observations performed by other astronomers. However they were not included as their measurements were made in different photometric bands and we were unsure on how to convert between different systems. 
 
-If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the model to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate due to observation limits, the frames not being entirely clean of noise, or due to more data being required. So the values produced would naturally stray from unity. 
+If we return to our discussion on the quality of the fit, numerically, we can quantify this with $\chi^2$ statistics. It has been defined that a model is a good fit to the data if $\chi^2_{\nu} \approx 1$ (the reduced $\chi^2$) \cite{hugheshase}. From Table \ref{table:chi2} we see that for the B photometric band, both 2017hhz and 2017hle have better fits than their counterparts in the V. Whilst this is a test of the fit of the \textit{model} to the data, we once again cannot detract from the possibility that the data we collected and analysed was inaccurate. Again, potentially due to observation limits, or the frames not being entirely clean of noise, or due to more data being required. The values subsequently produced would naturally stray from unity. 
 
-Since we began this section we have looked at the results which SNooPy has created and have drawn basic conclusions on the quality of fit by calculating the absolute magnitudes of the supernovae and the $\chi^2_{\nu}$ values for the model. We have not yet explored the implications of the results from \texttt{fitMCMC()}, but we would like to first understand the underlying methodology that has been employed by the program, by extension we could then apply this in our own supernova light curve fitting routine. 
+Since we began this section we have looked at the results which SNooPy created and have drawn basic conclusions on the quality of fit. We have calculated and analysed the absolute magnitudes of the supernovae and also the $\chi^2_{\nu}$ values for the fitting. But, we have not yet explored the implications of the results from \texttt{fitMCMC()}, instead, we would like to first understand the underlying methodology that has been employed by the program, and by extension we could then apply this in our own supernova light curve fitting routine. 
 
-\vspace{-2ex}
+\vspace{-3ex}
 \subsubsection{How is the fitting actually performed?}
 \vspace{-2ex}
 
-In fitting templates there are many well-established methods which can be employed to fit data in a broad number of photometric bands. We must start though at the beginning, and understand the very basics behind fitting Type Ia light curves.
+In fitting templates there are many well-established methods which can be employed to fit data in a broad number of photometric bands. We must start though at the beginning, and understand the very basics behind the production and fitting Type Ia light curves.
 
-Within the B and to an extent V-band, light curves can generally be fitted by using a single template which has been stretched along the time axis to fit the observed data \cite{highred_perl}. However, applying this to longer wavelengths would be more difficult as other features would be present, for example, an inflection observed in the r band after 20 days will evolve into a secondary maximum when viewed in the i band \cite{car_snoopy}. More templates have to be derived and produced for observations made in other photometric filters.
+Within the B and to an extent V-band, light curves can generally be fitted by using a single template which has been stretched along the time axis to fit the observed data \cite{highred_perl}. However, applying this to longer wavelengths becomes more difficult as other features arise. For example, an inflection observed in the r band after 20 days will evolve into a secondary maximum when viewed in the i band \cite{car_snoopy}. More templates have to be derived and produced for the observations made in other photometric filters.
 
-So, a single-parameter family of curves became the accepted base method instead of using the stretch-like correction. This single parameter would be used to describe the shape of the light curve and would be employed when the template is being fitted.
+As a result, a single-parameter family of curves became the accepted base method instead of using the stretch-like correction. This single parameter would be used to describe the shape of the light curve and would be employed when the template is being fitted.
 
-One package which we have not used, SALT2 \cite{salt2}, uses a stretch-like parameter $x_1$ to describe a sequence of spectral energy distributions of Type Ia supernovae which is further modified by a colour-like parameter $c$. Another fitter on the other hand uses a luminosity parameter $\Delta$, MLCS2k2 \cite{prec_indic, mlcs2k2}. 
+One package which we have not used, SALT2 \cite{salt2}, uses a stretch-like parameter $x_1$ to describe a sequence of spectral energy distributions of Type Ia supernovae which is further modified by a colour-like parameter $c$. Another fitter, MLCS2k2, uses a luminosity parameter $\Delta$ to describe their light curves \cite{prec_indic, mlcs2k2}. 
 
-With SNooPy none of these parameters are used, instead, the decline-rate parameter ($\Delta m_{15}(B)$) is employed in the making of SNooPy's templates. Compared to the other two methods, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be not universal.
+With SNooPy, none of these parameters are used, instead, the decline-rate parameter $\Delta m_{15}(B)$ is employed in the making and fitting of SNooPy's templates. Compared to the other two packages, the advantage that is given for this is that it is a characteristic of the observed light curve which can be easily measured \cite{car_snoopy}. But as it is tied to a particular filter and photometric system, it cannot be truly universal.
 
-Detailed by Burns et al (2011) \cite{car_snoopy}, the initial theory and methods which build upon $\Delta m_{15}$ are beyond the scope of our knowledge and the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
+Detailed by Burns et al (2011) \cite{car_snoopy}, the initial theory and methods which build on the ideas of $\Delta m_{15}$ are beyond the scope of our understanding and beyond the purpose of this experiment, they cover topics such as: spline fittings, the interpolation of a sample four-dimensional surface, and the fitting of bi-variate polynomial functions. 
 
-What is actually useful for us to know is that after the creators of SNooPy had created some basic light curve templates, they arrived at the following conclusion:
+What is actually useful for us is that after the creators of SNooPy had created some basic light curve templates, they arrived at the following conclusion:
 
 \textquote{If we use the above procedure to generate a B light-curve template with a particular $\Delta m_{15}$, there is no guarantee that the \textit{measured} change in magnitude of the template from peak to day 15 will exactly match the input $\Delta m_{15}(B)$.} \cite{car_snoopy}.
 
-In other words, for the values of the decline-rate parameter which could be obtained after it had performed it's fitting, they do not correspond to the values which were used in the production of the templates. So to use these templates uncorrected for, inaccuracies would certainly arise if we were to use these $\Delta m_{15}$ values for calculating $M_{\max}(B)$. 
+In other words, for the values of the decline-rate parameter obtained after the fitting had been performed, they would not correspond to the values which were initially used in the making of the templates. If we had then used these templates uncorrected, inaccuracies would certainly arise when calculating $M_{\max}(B)$ for example. 
 
-Building upon this, we noted earlier that it was difficult to accept a light curve which had been fitted for a few data points from the period when the supernova is in decline. It was recognised by the creators of SNooPy that with a single parameter family of curves, reproducing observations for templates away from maximum light is currently inadequate \cite{car_snoopy}. They suggest that at least another parameter should be introduced in the future to improve the fittings.  
+Building upon this, we noted earlier that it was difficult to accept a light curve which had been fitted for just a few data points. It was recognised by the creators of SNooPy that with a single parameter family of curves, reproducing observations with templates away from maximum light is currently inadequate \cite{car_snoopy}. They suggest that at least another parameter should be introduced in the future to improve the fittings.  
 
-In the mean time, they have just included the intrinsic variations as an extra error in the template, and as  the fitting of their templates incorporate contributions from every photometric band provided, there is an extra random and systematic uncertainty.
+In the mean time, they have just included the intrinsic variations as an extra uncertainty in the template. Additionally, as the fitting of their templates incorporate contributions from every photometric band provided, there is another extra random and systematic uncertainty.
 
-Whilst the decline rate parameter is main parameter used in the producing of light curves, fitting them requires the  \texttt{fit()} and \texttt{fitMCMC()} functions to find the best fit parameters for not just $\Delta m_{15}$, but for the host galaxy extinction EBVhost, time for B-maximum (Tmax), and the distance modulus (DM) as well. The uncertainties quoted with all four of these value have a statistical component as a result of their fittings \cite{car_snoopy}.  
+Whilst the decline rate parameter is the main parameter used in the production of SNooPy light curves, fitting them requires the \texttt{fit()} and \texttt{fitMCMC()} functions to find the best fit parameters for not just $\Delta m_{15}$, but for the host galaxy extinction, time for B-maximum, and the distance modulus as well. These four values have uncertainties which incorporate a statistical component as a result of the fittings \cite{car_snoopy}.  
 
-\texttt{fit()} uses a non-linear least-squares algorithm in it's fitting, Levenberg-Marquardt. It minimises the variance-weighted residuals of the data from the model \cite{snoopy_online_docs} - it attempts to find the minimum $\chi^2$. 
+\texttt{fit()} uses a non-linear least-squares algorithm in it's fitting, the Levenberg-Marquardt method. It minimises the variance-weighted residuals of the data from the model \cite{snoopy_online_docs} (it attempts to find the minimum $\chi^2$). 
 
-\texttt{fitMCMC()} on the other hand uses a Markov Chain Monte Carlo (MCMC) approach which provides an advantage of a less biased estimator of the regression parameters, and it can use more sophisticated models of the statistical processes that produced the data \cite{car_snoopy}. 
+\texttt{fitMCMC()} on the other hand uses a Markov Chain Monte Carlo (MCMC) approach which provides the advantage of a less biased estimator of the regression parameters, and it can use more sophisticated models of the statistical processes that produced the data \cite{car_snoopy}. 
 
-Considering all of this, we find that the main tool used by SNooPy in the fitting of supernova templates is statistical analysis but with considerations for other factors which compose a template. If we had performed these fittings manually, we most likely would have just performed a stretching of an averaged Type Ia light curve onto our data and calculated $\chi^2$ values to see if it would be a good fit or not.
+Considering what we have discussed, we thus find that the main tool used by SNooPy in the fitting of supernova templates is statistical analysis based on optimising various parameters. If we had performed these fittings manually, we most likely would taken the route of stretching of an averaged Type Ia light curve onto our data and then calculate the $\chi^2$ values to see if it would be a good fit or not.
 
-We now arrive at the point where we have some understanding of how SNooPy and template fitters work, we shall therefore return to our earlier discussion on the quality of the fitting. 
+We now arrive at the point where we have some understanding of how SNooPy and template fitters work, we shall therefore return to our earlier discussion on the quality of SNooPy's fitting. 
 
 \vspace{-3ex}
 \subsubsection{So, how do we view the quality of the fit now?}
 \vspace{-2ex}
 
-As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other in a range from $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we were to use our results in cosmology we would use the summary output from \texttt{fitMCMC()} as it uses a less biased estimator of the parameters.
+As we chose to use \texttt{fit()} as our main tool, we did sacrifice some potential accuracy by not using the MCMC based function. When comparing Table \ref{table:snpy_summary} and \ref{table:snpy_mcmc_summary}, we see that the parameters differ from each other by about $\sim0.06\%$ to $\sim8\%$. Whilst this is not orders of magnitude different, if we had choose between them so that we could calculate some cosmological parameters, we would certainly use the output from \texttt{fitMCMC()}.
 
-Viewing the covariance plots for this function, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As the host extinction (the reddening of the light) increases then the apparent magnitude of the supernova that can be observed decreases. This may also be related to the fact that in the standard fitting, these two parameters are the only ones with systematic errors \cite{snoopy_online_docs} - the systematics in the distance modulus includes the intrinsic dispersion of the Phillips relation. 
+Viewing the covariance plots for our fittings, from Figure \ref{fig:covar_plots} we can see that the host galaxy extinction (EBVhost) is strongly negatively correlated with the distance modulus (DM) which does not come as a surprise. As the host extinction (the reddening of the light) increases then the apparent magnitude of the supernova that can be observed decreases. 
 
 With the other parameters, we can see from the covariance plots that they have very little correlation to each other. This can be extended for the relations between dm15-DM and EBVhost-Tmax which we have not presented, they too show no correlations.
 
-The point to make here then is that we should have constrained the parameters for the host extinction or for the distance modulus. We gave SNooPY free reign in finding the parameters, using methods such as minimising $\chi^2$ and calling up the Schlegel maps to find the extinction with our given RA and dec. 
+The point to make here then is that as they are correlated we should have constrained one of the host extinction or the distance modulus. Instead, we gave SNooPY free reign in finding and optimising the parameters, using methods such as minimising $\chi^2$ and calling up the Schlegel maps to find the extinction with our given RA and dec. 
 
-This does mean that we can now compare SNooPy's output with known information and use this as an extra judge of the quality of fit. Focussing on the results for 2017hhz, we begin with the distance modulus. For \texttt{fit()} and \texttt{fitMCMC()} we get $36.121\pm0.106$ mag and $36.096\pm0.113$ mag, and retrieved from NED the Tully-Fisher determined value for UGC 01218 is $35.64\pm0.43$ mag \cite{tully_fish_catalogue}. Comparing these values we see that whilst they are not completely different, within the SNooPy uncertainties, they do not agree with the Tully-Fisher distance modulus.
- 
-A similar comparison can be attempted for the host extinction. SNooPy produced $0.049\pm0.083$ and $0.047\pm0.067$, whilst a galactic extinction of 0.043 can be quoted from Schlafly and Finkbeiner (2011) \cite{reddening}. As the statistical uncertainties are larger than the actual values obtained, this further highlights the need that we should have initially constrained the templates.
+This does mean that we can now compare SNooPy's output with known information and use this as an extra judge of the quality of fit. Focussing on the results for 2017hhz, we begin with the distance modulus. For \texttt{fit()} and \texttt{fitMCMC()} we get $36.121\pm0.106$ mag and $36.096\pm0.113$ mag respectively, and retrieved from NED the Tully-Fisher determined value for UGC 01218 is $35.64\pm0.43$ mag \cite{tully_fish_catalogue}. Comparing these values we see that whilst they are not completely different, within the SNooPy uncertainties, they do not agree with the Tully-Fisher distance modulus. Noting that the SNooPy uncertainties for host extinction and distance modulus do incorporate systematic errors, for example, the distance modulus includes the intrinsic dispersion of the Phillips relation.  \cite{snoopy_online_docs}.
+
+A similar comparison can be attempted then for the host extinction. SNooPy produced $0.049\pm0.083$ mag and $0.047\pm0.067$ mag, whilst a galactic extinction of 0.043 mag can be quoted from Schlafly and Finkbeiner (2011) \cite{reddening}. As the statistical uncertainties for our values are larger than their companion extinction, this further highlights the need that an initial constraint should have been applied to the templates.
 
 We find that overall, whilst SNooPy is able to produce templates and fit them to a certain degree of accuracy, steps have to be taken to ensure that this accuracy can be further improved. Steps such as providing our own constraining parameters, and also using the MCMC based fitter as that provides a more accurate result than \texttt{fit()}.
 
-% Not sure that MCMC is more accurate, write something about that!
-
-\vspace{-2ex}
+\vspace{-4ex}
 \subsubsection{Can we use our results for cosmology then?}
 \vspace{-2ex}
 
-We have the parameters from our final SNooPy fittings and we concluded that they are not entirely inaccurate, could we use these them for cosmology then?
+We therefore have the parameters from our final SNooPy fittings and we concluded that they are not entirely inaccurate, what if we now used them to calculate some cosmological parameters?
 
-Take calculating a value for Hubble's Constant using 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation, 
+Take finding a value for Hubble's Constant, using the data for 2017hhz, we have all the required information: the redshift from other astronomers and our distance modulus from SNooPy. If we took Equation \ref{eqn:h_0}, Equation \ref{eqn:redshift}, and the following equation, 
 \begin{equation}
 \mu = 5 \log_{10}(d) - 5,
 \end{equation}
 
-where $\mu$ is the distance modulus in magnitudes and $d$ is the distance in parsecs \cite{mod_ast}. Using that and a value for speed of light in a vacuum from NIST \cite{speed_of_light} we would be able to produce $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$.
+where $\mu$ is the distance modulus in magnitudes and $d$ is the distance in parsecs \cite{mod_ast}. With this and a value for speed of light in a vacuum from NIST \cite{speed_of_light} we would be able to produce $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$.
 
 Comparing this to existing measurements, $H_0 = 73.24 \pm 1.74$ km s$^{-1}$ Mpc$^{-1}$ \cite{hubble_constant}, we see that whilst it appears to be consistent, the uncertainty entirely negates this fact. In our calculations we have had to estimate the uncertainty on the redshift and use SNooPy's provided statistical uncertainty for the distance modulus.
 
-If we wanted to use our results for cosmology we would firstly have to improve the original accuracy of our fitting and we would also have to find a value for the redshift which has a known uncertainty.  
+If we wanted to use our results for cosmology we would firstly have to improve the original accuracy of our fitting and find a value for the redshift which has a known uncertainty.  
  
-However, we must be aware that calculating $H_0$ is a partly cyclic process when using SNooPy. For the production of the Type Ia templates, cosmological parameters ($H_0$, $\Omega_M$, and $\Omega_{\Lambda}$) were employed in the calibration of the absolute magnitudes of their sample of Type Ia supernovae \cite{car_snoopy} . Whilst these parameters are not used in the actual fitting, we note that they might introduce an uncorrectable bias in our results. 
+However, we must be aware that calculating $H_0$ is a partly cyclic process when using results from SNooPy. For the production of the Type Ia templates, cosmological parameters ($H_0$, $\Omega_M$, \& $\Omega_{\Lambda}$) were employed in the calibration of the absolute magnitudes of the Type Ia supernovae sample \cite{car_snoopy}. Whilst these parameters are not used in the actual fitting, we note that they might introduce an uncorrectable bias in our results. 
 
-In answering our question, we could use our results for cosmology, but we would have to introduce improvements and additional uncertainties. 
+In answering our question, yes, we could use our results for cosmology, but we would have to introduce improvements and additional uncertainties. 
 
-We now arrive at a point where we have discussed the limitations and have judged the quality of fit that SNooPy provides, now we turn to the instruments that we used in collecting our data, the telescopes.
+We now arrive at a point where we have discussed the limitations and have judged the quality of fit that SNooPy provides, and now we turn to our methodologies that were used in collecting and analysing data.
 
-\vspace{-2ex}
+\vspace{-3ex}
 \subsection{Observing supernovae}
 \vspace{-2ex}
 
-In collecting data for this experiment we had to be aware of the sources of noise that would arise and do our best to account for them. We had accounted for the uncertainties for bias and dark current, flat-fielded our data to remove the variations in sensitivity of the CCD pixels, and stacked our data to improve the supernova signal. 
+In collecting data for this experiment we had to account for the uncertainties for the bias and dark current, we flat-fielded our data to remove the variations in sensitivity of the CCD pixels, and we stacked our data to improve the supernova signal. 
 
-But from our SNooPy results we see that we required an improved data set for more accurate values. An important case to make here is if we were to repeat this experiment for new supernovae, we should use telescopes with a larger aperture. This is so that we could collect more data as the supernova dims, filling out that decline path and improving our SNooPy result. 
+But from our SNooPy results we see that more would be required to improve our data set. One suggestion that we would like to repeat, is that if we were to repeat this experiment for new Type Ia supernovae, we should attempt to use telescopes with a larger aperture. This is so that we could collect more data as the supernova dims, filling out the decline path and improving the overall accuracy of our results.
 
-On the other hand, an attempt could be make to take even more frames in the dimming period of the supernova. When the time came to combine the data, the fainter signals would be improved through this method.
+On the other hand, an attempt could be make to take even more frames when the supernova dims, and when the time came to combine the data, the fainter signals would be improved.
 
 Using a longer exposure time could also be considered, but then there is a possibility that the images would become saturated and in a situation where our targets are already faint, this would not be ideal.
 
-For this, it would be helpful to know what the magnitude limit for our telescopes are. A quantifiable value is difficult to produce as observations and the data rely on the conditions at the time of viewing, exposure time, exposure number, to put a certain value is difficult. Nevertheless we can use our data and final graphs from SNooPy to try and put a rough estimate on the smallest magnitude which can be viewed.
+To account avoid this, it would be helpful to know what the magnitude limit for our telescopes are. A quantifiable value is difficult to produce as observations and data are dependent on the conditions at the time of viewing, exposure time, and exposure number. So to put a certain value is difficult, nevertheless we can use our data and final graphs from SNooPy to try and put a rough estimate on the lowest magnitude which can be viewed.
 
-What we see from Table \ref{table:2017hhz_data}, Table \ref{table:2017hle_data} and Figure \ref{fig:2017hle_lc}, as the magnitude reaches around and below $18$ mag the uncertainties increase. While we definitely can attribute this to less photons being detected as the supernova dims, we can additionally suggest that this could be the case as the telescopes are reaching their observation limit. Thus we can give a value of $\sim 18$ mag for the limits of Far-East-16 and pt5m.
+From Table \ref{table:2017hhz_data}, Table \ref{table:2017hle_data} and Figure \ref{fig:2017hle_lc} we can suggest: as the magnitude reaches around and below $18$ mag the uncertainties increase. While we definitely can attribute this to less photons being detected as the supernova dims, we can additionally suggest that this could be the case due to the telescopes reaching their observation limit. Thus we can give a value of $\sim 18$ mag for the limits of Far-East-16 and pt5m.
 
-In highlighting the difference with the types of data that we collect, in Figure \ref{fig:2017hhz_collage} we present a collage of data that we used. At a first glance of Figure \ref{fig:2017hhz_collage}(c)  we note that flat-fielding our data vastly improves the quality of it. It cannot be seen directly but the vignette effect has been removed, cosmic rays taken out, and the data has reduced noise in general. 
+In highlighting the differences between the types of data that we collected, in Figure \ref{fig:2017hhz_collage} we present a collage of data that we used. At a first glance of Figure \ref{fig:2017hhz_collage}(c)  we note that flat-fielding our data vastly improves the quality of it. It cannot be seen directly but the vignette effect has been removed, cosmic rays taken out, and the data has reduced noise in general. 
 
 With the comparison of the raw data, the first thing to note is that different observation conditions would have been present when the data was being taken. In Figure \ref{fig:2017hhz_collage}(a) five exposures each taken for 120s had been taken in La Palma. For Figure \ref{fig:2017hhz_collage}(b) the Durham site was used for 24 exposures at 60s each. On both days the conditions appeared to be clear. 
 
-We do notice in Figure \ref{fig:2017hhz_collage}(a) that all the objects appear to be slightly warped like a rugby ball, this potentially could be due to atmospheric turbulence. It was not atypical that our data would sometimes have aberrations such as this. We can cite some cases where a satellite or an aeroplane had transited through some of our frames. It was not until we had stacked the multiple frames together that we would notice such a thing had occurred.
+We do notice in Figure \ref{fig:2017hhz_collage}(a) that all the objects appear to be slightly warped like a rugby ball, this potentially could be due to atmospheric turbulence. It was not atypical that our data would sometimes have aberrations such as this. We can cite some cases where potentially a satellite or an aeroplane had transited through some of our frames and it was not until we had stacked multiple frames together that we would notice such a thing had occurred.
 
 This is another advantage for collecting as many frames of our objects as possible. In addition to reducing unwanted noise, we could circumnavigate the problems that erroneous images can bring. 
 
@@ -578,9 +576,9 @@ Looking away from data collection, we can instead suggest improvements which cou
 
 Now, considering the tools we used for this photometry, GAIA was our main astronomical data analysis package. For the counts of our objects we did not make use of the quoted uncertainty from the program, instead we chose a functional approach which can be found in Appendix \ref{app:uncertainties}. A method opted for as we had control and an understanding of how it worked.
 
-GAIA's other measurement parameter that we utilised was the estimator for the sky background value. A value which we only used for our signal-to-noise calculations when we chose the radius of our apertures. The way in which this value is calculated can be changed within GAIA's photometry settings. Our calculations in particular make use of the `clipped mean', a mean which disregards the extreme high and low values. Compared with the standard `mean', there is only a $\sim 0.06 \%$ difference between both values, a difference too small to be a problem in our calculations.
+For the sky background values, GAIA was utilised again. Values which we only used for our signal-to-noise calculations when we chose the radius of our apertures. The way in which they were calculated could be changed within GAIA's photometry settings. Our calculations in particular made use of the `clipped mean', a mean which disregards the extreme high and low values. Compared with the standard `mean', there is only a $\sim 0.06 \%$ difference between both values, a difference too small to make a difference in our calculations.
 
-Once we had gained a strong set of skills in operating telescopes and collecting plus analysing data we attempted to apply what we had learnt to other related projects. 
+Once we had gained a strong set of skills in analysing data we attempted to apply what we had learnt to other projects. 
 
 \vspace{-3ex}
 \subsection{Galaxy subtraction, the search for transients, and closing thoughts}
@@ -596,7 +594,7 @@ Looking at our objects log and observing logs we find that we observed many more
 
 We therefore suggest that if this project were to be revisited in the future, it would help if the photometry and the template fittings were automated. In doing so, more time could be devoted to focussing on the astrophysics behind supernovae and their applications. We also suggest that other fitters should be used as well as SNooPy, namely SALT2 and MLCS2k2, it would certainly be interesting to compare and contrast the uncertainties in their results and their initial parameters.
 
-\vspace{-3ex}
+\vspace{-4ex}
 \section{Conclusions}
 \label{conclusions}
 \vspace{-2ex}
@@ -609,18 +607,16 @@ Therefore adjustments must be made to produce more reasonable uncertainties. Wit
 
 Having a better set of results in hand, one could then achieve more consistent values for the geometry of the universe. We shall state once again that Type Ia supernovae are an important tool for cosmology, and it is important to produce accurate light curves.
 
-\vspace{-3ex}
+\vspace{-4ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
-We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for the continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the upkeep of the department's roof telescope array, and we thank Dr. R. Wilson for the usage of the robotic telescope at La Palma. 
+We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for the continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the upkeep of the department's roof telescope array, and we thank Dr. R. Wilson for the usage of the robotic telescope at La Palma. As a final show of gratitude, I thank Duncan Middlemiss for his patience and partnership during this project.
 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
 
 The Starlink software (Currie et al 2014) is currently supported by the East Asian Observatory.
 
-As a final show of gratitude, I thank Duncan Middlemiss for his patience and partnership during this project.
-
-\vspace{-2ex}
+\vspace{-3ex}
 \bibliographystyle{abbrv}
 \bibliography{supernovae}
 

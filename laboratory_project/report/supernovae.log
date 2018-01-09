@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 JAN 2018 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  9 JAN 2018 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -879,38 +879,34 @@ Overfull \hbox (26.07182pt too wide) in paragraph at lines 66--67
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./int
 ro/typeia.pdf>] [2]
-<observations/cassegrain.pdf, id=49, 403.5075pt x 206.7725pt>
+<observations/cassegrain.pdf, id=51, 403.5075pt x 206.7725pt>
 File: observations/cassegrain.pdf Graphic file (type pdf)
 
 <use observations/cassegrain.pdf>
-Package pdftex.def Info: observations/cassegrain.pdf used on input line 161.
+Package pdftex.def Info: observations/cassegrain.pdf used on input line 162.
 (pdftex.def)             Requested size: 213.39566pt x 109.35226pt.
  [3 <./observations/cassegrain.pdf>] [4]
-<observations/2017hhz.pdf, id=70, 503.8825pt x 212.795pt>
+<observations/2017hhz.pdf, id=72, 503.8825pt x 212.795pt>
 File: observations/2017hhz.pdf Graphic file (type pdf)
 
 <use observations/2017hhz.pdf>
-Package pdftex.def Info: observations/2017hhz.pdf used on input line 249.
+Package pdftex.def Info: observations/2017hhz.pdf used on input line 250.
 (pdftex.def)             Requested size: 241.84842pt x 102.13393pt.
 
-Overfull \hbox (4.73225pt too wide) in paragraph at lines 249--250
+Overfull \hbox (4.73225pt too wide) in paragraph at lines 250--251
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Missing character: There is no   in font cmr10!
 [5]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 258.
-
-
-LaTeX Warning: Reference `m_uncert' on page 6 undefined on input line 281.
+ on input line 260.
 
 [6 <./observations/2017hhz.pdf>]
-<results/2017hhz.pdf, id=107, 462.72874pt x 313.17pt>
+<results/2017hhz.pdf, id=108, 462.72874pt x 313.17pt>
 File: results/2017hhz.pdf Graphic file (type pdf)
 
 <use results/2017hhz.pdf>
@@ -924,7 +920,7 @@ Overfull \hbox (26.07182pt too wide) in paragraph at lines 357--358
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/2017hle.pdf, id=108, 462.72874pt x 313.17pt>
+<results/2017hle.pdf, id=109, 462.72874pt x 313.17pt>
 File: results/2017hle.pdf Graphic file (type pdf)
 
 <use results/2017hle.pdf>
@@ -938,13 +934,13 @@ Overfull \hbox (26.07182pt too wide) in paragraph at lines 366--367
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<results/covariance/covariance.pdf, id=109, 321.2pt x 260.975pt>
+<results/covariance/covariance.pdf, id=110, 321.2pt x 255.95625pt>
 File: results/covariance/covariance.pdf Graphic file (type pdf)
 
 <use results/covariance/covariance.pdf>
 Package pdftex.def Info: results/covariance/covariance.pdf used on input line 3
 92.
-(pdftex.def)             Requested size: 234.73523pt x 190.72919pt.
+(pdftex.def)             Requested size: 234.73523pt x 187.06131pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -953,9 +949,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
+Underfull \hbox (badness 1622) in paragraph at lines 422--422
+[]\OT1/cmr/m/n/9 TABLE VI: Out-put of the pa-ram-e-ters used for the
+ []
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/collage_rectangle_small.pdf, id=110, 999.735pt x 579.60541pt>
+<images/collage_rectangle_small.pdf, id=111, 999.735pt x 579.60541pt>
 File: images/collage_rectangle_small.pdf Graphic file (type pdf)
 
 <use images/collage_rectangle_small.pdf>
@@ -972,12 +973,7 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 445.
 
 [8 <./results/covariance/covariance.pdf> <./images/collage_rectangle_small.pdf>
-] [9] [10]
-Underfull \hbox (badness 2005) in paragraph at lines 581--582
-[]\OT1/cmr/m/n/10 GAIA's other mea-sure-ment pa-ram-e-ter that we
- []
-
-[11] (./supernovae.bbl
+] [9] [10] [11] (./supernovae.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 20--26
  []\OT1/cmr/m/n/9 C. Burns.  SNooPy 2.0 doc-u-men-ta-tion.
  []
@@ -1010,27 +1006,27 @@ tate . edu /
  []
 
 ) [12]
-Underfull \hbox (badness 1014) in paragraph at lines 661--661
+Underfull \hbox (badness 1014) in paragraph at lines 657--657
 []|\OT1/cmr/m/n/9 Was later iden-ti-fied as a Cat-a-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 661--661
+Underfull \hbox (badness 1077) in paragraph at lines 657--657
 \OT1/cmr/m/n/9 ob-ject be-came too dim for our
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 661--661
+Underfull \hbox (badness 1360) in paragraph at lines 657--657
 []|\OT1/cmr/m/n/9 Was later clas-si-fied as a Cat-a-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 661--661
+Underfull \hbox (badness 1117) in paragraph at lines 657--657
 \OT1/cmr/m/n/9 chose to fo-cus on 2017hhz and
  []
 
 [13]
-Underfull \hbox (badness 1824) in paragraph at lines 710--710
+Underfull \hbox (badness 1824) in paragraph at lines 706--706
 \OT1/cmr/m/n/9 ob-ject tran-sited across the frame while
  []
 
@@ -1044,119 +1040,114 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14] [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+Underfull \hbox (badness 10000) in paragraph at lines 830--831
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 []\OT1/cmr/m/it/10 The SNooPy files which we used for pro-
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 836--837
+Underfull \hbox (badness 6141) in paragraph at lines 832--833
 \OT1/cmr/m/it/10 cess-ing 2017hhz and 2017hle can be found at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 \OT1/cmtt/m/n/10 https : / / community . dur . ac . uk / jacky . cao / #l3lp$\O
 T1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 \OT1/cmr/m/it/10 The stan-dard ex-am-ple files can be re-trieved
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 \OT1/cmr/m/it/10 from the Carnegie Su-per-nova Project, $\OT1/cmtt/m/n/10 https
  :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 
  []
 
 
-Overfull \hbox (7.88383pt too wide) in paragraph at lines 840--843
+Overfull \hbox (7.88383pt too wide) in paragraph at lines 836--839
  | 
  []
 
 
-Overfull \hbox (7.88383pt too wide) in paragraph at lines 857--858
+Overfull \hbox (7.88383pt too wide) in paragraph at lines 853--854
  | 
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 862.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 858.
 [18]
-Overfull \hbox (7.76767pt too wide) in paragraph at lines 972--975
+Overfull \hbox (7.76767pt too wide) in paragraph at lines 968--971
  | 
  []
 
 
-Overfull \hbox (7.76767pt too wide) in paragraph at lines 1001--1002
+Overfull \hbox (7.76767pt too wide) in paragraph at lines 997--998
  | 
  []
 
-[19] [20] (./supernovae.aux)
-
-LaTeX Warning: There were undefined references.
-
- )
+[19] [20] (./supernovae.aux) )
 (\end occurred inside a group at level 6)
 
-### simple group (level 6) entered at line 948 ({)
-### simple group (level 5) entered at line 803 ({)
-### simple group (level 4) entered at line 759 ({)
-### simple group (level 3) entered at line 714 ({)
-### simple group (level 2) entered at line 676 ({)
-### simple group (level 1) entered at line 635 ({)
+### simple group (level 6) entered at line 944 ({)
+### simple group (level 5) entered at line 799 ({)
+### simple group (level 4) entered at line 755 ({)
+### simple group (level 3) entered at line 710 ({)
+### simple group (level 2) entered at line 672 ({)
+### simple group (level 1) entered at line 631 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 15771 strings out of 493089
- 275053 string characters out of 6134841
+ 15767 strings out of 493089
+ 275014 string characters out of 6134841
  397988 words of memory out of 5000000
- 19037 multiletter control sequences out of 15000+600000
- 16300 words of font info for 61 fonts, out of 8000000 for 9000
+ 19034 multiletter control sequences out of 15000+600000
+ 15992 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,17n,47p,10373b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
-mib6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextr
-a/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supernovae.pdf (20 pages, 1530491 bytes).
+cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib
+5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mmib6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on supernovae.pdf (20 pages, 1522928 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
