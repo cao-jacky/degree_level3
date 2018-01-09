@@ -31,7 +31,7 @@ def data_input(file_name):
     data_file[:,1] = np.add(data_file[:,1], mag) # Adding magnitude to mag column
     return data_file
 
-def data_splitter(file_name):
+def redshift(file_name):
     """ Sorts and splits the data by redshift. """
     total_file = data_input(file_name) # Calling the data
     total_file = total_file[total_file[:,0].argsort()] # Sorting by redshift
@@ -41,12 +41,55 @@ def data_splitter(file_name):
     low_z = split_arrays[0] # Low redshift as an array
     high_z = split_arrays[1] # High redshift as an array
 
-    low_z_0 = np.zeros([len(low_z),1])# Zeros arrays instead of names, waste of memory
+    low_z_0 = np.zeros([len(low_z),1]) # Zeros arrays instead of names, waste of memory
     high_z_0 = np.zeros([len(high_z),1])
     
     low_z = np.append(low_z_0, low_z, axis=1) # Adding the zeros array because I'm silly
     high_z = np.append(high_z_0, high_z, axis=1) 
 
-    np.savetxt("program/sn_high_z.txt", high_z) # Save to a text file
-    np.savetxt("program/sn_low_z.txt", low_z) # Save to a text file
+    #np.savetxt("program/sn_high_z.txt", high_z) # Save to a text file
+    #np.savetxt("program/sn_low_z.txt", low_z) # Save to a text file
     return high_z, low_z
+
+def galaxy(file_name):
+    """ Sorts and separates by whether if it is a low-mass galaxy. """
+    total_file = data_input(file_name) # Calling the data 
+    total_file = total_file[total_file[:,3].argsort()] # Sorting by redshift
+
+    split_mass = np.where(total_file[:,3] < 0.74)[0] # Location of point where low mass
+    split_arrays = np.split(total_file, [split_mass[-1]], axis=0)
+    low_mass = split_arrays[0] # Low mass galaxy
+    high_mass = split_arrays[1] # High mass galaxy
+
+    low_mass_0 = np.zeros([len(low_mass),1]) # Zero arrays for names
+    high_mass_0 = np.zeros([len(high_mass),1]) 
+
+    # : Adding the zeros array because I'm silly
+    low_mass = np.append(low_mass_0, low_mass, axis=1)     
+    high_mass = np.append(high_mass_0, high_mass, axis=1) 
+    return low_mass, high_mass
+
+def galaxy_low(file_name):
+    """ Separates low mass galaxy data by redshift. """
+    data = galaxy(file_name)[0]
+    data = data[data[:,1].argsort()] # Sorting by redshift
+
+    local_sn = np.where(data[:,1] < 0.1)[0] # Location of local supernova, z<0.1
+    split_arrays = np.split(data, [local_sn[-1]], axis=0) # Splitting at last z<0.1
+    low_z = split_arrays[0] # Low redshift as an array
+    high_z = split_arrays[1] # High redshift as an array
+    return high_z, low_z
+
+def galaxy_high(file_name):
+    """ Separates high mass galaxy data by redshift. """
+    data = galaxy(file_name)[1]
+    data = data[data[:,1].argsort()] # Sorting by redshift
+
+    local_sn = np.where(data[:,1] < 0.1)[0] # Location of local supernova, z<0.1
+    split_arrays = np.split(data, [local_sn[-1]], axis=0) # Splitting at last z<0.1
+    low_z = split_arrays[0] # Low redshift as an array
+    high_z = split_arrays[1] # High redshift as an array
+    return high_z, low_z
+
+
+

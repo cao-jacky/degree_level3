@@ -1,5 +1,23 @@
-These values were generated at this date and time: 2018-01-08 22:14:36.129580
+These values were generated at this date and time: 2018-01-09 11:24:04.112662
 
 Using our milestone program we have calculated: 
 L_peak: [  3.08667980e+35], + 1.4e+34, - 1.4e+34
 Omega_Lambda: [ 0.86], + 0.04, - 0.04
+
+Using our extension program we have calculated the following: 
+By using our complete extension data set: 
+L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
+Omega_Lambda: [ 0.82], + 0.01, - 0.01
+
+By using our complete extension and original data set: 
+L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
+Omega_Lambda: [ 0.82], + 0.01, - 0.01
+
+By using our complete extension data set, for low mass galaxies: 
+L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
+Omega_Lambda: [ 0.82], + 0.01, - 0.01
+
+By using our complete extension data set, for low mass galaxies: 
+L_peak: [  3.79253499e+35], + 1.9e+34, - 1.9e+34
+Omega_Lambda: [ 0.77], + 0.09, - 0.09
+
