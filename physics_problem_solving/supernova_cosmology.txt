@@ -1,4 +1,6 @@
-These values were generated at this date and time: 2018-01-09 11:24:04.112662
+These values were generated at this date and time: 2018-01-09 14:22:33.942366
+
+The following values were also calculated in flux space! 
 
 Using our milestone program we have calculated: 
 L_peak: [  3.08667980e+35], + 1.4e+34, - 1.4e+34
@@ -17,7 +19,7 @@ By using our complete extension data set, for low mass galaxies:
 L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
 Omega_Lambda: [ 0.82], + 0.01, - 0.01
 
-By using our complete extension data set, for low mass galaxies: 
+By using our complete extension data set, for high mass galaxies: 
 L_peak: [  3.79253499e+35], + 1.9e+34, - 1.9e+34
 Omega_Lambda: [ 0.77], + 0.09, - 0.09
 

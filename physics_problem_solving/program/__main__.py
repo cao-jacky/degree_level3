@@ -81,6 +81,8 @@ def plotting(data):
     plotter.plot_l(cm_data[0], cm_data[1], sn_data, step)
     plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
     plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    eplotter.plot_h(data)
+
 
 #---------- CALLING STUFF ----------#
 
@@ -89,13 +91,7 @@ efile_name = 'program/data/SCPUnion2.1_mu_vs_z.txt'
 
 calling_milestone = True 
 calling_extension = True
-graphs = False
-
-if graphs == True:
-    if call_milestone == True:
-        ml = milestone()
-        plotting(ml)
-
+graphs = True
 
 #---------- SAVING TO TEXT FILE ----------#
 # This should be an automatic process which outputs a file confirming stuff has been done
@@ -146,6 +142,16 @@ if calling_extension == True:
     f.write('\n')
 
 f.close()
+
+#---------- GRAPHING ----------#
+if graphs == True:
+    odat = data.data_input(file_name) # Original data set
+    edt = edata.redshift(efile_name) # Extension data set
+    # : Removing the probability column
+    edat = [np.delete(edt[0], 3, axis=1), np.delete(edt[1], 3, axis=1)] 
+
+    eplotter.plot_h(cm_data[0], cm_data[1], [edat, odat], step, [ml[0][1],ml[2][1]], 
+            [ex[0][1], ex[2][1]])
 
 stop = timeit.default_timer()
 print("Time this program took: ")

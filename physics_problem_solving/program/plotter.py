@@ -10,8 +10,8 @@ rc('text', usetex=True)
 import l_peak
 import omega_lambda
 
-e = "extension"
-#e = "original"
+#e = "extension"
+e = "original"
 
 pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
