@@ -584,15 +584,15 @@ Once we had gained a strong set of skills in analysing data we attempted to appl
 \subsection{Galaxy subtraction, the search for transients, and closing thoughts}
 \vspace{-2ex}
 
-Using the data which we had previously collected we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then one of the images had to be accounted for the point spread function (PSF) of the other. This involved convolving a Gaussian function with one of the frames so that the objects in both had the same `spread'. The images could then be scaled and subtracted from each other. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve our Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
+Using the data which we had previously collected, we attempted to perform a `galaxy subtraction' on our 2017hhz frames. Our intention was to remove the background galaxy, UGC 01218, and only leave the bright supernova behind. The method consisted of interpolating two frames, one where the supernova is really bright and one where it has faded from view, then one of the images had to be accounted for the point spread function (PSF) of the other. This involved convolving a Gaussian function with the other frame so that the objects in both had the same `spread'. The images could then be scaled and subtracted from each other. In Figure \ref{fig:2017hhz_collage}(d) we see that our attempt was partially successful. We successfully removed the galaxy, but we did not manage to convolve our Gaussian function by the correct amount, thus leaving behind `negative' objects in the place of the stars. 
 
-If we had been successful in implementing this galaxy subtraction, we then would have rudimentarily attempted our own transients survey. Throughout the project, in addition to our supernova observations, we viewed areas where we thought supernovae may occur. We initially started with stellar clusters, Messier 7 and Messier 10, but we soon realised that there would be a low chance for their stars to explode. So, we took our observations to a galactic cluster, the Perseus Cluster (Abell 426). 
+If we had been successful in implementing this galaxy subtraction, we then would have rudimentarily attempted our own transients survey. Throughout the project, in addition to our supernova observations, we viewed areas where we thought supernovae may occur. We initially started with stellar clusters, Messier 7 and Messier 10, but we soon realised that there would be a low chance for their stars to go supernova. Instead, we took our observations to a galactic cluster, the Perseus Cluster (Abell 426). 
 
-We had intended to carry out a `background subtract' on our frames, new events would then be easily detected. We state these past intentions instead of presenting results as there was just not enough time. Our time was limited and in the end we decided it would be more important for us to focus our efforts on the main project, producing Type Ia light curves. 
+We had intended to carry out a `background subtract' on our frames, and like the supernovae in galaxy subtraction, new events in this survey would be easily detected. We state our past intentions instead of presenting results as there was just not enough time, it was limited and in the end we decided it would be more important for us to focus our efforts on the main project, producing Type Ia light curves. 
 
-Looking at our objects log and observing logs we find that we observed many more objects than just 2017hhz and 2017hle. Not everything that we collected could be analysed as it would take an excessive amount of time to do so. 
+Looking at our objects log and observing logs we find that we observed many more objects than just 2017hhz and 2017hle. However, not everything that we collected could be analysed as it would just take an excessive amount of time to do so. 
 
-We therefore suggest that if this project were to be revisited in the future, it would help if the photometry and the template fittings were automated. In doing so, more time could be devoted to focussing on the astrophysics behind supernovae and their applications. We also suggest that other fitters should be used as well as SNooPy, namely SALT2 and MLCS2k2, it would certainly be interesting to compare and contrast the uncertainties in their results and their initial parameters.
+We therefore suggest that if this project were to be revisited in the future, it would help if the photometry and the template fittings were automated. In doing so, more time could be devoted to the astrophysics behind supernovae and their applications in cosmology. We also suggest that other fitters should be used as well as SNooPy, namely SALT2 and MLCS2k2, it would certainly be interesting to compare and contrast the uncertainties in their results and also the parameters used when fitting light curves.
 
 \vspace{-4ex}
 \section{Conclusions}
@@ -601,16 +601,16 @@ We therefore suggest that if this project were to be revisited in the future, it
 
 We asked ourselves at the beginning of this experiment whether it would be possible for us to observe Type Ia supernovae and reproduce their evolutionary light curves. Our conclusion is that it is possible, but the accuracy and uncertainties could certainly be improved. 
 
-Through the usage of SNooPy we managed to apply models to our data which were not entirely unacceptable, producing average reduced $\chi^2$ values of $\sim 1.38$ for the B band and $\sim 2.95$ for the V band. The calculated parameters used in the fittings, the distance modulus and galactic extinction, are consistent with known values, however, their uncertainties negate any agreement as the results become meaningless. 
+Through the usage of SNooPy we managed to apply models to our data which were not entirely unacceptable, producing average reduced $\chi^2$ values of $\sim 1.38$ for the B band and $\sim 2.95$ for the V band. The calculated parameters used in these fittings, namely the distance modulus and galactic extinction, are consistent with known values, however, their uncertainties negate any agreement as the results become meaningless. 
 
-Therefore adjustments must be made to produce more reasonable uncertainties. With our observational method, an extensive data set should be collected with a larger telescope, one which covers the entire evolution of the supernova. Further, for our analysis, if SNooPy is to be used again for our fittings, known constraints should be placed on the templates as this would in turn produce more accurate results.
+Therefore adjustments must be made to produce more reasonable uncertainties. With our observational method, an extensive data set which covers the entire evolution of the supernova should be collected with a larger telescope. Furthermore, for our analysis, if SNooPy is to be used again for light curve fitting, known constraints should be placed on the templates as this would in turn produce more accurate results.
 
-Having a better set of results in hand, one could then achieve more consistent values for the geometry of the universe. We shall state once again that Type Ia supernovae are an important tool for cosmology, and it is important to produce accurate light curves.
+We conclude on this, Type Ia supernovae are an important tool for cosmology and it is thus important to produce accurate light curves. Armed with a better set of results, one could then achieve more consistent values for the geometry of the universe.
 
 \vspace{-4ex}
 \section*{Acknowledgements}
 \vspace{-2ex}
-We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for the continual support and help which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the upkeep of the department's roof telescope array, and we thank Dr. R. Wilson for the usage of the robotic telescope at La Palma. As a final show of gratitude, I thank Duncan Middlemiss for his patience and partnership during this project.
+We thank Dr. J. Lucey, Dr. M. Swinbank, and U. Dudzeviciute for their continual support which was provided over our entire experimental period. We also thank the staff at the Department of Physics at Durham University for the upkeep of the department's telescope array, and we thank Dr. R. Wilson for the usage of the robotic telescope at La Palma. Finally, I thank Duncan Middlemiss for his patience and partnership during this project.
 
 This research has made use of the CfA Supernova Archive, which is funded in part by the National Science Foundation through grant AST 0907903.
 
@@ -626,7 +626,7 @@ The Starlink software (Currie et al 2014) is currently supported by the East Asi
 \appendix
 \section{Objects Log} \label{app:objects_log}
 \vspace{-2ex}
-In Table \ref{table:app_objects_log} we provide a chronological list of the objects that were chosen to be observed. We provide the celestial coordinates, the magnitude of the object on the discovery date, the discovery date, and notes providing extra information. Not all of the objects in the table were observed for an extended period, however most of them were observed for at least a couple of nights to ensure suitability. We also note that we did not just focus on Type Ia supernovae, as can be seen in Table \ref{table:app_objects_log} and in our subsequent observation logs in Appendix \ref{app:observations_log}.
+In Table \ref{table:app_objects_log} we provide a chronological list of the objects that were chosen to be observed. We provide the celestial coordinates, the magnitude of the object on it's discovery date, the discovery date, and notes providing extra information. Not all of the objects in the table were observed for an extended period. However, most of them were observed for at least a couple of nights to ensure suitability. We made extensive use of the `Object Visibility' tool by the Isaac Newton Group of Telescopes, a program which shows what path an object would make as the night progressed. Noting that Department's telescopes in Durham are located at roughly a longitude of -1.5\degree{East}, latitude of +54\degree, altitude of 152 m, and has a UTC offset of 0 hours.  We also note that we did not just focus on Type Ia supernovae, as seen in Table \ref{table:app_objects_log} and in our observation logs in Appendix \ref{app:observations_log}.
 
 {\renewcommand{\arraystretch}{1.2}%
 \begin{table}[h!]
@@ -655,7 +655,7 @@ In Table \ref{table:app_objects_log} we provide a chronological list of the obje
     2017igf & 11:42:49.850 & +77:22:12.94 & 15.4 & 2017/11/18.590 & Ia & {Promising Type Ia target, but we chose to focus on 2017hhz and 2017hle.}  \\
     \hline      
 \end{tabularx}
-\caption{Objects that we chose to observe and the notes on them. RA is the Right Ascension, given in units of (hours : arcminutes : arcseconds). Dec is the Declination quoted in the format of (degrees : minutes : seconds). The stated magnitude is the V band magnitude that the object was discovered at on the date of first discovery.}
+\caption{Objects that we chose to observe and the notes on them. RA is the Right Ascension, given in units of (hours : arcminutes : arcseconds). Dec is the Declination quoted in the format of (degrees : minutes : seconds). The stated magnitude is the V band magnitude that the object was discovered at on the date of first discovery. Some of our objects' type had not been discovered at the time, and some remain undiscovered, we mark those objects as unknown.}
 \label{table:app_objects_log}
 \end{table}
 
@@ -666,7 +666,7 @@ In Table \ref{table:app_objects_log} we provide a chronological list of the obje
 \vspace{-3ex}
 \section{Observation Logs} \label{app:observations_log}
 \vspace{-2ex}
-Given in Table \ref{table:app_observation_logs} are all the observations which were made during the entirety of our observational period. The exposures column is of the following format: ($x: y, z$ s), where $x$ is the band in which the images were taken in, $y$ the number of exposures taken, and $z$ the exposure time expressed in units of seconds. With the information provided in the conditions column, they give a rough indication of the state of the weather during observations. In the notes column we provide which telescope was used and any extra information. Noting the acronyms used for the telescopes, for the Durham array: FE16: Far-East-16, E14: East-14, and W14: West-14. Additionally, for La Palma: pt5m: the $0.5$ m robotic telescope.
+Given in Table \ref{table:app_observation_logs} are all the observations which were made during the entirety of our observational period. The exposures column is of the following format: ($x: y, z$ s), where $x$ is the photometric band in which the images were taken in, $y$ the number of exposures taken, and $z$ the exposure time expressed in units of seconds. With the information provided in the conditions column, they give a rough indication of the state of the weather during observations. In the notes column we provide which telescope was used and any extra information. Noting the acronyms used for the telescopes, for the Durham array: FE16: Far-East-16, E14: East-14, and W14: West-14. Additionally for La Palma, pt5m: the $0.5$ m robotic telescope.
 
 \vspace{2ex}
 {\renewcommand{\arraystretch}{1.2}%
