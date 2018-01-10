@@ -48,21 +48,21 @@ def extension(file_name1, file_name2, data_type):
     
     if data_type == "extension":
         sn_data = edata.redshift(file_name1) # Extension data set
-        sn_data = [np.delete(sn_data[0], 3, axis=1), np.delete(sn_data[1], 3, axis=1)] 
+        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)] 
     elif data_type == "total":
         # Both sets of data
         odat = data.data_input(file_name2) # Original data set
         edt = edata.redshift(file_name1) # Extension data set
         # : Removing the probability column
-        edat = [np.delete(edt[0], 3, axis=1), np.delete(edt[1], 3, axis=1)] 
+        edat = [np.delete(edt[0], 4, axis=1), np.delete(edt[1], 4, axis=1)] 
         sn_data = [np.append(odat[0], edat[0], axis=0), 
                 np.append(odat[1], edat[1], axis=0)]
     elif data_type == "low_mass":
         sn_data = edata.galaxy_low(file_name1)
-        sn_data = [np.delete(sn_data[0], 3, axis=1), np.delete(sn_data[1], 3, axis=1)] 
+        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)] 
     elif data_type == "high_mass":
         sn_data = edata.galaxy_high(file_name1)
-        sn_data = [np.delete(sn_data[0], 3, axis=1), np.delete(sn_data[1], 3, axis=1)]
+        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
     
     # Finding the best fit L_peak value, and best fit Omega_Lambda value
     fl_p = l_peak.fchi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01)

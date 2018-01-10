@@ -1,4 +1,4 @@
-These values were generated at this date and time: 2018-01-09 14:22:33.942366
+These values were generated at this date and time: 2018-01-10 15:05:50.176027
 
 The following values were also calculated in flux space! 
 
@@ -8,18 +8,18 @@ Omega_Lambda: [ 0.86], + 0.04, - 0.04
 
 Using our extension program we have calculated the following: 
 By using our complete extension data set: 
-L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
-Omega_Lambda: [ 0.82], + 0.01, - 0.01
+L_peak: [  3.60936635e+35], + 4e+33, - 4e+33
+Omega_Lambda: [ 0.78], + 0.01, - 0.01
 
 By using our complete extension and original data set: 
-L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
-Omega_Lambda: [ 0.82], + 0.01, - 0.01
+L_peak: [  3.55936635e+35], + 4e+33, - 4e+33
+Omega_Lambda: [ 0.79], + 0.01, - 0.01
 
 By using our complete extension data set, for low mass galaxies: 
-L_peak: [  2.92936635e+35], + 1.3e+34, - 1.3e+34
-Omega_Lambda: [ 0.82], + 0.01, - 0.01
+L_peak: [  3.58936635e+35], + 4e+33, - 4e+33
+Omega_Lambda: [ 0.78], + 0.01, - 0.01
 
 By using our complete extension data set, for high mass galaxies: 
-L_peak: [  3.79253499e+35], + 1.9e+34, - 1.9e+34
-Omega_Lambda: [ 0.77], + 0.09, - 0.09
+L_peak: [  3.82253499e+35], + 1.8e+34, - 1.8e+34
+Omega_Lambda: [ 0.81], + 0.03, - 0.03
 
