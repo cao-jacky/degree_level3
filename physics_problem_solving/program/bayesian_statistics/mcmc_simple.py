@@ -1,8 +1,9 @@
 import numpy as np
 from scipy.integrate import quad
 
+import matplotlib
 import matplotlib.pyplot as pyplot
-from matplotlib import patches
+from matplotlib.patches import Ellipse
 from matplotlib import rc
 
 import edata
@@ -11,6 +12,9 @@ import model
 pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
 pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
+
+matplotlib.rcParams['lines.color'] = 'k'
+matplotlib.rcParams['axes.prop_cycle'] = matplotlib.cycler('color', ['k'])
 
 # Our parameters 
 H0 = (75 /3.09) * (1.0 / (10**19)) # Hubble's constant
@@ -94,54 +98,31 @@ def maximum_likelihood(file_name, lp, ol, rng):
 def plotter(max_point):
     """ Plots into a covariance plot"""
     data = np.loadtxt("bayesian_statistics/data.txt")
+    x = data[:,1]
+    y = data[:,2]
 
-    fig1 = pyplot.figure()
+    cov = np.cov(x, y) # Covariance matrix
+
+    lambda_, v = np.linalg.eig(cov)
+    lambda_ = np.sqrt(lambda_)
+
+    fig, ax = pyplot.subplots()
+
+    for j in range(1, 4):
+        ell = Ellipse(xy=(np.mean(x), np.mean(y)),
+                      width=lambda_[0]*j*2, height=lambda_[1]*j*2,
+                      angle=np.rad2deg(np.arccos(v[0, 0])), lw=2, edgecolor='red')
+        ell.set_facecolor('none')
+        ax.add_artist(ell)
+
     #: Labels
     #pyplot.title(r"\textbf{Covariance plot of L_{peak} and Omega_{Lambda}}")
     pyplot.xlabel(r'$L_{peak}$')
     pyplot.ylabel(r'$\Omega_{\Lambda}$')
 
     #: Plotting main data
-    pyplot.scatter(data[:,1], data[:,2],marker=".",color="0.1")
+    pyplot.scatter(x, y,marker=".",color="0.1")
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
-    pyplot.scatter(max_point[0],max_point[1], marker=".", color="green")
-
-    #: Plotting confidence interval ellipses
-    ##: Calculating largest L_peak variance
-    lp_max_var = np.amax(data[:,1]) - max_point[0]
-    lp_min_var = max_point[0] - np.amin(data[:,1]) 
-    if lp_max_var > lp_min_var:
-        lp_var = lp_max_var
-    else:
-        lp_var = lp_min_var
-
-    print(np.var(data[:,1]))
-    print(np.var(data[:,2]))
-
-    ##: Calculating largest Omega_Lambda variance
-    ol_max_var = np.amax(data[:,2]) - max_point[1]
-    ol_min_var = max_point[1] - np.amin(data[:,2]) 
-
-    if ol_max_var > ol_min_var:
-        ol_var = ol_max_var
-    else:
-        ol_var = ol_min_var
-
-    pyplot.contour(x, y,(x**2/lp_var**2 + y**2/ol_var**2), [5.991], colors='k')
-
-    # Compute ellipse parameters
-    a = lp_var                               # Semimajor axis
-    x0 = max_point[0]                        # Center x-value
-    y0 = max_point[1]                        # Center y-value
-    b = ol_var                               # Semiminor axis
-    phi = 0                                  # Angle betw major axis and x-axis
-
-    # Parametric plot in t
-    resolution = 1000
-    t = np.linspace(0, 2*np.pi, resolution)
-    x = x0 + a * np.cos(t) * np.cos(phi) - b * np.sin(t) * np.sin(phi)
-    y = y0 + a * np.cos(t) * np.sin(phi) + b * np.sin(t) * np.cos(phi)
-    
-    pyplot.plot(x, y)
+    pyplot.scatter(max_point[0],max_point[1], marker=".", color="deepskyblue")
 
     pyplot.savefig("bayesian_statistics/ol_lp.pdf")
