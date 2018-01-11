@@ -96,7 +96,7 @@ def running_like(theta):
         value = like(theta, z_ac[i], m_ac[i], m_err_ac[i])
         print(value)
 
-running_like([lp_true, ol_true])
+#running_like([lp_true, ol_true])
 
 #test = like([lp_true, ol_true], 0.458, 23.11, 0.46)
 #print(test)
@@ -132,6 +132,7 @@ def prob(theta, z, m, merr):
 ndim, nwalkers = 2, 100
 pos = [result["x"] + 1e-4*np.random.randn(ndim) for i in range(nwalkers)]
 sampler = emcee.EnsembleSampler(nwalkers, ndim, prob, args=(z_ac, m_ac, m_err_ac))
+print(sampler)
 sampler.run_mcmc(pos, 500)
 
 samples = sampler.chain[:, 50:, :].reshape((-1, ndim))
