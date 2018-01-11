@@ -1,7 +1,7 @@
-These values were generated at this date and time: 2018-01-11 21:21:23.915800
+These values were generated at this date and time: 2018-01-11 21:26:22.570797
 
 The following values were also calculated in flux space! 
 
 Using a basic MCMC method we have calculated: 
-L_peak: 3.63385961802e+35
-Omega_Lambda: 0.719731237431
+L_peak: 3.56152303808e+35
+Omega_Lambda: 0.66075990377
