@@ -2,6 +2,7 @@ import numpy as np
 from scipy.integrate import quad
 
 import matplotlib.pyplot as pyplot
+from matplotlib import patches
 from matplotlib import rc
 
 import edata
@@ -90,7 +91,7 @@ def maximum_likelihood(file_name, lp, ol, rng):
     ol_max = max_lh_row[2] # For Omega_Lambda
     return lp_max, ol_max
 
-def plotter():
+def plotter(max_point):
     """ Plots into a covariance plot"""
     data = np.loadtxt("bayesian_statistics/data.txt")
 
@@ -100,6 +101,47 @@ def plotter():
     pyplot.xlabel(r'$L_{peak}$')
     pyplot.ylabel(r'$\Omega_{\Lambda}$')
 
+    #: Plotting main data
     pyplot.scatter(data[:,1], data[:,2],marker=".",color="0.1")
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
+    pyplot.scatter(max_point[0],max_point[1], marker=".", color="green")
+
+    #: Plotting confidence interval ellipses
+    ##: Calculating largest L_peak variance
+    lp_max_var = np.amax(data[:,1]) - max_point[0]
+    lp_min_var = max_point[0] - np.amin(data[:,1]) 
+    if lp_max_var > lp_min_var:
+        lp_var = lp_max_var
+    else:
+        lp_var = lp_min_var
+
+    print(np.var(data[:,1]))
+    print(np.var(data[:,2]))
+
+    ##: Calculating largest Omega_Lambda variance
+    ol_max_var = np.amax(data[:,2]) - max_point[1]
+    ol_min_var = max_point[1] - np.amin(data[:,2]) 
+
+    if ol_max_var > ol_min_var:
+        ol_var = ol_max_var
+    else:
+        ol_var = ol_min_var
+
+    pyplot.contour(x, y,(x**2/lp_var**2 + y**2/ol_var**2), [5.991], colors='k')
+
+    # Compute ellipse parameters
+    a = lp_var                               # Semimajor axis
+    x0 = max_point[0]                        # Center x-value
+    y0 = max_point[1]                        # Center y-value
+    b = ol_var                               # Semiminor axis
+    phi = 0                                  # Angle betw major axis and x-axis
+
+    # Parametric plot in t
+    resolution = 1000
+    t = np.linspace(0, 2*np.pi, resolution)
+    x = x0 + a * np.cos(t) * np.cos(phi) - b * np.sin(t) * np.sin(phi)
+    y = y0 + a * np.cos(t) * np.sin(phi) + b * np.sin(t) * np.cos(phi)
+    
+    pyplot.plot(x, y)
+
     pyplot.savefig("bayesian_statistics/ol_lp.pdf")
