@@ -15,18 +15,91 @@ pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
 H0 = (75 /3.09) * (1.0 / (10**19)) # Hubble's constant
 c = (3*(10**8)) # Speed of light in a vacuum
 
-lp_true = 2.92936635 * (10**35) # L_peak 
-ol_true = 0.82 #Omega_Lambda
-
 step = 0.01
 
-
-efile_name = 'data/SCPUnion2.1_mu_vs_z.txt'
-
-def data():
-    sn_data = edata.redshift(efile_name)
+def data(file_name):
+    sn_data = edata.redshift(file_name)
     sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
-    return sn_data
+    return sn_data[0]
 
+def error_function(file_name, lp, ol):
+    dt = data(file_name)
+    m_mdl = np.zeros([len(dt[:,1]),1]) # Storing the model magnitudes
+    #: Producing model data with the redshifts from file
+    for i in range(len(dt[:,1])):
+        m_mdl[i] = model.model_running(H0, c, dt[:,1][i], lp, ol)
 
+    # Joining data and model values array
+    total_data = np.concatenate((dt,m_mdl), axis=1)
 
+    # Chi^2: (data-model)**2/(error**2)
+    chi_sq = ((total_data[:,2] - total_data[:,4])**2) / (total_data[:,3]**2)
+    total_chi_sq = np.sum(chi_sq) # Sums all the values together
+    return total_chi_sq
+
+def likelihood_ratio(chi_sq_crrnt, chi_sq_prpsed):
+    return np.exp(- chi_sq_prpsed + chi_sq_crrnt)
+
+def current_values(file_name, lp, ol):
+    chi_sq_crrnt = error_function(file_name, lp, ol) / 2 # Current chi^2
+
+    #: Proposed values for new Omega_Lambda and L_peak
+    ol_prpsed = np.random.normal(ol, 0.15, 1)
+    lp_prpsed = np.random.normal(lp, 0.2*(10**35),1)
+    print(ol_prpsed, lp_prpsed)
+    if ol_prpsed > 1.0:
+        ol_prpsed = np.random.normal(ol, 0.15, 1)
+
+    chi_sq_prpsed = error_function(file_name, lp_prpsed, ol_prpsed) / 2 # Proposed chi^2
+
+    ratio = likelihood_ratio(chi_sq_crrnt, chi_sq_prpsed) # Calcualting the ratio
+    return ratio, lp_prpsed, ol_prpsed
+
+def mcmc(file_name, lp, ol, rng):
+    lp_ol = np.zeros([rng, 3]) # Storing all our values
+
+    for i in range(len(lp_ol)):
+        lp_n = lp
+        ol_n = ol
+        if i == 0:
+            lp_ol[i][1] = lp
+            lp_ol[i][2] = ol
+        else:
+            ratio_value = current_values(file_name,lp_n,ol_n)
+            lp_ol[i][0] = ratio_value[0]
+            lp_ol[i][1] = ratio_value[1]
+            lp_ol[i][2] = ratio_value[2]
+            if ratio_value[0] > np.random.rand(1):
+                lp = ratio_value[1]
+                ol = ratio_value[2]
+            else:
+                lp = lp
+                ol = ol
+    return lp_ol
+
+def maximum_likelihood(file_name, lp, ol, rng):
+    data = mcmc(file_name, lp, ol, rng)
+    #: Saving data to a textfile to then plot
+    np.savetxt("bayesian_statistics/data.txt", data)
+
+    data_sorted = data[data[:,0].argsort()] # Sorting by the likelihood probability
+    data_likelihood = np.where(data_sorted[:,0] < 1)[0]
+    lto = data_likelihood[-1] # Last entry which is less than one, use as an index
+    max_lh_row = data_sorted[lto] # Row with the maximum likelihood data
+    lp_max = max_lh_row[1] # For L_peak
+    ol_max = max_lh_row[2] # For Omega_Lambda
+    return lp_max, ol_max
+
+def plotter():
+    """ Plots into a covariance plot"""
+    data = np.loadtxt("bayesian_statistics/data.txt")
+
+    fig1 = pyplot.figure()
+    #: Labels
+    #pyplot.title(r"\textbf{Covariance plot of L_{peak} and Omega_{Lambda}}")
+    pyplot.xlabel(r'$L_{peak}$')
+    pyplot.ylabel(r'$\Omega_{\Lambda}$')
+
+    pyplot.scatter(data[:,1], data[:,2],marker=".",color="0.1")
+    pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
+    pyplot.savefig("bayesian_statistics/ol_lp.pdf")
