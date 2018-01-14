@@ -95,7 +95,7 @@ def maximum_likelihood(file_name, lp, ol, rng):
     ol_max = max_lh_row[2] # For Omega_Lambda
     return lp_max, ol_max
 
-def plotter(max_point):
+def plotter(max_point, name):
     """ Plots into a covariance plot"""
     data = np.loadtxt("bayesian_statistics/data.txt")
     x = data[:,1]
@@ -125,4 +125,4 @@ def plotter(max_point):
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
     pyplot.scatter(max_point[0],max_point[1], marker=".", color="deepskyblue")
 
-    pyplot.savefig("bayesian_statistics/ol_lp.pdf")
+    pyplot.savefig("bayesian_statistics/graphs/ol_lp" + str(name) + ".pdf")
