@@ -20,7 +20,7 @@ lp_arnd = 3.40 * (10**35)
 ol_arnd = 0.80
 
 # Amount of steps for the MCMC function to take - higher number, takes longer
-rng = 10
+rng = 1500
 
 # Running the MCMC function, the number of times
 no = 10 
@@ -37,7 +37,7 @@ ollp_store = np.zeros([no,2])
 
 for i in range(no):
     # Running the MCMC function
-    dt = mcmc_simple.maximum_likelihood(efile_name, lp_arnd, ol_arnd, rng)
+    dt = mcmc_simple.maximum_likelihood(efile_name, lp_arnd, ol_arnd, rng, i)
     ollp_store[i] = dt
     mcmc_simple.plotter([dt[0],dt[1]], i) # Plots as a covariance plot
     
@@ -55,6 +55,8 @@ f.write("L_peak: " + str(lp_average) + " +- " + str(lp_std / np.sqrt(no)) + "\n"
 f.write("Omega_Lambda: " + str(ol_average) + " +- " + str(ol_std / np.sqrt(no)) + "\n")
 
 f.close()
+
+mcmc_simple.complete(ollp_store, no)
 
 stop = timeit.default_timer()
 print("Time this program took: ")

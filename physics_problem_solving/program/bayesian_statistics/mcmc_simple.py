@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.integrate import quad
+import glob
 
 import matplotlib
 import matplotlib.pyplot as pyplot
@@ -82,10 +83,11 @@ def mcmc(file_name, lp, ol, rng):
                 ol = ol
     return lp_ol
 
-def maximum_likelihood(file_name, lp, ol, rng):
+def maximum_likelihood(file_name, lp, ol, rng, name):
     data = mcmc(file_name, lp, ol, rng)
     #: Saving data to a textfile to then plot
-    np.savetxt("bayesian_statistics/data.txt", data)
+    np.savetxt("bayesian_statistics/runs/data_run" + str(name) + ".txt", data)
+    #np.savetxt("bayesian_statistics/data.txt", data)
 
     data_sorted = data[data[:,0].argsort()] # Sorting by the likelihood probability
     data_likelihood = np.where(data_sorted[:,0] < 1)[0]
@@ -97,7 +99,7 @@ def maximum_likelihood(file_name, lp, ol, rng):
 
 def plotter(max_point, name):
     """ Plots into a covariance plot"""
-    data = np.loadtxt("bayesian_statistics/data.txt")
+    data = np.loadtxt("bayesian_statistics/runs/data_run" + str(name) + ".txt")
     x = data[:,1]
     y = data[:,2]
 
@@ -126,3 +128,45 @@ def plotter(max_point, name):
     pyplot.scatter(max_point[0],max_point[1], marker=".", color="deepskyblue")
 
     pyplot.savefig("bayesian_statistics/graphs/ol_lp" + str(name) + ".pdf")
+
+def complete(points, number):
+    """ Plots a single graph with all our data. """
+
+    fnames = glob.glob("/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/program/bayesian_statistics/runs/*.txt") # Where the data files are
+    arrays = [np.loadtxt(f) for f in fnames] # Loading the data
+    data = np.concatenate(arrays)
+    
+    fig, ax = pyplot.subplots()
+
+    #: Plotting main data
+    x = data[:,1]
+    y = data[:,2]
+
+    ax.scatter(x,y, marker=".", color="0.1")
+
+    cov = np.cov(x, y) # Covariance matrix
+
+    lambda_, v = np.linalg.eig(cov)
+    lambda_ = np.sqrt(lambda_) 
+
+    for j in range(1, 4):
+        ell = Ellipse(xy=(np.mean(x), np.mean(y)),
+                      width=lambda_[0]*j*2, height=lambda_[1]*j*2,
+                      angle=np.rad2deg(np.arccos(v[0, 0])), lw=2, edgecolor='red')
+        ell.set_facecolor('none')
+        ax.add_artist(ell)
+
+    #: Labels
+    #pyplot.title(r"\textbf{Covariance plot of L_{peak} and Omega_{Lambda}}")
+    pyplot.xlabel(r'$L_{peak}$')
+    pyplot.ylabel(r'$\Omega_{\Lambda}$')
+
+    pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
+    pyplot.scatter(points[:,0],points[:,1], marker=".", color="deepskyblue")
+    pyplot.scatter(np.average(points[:,0]), np.average(points[:,1]), marker=".",
+        color="limegreen")
+
+    pyplot.savefig("bayesian_statistics/graphs/ol_lp_complete.pdf")
+
+
+
