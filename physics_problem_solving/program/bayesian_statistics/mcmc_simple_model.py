@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.integrate import quad
 import glob
 
 import matplotlib
@@ -8,7 +7,7 @@ from matplotlib.patches import Ellipse
 from matplotlib import rc
 
 import edata
-import model
+import simple_model
 
 pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
@@ -33,7 +32,7 @@ def error_function(file_name, lp, ol):
     m_mdl = np.zeros([len(dt[:,1]),1]) # Storing the model magnitudes
     #: Producing model data with the redshifts from file
     for i in range(len(dt[:,1])):
-        m_mdl[i] = model.model_running(H0, c, dt[:,1][i], lp, ol)
+        m_mdl[i] = simple_model.model_running(H0, c, dt[:,1][i], lp, ol)
 
     # Joining data and model values array
     total_data = np.concatenate((dt,m_mdl), axis=1)
@@ -86,7 +85,7 @@ def mcmc(file_name, lp, ol, rng):
 def maximum_likelihood(file_name, lp, ol, rng, name):
     data = mcmc(file_name, lp, ol, rng)
     #: Saving data to a textfile to then plot
-    np.savetxt("bayesian_statistics/runs/data_run" + str(name) + ".txt", data)
+    np.savetxt("bayesian_statistics/runs_simple/data_run" + str(name) + ".txt", data)
     #np.savetxt("bayesian_statistics/data.txt", data)
 
     data_sorted = data[data[:,0].argsort()] # Sorting by the likelihood probability
@@ -99,7 +98,7 @@ def maximum_likelihood(file_name, lp, ol, rng, name):
 
 def plotter(max_point, name):
     """ Plots into a covariance plot"""
-    data = np.loadtxt("bayesian_statistics/runs/data_run" + str(name) + ".txt")
+    data = np.loadtxt("bayesian_statistics/runs_simple/data_run" + str(name) + ".txt")
     x = data[:,1]
     y = data[:,2]
 
@@ -127,12 +126,12 @@ def plotter(max_point, name):
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
     pyplot.scatter(max_point[0],max_point[1], marker=".", color="deepskyblue")
 
-    pyplot.savefig("bayesian_statistics/graphs/ol_lp" + str(name) + ".pdf")
+    pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp" + str(name) + ".pdf")
 
 def complete(points, number):
     """ Plots a single graph with all our data. """
 
-    fnames = glob.glob("/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/program/bayesian_statistics/runs/*.txt") # Where the data files are
+    fnames = glob.glob("/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/program/bayesian_statistics/runs_simple/*.txt") # Where the data files are
     arrays = [np.loadtxt(f) for f in fnames] # Loading the data
     data = np.concatenate(arrays)
     
@@ -166,7 +165,7 @@ def complete(points, number):
     pyplot.scatter(np.average(points[:,0]), np.average(points[:,1]), marker=".",
         color="limegreen")
 
-    pyplot.savefig("bayesian_statistics/graphs/ol_lp_complete.pdf")
+    pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp_complete.pdf")
 
 
 
