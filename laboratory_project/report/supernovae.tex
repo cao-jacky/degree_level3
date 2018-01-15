@@ -621,9 +621,311 @@ The Starlink software (Currie et al 2014) is currently supported by the East Asi
 \bibliography{supernovae}
 
 \clearpage
+
+\appendix
+
+\twocolumngrid
+\vspace{-3ex}
+\section{Uncertainties} \label{app:uncertainties}
+\vspace{-2ex}
+\subsection{Magnitudes}
+\vspace{-2ex}
+Our magnitude values each had an associated uncertainty which was found by using the following equation,
+\begin{equation}
+\alpha_{m} = 2.5 \log_{10} \Big(1 + \frac{1}{\sqrt{C}} \Big),
+\label{eqn:mag_uncert}
+\end{equation}
+
+where $\alpha_{m}$ is the uncertainty on the magnitude, and $C$ is the value obtained for the counts of the supernova explosion. This equation was obtained from \textit{Observing the Universe} [A. J. Norton. \textit{Observing the Universe}, The Open University, 2004].
+
+\vspace{-2ex}
+\subsection{$\boldsymbol{\chi^2}$}
+\vspace{-2ex}
+In comparing the fit of the model to our data we used $\chi^2$ statistics in doing so, we now provide the method which was derived. The equations have been adapted from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
+
+An individual value for $\chi^2$ had to be calculated for each data point and their corresponding value from the model, together these were then summed together to produce a total $\chi^2$ value for each photometric band. The following equation summaries this,
+\begin{equation}
+\chi^2 = \sum_i \frac{(m_i - m(t_i))^2}{\alpha_i^2}, 
+\label{eqn:chisquared}
+\end{equation}
+
+where $m(t_i)$ represents the model magnitude from SNooPy's fitting, $m_i$ is the magnitude that we calculated from our collected data and $\alpha_i$ is the uncertainty on that magnitude.
+
+Then to use this as a quality of fit we had to reduce the final $\chi^2$ value using the number of degrees of freedom,
+\begin{equation}
+\nu = N - \mathcal{N},
+\end{equation}
+
+where $N$ is the number of independent data points with $\mathcal{N}$ parameters, this latter value was taken to be the number of parameters that SNooPy used in their fittings.
+
+Finally, the reduced $\chi^2$ values would be calculated as follows,
+\begin{equation}
+\chi^2_{\nu} = \frac{\chi^2}{\nu},
+\end{equation}
+
+where $\chi^2$ is as calculated in Equation \ref{eqn:chisquared}, and $\nu$ is the number of degrees of freedom.
+
+\vspace{-2ex}
+\subsection{Hubble's Constant, $\boldsymbol{H_0}$}
+\vspace{-2ex}
+The following calculations makes use of equations and theories derived from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
+ 
+For our calculation of Hubble's Constant we derived the uncertainty as follows.  
+
+To use Hubble's Law and the redshift-velocity relationship as defined by Equations \ref{eqn:h_0} and \ref{eqn:redshift}, we firstly had to retrieve values for the quoted redshifts for our supernovae. Their entries on the Transient Name Server (TNS) had no associated errors, so we looked at the spectrograph's manual in attempt to find a value. 
+
+We only used one of our objects to calculate $H_0$, 2017hhz, and the `SED Machine' was the spectrgraph which identified it's redshift. According to C. C. Ngeow et al [C. C. Ngeow et al. \textit{The SED Machine: A Spectrograph to Efficiently Classify Transient Events Discovered by PTF}. International Astronomical Union, 290, 2012.] this machine provides a spectrophotometric calibration of $\sim 5\%$. Therefore we took $5\%$ of our redshift value as it's uncertainty. 
+
+Our next uncertainty of concern was the value for the distance to the supernova, not the distance modulus. We derived the following equation for the uncertainty in the distance,
+\begin{equation}
+\alpha_{d} = 10^{\delta} \times \ln{10} \times \alpha_{\mu}, 
+\end{equation}
+
+where $\alpha_{d}$ is given in parsecs, $\delta= ([\mu/1]+1)$ and $\alpha_{\mu}$ as the uncertainty on the distance modulus, $\mu$, as found by SNooPy. 
+
+Putting all of this together, we then find a value for the uncertainty of Hubble's Constant,
+\begin{equation}
+\alpha_{H_0} = H_0 \sqrt{\Big(\frac{\alpha_z}{z}\Big)^2 + \Big(\frac{\alpha_d}{d}\Big)^2},
+\end{equation}
+
+where $H_0$ is the calculated value for Hubble's Constant, $\alpha_z$ is the uncertainty on redshift $z$, and $\alpha_d$ is the uncertainty on distance $d$.
+
+\clearpage
+
 \onecolumngrid
 \vspace{-3ex}
-\appendix
+\section{Programs created}
+\vspace{-2ex}
+Accessible from \url{https://community.dur.ac.uk/jacky.cao/#l3lp}, in Table \ref{table:programs} we provide a detailed list of the scripts that we created for our experiment, the majority of which are simple calculators or data processors.
+
+{\renewcommand{\arraystretch}{1.5}%
+\begin{table}[h!]
+\centering    
+\begin{tabularx}{\textwidth}{c@{\hskip 20pt}X}
+    \hline
+    \textbf{Script Name} & \textbf{Script Description} \\ 
+     \texttt{chi\_squared} & $\chi^2$ and reduced $\chi^2$ would be calculated for the B and V photometric bands for 2017hhz and 2017hle. \\
+     \texttt{covariance} & Before we had managed to output the covariance triangle plots from \texttt{fitMCMC()} we had managed to retrieve the covariance matrixes for 2017hhz and 2017hle. Here a script was made to plot a basic heat map of the data. \\
+     \texttt{flat\_fielder} & Contrary to the name, this script only successfully copied the data from my hard drive to my working folders. Commands had to be ran in a Terminal for the data to be flat fielded using our flats. \\
+     \texttt{galaxy\_subtraction} & Two frames had to have already been aligned for this program to work - we used the program kindly provided by Dr. M. Swinbank. This script would firstly attempt a Gaussian convolution on one of the frames, then it would scale the data by comparing two values for the counts of an object, one from each frame. After this had been done, the subtraction could then be performed. \\
+     \texttt{light\_curves} & This script was initially made to quickly show our calculated magnitudes as a light curve in matplotlib - before it had been ran through SNooPy. \\
+     \texttt{magnitude\_calculations} & After photometry had been performed, we would then run this script and obtain magnitudes for our supernovae with an uncertainty. It would accept a specific file format containing the known magnitudes of the calibration stars, and the counts for those stars and our supernova in the B and V photometric bands. \\
+    \hline      
+\end{tabularx}
+\caption{The scripts created to supplement and aid in our data analysis. }
+\label{table:programs}
+\end{table}
+
+\vspace{-3ex}
+\section{Sample data}
+\vspace{-3ex}
+\subsection{Example analysis for a day's worth of data}
+\vspace{-2ex}
+
+Below, we provide an example of the data file that was used by the script \texttt{magnitude\_calculations} in calculating the magnitudes for the 2017hhz data from 20th October 2017.
+
+\begin{center}
+2017hhz--17\_10\_20.txt
+\line(1,0){500}
+\vspace{-4ex}
+\end{center}
+\begin{lstlisting}
+# supernova data
+# 2017hhz 17_10_20
+
+# star catalogue objects
+# name, V-mag, B-mag, r-mag, i-mag
+512-002598 14.952 15.719 14.129 13.953
+512-002599 16.158 17.105 15.887 15.79
+
+# v-band
+# name, mean counts, counts error, sky value
+512-002598 804.14 2.3613 137.46
+512-002599 119.41 1.0980 101.86
+
+2017hhz 77.5 1.5113 121.16
+
+# b-band
+# name, mean counts, mean counts error, sky value
+512-002598 206.53 1.4903 37.667
+512-002599 47.787 1.4286 28.199
+
+2017hhz 69.830 1.1861 42.177
+\end{lstlisting}
+\begin{center}
+\vspace{-7ex}
+\line(1,0){500}
+\end{center}
+
+Some of the data provided in the file had become obsolete as the project progressed. For example we did not need the magnitudes of the calibration stars in the r,i photometric bands. Plus the error in the counts from GAIA and the sky value were not required for our analysis in the end. 
+
+\clearpage
+
+In the following table we present the data which were used to calculate the zero points for our B and V frames for the data from 20th October 2017. We also provide the final average zero points for each band and the values that were averaged to produce that value.
+
+\vspace{2ex}
+\begin{table}[h!]
+\centering    
+\begin{tabular}{c@{\hskip 5pt} c @{\hskip 15pt}c@{\hskip 15pt} c@{\hskip 15pt} c@{\hskip 15pt}}
+    \hline
+    \textbf{Band} & \textbf{Object} & \textbf{Apparent Magnitude} & \textbf{Mean Counts} & \textbf{Zero Point\footnotemark}  \\ 
+    V & 512-002598 & 14.952 & 804.14 & 22.215329164   \\
+     & 512-002599 & 16.158 & 119.41 & 21.350601745 \\
+     & & & \textit{Average:} & 21.782965454   \\
+    B & 512-002598 & 15.719 & 206.53 & 21.5064578626   \\
+     & 512-002599 & 17.105 & 47.787 & 21.3032744175 \\
+     & & & \textit{Average:} & 21.40486614 \\
+       
+    \hline      
+\end{tabular}
+\footnotetext{We have quoted these values in full to provide an easy comparison for the reader, if they so choose to reproduce our results using our method and data.}
+\caption{Table showing the apparent magnitudes and mean counts of our calibration stars, the zero-points and the final average have been shown for each of the photometric bands which we used. Equation \ref{eqn:mag_counts} was employed in the calculations for the zero point. The magnitudes were obtained from the UCAC4 Catalogue and the mean counts by using the aperture photometry tool on GAIA.} 
+\label{table:zero_point}
+\end{table}
+
+\vspace{-3ex}
+\subsection{Type Ia Supernova 2017hhz}
+\vspace{-2ex}
+For the magnitudes used in the SNooPy fitting of the B and V light curves, we now present in Table \ref{table:2017hhz_appendix_table} which day's data we used in that fitting, the telescopes used on those days, and the names of the frames which were used in our analysis. 
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{c@{\hskip 10pt}c@{\hskip 10pt}X X} 
+ \hline
+ \textbf{Date Observed} & \textbf{Telescope} & \textbf{Files for B} & \textbf{Files for V} \\ [0.5ex] 
+ 20/10/17 & pt5m & (5) \texttt{dbr0433809.fits} to \texttt{dbr0433813.fits} & (5) \texttt{dbr0433814.fits} to \texttt{dbr0433818.fits} \\
+ 22/10/17 & pt5m & (5) \texttt{dbr0434562.fits} to \texttt{dbr0434566.fits} & (5) \texttt{dbr0434567.fits} to \texttt{dbr0434571.fits} \\
+ 23/10/17 & pt5m & (5) \texttt{dbr0435054.fits} to \texttt{dbr0435058.fits} & (5) \texttt{dbr0435059.fits} to \texttt{dbr0435063.fits} \\
+ 26/10/17 & FE16 & (4) \texttt{d0038.fits} to \texttt{d0041.fits} & (4) \texttt{d0034.fits} to \texttt{d0037.fits} \\
+ 29/10/17 & pt5m & (5) \texttt{dbr0437486.fits} to \texttt{dbr0437490.fits} & (5) \texttt{dbr0437491.fits} to \texttt{dbr0437495.fits} \\
+ 30/10/17 & pt5m & (5) \texttt{dbr0437816.fits} to \texttt{dbr0437820.fits} & (5) \texttt{dbr0437821.fits} to \texttt{dbr0437825.fits} \\
+ 05/11/17 & FE16 & (8) \texttt{db0054.fits} to \texttt{db0062.fits} & (8) \texttt{db0038.fits} to \texttt{db0045.fits} \\
+ 11/11/17 & FE16 & (15) \texttt{db0043.fits} to \texttt{db0058.fits} & (7) \texttt{db0059.fits} to \texttt{db0066.fits} \\
+ 16/11/17 & FE16 & (8) \texttt{d0156.fits} to \texttt{d0163.fits} & (8) \texttt{d0147.fits} to \texttt{d0155.fits} \\
+ 17/11/17 & FE16 & (8) \texttt{d0019.fits} to \texttt{d0027.fits} & (8) \texttt{d0028.fits} to \texttt{d0035.fits} \\
+ \hline
+\end{tabularx}
+\caption{Table detailing the telescope and final frames used for each day's photometry for the supernova 2017hhz. The acronyms for the telescopes are as follows: pt5m, the robotic 0.5 m telescope in La Palma; FE16, Far-East-16, the 16 inch telescope from the Department of Physic's Durham Telescope Array. The bracketed number given before the file names specifies the number of files that were used in the analysis.}
+\vspace{-0.5em}
+\label{table:2017hhz_appendix_table}
+\end{table}
+
+\clearpage
+
+
+\twocolumngrid
+\vspace{-3ex}
+\section{Using SNooPy} \label{app:using_snoopy}
+\vspace{-2ex}
+\textit{A brief overview and tutorial of how SNooPy can be utilised to fit Type Ia light curves.} \\
+
+\textit{The SNooPy files which we used for processing 2017hhz and 2017hle can be found at} \url{https://community.dur.ac.uk/jacky.cao/#l3lp}. \textit{The standard example files can be retrieved from the Carnegie Supernova Project,} \url{https://csp.obs.carnegiescience.edu/data/snpy}. \\
+
+For SNooPy to fit Type Ia light curves, the correct file format to store our data was required. Below we give an example of the type of file that would contain B and V band data, \texttt{supernova.txt}.
+\begin{center}
+supernova.txt
+\line(1,0){245}
+\vspace{-4ex}
+\end{center}
+\begin{lstlisting}
+sn_name sn_redshift sn_ra sn_dec
+filter Bs
+date_1   bmag_1   bmag_err_1
+date_2   bmag_2   bmag_err_2
+date_3   bmag_3   bmag_err_3
+filter Vs
+date_1   vmag_1   vmag_err_1
+date_2   vmag_2   vmag_err_2
+date_3   vmag_3   vmag_err_3
+\end{lstlisting}
+\begin{center}
+\vspace{-7ex}
+\line(1,0){245}
+\end{center}
+
+We now detail the steps that we took when using this Python package.
+
+\subsection{A basic fit with \texttt{fit()}}
+\begin{enumerate}
+ \item SNooPy was initially loaded into a command line interface in the folder of \texttt{supernova.txt} with the command \texttt{snpy}.
+ \item We then loaded the supernova text file with,
+ \begin{equation*}
+ \texttt{s = get\_sn(`supernova.txt')} .
+ \end{equation*}
+ 
+ \item An optional step, but one which we chose to make was to use the Carnegie Supernova Project's passbands as they would include spectral corrections, \textit{S-corrections}, doing this for the B and V bands by using,
+ \begin{equation*}
+ \begin{split}
+ \texttt{s = restbands[`Bs'] = `B' } , \\ 
+ \texttt{s = restbands[`Vs'] = `V' } .
+ \end{split}
+ \end{equation*}
+ 
+ \item Once this was done, the basic fit was performed, selecting the two photometric bands which we used,
+ \begin{equation*}
+ \texttt{s = s.fit([`Bs',`Vs'])} . 
+ \end{equation*}
+ 
+ A matplotlib interface would then appear and you could view the data which was plotted with their uncertainties plus the fitted light curve. The bands which were selected would correlate to what would be shown in the plots.
+ 
+ \item We could then view the parameters that SNooPy chose when fitting the light curves,
+ \begin{equation*}
+ \texttt{s.summary()} .
+ \end{equation*}
+ 
+ The host galaxy extinction, time for B-maximum, the distance modulus, and the decline-rate parameter would be shown with their statistical uncertainties.
+ 
+ \item To retrieve the fitted data we used,
+ \begin{equation*}
+ \texttt{s.dump\_lc()} .
+ \end{equation*}
+ 
+ This function would dump your supernova data and the light curve data in the same folder you were operating in. The file formats used are '\texttt{.dat}'.
+\end{enumerate}
+
+\subsection{A more complex fit with \texttt{fitMCMC()}}
+\begin{enumerate}
+ \item Instead of using the \texttt{fit()} function which uses the Levenberg-Marquardt method to fit the light curves, a Markov Chain Monte Carlo method can be used instead. To invoke a fit with this method, the following command would be used, 
+ \begin{equation*}
+ \texttt{s.fitMCMC()} .
+ \end{equation*}
+ 
+ It is worth noting that as this is a more complex method, it is sampling multiple probabilities, it will take more time to render a final plot. 
+ 
+ \item To produce the covariance plots, the function \texttt{fitMCMC()} could be used. However, the \texttt{fit()} function must be called before doing so,
+ \begin{equation*}
+ \texttt{s = s.fit([`Bs',`Vs'])} . 
+ \end{equation*}
+ 
+ Once this function has been called the following command should then allow us to produce the covariance (triangle) plots,
+ \begin{equation*}
+ \texttt{s.fitMCMC(plot\_triangle = True)} . 
+ \end{equation*}
+ 
+ Again, this will take some time to render. 
+ 
+ We also note that it may be case that the \texttt{corner} Python module needs installing before the covariance plots can be produced, in which case this must be done. 
+ 
+ Furthermore, once this has been completed, one of the files in the SNooPy installation needs to be change to account for this new module, \texttt{sn.py}.
+ 
+ \item To obtain actual values for the correlations, the full covariance matrix can be access with, 
+ \begin{equation*}
+ \texttt{s.model.C}.
+ \end{equation*}
+\end{enumerate}
+
+N.B.: The full stops and commas at the end of the functions should not be included, they have been added for grammatical and aesthetic reasons.
+
+For other types of Type Ia supernovae, a different form of the standard template has to be selected, that can be done with this command,
+\begin{equation*}
+\texttt{s.k\_version = `type'},
+\end{equation*}
+
+where \texttt{type} could be \texttt{91bg} to represent Type Ia-91bg supernovae.
+
+\clearpage
+
+\onecolumngrid
+\vspace{-3ex}
 \section{Objects Log} \label{app:objects_log}
 \vspace{-2ex}
 In Table \ref{table:app_objects_log} we provide a chronological list of the objects that were chosen to be observed. We provide the celestial coordinates, the magnitude of the object on it's discovery date, the discovery date, and notes providing extra information. Not all of the objects in the table were observed for an extended period. However, most of them were observed for at least a couple of nights to ensure suitability. We made extensive use of the `Object Visibility' tool by the Isaac Newton Group of Telescopes, a program which shows what path an object would make as the night progressed. Noting that Department's telescopes in Durham are located at roughly a longitude of -1.5\degree{East}, latitude of +54\degree, altitude of 152 m, and has a UTC offset of 0 hours.  We also note that we did not just focus on Type Ia supernovae, as seen in Table \ref{table:app_objects_log} and in our observation logs in Appendix \ref{app:observations_log}.
@@ -820,253 +1122,7 @@ Given in Table \ref{table:app_observation_logs} are all the observations which w
 \label{table:app_observation_logs}
 \end{table}
 
-
 \clearpage
 
-\twocolumngrid
-\vspace{-3ex}
-\section{Using SNooPy} \label{app:using_snoopy}
-\vspace{-2ex}
-\textit{A brief overview and tutorial of how SNooPy can be utilised to fit Type Ia light curves.} \\
-
-\textit{The SNooPy files which we used for processing 2017hhz and 2017hle can be found at} \url{https://community.dur.ac.uk/jacky.cao/#l3lp}. \textit{The standard example files can be retrieved from the Carnegie Supernova Project,} \url{https://csp.obs.carnegiescience.edu/data/snpy}. \\
-
-For SNooPy to fit Type Ia light curves, the correct file format to store our data was required. Below we give an example of the type of file that would contain B and V band data, \texttt{supernova.txt}.
-\begin{center}
-supernova.txt
-\line(1,0){245}
-\vspace{-4ex}
-\end{center}
-\begin{lstlisting}
-sn_name sn_redshift sn_ra sn_dec
-filter Bs
-date_1   bmag_1   bmag_err_1
-date_2   bmag_2   bmag_err_2
-date_3   bmag_3   bmag_err_3
-filter Vs
-date_1   vmag_1   vmag_err_1
-date_2   vmag_2   vmag_err_2
-date_3   vmag_3   vmag_err_3
-\end{lstlisting}
-\begin{center}
-\vspace{-7ex}
-\line(1,0){245}
-\end{center}
-
-We now detail the steps that we took when using this Python package.
-
-\subsection{A basic fit with \texttt{fit()}}
-\begin{enumerate}
- \item SNooPy was initially loaded into a command line interface in the folder of \texttt{supernova.txt} with the command \texttt{snpy}.
- \item We then loaded the supernova text file with,
- \begin{equation*}
- \texttt{s = get\_sn(`supernova.txt')} .
- \end{equation*}
- 
- \item An optional step, but one which we chose to make was to use the Carnegie Supernova Project's passbands as they would include spectral corrections, \textit{S-corrections}, doing this for the B and V bands by using,
- \begin{equation*}
- \begin{split}
- \texttt{s = restbands[`Bs'] = `B' } , \\ 
- \texttt{s = restbands[`Vs'] = `V' } .
- \end{split}
- \end{equation*}
- 
- \item Once this was done, the basic fit was performed, selecting the two photometric bands which we used,
- \begin{equation*}
- \texttt{s = s.fit([`Bs',`Vs'])} . 
- \end{equation*}
- 
- A matplotlib interface would then appear and you could view the data which was plotted with their uncertainties plus the fitted light curve. The bands which were selected would correlate to what would be shown in the plots.
- 
- \item We could then view the parameters that SNooPy chose when fitting the light curves,
- \begin{equation*}
- \texttt{s.summary()} .
- \end{equation*}
- 
- The host galaxy extinction, time for B-maximum, the distance modulus, and the decline-rate parameter would be shown with their statistical uncertainties.
- 
- \item To retrieve the fitted data we used,
- \begin{equation*}
- \texttt{s.dump\_lc()} .
- \end{equation*}
- 
- This function would dump your supernova data and the light curve data in the same folder you were operating in. The file formats used are '\texttt{.dat}'.
-\end{enumerate}
-
-\subsection{A more complex fit with \texttt{fitMCMC()}}
-\begin{enumerate}
- \item Instead of using the \texttt{fit()} function which uses the Levenberg-Marquardt method to fit the light curves, a Markov Chain Monte Carlo method can be used instead. To invoke a fit with this method, the following command would be used, 
- \begin{equation*}
- \texttt{s.fitMCMC()} .
- \end{equation*}
- 
- It is worth noting that as this is a more complex method, it is sampling multiple probabilities, it will take more time to render a final plot. 
- 
- \item To produce the covariance plots, the function \texttt{fitMCMC()} could be used. However, the \texttt{fit()} function must be called before doing so,
- \begin{equation*}
- \texttt{s = s.fit([`Bs',`Vs'])} . 
- \end{equation*}
- 
- Once this function has been called the following command should then allow us to produce the covariance (triangle) plots,
- \begin{equation*}
- \texttt{s.fitMCMC(plot\_triangle = True)} . 
- \end{equation*}
- 
- Again, this will take some time to render. 
- 
- We also note that it may be case that the \texttt{corner} Python module needs installing before the covariance plots can be produced, in which case this must be done. 
- 
- Furthermore, once this has been completed, one of the files in the SNooPy installation needs to be change to account for this new module, \texttt{sn.py}.
- 
- \item To obtain actual values for the correlations, the full covariance matrix can be access with, 
- \begin{equation*}
- \texttt{s.model.C}.
- \end{equation*}
-\end{enumerate}
-
-N.B.: The full stops and commas at the end of the functions should not be included, they have been added for grammatical and aesthetic reasons.
-
-For other types of Type Ia supernovae, a different form of the standard template has to be selected, that can be done with this command,
-\begin{equation*}
-\texttt{s.k\_version = `type'},
-\end{equation*}
-
-where \texttt{type} could be \texttt{91bg} to represent Type Ia-91bg supernovae.
-
-\clearpage
-
-\onecolumngrid
-\vspace{-3ex}
-\section{Programs created}
-\vspace{-2ex}
-Accessible from \url{https://community.dur.ac.uk/jacky.cao/#l3lp}, in Table \ref{table:programs} we provide a detailed list of the scripts that we created for our experiment, the majority of which are simple calculators or data processors.
-
-{\renewcommand{\arraystretch}{1.5}%
-\begin{table}[h!]
-\centering    
-\begin{tabularx}{\textwidth}{c@{\hskip 20pt}X}
-    \hline
-    \textbf{Script Name} & \textbf{Script Description} \\ 
-     \texttt{chi\_squared} & $\chi^2$ and reduced $\chi^2$ would be calculated for the B and V photometric bands for 2017hhz and 2017hle. \\
-     \texttt{covariance} & Before we had managed to output the covariance triangle plots from \texttt{fitMCMC()} we had managed to retrieve the covariance matrixes for 2017hhz and 2017hle. Here a script was made to plot a basic heat map of the data. \\
-     \texttt{flat\_fielder} & Contrary to the name, this script only successfully copied the data from my hard drive to my working folders. Commands had to be ran in a Terminal for the data to be flat fielded using our flats. \\
-     \texttt{galaxy\_subtraction} & Two frames had to have already been aligned for this program to work - we used the program kindly provided by Dr. M. Swinbank. This script would firstly attempt a Gaussian convolution on one of the frames, then it would scale the data by comparing two values for the counts of an object, one from each frame. After this had been done, the subtraction could then be performed. \\
-     \texttt{light\_curves} & This script was initially made to quickly show our calculated magnitudes as a light curve in matplotlib - before it had been ran through SNooPy. \\
-     \texttt{magnitude\_calculations} & After photometry had been performed, we would then run this script and obtain magnitudes for our supernovae with an uncertainty. It would accept a specific file format containing the known magnitudes of the calibration stars, and the counts for those stars and our supernova in the B and V photometric bands. \\
-    \hline      
-\end{tabularx}
-\caption{The scripts created to supplement and aid in our data analysis. }
-\label{table:programs}
-\end{table}
-
-\vspace{-3ex}
-\section{Set of sample data}
-\vspace{-2ex}
-Below, we provide an example of the data file that was used by the script \texttt{magnitude\_calculations} in calculating the magnitudes for a day's set of data.
-
-\begin{center}
-2017hhz--17\_10\_20.txt
-\line(1,0){500}
-\vspace{-4ex}
-\end{center}
-\begin{lstlisting}
-# supernova data
-# 2017hhz 17_10_20
-
-# star catalogue objects
-# name, V-mag, B-mag, r-mag, i-mag
-512-002598 14.952 15.719 14.129 13.953
-512-002599 16.158 17.105 15.887 15.79
-
-# v-band
-# name, mean counts, counts error, sky value
-512-002598 804.14 2.3613 137.46
-512-002599 119.41 1.0980 101.86
-
-2017hhz 77.5 1.5113 121.16
-
-# b-band
-# name, mean counts, mean counts error, sky value
-512-002598 206.53 1.4903 37.667
-512-002599 47.787 1.4286 28.199
-
-2017hhz 69.830 1.1861 42.177
-\end{lstlisting}
-\begin{center}
-\vspace{-7ex}
-\line(1,0){500}
-\end{center}
-
-Some of the data provided in the file had become obsolete as the project progressed. For example we did not need the magnitudes of the calibration stars in the r,i photometric bands. Plus the error in the counts from GAIA and the sky value was not required in the end. 
-
-\clearpage
-
-\twocolumngrid
-\vspace{-3ex}
-\section{Uncertainties} \label{app:uncertainties}
-\vspace{-2ex}
-\subsection{Magnitudes}
-\vspace{-2ex}
-Our magnitude values each had an associated uncertainty which was found by using the following equation,
-\begin{equation}
-\alpha_{m} = 2.5 \log_{10} \Big(1 + \frac{1}{\sqrt{C}} \Big),
-\label{eqn:mag_uncert}
-\end{equation}
-
-where $\alpha_{m}$ is the uncertainty on the magnitude, and $C$ is the value obtained for the counts of the supernova explosion. This equation was obtained from \textit{Observing the Universe} [A. J. Norton. \textit{Observing the Universe}, The Open University, 2004].
-
-\vspace{-2ex}
-\subsection{$\boldsymbol{\chi^2}$}
-\vspace{-2ex}
-In comparing the fit of the model to our data we used $\chi^2$ statistics in doing so, we now provide the method which was derived. The equations have been adapted from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
-
-An individual value for $\chi^2$ had to be calculated for each data point and their corresponding value from the model, together these were then summed together to produce a total $\chi^2$ value for each photometric band. The following equation summaries this,
-\begin{equation}
-\chi^2 = \sum_i \frac{(m_i - m(t_i))^2}{\alpha_i^2}, 
-\label{eqn:chisquared}
-\end{equation}
-
-where $m(t_i)$ represents the model magnitude from SNooPy's fitting, $m_i$ is the magnitude that we calculated from our collected data and $\alpha_i$ is the uncertainty on that magnitude.
-
-Then to use this as a quality of fit we had to reduce the final $\chi^2$ value using the number of degrees of freedom,
-\begin{equation}
-\nu = N - \mathcal{N},
-\end{equation}
-
-where $N$ is the number of independent data points with $\mathcal{N}$ parameters, this latter value was taken to be the number of parameters that SNooPy used in their fittings.
-
-Finally, the reduced $\chi^2$ values would be calculated as follows,
-\begin{equation}
-\chi^2_{\nu} = \frac{\chi^2}{\nu},
-\end{equation}
-
-where $\chi^2$ is as calculated in Equation \ref{eqn:chisquared}, and $\nu$ is the number of degrees of freedom.
-
-\vspace{-2ex}
-\subsection{Hubble's Constant, $\boldsymbol{H_0}$}
-\vspace{-2ex}
-The following calculations makes use of equations and theories derived from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
- 
-For our calculation of Hubble's Constant we derived the uncertainty as follows.  
-
-To use Hubble's Law and the redshift-velocity relationship as defined by Equations \ref{eqn:h_0} and \ref{eqn:redshift}, we firstly had to retrieve values for the quoted redshifts for our supernovae. Their entries on the Transient Name Server (TNS) had no associated errors, so we looked at the spectrograph's manual in attempt to find a value. 
-
-We only used one of our objects to calculate $H_0$, 2017hhz, and the `SED Machine' was the spectrgraph which identified it's redshift. According to C. C. Ngeow et al [C. C. Ngeow et al. \textit{The SED Machine: A Spectrograph to Efficiently Classify Transient Events Discovered by PTF}. International Astronomical Union, 290, 2012.] this machine provides a spectrophotometric calibration of $\sim 5\%$. Therefore we took $5\%$ of our redshift value as it's uncertainty. 
-
-Our next uncertainty of concern was the value for the distance to the supernova, not the distance modulus. We derived the following equation for the uncertainty in the distance,
-\begin{equation}
-\alpha_{d} = 10^{\delta} \times \ln{10} \times \alpha_{\mu}, 
-\end{equation}
-
-where $\alpha_{d}$ is given in parsecs, $\delta= ([\mu/1]+1)$ and $\alpha_{\mu}$ as the uncertainty on the distance modulus, $\mu$, as found by SNooPy. 
-
-Putting all of this together, we then find a value for the uncertainty of Hubble's Constant,
-\begin{equation}
-\alpha_{H_0} = H_0 \sqrt{\Big(\frac{\alpha_z}{z}\Big)^2 + \Big(\frac{\alpha_d}{d}\Big)^2},
-\end{equation}
-
-where $H_0$ is the calculated value for Hubble's Constant, $\alpha_z$ is the uncertainty on redshift $z$, and $\alpha_d$ is the uncertainty on distance $d$.
-
-\clearpage
 
 \end{document}

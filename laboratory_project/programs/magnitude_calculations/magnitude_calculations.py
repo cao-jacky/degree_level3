@@ -115,11 +115,17 @@ def data_return(data):
     z_1_v = sc_data[0][1] + (2.5 * np.log10(v_band_cal[0][1]))
     z_2_v = sc_data[1][1] + (2.5 * np.log10(v_band_cal[1][1]))
 
+    print(z_1_v, z_2_v)
+
     z_1_b = sc_data[0][2] + (2.5 * np.log10(b_band_cal[0][1]))
     z_2_b = sc_data[1][2] + (2.5 * np.log10(b_band_cal[1][1]))
 
+    print(z_1_b, z_2_b)
+
     z_v_av = np.average([z_1_v, z_2_v])
     z_b_av = np.average([z_1_b, z_2_b])
+
+    print(z_v_av, z_b_av)
 
     # Calculating magnitudes of v and b band
     m_v = z_v_av - (2.5 * np.log10(v_band[0]))
@@ -142,5 +148,5 @@ def data_return(data):
 
 if __name__ == '__main__':
 
-    data_return("2017hle/2017hle--17_11_18.txt")
+    data_return("2017hhz/2017hhz--17_10_20.txt")
 
