@@ -26,7 +26,7 @@ rng = 10
 no = 10 
 
 #---------- Saving to a text file ----------#
-txt_name = "/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/mcmc_results.txt"
+txt_name = "/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/mcmc_simple_model_results.txt"
 f = open(txt_name, 'w')
 f.write("These values were generated at this date and time: " + str(now) + '\n')
 f.write("\n")

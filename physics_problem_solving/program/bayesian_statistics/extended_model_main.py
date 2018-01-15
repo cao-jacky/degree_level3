@@ -21,15 +21,15 @@ orad_true = 0.000_041_6 # Omega_r
 # Testing values
 lp_arnd = 3.40 * (10**35)
 ol_arnd = 0.80
-ok_arnd = -0.002
-om_arnd = 0.3
+ok_arnd = -0.0025
+om_arnd = 0.2
 orad_arnd = 0.000_05
 
 # Amount of steps for the MCMC function to take - higher number, takes longer
 rng = 100
 
 # Running the MCMC function, the number of times
-no = 1
+no = 10
 
 #---------- Saving to a text file ----------#
 txt_name = "/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/mcmc_extended_model_results.txt"
@@ -58,13 +58,23 @@ for i in range(no):
     f.write("Omega_r: " + str(dt[4]) + "\n")
     f.write("\n")
 
-f.write("Final average values for L_peak and Omega_Lambda and their uncertainties: \n")
-lp_average = np.average(ollp_store[:,0])
-ol_average = np.average(ollp_store[:,1])
-lp_std = np.std(ollp_store[:,0])
-ol_std = np.std(ollp_store[:,1])
+f.write("Final average values and their uncertainties: \n")
+lp_average = np.average(values_store[:,0])
+ol_average = np.average(values_store[:,1])
+ok_average = np.average(values_store[:,2])
+om_average = np.average(values_store[:,3])
+orad_average = np.average(values_store[:,4])
+lp_std = np.std(values_store[:,0])
+ol_std = np.std(values_store[:,1])
+ok_std = np.std(values_store[:,2])
+om_std = np.std(values_store[:,3])
+orad_std = np.std(values_store[:,4])
+
 f.write("L_peak: " + str(lp_average) + " +- " + str(lp_std / np.sqrt(no)) + "\n")
 f.write("Omega_Lambda: " + str(ol_average) + " +- " + str(ol_std / np.sqrt(no)) + "\n")
+f.write("Omega_k: " + str(ok_average) + " +- " + str(ok_std / np.sqrt(no)) + "\n")
+f.write("Omega_m: " + str(om_average) + " +- " + str(om_std / np.sqrt(no)) + "\n")
+f.write("Omega_r: " + str(orad_average) + " +- " + str(orad_std / np.sqrt(no)) + "\n")
 
 f.close()
 

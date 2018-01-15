@@ -37,10 +37,11 @@ def current_values(file_name, lp, ol, ok, om, orad):
 
     #: Proposed values for new Omega_Lambda and L_peak
     ol_prpsed = np.random.normal(ol, 0.15, 1)
-    lp_prpsed = np.random.normal(lp, 0.2*(10**35), 1)
-    ok_prpsed = np.random.normal(ok, 0.004, 1)
-    om_prpsed = np.random.normal(om, 0.2, 1)
-    orad_prpsed = np.random.normal(orad, 0.000_03, 1)
+    lp_prpsed = np.random.normal(lp, 0.25*(10**35), 1)
+    ok_prpsed = np.random.normal(ok, 0.002, 1)
+    om_prpsed = np.random.normal(om, 0.1, 1)
+    orad_prpsed = np.random.normal(orad, 0.000_02, 1)
+    print(ol_prpsed,lp_prpsed,ok_prpsed,om_prpsed,orad_prpsed)
     if ol_prpsed > 1.0:
         ol_prpsed = np.random.normal(ol, 0.15, 1)
 
@@ -91,7 +92,7 @@ def mcmc(file_name, lp, ol, ok, om, orad, rng):
 def maximum_likelihood(file_name, lp, ol, ok, om, orad, rng, name):
     data = mcmc(file_name, lp, ol, ok, om, orad, rng)
     #: Saving data to a textfile to then plot
-    #np.savetxt("bayesian_statistics/runs_extended/data_run" + str(name) + ".txt", data)
+    np.savetxt("runs_extended/data_run" + str(name) + ".txt", data)
     #np.savetxt("bayesian_statistics/data.txt", data)
 
     data_sorted = data[data[:,0].argsort()] # Sorting by the likelihood probability

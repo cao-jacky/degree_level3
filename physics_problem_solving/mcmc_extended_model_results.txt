@@ -1,0 +1,80 @@
+These values were generated at this date and time: 2018-01-15 16:54:52.802483
+
+The following values were also calculated in flux space! 
+
+Using a basic MCMC method we have calculated on run0: 
+L_peak: 2.64365928833e+35
+Omega_Lambda: 0.946400802327
+Omega_k: -0.0084722233851
+Omega_m: 0.426127241127
+Omega_r: 6.71454068927e-05
+
+Using a basic MCMC method we have calculated on run1: 
+L_peak: 2.99327224978e+35
+Omega_Lambda: 0.725918072506
+Omega_k: 0.00139322455768
+Omega_m: 0.463203555588
+Omega_r: 8.24638804675e-05
+
+Using a basic MCMC method we have calculated on run2: 
+L_peak: 3.6411910452e+35
+Omega_Lambda: 0.554356111469
+Omega_k: -0.00374330715892
+Omega_m: 0.386523194084
+Omega_r: 4.12511677423e-05
+
+Using a basic MCMC method we have calculated on run3: 
+L_peak: 3.44187844125e+35
+Omega_Lambda: 0.803972239374
+Omega_k: -0.00503240962722
+Omega_m: 0.292764221801
+Omega_r: 6.77785462963e-05
+
+Using a basic MCMC method we have calculated on run4: 
+L_peak: 3.18917042699e+35
+Omega_Lambda: 0.985909398702
+Omega_k: 0.000321082596491
+Omega_m: 0.21537984197
+Omega_r: 9.32513299212e-05
+
+Using a basic MCMC method we have calculated on run5: 
+L_peak: 3.39725328871e+35
+Omega_Lambda: 0.701487116506
+Omega_k: -0.000102119340204
+Omega_m: 0.344623290997
+Omega_r: 0.000112427100195
+
+Using a basic MCMC method we have calculated on run6: 
+L_peak: 3.814887525e+35
+Omega_Lambda: 0.675148989051
+Omega_k: 0.00776087513748
+Omega_m: 0.284362413558
+Omega_r: 7.2127234945e-05
+
+Using a basic MCMC method we have calculated on run7: 
+L_peak: 3.76910851513e+35
+Omega_Lambda: 0.71856560728
+Omega_k: -0.00712297664273
+Omega_m: 0.251199963057
+Omega_r: 3.4503449665e-06
+
+Using a basic MCMC method we have calculated on run8: 
+L_peak: 3.46997937177e+35
+Omega_Lambda: 0.67604535007
+Omega_k: -0.00458783782436
+Omega_m: 0.329911078758
+Omega_r: 3.76119617806e-05
+
+Using a basic MCMC method we have calculated on run9: 
+L_peak: 3.54270542702e+35
+Omega_Lambda: 0.808534930057
+Omega_k: -0.00168694353625
+Omega_m: 0.245908425682
+Omega_r: 0.000125751125596
+
+Final average values and their uncertainties: 
+L_peak: 3.39031055792e+35 +- 1.08377034707e+34
+Omega_Lambda: 0.759633861734 +- 0.0391034272974
+Omega_k: -0.00212726352231 +- 0.00142400903757
+Omega_m: 0.324000322662 +- 0.0244786241928
+Omega_r: 7.03258098804e-05 +- 1.09202122794e-05
