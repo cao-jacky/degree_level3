@@ -4,6 +4,7 @@ start = timeit.default_timer() # Keeping track of program time
 now = datetime.datetime.now()
 
 import mcmc_extended_model
+import mcmc_covariance_plotter
 
 import numpy as np
 
@@ -77,6 +78,8 @@ f.write("Omega_m: " + str(om_average) + " +- " + str(om_std / np.sqrt(no)) + "\n
 f.write("Omega_r: " + str(orad_average) + " +- " + str(orad_std / np.sqrt(no)) + "\n")
 
 f.close()
+
+mcmc_covariance_plotter.plotter()
 
 stop = timeit.default_timer()
 print("Time this program took: ")

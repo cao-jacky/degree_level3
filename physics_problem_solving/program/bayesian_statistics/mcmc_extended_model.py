@@ -1,4 +1,5 @@
-import numpy as np 
+import numpy as np
+import glob
 
 import edata
 import extended_model
@@ -105,4 +106,3 @@ def maximum_likelihood(file_name, lp, ol, ok, om, orad, rng, name):
     om_max = max_lh_row[4]
     orad_max = max_lh_row[5]
     return lp_max, ol_max, ok_max, om_max, orad_max
-
