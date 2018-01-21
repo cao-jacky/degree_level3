@@ -1,80 +1,80 @@
-These values were generated at this date and time: 2018-01-15 16:54:52.802483
+These values were generated at this date and time: 2018-01-21 19:41:59.662560
 
 The following values were also calculated in flux space! 
 
 Using a basic MCMC method we have calculated on run0: 
-L_peak: 2.64365928833e+35
-Omega_Lambda: 0.946400802327
-Omega_k: -0.0084722233851
-Omega_m: 0.426127241127
-Omega_r: 6.71454068927e-05
+L_peak: 1.88631672487e+35
+Omega_Lambda: 1.49602072701
+Omega_k: 0.00245979377365
+Omega_m: 0.495678168449
+Omega_r: 0.000184745283543
 
 Using a basic MCMC method we have calculated on run1: 
-L_peak: 2.99327224978e+35
-Omega_Lambda: 0.725918072506
-Omega_k: 0.00139322455768
-Omega_m: 0.463203555588
-Omega_r: 8.24638804675e-05
+L_peak: 3.2435624393e+35
+Omega_Lambda: 0.771879237391
+Omega_k: 0.00325316609802
+Omega_m: 0.333602751289
+Omega_r: -2.90971163234e-05
 
 Using a basic MCMC method we have calculated on run2: 
-L_peak: 3.6411910452e+35
-Omega_Lambda: 0.554356111469
-Omega_k: -0.00374330715892
-Omega_m: 0.386523194084
-Omega_r: 4.12511677423e-05
+L_peak: 3.22519185092e+35
+Omega_Lambda: 0.839406989179
+Omega_k: 0.0200898530529
+Omega_m: 0.298953651884
+Omega_r: 7.40444103369e-05
 
 Using a basic MCMC method we have calculated on run3: 
-L_peak: 3.44187844125e+35
-Omega_Lambda: 0.803972239374
-Omega_k: -0.00503240962722
-Omega_m: 0.292764221801
-Omega_r: 6.77785462963e-05
+L_peak: 3.83564454055e+35
+Omega_Lambda: 0.631426383896
+Omega_k: 0.00244983062525
+Omega_m: 0.302218527443
+Omega_r: 7.93691097713e-07
 
 Using a basic MCMC method we have calculated on run4: 
-L_peak: 3.18917042699e+35
-Omega_Lambda: 0.985909398702
-Omega_k: 0.000321082596491
-Omega_m: 0.21537984197
-Omega_r: 9.32513299212e-05
+L_peak: 2.90106802527e+35
+Omega_Lambda: 0.931236447545
+Omega_k: -0.0108648205604
+Omega_m: 0.349827158066
+Omega_r: 0.000137544242295
 
 Using a basic MCMC method we have calculated on run5: 
-L_peak: 3.39725328871e+35
-Omega_Lambda: 0.701487116506
-Omega_k: -0.000102119340204
-Omega_m: 0.344623290997
-Omega_r: 0.000112427100195
+L_peak: 3.97820157609e+35
+Omega_Lambda: 0.718655227976
+Omega_k: -0.00853439040677
+Omega_m: 0.229597542269
+Omega_r: 0.00020305179533
 
 Using a basic MCMC method we have calculated on run6: 
-L_peak: 3.814887525e+35
-Omega_Lambda: 0.675148989051
-Omega_k: 0.00776087513748
-Omega_m: 0.284362413558
-Omega_r: 7.2127234945e-05
+L_peak: 2.8750124028e+35
+Omega_Lambda: 0.887661618615
+Omega_k: 0.0157530864363
+Omega_m: 0.359479517042
+Omega_r: 0.00014349432537
 
 Using a basic MCMC method we have calculated on run7: 
-L_peak: 3.76910851513e+35
-Omega_Lambda: 0.71856560728
-Omega_k: -0.00712297664273
-Omega_m: 0.251199963057
-Omega_r: 3.4503449665e-06
+L_peak: 2.62221337942e+35
+Omega_Lambda: 0.957989960215
+Omega_k: -0.00181734181837
+Omega_m: 0.416604361876
+Omega_r: 3.66635107063e-05
 
 Using a basic MCMC method we have calculated on run8: 
-L_peak: 3.46997937177e+35
-Omega_Lambda: 0.67604535007
-Omega_k: -0.00458783782436
-Omega_m: 0.329911078758
-Omega_r: 3.76119617806e-05
+L_peak: 3.02731089997e+35
+Omega_Lambda: 0.909719779292
+Omega_k: 0.00214326785691
+Omega_m: 0.31508116463
+Omega_r: -3.04195482986e-05
 
 Using a basic MCMC method we have calculated on run9: 
-L_peak: 3.54270542702e+35
-Omega_Lambda: 0.808534930057
-Omega_k: -0.00168694353625
-Omega_m: 0.245908425682
-Omega_r: 0.000125751125596
+L_peak: 4.63896899071e+35
+Omega_Lambda: 0.574885211196
+Omega_k: -0.00992383241772
+Omega_m: 0.231069248104
+Omega_r: -4.43442167786e-05
 
 Final average values and their uncertainties: 
-L_peak: 3.39031055792e+35 +- 1.08377034707e+34
-Omega_Lambda: 0.759633861734 +- 0.0391034272974
-Omega_k: -0.00212726352231 +- 0.00142400903757
-Omega_m: 0.324000322662 +- 0.0244786241928
-Omega_r: 7.03258098804e-05 +- 1.09202122794e-05
+L_peak: 3.22334908299e+35 +- 2.31554612679e+34
+Omega_Lambda: 0.871888158232 +- 0.0763365570179
+Omega_k: 0.00150086126398 +- 0.00308079592225
+Omega_m: 0.333211209105 +- 0.0240723482617
+Omega_r: 6.76476377279e-05 +- 2.8226526673e-05
