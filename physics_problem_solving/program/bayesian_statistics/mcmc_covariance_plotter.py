@@ -85,11 +85,13 @@ def plotter():
     axarr[3,3].set_yticklabels([])
     axarr[3,3].set_xticklabels([])
 
+    axarr[2,0].set_xticklabels([])
     axarr[2,1].set_yticklabels([])
     axarr[2,1].set_xticklabels([])
     axarr[2,2].set_yticklabels([])
     axarr[2,2].set_xticklabels([])
 
+    axarr[1,0].set_xticklabels([])
     axarr[1,1].set_yticklabels([])
     axarr[1,1].set_xticklabels([])
 
