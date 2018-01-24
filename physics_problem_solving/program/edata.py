@@ -1,10 +1,11 @@
 import numpy as np
+import re
 
 """ The name edata because extension-data, data reader for the extension phase of my 
 project!"""
 
 def data_input(file_name):
-    """ Opens data file and stores it into one single array. """
+    """ Opens data text file and stores it into one single array. """
     with open(file_name) as f:
         lines = f.readlines()
     f.close() # Closing reader to save memory
@@ -29,6 +30,42 @@ def data_input(file_name):
     data_file = np.delete(data_file, [0,1,2,3,4], axis=0) # Removing first five rows
     data_file = np.delete(data_file, [0], axis=1) # Removing first column
     data_file[:,1] = np.add(data_file[:,1], mag) # Adding magnitude to mag column
+    return data_file
+
+def data_input_tex(file_name):
+    """ Opens data .tex file and reads and stores into array. """
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+    f.close() 
+    num_lines = sum(1 for line in open(file_name)) # Number of lines in text file
+    data_file = np.zeros([len(lines), 4])
+    
+    print("??")
+
+    # For loop, stores and pulls out data
+    for i in range(len(lines)):
+        line_split = lines[i].split('&') # Split current row in strings
+        for k in range(9):
+            if k in {0,3,4,5,6,7,8}:
+                pass # Not bothering to store the SN name
+            else:
+                if k == 1:
+                    data_file[i][1] = line_split[k] # storing into an array
+                elif k == 2:
+                    if "nodata" in line_split[k]:
+                        pass
+                    else:
+                        #: Finding mag and it's uncertainty from the file
+                        mag = line_split[k].split('(')
+                        mag_uncert = line_split[k].split('(', 1)[1].split(')')[0]
+
+                        #: Storing our data
+                        data_file[i][2] = mag[0]
+                        data_file[i][3] = mag_uncert
+
+    zero_rows = np.where(data_file[:,2] == 0) # Finding where zero mags are
+    data_file = np.delete(data_file, zero_rows, axis=0) # Removing first five rows
+    data_file = np.delete(data_file, [0], axis=1) # Removing first column
     return data_file
 
 def redshift(file_name):

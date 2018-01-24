@@ -88,6 +88,9 @@ def plotting(data):
 
 file_name = 'program/data/sn_data.txt'
 efile_name = 'program/data/SCPUnion2.1_mu_vs_z.txt'
+efile_name_tex = 'program/data/SCPUnion2.1_AllSNe.tex'
+
+edata.data_input_tex(efile_name_tex)
 
 calling_milestone = True 
 calling_extension = True
