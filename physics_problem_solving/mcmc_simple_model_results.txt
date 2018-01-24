@@ -1,0 +1,47 @@
+These values were generated at this date and time: 2018-01-24 21:33:19.000079
+
+The following values were also calculated in flux space! 
+
+Using a basic MCMC method we have calculated on run0: 
+L_peak: 2.90174280069e+35
+Omega_Lambda: 0.463500883869
+
+Using a basic MCMC method we have calculated on run1: 
+L_peak: 2.91129713237e+35
+Omega_Lambda: 0.46067410636
+
+Using a basic MCMC method we have calculated on run2: 
+L_peak: 2.898005622e+35
+Omega_Lambda: 0.471266854292
+
+Using a basic MCMC method we have calculated on run3: 
+L_peak: 2.86909645113e+35
+Omega_Lambda: 0.442033034561
+
+Using a basic MCMC method we have calculated on run4: 
+L_peak: 2.88210146432e+35
+Omega_Lambda: 0.460039056856
+
+Using a basic MCMC method we have calculated on run5: 
+L_peak: 2.86741622421e+35
+Omega_Lambda: 0.427818908919
+
+Using a basic MCMC method we have calculated on run6: 
+L_peak: 2.87393395044e+35
+Omega_Lambda: 0.44962324535
+
+Using a basic MCMC method we have calculated on run7: 
+L_peak: 2.89577175017e+35
+Omega_Lambda: 0.45510047741
+
+Using a basic MCMC method we have calculated on run8: 
+L_peak: 2.87582820516e+35
+Omega_Lambda: 0.445303460026
+
+Using a basic MCMC method we have calculated on run9: 
+L_peak: 2.90668176013e+35
+Omega_Lambda: 0.481189201633
+
+Final average values for L_peak and Omega_Lambda and their uncertainties: 
+L_peak: 2.88818753606e+35 +- 4.90165791551e+32
+Omega_Lambda: 0.455654922928 +- 0.00458905717185
