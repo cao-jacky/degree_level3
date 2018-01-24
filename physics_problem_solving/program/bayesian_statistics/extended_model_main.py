@@ -8,7 +8,7 @@ import mcmc_covariance_plotter
 
 import numpy as np
 
-efile_name = 'data/SCPUnion2.1_mu_vs_z.txt'
+efile_name = 'data/SCPUnion2.1_AllSNe.tex'
 
 #---------- Simple MCMC runner ----------#
 

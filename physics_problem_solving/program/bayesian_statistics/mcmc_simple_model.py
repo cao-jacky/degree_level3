@@ -24,11 +24,11 @@ step = 0.01
 
 def data(file_name):
     sn_data = edata.redshift(file_name)
-    sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
-    return sn_data[0]
+    return sn_data
 
 def error_function(file_name, lp, ol):
     dt = data(file_name)
+    dt = np.concatenate((dt[0],dt[1]))
     m_mdl = np.zeros([len(dt[:,1]),1]) # Storing the model magnitudes
     #: Producing model data with the redshifts from file
     for i in range(len(dt[:,1])):
@@ -127,6 +127,8 @@ def plotter(max_point, name):
     pyplot.scatter(max_point[0],max_point[1], marker=".", color="deepskyblue")
 
     pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp" + str(name) + ".pdf")
+    pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp" + str(name) + 
+            "_transparent.png", transparent=True)
 
 def complete(points, number):
     """ Plots a single graph with all our data. """
@@ -166,6 +168,8 @@ def complete(points, number):
         color="limegreen")
 
     pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp_complete.pdf")
+    pyplot.savefig("bayesian_statistics/graphs_simple/ol_lp_complete_transparent.png", 
+            transparent=True)
 
 
 

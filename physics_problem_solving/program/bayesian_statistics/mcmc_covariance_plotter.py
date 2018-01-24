@@ -129,6 +129,7 @@ def plotter():
     pyplot.setp([a.get_yticklabels() for a in axarr[:, 4]], visible=False)
 
     pyplot.savefig("graphs_extended/triangle.pdf")
+    pyplot.savefig("graphs_extended/triangle_transparent.png", transparent=True)
 
 if __name__ == '__main__':
     plotter()

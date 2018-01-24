@@ -38,6 +38,9 @@ def milestone(file_name):
     # Finding the uncertainties on L_peak and Omega_Lambda
     l_p_uncert = l_peak_uncert.values(cm_data[0], cm_data[1], sn_data, 0.01)
     o_l_uncert = omega_lambda_uncert.values(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
+    stop = timeit.default_timer()
+    print("So far: ")
+    print(stop-start)
     return l_p, l_p_uncert, o_l, o_l_uncert
 
 #---------- EXTENSION WORK ----------#
@@ -48,30 +51,27 @@ def extension(file_name1, file_name2, data_type):
     
     if data_type == "extension":
         sn_data = edata.redshift(file_name1) # Extension data set
-        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)] 
     elif data_type == "total":
         # Both sets of data
         odat = data.data_input(file_name2) # Original data set
-        edt = edata.redshift(file_name1) # Extension data set
+        edat = edata.redshift(file_name1) # Extension data set
         # : Removing the probability column
-        edat = [np.delete(edt[0], 4, axis=1), np.delete(edt[1], 4, axis=1)] 
         sn_data = [np.append(odat[0], edat[0], axis=0), 
                 np.append(odat[1], edat[1], axis=0)]
-    elif data_type == "low_mass":
-        sn_data = edata.galaxy_low(file_name1)
-        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)] 
-    elif data_type == "high_mass":
-        sn_data = edata.galaxy_high(file_name1)
-        sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
     
     # Finding the best fit L_peak value, and best fit Omega_Lambda value
     fl_p = l_peak.fchi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01)
     #ml_p = l_peak.mchi_sq_min(cm_data[0], cm_data[1], tot_data, 0.01)
-    o_l = omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01, float(fl_p[1]))
+    o_l = omega_lambda.chi_sq_min(cm_data[0], cm_data[1], sn_data, 0.01, 
+            float(fl_p[1]))
 
     # Finding the uncertainties on L_peak and Omega_Lambda
     l_p_uncert = l_peak_uncert.values(cm_data[0], cm_data[1], sn_data, 0.01)
-    o_l_uncert = omega_lambda_uncert.values(cm_data[0], cm_data[1], sn_data, step, float(fl_p[1]))
+    o_l_uncert = omega_lambda_uncert.values(cm_data[0], cm_data[1], sn_data, step, 
+            float(fl_p[1]))
+    stop = timeit.default_timer()
+    print("So far: ")
+    print(stop-start)
     return fl_p, l_p_uncert, o_l, o_l_uncert
 
 #---------- GRAPH PLOTTERS ----------#
@@ -82,15 +82,15 @@ def plotting(data):
     plotter.plot_o(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
     plotter.plot_redmag(cm_data[0], cm_data[1], sn_data, step, float(l_p[1]))
     eplotter.plot_h(data)
-
+    stop = timeit.default_timer()
+    print("So far: ")
+    print(stop-start)
 
 #---------- CALLING STUFF ----------#
 
 file_name = 'program/data/sn_data.txt'
-efile_name = 'program/data/SCPUnion2.1_mu_vs_z.txt'
-efile_name_tex = 'program/data/SCPUnion2.1_AllSNe.tex'
-
-edata.data_input_tex(efile_name_tex)
+#efile_name = 'program/data/SCPUnion2.1_mu_vs_z.txt'
+efile_name = 'program/data/SCPUnion2.1_AllSNe.tex'
 
 calling_milestone = True 
 calling_extension = True
@@ -130,28 +130,13 @@ if calling_extension == True:
     f.write("Omega_Lambda: " + str(ex1[2][1] ) + ", + " + str(np.abs(ex1[3][1][0])) + ", - " + str(np.abs(ex1[3][0][0]))  + "\n")
     f.write('\n')
 
-    # Extension data set: low mass
-    f.write("By using our complete extension data set, for low mass galaxies: " + '\n')
-    ex2 = extension(efile_name, file_name, "low_mass")
-    f.write("L_peak: " + str(ex2[0][1]) + ", + " + str(np.abs(ex2[1][1][0])) + ", - " + str(np.abs(ex2[1][0][0])) + "\n")
-    f.write("Omega_Lambda: " + str(ex2[2][1] ) + ", + " + str(np.abs(ex2[3][1][0])) + ", - " + str(np.abs(ex2[3][0][0]))  + "\n")
-    f.write('\n')
-
-    # Extension data set: low mass
-    f.write("By using our complete extension data set, for high mass galaxies: " + '\n')
-    ex3 = extension(efile_name, file_name, "high_mass")
-    f.write("L_peak: " + str(ex3[0][1]) + ", + " + str(np.abs(ex3[1][1][0])) + ", - " + str(np.abs(ex3[1][0][0])) + "\n")
-    f.write("Omega_Lambda: " + str(ex3[2][1] ) + ", + " + str(np.abs(ex3[3][1][0])) + ", - " + str(np.abs(ex3[3][0][0]))  + "\n")
-    f.write('\n')
-
 f.close()
 
 #---------- GRAPHING ----------#
 if graphs == True:
     odat = data.data_input(file_name) # Original data set
-    edt = edata.redshift(efile_name) # Extension data set
+    edat = edata.redshift(efile_name) # Extension data set
     # : Removing the probability column
-    edat = [np.delete(edt[0], 3, axis=1), np.delete(edt[1], 3, axis=1)] 
 
     eplotter.plot_h(cm_data[0], cm_data[1], [edat, odat], step, [ml[0][1],ml[2][1]], 
             [ex[0][1], ex[2][1]])

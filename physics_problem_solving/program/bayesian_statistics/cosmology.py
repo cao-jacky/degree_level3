@@ -22,11 +22,10 @@ ol_true = 0.82 #Omega_Lambda
 
 step = 0.01
 
-efile_name = 'data/SCPUnion2.1_mu_vs_z.txt'
+efile_name = 'data/SCPUnion2.1_AllSNe.tex'
 
 def data():
     sn_data = edata.redshift(efile_name)
-    sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
     return sn_data
 
 def com_integral(x, ol):
@@ -80,6 +79,7 @@ pyplot.errorbar(odt[:,1],odt[:,2],yerr=odt[:,3],marker=".",color="grey",
 
 pyplot.plot(z, model_one, color="red")
 pyplot.savefig('hubble_diagram.pdf')
+pyplot.savefig('hubble_diagram_transparent.png', transparent=True)
 
 def like(theta, z, m, merr):
     """ Likelihood function. """
@@ -95,21 +95,7 @@ def running_like(theta):
     for i in range(len(z_ac)):
         value = like(theta, z_ac[i], m_ac[i], m_err_ac[i])
         print(value)
-
-#running_like([lp_true, ol_true])
-
-#test = like([lp_true, ol_true], 0.458, 23.11, 0.46)
-#print(test)
-
-#test2 = model(H0_true, c_true, 0.458, lp_true, ol_true)
-#print(test2)
-
-#test3 = like([lp_true, ol_true], z_ac, m_ac, m_err_ac)
-#print(test3)
-
-
 lp_ol_list = []
-
 
 nll = lambda *args: -like(*args)
 for i in range(len(z_ac)):

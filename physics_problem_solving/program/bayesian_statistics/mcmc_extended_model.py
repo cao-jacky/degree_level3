@@ -12,11 +12,11 @@ step = 0.01
 
 def data(file_name):
     sn_data = edata.redshift(file_name)
-    sn_data = [np.delete(sn_data[0], 4, axis=1), np.delete(sn_data[1], 4, axis=1)]
-    return sn_data[0]
+    return sn_data
 
 def error_function(file_name, lp, ol, ok, om, orad):
     dt = data(file_name)
+    dt = np.concatenate((dt[0],dt[1]))
     m_mdl = np.zeros([len(dt[:,1]),1]) # Storing the model magnitudes
     #: Producing model data with the redshifts from file
     for i in range(len(dt[:,1])):

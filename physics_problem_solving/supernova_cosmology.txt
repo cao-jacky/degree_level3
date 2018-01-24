@@ -1,0 +1,17 @@
+These values were generated at this date and time: 2018-01-24 21:14:05.954846
+
+The following values were also calculated in flux space! 
+
+Using our milestone program we have calculated: 
+L_peak: [  3.08667980e+35], + 1.4e+34, - 1.4e+34
+Omega_Lambda: [ 0.86], + 0.04, - 0.04
+
+Using our extension program we have calculated the following: 
+By using our complete extension data set: 
+L_peak: [  2.94014147e+35], + 4e+33, - 4e+33
+Omega_Lambda: [ 0.74], + 0.01, - 0.01
+
+By using our complete extension and original data set: 
+L_peak: [  2.94014147e+35], + 3e+33, - 3e+33
+Omega_Lambda: [ 0.74], + 0.01, - 0.01
+

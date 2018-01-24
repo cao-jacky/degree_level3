@@ -69,3 +69,4 @@ def plot_h(hubble, c, data, step, milestone, extension1):
     pyplot.plot(z, model_two, color="red")
 
     pyplot.savefig('program/graphs/hubble_diagram.pdf')
+    pyplot.savefig('program/graphs/hubble_diagram_transparent.png', transparent=True)
