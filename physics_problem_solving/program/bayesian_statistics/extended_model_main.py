@@ -21,13 +21,13 @@ orad_true = 0.000_041_6 # Omega_r
 
 # Testing values
 lp_arnd = 3.40 * (10**35)
-ol_arnd = 0.80
+ol_arnd = 0.75
 ok_arnd = -0.0025
 om_arnd = 0.2
 orad_arnd = 0.000_05
 
 # Amount of steps for the MCMC function to take - higher number, takes longer
-rng = 1500
+rng = 100
 
 # Running the MCMC function, the number of times
 no = 10

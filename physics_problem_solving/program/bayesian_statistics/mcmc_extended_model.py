@@ -43,8 +43,6 @@ def current_values(file_name, lp, ol, ok, om, orad):
     om_prpsed = np.random.normal(om, 0.1, 1)
     orad_prpsed = np.random.normal(orad, 0.000_02, 1)
     print(ol_prpsed,lp_prpsed,ok_prpsed,om_prpsed,orad_prpsed)
-    if ol_prpsed > 1.0:
-        ol_prpsed = np.random.normal(ol, 0.15, 1)
 
     chi_sq_prpsed = error_function(file_name, lp_prpsed, ol_prpsed, ok_prpsed, om_prpsed,
              orad_prpsed) / 2 # Proposed chi^2

@@ -52,9 +52,7 @@ def current_values(file_name, lp, ol):
     ol_prpsed = np.random.normal(ol, 0.15, 1)
     lp_prpsed = np.random.normal(lp, 0.2*(10**35),1)
     print(ol_prpsed, lp_prpsed)
-    if ol_prpsed > 1.0:
-        ol_prpsed = np.random.normal(ol, 0.15, 1)
-
+    
     chi_sq_prpsed = error_function(file_name, lp_prpsed, ol_prpsed) / 2 # Proposed chi^2
 
     ratio = likelihood_ratio(chi_sq_crrnt, chi_sq_prpsed) # Calcualting the ratio
