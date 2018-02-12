@@ -10,7 +10,7 @@ import numpy as np
 
 efile_name = 'data/SCPUnion2.1_AllSNe.tex'
 
-#---------- Simple MCMC runner ----------#
+#---------- Extended MCMC runner ----------#
 
 # The 'actual' values that the other program calculated
 lp_true = 3.60936635 * (10**35) # L_peak 
@@ -18,16 +18,18 @@ ol_true = 0.78 # Omega_Lambda
 ok_true = -0.0030 # Omega_k
 om_true = 0.239 # Omega_m
 orad_true = 0.000_041_6 # Omega_r
+w_true = -0.941
 
 # Testing values
-lp_arnd = 3.40 * (10**35)
+lp_arnd = 3.50 * (10**35)
 ol_arnd = 0.75
 ok_arnd = -0.0025
 om_arnd = 0.2
 orad_arnd = 0.000_05
+w_arnd = -0.9
 
 # Amount of steps for the MCMC function to take - higher number, takes longer
-rng = 100
+rng = 10
 
 # Running the MCMC function, the number of times
 no = 10
@@ -40,14 +42,14 @@ f.write("\n")
 f.write("The following values were also calculated in flux space! \n")
 f.write("\n")
 
-values_store = np.zeros([no,5])
+values_store = np.zeros([no,6])
 
 ollp_store = np.zeros([no,2])
 
 for i in range(no):
     # Running the MCMC function
     dt = mcmc_extended_model.maximum_likelihood(efile_name, lp_arnd, ol_arnd, ok_arnd, 
-            om_arnd, orad_arnd, rng, i)
+            om_arnd, orad_arnd, w_arnd, rng, i)
     values_store[i] = dt
     #mcmc_simple_model.plotter([dt[0],dt[1]], i) # Plots as a covariance plot
     
@@ -57,6 +59,7 @@ for i in range(no):
     f.write("Omega_k: " + str(dt[2]) + "\n")
     f.write("Omega_m: " + str(dt[3]) + "\n")
     f.write("Omega_r: " + str(dt[4]) + "\n")
+    f.write("w: " + str(dt[5]) + "\n")
     f.write("\n")
 
 f.write("Final average values and their uncertainties: \n")
@@ -65,17 +68,22 @@ ol_average = np.average(values_store[:,1])
 ok_average = np.average(values_store[:,2])
 om_average = np.average(values_store[:,3])
 orad_average = np.average(values_store[:,4])
+w_average = np.average(values_store[:,5])
+
 lp_std = np.std(values_store[:,0])
 ol_std = np.std(values_store[:,1])
 ok_std = np.std(values_store[:,2])
 om_std = np.std(values_store[:,3])
 orad_std = np.std(values_store[:,4])
+w_std = np.std(values_store[:,5])
 
 f.write("L_peak: " + str(lp_average) + " +- " + str(lp_std / np.sqrt(no)) + "\n")
 f.write("Omega_Lambda: " + str(ol_average) + " +- " + str(ol_std / np.sqrt(no)) + "\n")
 f.write("Omega_k: " + str(ok_average) + " +- " + str(ok_std / np.sqrt(no)) + "\n")
 f.write("Omega_m: " + str(om_average) + " +- " + str(om_std / np.sqrt(no)) + "\n")
 f.write("Omega_r: " + str(orad_average) + " +- " + str(orad_std / np.sqrt(no)) + "\n")
+f.write("w: " + str(w_average) + " +- " + str(w_std / np.sqrt(no)) + "\n")
+
 
 f.close()
 
