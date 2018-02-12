@@ -24,6 +24,15 @@ def plotter():
     # Axes for the plots
     f, axarr = pyplot.subplots(5, 5)  
 
+    # Setting axis limits for Omega_rad
+    lims = [-0.0001,0.0001]
+    axarr[4,3].set_xlim(lims[0], lims[1])
+    axarr[3,0].set_ylim(lims[0], lims[1])
+    axarr[3,1].set_ylim(lims[0], lims[1])
+    axarr[3,2].set_ylim(lims[0], lims[1])
+    axarr[3,3].set_xlim(lims[0], lims[1])
+    axarr[3,3].set_ylim(lims[0], lims[1])
+
     #: Plotting all the data
     axarr[4,0].scatter(data[:,2], data[:,1], marker='.', s=4) # O_L and L_P
     axarr[4,1].scatter(data[:,3], data[:,1], marker='.', s=4) # O_k and L_P
@@ -122,7 +131,7 @@ def plotter():
     axarr[0,0].set_ylabel(r'$\Omega_{\Lambda}$')
     axarr[1,0].set_ylabel(r'$\Omega_{k}$')
     axarr[2,0].set_ylabel(r'$\Omega_{m}$')
-    axarr[3,0].set_ylabel(r'$\Omega_{r}$')
+    axarr[3,0].set_ylabel(r'$\Omega_{r}$') 
 
     # Fine-tune figure; hide x ticks for top plots and y ticks for right plots
     pyplot.setp([a.get_xticklabels() for a in axarr[0, :]], visible=False)
