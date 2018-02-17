@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  17 FEB 2018 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  17 FEB 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -700,48 +700,60 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen172
 \Gm@dimlist=\toks28
 )
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box54
+\UL@hyphenbox=\box55
+\UL@skip=\skip69
+\UL@hook=\toks29
+\UL@height=\dimen173
+\UL@pe=\count224
+\UL@pixel=\dimen174
+\ULC@box=\box56
+Package: ulem 2012/05/18
+\ULdepth=\dimen175
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
 (./supernova_cosmology.aux)
 \openout1 = `supernova_cosmology.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 15.
-Class revtex4 Info: Patching array package. on input line 15.
-Class revtex4 Info: cite was not loaded (OK!) on input line 15.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 15.
+LaTeX Font Info:    ... okay on input line 16.
+Class revtex4 Info: Patching array package. on input line 16.
+Class revtex4 Info: cite was not loaded (OK!) on input line 16.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 16.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count224
-\scratchdimen=\dimen173
-\scratchbox=\box54
-\nofMPsegments=\count225
-\nofMParguments=\count226
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count227
-\MPscratchDim=\dimen174
-\MPnumerator=\count228
-\makeMPintoPDFobject=\count229
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count225
+\scratchdimen=\dimen176
+\scratchbox=\box57
+\nofMPsegments=\count226
+\nofMParguments=\count227
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count228
+\MPscratchDim=\dimen177
+\MPnumerator=\count229
+\makeMPintoPDFobject=\count230
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -788,21 +800,21 @@ e
 ))
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 15.
-Package gensymb Info: Math companion symbols declared on input line 15.
-LaTeX Info: Redefining \degree on input line 15.
-LaTeX Info: Redefining \celsius on input line 15.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 16.
+Package gensymb Info: Math companion symbols declared on input line 16.
+LaTeX Info: Redefining \degree on input line 16.
+LaTeX Info: Redefining \celsius on input line 16.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 15.
-LaTeX Info: Redefining \ohm on input line 15.
-Package gensymb Info: Using \textohm for \ohm on input line 15.
-Package gensymb Info: Using \textmu for \micro on input line 15.
+erthousand on input line 16.
+LaTeX Info: Redefining \ohm on input line 16.
+Package gensymb Info: Using \textohm for \ohm on input line 16.
+Package gensymb Info: Using \textmu for \micro on input line 16.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 15.
+. Activating mapping `default' on line 16.
 .................................................
-\c@lstlisting=\count230
+\c@lstlisting=\count231
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -838,11 +850,11 @@ Package gensymb Info: Using \textmu for \micro on input line 15.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -854,11 +866,11 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
 (./supernova_cosmology.bbl) [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdft
 ex/updmap/pdftex.map}] [2] (./supernova_cosmology.aux) ) 
 Here is how much of TeX's memory you used:
- 15455 strings out of 493089
- 270290 string characters out of 6134841
- 350985 words of memory out of 5000000
- 18755 multiletter control sequences out of 15000+600000
- 9828 words of font info for 37 fonts, out of 8000000 for 9000
+ 15546 strings out of 493089
+ 271207 string characters out of 6134841
+ 354859 words of memory out of 5000000
+ 18839 multiletter control sequences out of 15000+600000
+ 11662 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,4n,41p,10382b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/201
@@ -868,15 +880,16 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (2 pages, 121207 bytes).
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt9.pfb>
+Output written on supernova_cosmology.pdf (2 pages, 133590 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
