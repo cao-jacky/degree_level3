@@ -1,19 +1,28 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,ulem,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb,relsize,csquotes}
+\usepackage{listings}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
+
+\def\bibsection{\section*{\refname}} 
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 \begin{document}
 
 \textheight=26.385cm
 %Change textheight as the last resort...
 
-\title{Supernova Cosmology}
+\title{Constraining the geometry of the Universe using Type Ia supernovae}
  
-\author{Jacky Cao, Physics Problem Solving \\ Date of report: 19/03/2017}
+\author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of report: 28/02/2018}
 
 \begin{abstract}              
-asdsa
+Type Ia supernovae have the unique trait of being standard candles, their light curves can be used in cosmology to calculate and constrain cosmological parameters. In observing Type Ia supernovae and fitting model light curves to such data one can attempt to derive such values. We have monitored, collected, and analysed data for supernova explosions over a period of 34 days. A $16''$ and a $0.5$ m telescope situated in Durham and La Palma was used for this project. After calculating the magnitudes for a Type Ia (2017hhz) and Type Ia-91bg (2017hle) supernova object, we fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit for the program's \texttt{fit()} function was deemed to be acceptable in accordance to the average reduced $\chi^2$ values calculated for the B and V photometric bands, $\chi^2_{\nu,B} \approx 1.38$ and $\chi^2_{V,\nu} \approx 2.95$ - a good fit requiring $\chi^2_{\nu} \approx1$. The distance modulus to the supernova 2017hhz was calculated by SNooPy to be $36.121\pm0.106$ mag, using this value we were able to compute $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$. However, the quoted error negates the meaning of $H_0$ as it is too large of an uncertainty. In improving the accuracy and uncertainties we suggest that more observations of the supernovae were required, and constraining values should be used for the parameters in SNooPy's templates.
 \end{abstract}
 
 \maketitle
@@ -24,32 +33,16 @@ asdsa
 \subsection{Supernovae}
 \vspace{-2ex}
 
-In cosmology, we can argue that one of the most important objects that we can observe are supernovae.  
+In cosmology, we can argue that one of the most important objects that we can observe are supernovae.  \cite{obs_uni}
 
 \vspace{-3ex}
-\subsection{Supernova Discovery}
+\subsection{Cosmological Parameters}
 \vspace{-2ex}
 
-asdasd
+sdfsdf
 
 \vspace{-3ex}
-\subsection{Project Aims}
-\vspace{-2ex}
-
-Studying the evolution of the magnitudes of different supernovae will allow us to produce a light curve which can be fitted with known models. Through this we can then discover the type of supernova that we are observing. 
-
-Through observing the magnitudes on different days.
-
-Could we confirm the expansion rate of the universe through our observations of supernovae? 
-
-\vspace{-3ex}
-\section{Observations} 
-\vspace{-2ex}
-
-asdasd
-
-\vspace{-3ex}
-\section{Analysis}
+\section{Results} 
 \vspace{-2ex}
 
 asdasd
@@ -72,18 +65,17 @@ sdfsdf
 
 sdfsadf
 
-\begin{thebibliography}{5}
-\bibitem{mathmethods}
-	K. F. Riley, M. P. Hobson, and S. J. Bence.
-	\textit{Mathematical Methods for Physics and Engineering}.
-	Cambridge University Press, Cambridge, UK, 2010.	
-\end{thebibliography}
+\vspace{-3ex}
+\bibliographystyle{abbrv}
+\bibliography{supernova_cosmology}
+
 \clearpage
+\appendix
 
 \vfill
 \twocolumngrid
 \vspace{-3ex}
-\section*{Appendix A - Observation Logs}
+\section{Observation Logs}
 \vspace{-2ex}
 
 
