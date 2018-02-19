@@ -5,29 +5,29 @@ The style file: abbrv.bst
 Database file #1: supernova_cosmology.bib
 You've used 1 entry,
             2118 wiz_defined-function locations,
-            501 strings with 3797 characters,
-and the built_in function-call counts, 240 in all, are:
-= -- 19
-> -- 8
+            502 strings with 3806 characters,
+and the built_in function-call counts, 243 in all, are:
+= -- 21
+> -- 7
 < -- 0
 + -- 3
 - -- 2
-* -- 11
+* -- 12
 := -- 48
 add.period$ -- 3
 call.type$ -- 1
-change.case$ -- 3
+change.case$ -- 4
 chr.to.int$ -- 0
 cite$ -- 1
-duplicate$ -- 13
-empty$ -- 24
+duplicate$ -- 12
+empty$ -- 23
 format.name$ -- 2
-if$ -- 48
+if$ -- 49
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 1
+missing$ -- 2
 newline$ -- 8
-num.names$ -- 3
+num.names$ -- 2
 pop$ -- 7
 preamble$ -- 1
 purify$ -- 3
@@ -43,4 +43,4 @@ type$ -- 2
 warning$ -- 0
 while$ -- 2
 width$ -- 2
-write$ -- 12
+write$ -- 13
