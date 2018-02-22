@@ -5,6 +5,8 @@
 \usepackage[normalem]{ulem}
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
 
+\usepackage{lipsum}
+
 \def\bibsection{\section*{\refname}} 
 \renewcommand{\thesubsection}{\alph{subsection}}
 
@@ -74,11 +76,31 @@ If we solve the field equations for an isotropic, homogenous universe a descript
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G \rho \Big] R^2 = -k c^2,
 \end{equation}
 
-where $R(t)$ is the scale factor, $G$ the gravitational constant, $\rho$ is the mass density, and $k$ a parameter which describes the shape of the universe. 
+where $R(t)$ is the scale factor, $G$ the gravitational constant, $\rho$ is the mass density, and $k$ is a parameter which describes the shape of the universe. $k$ can be defined as a constant which is equal to $-1$ for a negatively curved universe, $0$ for a spatially flat universe, and $+1$ for a positively curved universe \cite{mod_ast, longair}. 
 
-Work performed by Einstein led to a cosmological constant $\Lambda$ being introduced in the Friedmann equation. This was added in the form of $\tfrac{1}{3}\Lambda c^2$ within the left-hand bracketed section, a result arising from Newtonian cosmology \cite{mod_ast}.
+Work performed by Einstein led to a cosmological constant $\Lambda$ being introduced in the Friedmann equation. This was added in the form of $\tfrac{1}{3}\Lambda c^2$ within the left-hand bracketed section, a result arising from Newtonian cosmology \cite{mod_ast}. Whilst Einstein included this term to account for his static and closed universe, astronomers in the 1990s eventually related the cosmological constant to dark energy. This was a consequence of observations which showed the existence of an accelerating universe \cite{mod_ast}. 
 
-Whilst Einstein included this term to account for his static and closed universe, astronomers in the 1990s eventually related the cosmological constant to dark energy as a consequence of observations of an accelerating universe \cite{mod_ast}. 
+The Friedmann equation can therefore be rewritten to include for a three component universe of baryonic and dark matter, relativistic photons and neutrinos, and dark energy, 
+\begin{equation}
+\Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{\text{rel}} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
+\end{equation}
+
+where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. These can be combined with a critical density to further simplify the Friedmann equation, this critical density is the density if the universe was assumed to be spatially flat,
+\begin{equation}
+\rho_{\text{crit}} (t) = \frac{3 H^2(t)}{8 \pi G},
+\end{equation}
+
+the variable $H(t)$ is the Hubble parameter and it is a function of time \cite{mod_ast}. Employing this critical density we can define new densities,
+\begin{equation}
+\Omega_{\Lambda}(t) = \rho_{\Lambda}(t) / \rho_{\text{crit}}(t)
+\end{equation}
+
+and 
+\begin{equation}
+\Omega_{M}(t) = \rho_{M}(t) / \rho_{\text{crit}}(t),
+\end{equation}
+
+the contribution from radiation has been omitted as it is a negligible amount \cite{mod_ast}.
 
 \vspace{-3ex}
 \subsection{Cosmological Parameters from Type Ia Supernovae}
@@ -97,6 +119,17 @@ Through computational analysis it is possible to employ data sets of Type Ia sup
 \vspace{-2ex}
 From our experimentation we have therefore found results which ??
 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.25cm]{results/ol_lp_complete}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\vspace{-3ex}
+\label{fig:ol_lp_complete}
+\end{center}
+\end{figure}
+
+sdfsadfasdf
+
 \vspace{-3ex}
 \subsection{$\chi^2$ Statistics} 
 \vspace{-2ex}
@@ -108,6 +141,25 @@ asdasd
 \vspace{-2ex}
 
 asdasd
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.25cm]{results/triangle}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\vspace{-3ex}
+\label{fig:triangle}
+\end{center}
+\end{figure}
+
+\lipsum
+\lipsum
+\lipsum
+\lipsum
+\lipsum
+\lipsum[3-6]
+
+sdfasdfsdfsad
 
 \vspace{-3ex}
 \subsection{Further Investigation} 
