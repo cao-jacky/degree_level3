@@ -85,22 +85,33 @@ The Friedmann equation can therefore be rewritten to include for a three compone
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{\text{rel}} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
 \end{equation}
 
-where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. These can be combined with a critical density to further simplify the Friedmann equation, this critical density is the density if the universe was assumed to be spatially flat,
+where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. These values can be combined with a critical density to further simplify the Friedmann equation,
 \begin{equation}
 \rho_{\text{crit}} (t) = \frac{3 H^2(t)}{8 \pi G},
 \end{equation}
 
-the variable $H(t)$ is the Hubble parameter and it is a function of time \cite{mod_ast}. Employing this critical density we can define new densities,
+where the variable $H(t)$ is the Hubble parameter and changes as the universe expands as it is related to the scale factor, and the expansion factor of the universe. 
+
+If we were to employ this critical density then we would be able to define the new densities as,
 \begin{equation}
 \Omega_{\Lambda}(t) = \rho_{\Lambda}(t) / \rho_{\text{crit}}(t)
+\label{eqn:omg_lam}
 \end{equation}
 
 and 
 \begin{equation}
 \Omega_{M}(t) = \rho_{M}(t) / \rho_{\text{crit}}(t),
+\label{eqn:omg_m}
 \end{equation}
 
-the contribution from radiation has been omitted as it is a negligible amount \cite{mod_ast}.
+we choose to omit the contribution from radiation as it is a negligible amount ($8.25 \times 10^{-5}$) when compared to $\Omega_{\Lambda}$ ($0.74 \pm 0.04$) and $\Omega_{M}$ ($0.27 \pm 0.04$) \cite{mod_ast}. 
+
+What we finally arrive at is a Friedmann equation which contains cosmological parameters, 
+\begin{equation}
+H^2 [1-(\Omega_{M}+\Omega_{\Lambda})]R^2 = -kc^2,
+\end{equation}
+
+where the parameters are the densities which we defined in Equation \ref{eqn:omg_lam} and Equation \ref{eqn:omg_m}. 
 
 \vspace{-3ex}
 \subsection{Cosmological Parameters from Type Ia Supernovae}
@@ -152,12 +163,6 @@ asdasd
 \end{center}
 \end{figure}
 
-\lipsum
-\lipsum
-\lipsum
-\lipsum
-\lipsum
-\lipsum[3-6]
 
 sdfasdfsdfsad
 
