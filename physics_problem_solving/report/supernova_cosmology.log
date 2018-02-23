@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  22 FEB 2018 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  23 FEB 2018 11:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,74 +868,78 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
  Problem Solving \\ Date of report: 28/02/2018.
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1092) in paragraph at lines 124--125
+[]\OT1/cmr/m/n/10 For this rea-son Type Ia su-per-novae have been
+ []
+
 <results/ol_lp_complete.pdf, id=21, 462.52798pt x 346.89601pt>
 File: results/ol_lp_complete.pdf Graphic file (type pdf)
 
 <use results/ol_lp_complete.pdf>
-Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 135.
+Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 145.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 135--136
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 145--146
  [] 
  []
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 136.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 146.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-36.
+46.
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 136.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 146.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-36.
+46.
 
 <results/triangle.pdf, id=22, 462.52798pt x 346.89601pt>
 File: results/triangle.pdf Graphic file (type pdf)
 
 <use results/triangle.pdf>
-Package pdftex.def Info: results/triangle.pdf used on input line 159.
+Package pdftex.def Info: results/triangle.pdf used on input line 169.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 159--160
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 169--170
  [] 
  []
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 160.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 170.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-60.
+70.
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 160.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 170.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-60.
+70.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./supernova_cosmology.bbl [2 <./results/ol_lp_complete.pdf>]
+[2 <./results/ol_lp_complete.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 23.
+ on input line 186.
 
-) [3 <./results/triangle.pdf>]
+(./supernova_cosmology.bbl) [3 <./results/triangle.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
 [4] (./supernova_cosmology.aux) ) 
 Here is how much of TeX's memory you used:
- 15774 strings out of 493089
- 274149 string characters out of 6134841
- 461833 words of memory out of 5000000
- 19060 multiletter control sequences out of 15000+600000
+ 15775 strings out of 493089
+ 274166 string characters out of 6134841
+ 461847 words of memory out of 5000000
+ 19061 multiletter control sequences out of 15000+600000
  11662 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,5n,41p,10382b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -962,7 +966,7 @@ y7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
 >
-Output written on supernova_cosmology.pdf (4 pages, 616024 bytes).
+Output written on supernova_cosmology.pdf (4 pages, 617739 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
