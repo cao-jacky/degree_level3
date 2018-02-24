@@ -69,9 +69,9 @@ Within cosmology Type Ia supernovae can thus be employed as standard candles to 
 \vspace{-3ex}
 \subsection{Cosmological Parameters}
 \vspace{-2ex}
-At large cosmological distances, the appearance of objects will be affected by the spacetime which it travels through. If we therefore wanted to describe the geometrical properties of the universe, we would require to solve Einstein's general theory of relativity.
+At large cosmological distances, the appearance of objects will be affected by the spacetime which it travels through. If we therefore wanted to describe the geometrical properties of the universe, we would require to solve Einstein's general theory of relativity. From \textit{An Introduction to Modern Astrophysics} \cite{mod_ast} we can build the framework needed to calculate and compute cosmological parameters. 
 
-If we solve the field equations for an isotropic, homogenous universe a description of the evolution of the universe can be obtained in the form of a differential equation, the Friedmann equation \cite{mod_ast}. In the 1922 form of the equation, a nonstatic universe is accounted for,
+If we solve Einstein's field equations for an isotropic, homogenous universe a description of the evolution of the universe can be obtained in the form of a differential equation, the Friedmann equation \cite{mod_ast}. In the 1922 form of the equation, a nonstatic universe is accounted for,
 \begin{equation}
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G \rho \Big] R^2 = -k c^2,
 \end{equation}
@@ -80,7 +80,7 @@ where $R(t)$ is the scale factor, $G$ the gravitational constant, $\rho$ is the 
 
 Work performed by Einstein led to a cosmological constant $\Lambda$ being introduced in the Friedmann equation. This was added in the form of $\tfrac{1}{3}\Lambda c^2$ within the left-hand bracketed section, a result arising from Newtonian cosmology \cite{mod_ast}. Whilst Einstein included this term to account for his static and closed universe, astronomers in the 1990s eventually related the cosmological constant to dark energy. This was a consequence of observations which showed the existence of an accelerating universe \cite{mod_ast}. 
 
-The Friedmann equation can therefore be rewritten to include for a three component universe of baryonic and dark matter, relativistic photons and neutrinos, and dark energy, 
+If we take the Friedmann equation, we can therefore rewrite it so that it includes for a three component universe: baryonic and dark matter, relativistic photons and neutrinos, and dark energy, 
 \begin{equation}
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{\text{rel}} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
 \end{equation}
@@ -90,9 +90,14 @@ where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of
 \rho_{\text{crit}} (t) = \frac{3 H^2(t)}{8 \pi G},
 \end{equation}
 
-where the variable $H(t)$ is the Hubble parameter and changes as the universe expands as it is related to the scale factor and expansion factor of the universe. 
+where the variable $H(t)$ is the Hubble parameter and changes as the universe expands. It is related to the scale factor and expansion factor of the universe through a simple ratio of terms,
+\begin{equation}
+H = \frac{\dot{R}}{R} \equiv \frac{\dot{a}}{a},
+\end{equation}
 
-If we were to employ this critical density then we would be able to define the new densities as,
+where $\dot{R}$ and $\dot{a}$ are the time derivatives of the scale factors $R$ and expansion factors $a$ respectively.
+
+Returning to the components of densities, we can redefine them by reducing them with the critical density,
 \begin{equation}
 \Omega_{\Lambda}(t) = \rho_{\Lambda}(t) / \rho_{\text{crit}}(t)
 \label{eqn:omg_lam}
@@ -104,12 +109,12 @@ and
 \label{eqn:omg_m}
 \end{equation}
 
-What we arrive at now is a Friedmann equation which contains the cosmological parameters as defined in Equation \ref{eqn:omg_lam} and Equation \ref{eqn:omg_m}, 
+We can now arrive at a form of the Friedmann equation which contains the cosmological parameters $\Omega_{\Lambda}$ and $\Omega_{M}$,
 \begin{equation}
 H^2 [1-(\Omega_{M}+\Omega_{\Lambda})]R^2 = -kc^2.
 \end{equation}
 
-With this in hand, it is now possible to calculate the make-up of the universe in terms of the energy and matter content. In these calculations, it is normally chosen so that the contribution from radiation is omitted as it is a negligible amount. Results from the Wilkinson Microwave Anisotropy Probe (WMAP) show that $\Omega_{\text{rad}}=8.25 \times 10^{-5}$ is an insignificant value when compared to $\Omega_{\Lambda}=0.74 \pm 0.04$ and $\Omega_{M} = 0.27 \pm 0.04$ \cite{mod_ast}. 
+With this in hand, it is now possible to calculate the proportions of the universe which is matter and which is energy. In these calculations, cosmologists normally choose to omit the contribution from radiation as it is a negligible amount. Results from the Wilkinson Microwave Anisotropy Probe (WMAP) show that $\Omega_{\text{rad}}=8.25 \times 10^{-5}$ is an insignificant value when compared to $\Omega_{\Lambda}=0.74 \pm 0.04$ and $\Omega_{M} = 0.27 \pm 0.04$ \cite{mod_ast}. 
 
 Using these cosmological variables we can additionally define the total density parameter,
 \begin{equation}
@@ -119,14 +124,12 @@ Using these cosmological variables we can additionally define the total density 
 
 Inputting the WMAP data into Equation \ref{eqn:total_density} we see that this produces a value which is $\sim 1$, indicating that the universe is flat ($k=0$) and that dark energy is the dominant factor in the expansion of the universe \cite{mod_ast}.
 
-Through the usage of measurements of the cosmic microwave background radiation the geometry of the universe was obtained [[CITE]]. However it would be especially useful if another measure was employed to verify this, one which is more readily available and accessible. 
-
-For this reason Type Ia supernovae have been utilised due to their standardised nature [[cite]]. 
+Through the usage of measurements of the cosmic microwave background radiation the geometry of the universe could be calculated. However, it would be especially useful if we could calculate the cosmic parameters using a more readily accessible set of data. We therefore can employ observations of Type Ia supernovae to constrain our densities.  
 
 \vspace{-3ex}
 \subsection{Cosmological Parameters from Type Ia Supernovae}
 \vspace{-2ex}
-To employ the supernovae in our calculations, we must first modify the Friedmann equation to enable for their ???
+To use Type Ia datasets, we must first modify the Friedmann equation so that the redshift of the supernovae is included. For this we have to recognise that the Hubble parameter can be a function of redshift $z$, 
 
 \vspace{-3ex}
 \subsection{Project Aims}
