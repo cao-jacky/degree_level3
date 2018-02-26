@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  24 FEB 2018 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  26 FEB 2018 10:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,26 +872,26 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
 File: results/ol_lp_complete.pdf Graphic file (type pdf)
 
 <use results/ol_lp_complete.pdf>
-Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 162.
+Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 164.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 162--163
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 164--165
  [] 
  []
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 163.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 165.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-63.
+65.
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 163.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 165.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-63.
+65.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -900,37 +900,36 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: results/triangle.pdf Graphic file (type pdf)
 
 <use results/triangle.pdf>
-Package pdftex.def Info: results/triangle.pdf used on input line 186.
+Package pdftex.def Info: results/triangle.pdf used on input line 188.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 186--187
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 188--189
  [] 
  []
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 187.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 189.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-87.
+89.
 
 
-Package natbib Warning: Citation `jha' on page 2 undefined on input line 187.
+Package natbib Warning: Citation `jha' on page 2 undefined on input line 189.
 
 
 Package natbib Warning: Citation `matheson' on page 2 undefined on input line 1
-87.
+89.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]
+(./supernova_cosmology.bbl [2]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 207.
+ on input line 14.
 
-(./supernova_cosmology.bbl) [3 <./results/ol_lp_complete.pdf> <./results/triang
-le.pdf
+) [3 <./results/ol_lp_complete.pdf> <./results/triangle.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./results/triangle.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
@@ -941,8 +940,8 @@ Package natbib Warning: There were undefined citations.
 [4] (./supernova_cosmology.aux) ) 
 Here is how much of TeX's memory you used:
  15777 strings out of 493089
- 274189 string characters out of 6134841
- 464848 words of memory out of 5000000
+ 274194 string characters out of 6134841
+ 464833 words of memory out of 5000000
  19062 multiletter control sequences out of 15000+600000
  12008 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -971,7 +970,7 @@ y7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
 
-Output written on supernova_cosmology.pdf (4 pages, 630395 bytes).
+Output written on supernova_cosmology.pdf (4 pages, 630258 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams
