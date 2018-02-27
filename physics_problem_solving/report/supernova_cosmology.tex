@@ -99,7 +99,7 @@ With this in hand, it is now possible to calculate the proportions of the univer
 
 Using these cosmological variables we can additionally define the total density parameter,
 \begin{equation}
-\Omega \equiv \Omega_{M} + \Omega_{\Lambda} + (\Omega_{\text{rel}}),.
+\Omega \equiv \Omega_{M} + \Omega_{\Lambda} + (\Omega_{\text{rel}}).
 \label{eqn:total_density}
 \end{equation}
 
@@ -110,6 +110,32 @@ This result was obtained through measurements of the cosmic microwave background
 \vspace{-3ex}
 \subsection{Cosmological Parameters from Type Ia Supernovae}
 \vspace{-2ex}
+To constrain the cosmological parameters using supernovae we do not look at the Friedmann equation directly. Instead, the main methodology is to use a Least Squares test to select the best model which would then correspond to cosmological parameters. We can define this test as the $\chi^2$ statistic, 
+\begin{equation}
+\chi^2 = \sum \frac{(f_\text{obs}-f_\text{model})^2}{\sigma_\text{obs}^2},
+\end{equation}
+
+where $f_\text{obs}$ is the peak observed flux of the supernova, $f_\text{model}$ is the model flux for the supernova calculated using the corresponding redshift and with certain defined cosmological parameters, and $\sigma_\text{model}$ is the uncertainty on the observational flux \cite{script}.
+
+Obtaining $f_\text{obs}$ is a simple matter, we can find it by using a rearranged form of,
+\begin{equation}
+m_\text{obs}=m_0 - 2.5\log_{10}(f_\text{obs}),
+\end{equation}
+
+that is, $m_\text{obs}$ is the effective peak magnitude of the supernova, $m_0$ is a constant with a value of $-20.45$, and $f$ is the supernova flux in units of erg cm$^{-2}$s$^{-1}$\AA$^{-1}$ \cite{script}.
+
+On the other hand, to find $f_\text{model}$ we begin by defining the flux equation for a certain model,
+\begin{equation}
+f_\text{model}=\frac{L_\text{peak}}{4\pi [R_0 S(\eta)]^2 (1+z)^2},
+\label{eqn:fmodel}
+\end{equation}
+
+where $L_\text{peak}$ is the peak luminosity value for Type Ia supernovae, $R_0 S(\eta)$ is the comoving distance between the observer and where the supernova exploded in space, and $z$ is the redshift for the supernova \cite{script}.
+
+To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1.
+
+
+
 To use Type Ia datasets, we must first modify the Friedmann equation so that the redshift $z$ of the supernovae is included. This redshift can be found by the expansion factor when it occurs, 
 \begin{equation}
 a = \frac{1}{1+z},

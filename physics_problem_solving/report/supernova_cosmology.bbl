@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{script}
+R.~Bower.
+\newblock {Level 3 PHYS3561 Computing Laboratory Computing Projects Booklet},
+  2017.
+
 \bibitem{mod_ast}
 B.~W. Carroll and D.~A. Ostlie.
 \newblock {\em An Introduction to Modern Astrophysics}.
@@ -11,10 +16,20 @@ A.~Gal-Yam.
   Classification of Supernovae}.
 \newblock Springer International Publishing AG, 2017.
 
+\bibitem{jha}
+S.~Jha et~al.
+\newblock {UBVRI Light Curves of 44 Type Ia Supernovae}.
+\newblock {\em The Astronomical Journal}, 131:526--554, 2006.
+
 \bibitem{longair}
 M.~Longair.
 \newblock {\em High Energy Astrophysics}.
 \newblock Cambridge University Press, 3rd edition, 2011.
+
+\bibitem{matheson}
+T.~Matheson et~al.
+\newblock {Optical Spectroscopy of Type Ia Supernovae}.
+\newblock {\em The Astronomical Journal}, 135:1598--1615, 2008.
 
 \bibitem{abs_phil}
 M.~M. Phillips.
