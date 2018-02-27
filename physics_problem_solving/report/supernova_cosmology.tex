@@ -91,6 +91,7 @@ Taking the Friedmann equation, it can be rewritten so that it considers a three 
 where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. Combining these densities with a critical density we can adapt the Friedmann equation so that it includes \textit{cosmological parameters}, these are values which describe the content makeup of the universe in terms of matter and energy. This critical density is defined as the value of the density that will result in a flat ($k=0$) universe. We see that the Friedmann equation becomes,
 \begin{equation}
 H^2 [1-(\Omega_{M} + \Omega_{\text{rel}} + \Omega_{\Lambda})]R^2 = -kc^2,
+\label{eqn:friedmann_old}
 \end{equation}
 
 where $H$ is the Hubble parameter and is related to the scale factor and expansion factors of the universe, $\Omega_{M}$ is the matter density parameter, $\Omega_{\text{rel}}$ is density contribution from radiation, and $\Omega_{\Lambda}$ is defined as the dark energy density parameter.
@@ -132,21 +133,17 @@ f_\text{model}=\frac{L_\text{peak}}{4\pi [R_0 S(\eta)]^2 (1+z)^2},
 
 where $L_\text{peak}$ is the peak luminosity value for Type Ia supernovae, $R_0 S(\eta)$ is the comoving distance between the observer and where the supernova exploded in space, and $z$ is the redshift for the supernova \cite{script}.
 
-To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1.
-
-
-
-To use Type Ia datasets, we must first modify the Friedmann equation so that the redshift $z$ of the supernovae is included. This redshift can be found by the expansion factor when it occurs, 
+To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For this data set the comoving distance cannot be simply approximated so we must use the following definition,
 \begin{equation}
-a = \frac{1}{1+z},
+R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
 \end{equation}
 
-i don't even know
+we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. The form that we require has been derived from Equation \ref{eqn:friedmann_old},
 \begin{equation}
-H^2 = \frac{H_0^2 \Omega_{M,0}}{a^3} + H_0^2 \Omega_{\Lambda} - \frac{kc^2}{R^2},
+H^2 = H_0^2 (1+z)^3 \Omega_{M,0} + H_0^2 \Omega_{\Lambda} - \frac{kc^2}{R^2},
 \end{equation}
 
-with stuff
+where, 
 \begin{equation}
 \frac{kc^2}{R_0^2} = H_0^2 (\Omega_{M,0} + \Omega_{\Lambda} - 1),
 \end{equation}

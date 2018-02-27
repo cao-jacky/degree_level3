@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 FEB 2018 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  27 FEB 2018 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,10 +872,10 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
 File: results/ol_lp_complete.pdf Graphic file (type pdf)
 
 <use results/ol_lp_complete.pdf>
-Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 169.
+Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 166.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 169--170
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 166--167
  [] 
  []
 
@@ -883,10 +883,10 @@ Overfull \hbox (26.07182pt too wide) in paragraph at lines 169--170
 File: results/triangle.pdf Graphic file (type pdf)
 
 <use results/triangle.pdf>
-Package pdftex.def Info: results/triangle.pdf used on input line 193.
+Package pdftex.def Info: results/triangle.pdf used on input line 190.
 (pdftex.def)             Requested size: 263.18799pt x 197.3993pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 193--194
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 190--191
  [] 
  []
 
@@ -900,10 +900,10 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./results/triangle.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >] [4] (./supernova_cosmology.aux) ) 
 Here is how much of TeX's memory you used:
- 15784 strings out of 493089
- 274302 string characters out of 6134841
- 465892 words of memory out of 5000000
- 19069 multiletter control sequences out of 15000+600000
+ 15785 strings out of 493089
+ 274322 string characters out of 6134841
+ 465906 words of memory out of 5000000
+ 19070 multiletter control sequences out of 15000+600000
  12008 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,5n,41p,10382b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -931,7 +931,7 @@ sy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
 fb>
-Output written on supernova_cosmology.pdf (4 pages, 635874 bytes).
+Output written on supernova_cosmology.pdf (4 pages, 636751 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams
