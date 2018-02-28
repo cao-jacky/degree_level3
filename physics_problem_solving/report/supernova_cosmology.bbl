@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{script}
 R.~Bower.
@@ -30,6 +30,12 @@ M.~Longair.
 T.~Matheson et~al.
 \newblock {Optical Spectroscopy of Type Ia Supernovae}.
 \newblock {\em The Astronomical Journal}, 135:1598--1615, 2008.
+
+\bibitem{dataset_1}
+S.~Perlmutter et~al.
+\newblock {Measurements of $\Omega$ and $\Lambda$ from 42 High-Redshift
+  Supernovae}.
+\newblock {\em The Astrophysical Journal}, 517(2), 1999.
 
 \bibitem{abs_phil}
 M.~M. Phillips.

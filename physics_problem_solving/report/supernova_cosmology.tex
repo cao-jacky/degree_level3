@@ -20,7 +20,7 @@
 \textheight=26.385cm
 %Change textheight as the last resort...
 
-\title{Constraining the geometry of the Universe using Type Ia supernovae}
+\title{Constraining the geometry of the Universe using Type Ia supernovae and statistical methods}
  
 \author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of report: 28/02/2018}
 
@@ -114,6 +114,7 @@ This result was obtained through measurements of the cosmic microwave background
 To constrain the cosmological parameters using supernovae we do not look at the Friedmann equation directly. Instead, the main methodology is to use a Least Squares test to select the best model which would then correspond to cosmological parameters. We can define this test as the $\chi^2$ statistic, 
 \begin{equation}
 \chi^2 = \sum \frac{(f_\text{obs}-f_\text{model})^2}{\sigma_\text{obs}^2},
+\label{eqn:chi_eqn}
 \end{equation}
 
 where $f_\text{obs}$ is the peak observed flux of the supernova, $f_\text{model}$ is the model flux for the supernova calculated using the corresponding redshift and with certain defined cosmological parameters, and $\sigma_\text{model}$ is the uncertainty on the observational flux \cite{script}.
@@ -133,7 +134,7 @@ f_\text{model}=\frac{L_\text{peak}}{4\pi [R_0 S(\eta)]^2 (1+z)^2},
 
 where $L_\text{peak}$ is the peak luminosity value for Type Ia supernovae, $R_0 S(\eta)$ is the comoving distance between the observer and where the supernova exploded in space, and $z$ is the redshift for the supernova \cite{script}.
 
-To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For this data set the comoving distance cannot be simply approximated so we must use the following definition,
+To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. Optimum $L_\text{peak}$ can then found by using Equation \ref{eqn:chi_eqn}, the smallest value for $\chi^2$ corresponds to the best luminosity. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For this data set the comoving distance cannot be simply approximated so we must use the following definition,
 \begin{equation}
 R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
 \label{eqn:comoving_integral}
@@ -141,7 +142,7 @@ R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
 
 we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_{M} = 1 - \Omega_{\Lambda}$, reducing the cosmological parameters which we have to find \cite{script}. 
 
-We arrive at the following result for the Hubble Parameter,
+We now arrive at the following result for the Hubble Parameter,
 \begin{equation}
 H^2 = H_0^2 [(1+z)^3 - \Omega_{\Lambda} ((1+z)^3-1)],
 \label{eqn:hubble_parameter}
@@ -149,29 +150,24 @@ H^2 = H_0^2 [(1+z)^3 - \Omega_{\Lambda} ((1+z)^3-1)],
 
 where $H_0$ is a value for the Hubble's constant, $z$ is the redshift for a supernova, and $\Omega_\Lambda$ is a cosmological constant.
 
-To find the optimum value for $\Omega_\Lambda$ we can select a range from 0.0 to 1.0 and then calculate $f_\text{model}$ and $\chi^2$ for each number. The best value for the cosmological parameter is then found by choosing the minimum value for $\chi^2$. 
+To find the optimum value for $\Omega_\Lambda$ we can select a range from 0.0 to 1.0 and then calculate $f_\text{model}$ and $\chi^2$ for each number. Identical to finding $L_\text{peak}$, the best value for the cosmological parameter is found by choosing the minimum value for $\chi^2$. Through the usage of this least squares method one is able to explore cosmological parameters using Type Ia supernova data sets.
 
-\vspace{-3ex}
+\vspace{-4ex}
 \subsection{Project Aims}
 \vspace{-2ex}
-Through computational analysis it has been possible to employ large datasets of Type Ia supernovae to constrain values for cosmological parameters using the Friedmann equation. In the following section we discuss the results from our experimentation and provide analysis on their meanings and implications.
+In this paper we discuss the experimental work performed to constrain cosmological parameters using Type Ia supernova data. Least Squares and Bayesian methods are initially explored, then details of experiments involving models which contain more than two parameters are analysed.
 
 \vspace{-3ex}
 \section{Results and Discussion} 
 \label{sec:results_discussion}
-\vspace{-2ex}
-From our experimentation we have therefore found results which ??
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=9.25cm]{results/ol_lp_complete}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
 \vspace{-3ex}
-\label{fig:ol_lp_complete}
-\end{center}
-\end{figure}
+\subsection{$\chi^2$ Statistics} 
+\vspace{-2ex}
+To calculate cosmological parameters using supernovae we must first obtain data sets of Type Ia supernovae which contain redshift, effective magnitude and the uncertainty on that magnitude. We specify effective magnitude as this means that it has been correct for light curve stretching and galactic dust extinction amongst other factors \cite{script}. This means that the magnitudes used in our calculations will be more accurate and thus produce more accurate parameters. 
 
-sdfsadfasdf
+In our first experiments we chose to use a data of set of 42 high-redshift ($z>0.1$) Type Ia supernovae from the Supernova Cosmology Project and 18 low-redshift ($z<0.1$) ones from the Cal\'{a}n Tololo Survey \cite{dataset_1}. As indicated in our previous discussion of the experimental theory we require the low-redshift supernovae to `calibrate' the Type Ia data so that Equation \ref{eqn:fmodel} can be used. In doing so we find $L_{\text{peak}} = (3.1\pm0.1) \times 10^{35}$ W for the peak luminosity and in using this we can then proceed to calculate $\Omega_\Lambda$.
+
+
 
 \begin{table}[h!]
 \centering
@@ -191,9 +187,16 @@ sdfsadfasdf
 \label{table:2017hhz_data}
 \end{table}
 
+aassa
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.25cm]{results/ol_lp_complete}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
 \vspace{-3ex}
-\subsection{$\chi^2$ Statistics} 
-\vspace{-2ex}
+\label{fig:ol_lp_complete}
+\end{center}
+\end{figure}
 
 asdasd
 
