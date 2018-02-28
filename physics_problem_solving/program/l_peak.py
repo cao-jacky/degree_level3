@@ -187,6 +187,7 @@ def mchi_sq_min(hubble, c, data, step):
 
     min_index = np.where(chi_sq_data[:,1] == chi_sq_min) # Finding index of min value
     l_peak_min = chi_sq_data[:,0][min_index] # Finding value corresponding to min chi^2
+    print(l_peak_min)
     return chi_sq_min, (l_peak_min)
 
 

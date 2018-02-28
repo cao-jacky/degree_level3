@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{revtex4}
-\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,mhchem,tabularx,array,makecell,threeparttable,amssymb,relsize,csquotes}
+\usepackage{graphics,graphicx,epsfig,amsmath,multirow,gensymb,commath,textcomp,natbib,blindtext,tabularx,array,makecell,threeparttable,amssymb,relsize,csquotes}
 \usepackage{listings}
 \usepackage[a4paper, left=1.85cm, right=1.85cm, top=1.85cm, bottom=1.85cm]{geometry}   
 \usepackage[normalem]{ulem}
@@ -165,27 +165,30 @@ In this paper we discuss the experimental work performed to constrain cosmologic
 \vspace{-2ex}
 To calculate cosmological parameters using supernovae we must first obtain data sets of Type Ia supernovae which contain redshift, effective magnitude and the uncertainty on that magnitude. We specify effective magnitude as this means that it has been correct for light curve stretching and galactic dust extinction amongst other factors \cite{script}. This means that the magnitudes used in our calculations will be more accurate and thus produce more accurate parameters. 
 
-In our first experiments we chose to use a data of set of 42 high-redshift ($z>0.1$) Type Ia supernovae from the Supernova Cosmology Project and 18 low-redshift ($z<0.1$) ones from the Cal\'{a}n Tololo Survey \cite{dataset_1}. As indicated in our previous discussion of the experimental theory we require the low-redshift supernovae to `calibrate' the Type Ia data so that Equation \ref{eqn:fmodel} can be used. In doing so we find $L_{\text{peak}} = (3.1\pm0.1) \times 10^{35}$ W for the peak luminosity and in using this we can then proceed to calculate $\Omega_\Lambda$.
+In our first experiments we chose to use a data of set of 42 high-redshift ($z>0.1$) Type Ia supernovae from the Supernova Cosmology Project (SCP) and 18 low-redshift ($z<0.1$) ones from the Cal\'{a}n Tololo Survey (CTS) \cite{dataset_1}. As indicated in our previous discussion of the experimental theory we require the low-redshift supernovae to `calibrate' the Type Ia data so that Equation \ref{eqn:fmodel} can be used. From Table \ref{table:cosmo_parameters} we see that we find $L_{\text{peak}} = (3.1\pm0.1) \times 10^{35}$ W for the peak luminosity using the SCP and CTS data.
 
+With this we found a corresponding $\Omega_\Lambda$ of $0.86\pm0.04$. We can compare it to a literature value of $0.761^{+0.017}_{-0.018}$ and find only a $\sim 10 \%$ difference between them. One can gather that whilst our result is consistent with known values, within it's own uncertainties it does include the accurate value. This may be the case because we calculated our $\chi^2$ values in what is known as \textit{flux}-space. Equation \ref{eqn:chi_eqn} uses the observational and model fluxes of the supernovae to calculate the $\chi^2$ values. Instead of this, magnitudes could be used which would shift us into \textit{magnitude}-space. Again, from Table \ref{table:cosmo_parameters} we see the value for $\Omega_\Lambda$ and for this, it is more consistent to the given literature value.
 
+It is  
 
-\begin{table}[h!]
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table*}[t]
 \centering
-\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
  \hline
- \textbf{Parameter} & \textbf{$\boldsymbol{\chi^2}$} & \textbf{MCMC} & \textbf{Literature} \\ [0.5ex] 
- $L_{\text{peak}}$ ($\times 10^{35}$ W) & $3.1\pm0.1$ & $3.4\pm0.1$ & 1\\
- $\Omega_\Lambda$ & 18.8 & 0.2 & 1 \\
- $\Omega_k$ & - & 1 & 1 \\
- $\Omega_M$ & - & 1 & 1 \\
- $\Omega_\text{rad}$ & - & 1 & 1 \\
- $w$ & - & 1 & 1\\
+ \textbf{Parameter} & \textbf{$\boldsymbol{\chi^2_{1}(f)}$} & \textbf{$\boldsymbol{\chi^2_{1}(m)}$} & \textbf{$\boldsymbol{\chi^2_2}$} & \textbf{MCMC} & \textbf{Literature} \\ [0.5ex] 
+ $L_{\text{peak}}$ (W) & $(3.1\pm0.1)\times 10^{35}$ & $(3.3\pm0.1)\times 10^{35}$ & $(2.94\pm0.04)\times 10^{35}$ & $(3.4\pm0.1 ) \times 10^{35}$ & -\\
+ $\Omega_\Lambda$ & $0.86\pm0.04$ &  $0.71\pm0.04$ & $0.74\pm0.01$ & $0.73\pm0.01$ & $0.761^{+0.017}_{-0.018}$ \\
+ $\Omega_k$ & - & - & - & $-0.0029\pm0.009$ & $-0.0030^{+0.0095}_{-0.0102}$ \\
+ $\Omega_M$ & - & - & - & $0.20\pm0.02$ & $0.239^{+0.018}_{-0.017}$ \\
+ $\Omega_\text{rad}$ & - & - & - & $(4.4\pm0.7)\times10^{-6}$ & $(4.16)\times10^{-6}$ \\
+ $w$ & - & - & - & $-0.912\pm0.01$ & $-0.941^{+0.087}_{-0.101}$ \\
  \hline
 \end{tabular}
-\caption{10 days worth of data was analysed to produce magnitudes and their uncertainties for the B and V photometric bands for Type Ia supernova, 2017hhz. }
+\caption{Cosmological parameters calculated using different data sets and methods. $\chi^2_1$ are the parameters which have been calculated using the SCP and Cal\'{a}n Tololo Survey data. $\chi^2_2$ are the parameters found with the larger Union2.1 SCP data set. MCMC corresponds to the parameters calculated using the Markov Chain Monte Carlo method from Bayesian statistics. We also provide `Literature' values obtained from work performed by M. Tegmark et al (2006) \cite{cosmo_constraints}.}
 \vspace{-0.5em}
-\label{table:2017hhz_data}
-\end{table}
+\label{table:cosmo_parameters}
+\end{table*}
 
 aassa
 
