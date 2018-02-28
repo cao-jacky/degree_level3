@@ -136,19 +136,20 @@ where $L_\text{peak}$ is the peak luminosity value for Type Ia supernovae, $R_0 
 To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For this data set the comoving distance cannot be simply approximated so we must use the following definition,
 \begin{equation}
 R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
+\label{eqn:comoving_integral}
 \end{equation}
 
-we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. The form that we require has been derived from Equation \ref{eqn:friedmann_old},
+we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_{M} = 1 - \Omega_{\Lambda}$, reducing the cosmological parameters which we have to find \cite{script}. 
+
+We arrive at the following result for the Hubble Parameter,
 \begin{equation}
-H^2 = H_0^2 (1+z)^3 \Omega_{M,0} + H_0^2 \Omega_{\Lambda} - \frac{kc^2}{R^2},
+H^2 = H_0^2 [(1+z)^3 - \Omega_{\Lambda} ((1+z)^3-1)],
+\label{eqn:hubble_parameter}
 \end{equation}
 
-where, 
-\begin{equation}
-\frac{kc^2}{R_0^2} = H_0^2 (\Omega_{M,0} + \Omega_{\Lambda} - 1),
-\end{equation}
+where $H_0$ is a value for the Hubble's constant, $z$ is the redshift for a supernova, and $\Omega_\Lambda$ is a cosmological constant.
 
-But using supernovae we need to consider blah blah blah
+To find the optimum value for $\Omega_\Lambda$ we can select a range from 0.0 to 1.0 and then calculate $f_\text{model}$ and $\chi^2$ for each number. The best value for the cosmological parameter is then found by choosing the minimum value for $\chi^2$. 
 
 \vspace{-3ex}
 \subsection{Project Aims}
@@ -171,6 +172,24 @@ From our experimentation we have therefore found results which ??
 \end{figure}
 
 sdfsadfasdf
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
+ \hline
+ \textbf{Parameter} & \textbf{$\boldsymbol{\chi^2}$} & \textbf{MCMC} & \textbf{Literature} \\ [0.5ex] 
+ $L_{\text{peak}}$ ($\times 10^{35}$ W) & $3.1\pm0.1$ & $3.4\pm0.1$ & 1\\
+ $\Omega_\Lambda$ & 18.8 & 0.2 & 1 \\
+ $\Omega_k$ & - & 1 & 1 \\
+ $\Omega_M$ & - & 1 & 1 \\
+ $\Omega_\text{rad}$ & - & 1 & 1 \\
+ $w$ & - & 1 & 1\\
+ \hline
+\end{tabular}
+\caption{10 days worth of data was analysed to produce magnitudes and their uncertainties for the B and V photometric bands for Type Ia supernova, 2017hhz. }
+\vspace{-0.5em}
+\label{table:2017hhz_data}
+\end{table}
 
 \vspace{-3ex}
 \subsection{$\chi^2$ Statistics} 
