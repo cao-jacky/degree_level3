@@ -162,7 +162,7 @@ In this paper we discuss the experimental work performed to constrain cosmologic
 \section{Results and Discussion} 
 \label{sec:results_discussion}
 \vspace{-3ex}
-\subsection{$\chi^2$ Statistics} 
+\subsection{Least Square Statistics} 
 \vspace{-2ex}
 To calculate cosmological parameters using supernovae we must first obtain data sets of Type Ia supernovae which contain redshift, effective magnitude and the uncertainty on that magnitude. We specify effective magnitude as this means that it has been correct for light curve stretching and galactic dust extinction amongst other factors \cite{script}. This means that the magnitudes used in our calculations will be more accurate and thus produce more accurate parameters. 
 
@@ -170,9 +170,17 @@ In our first experiments we chose to use a data of set of 42 high-redshift ($z>0
 
 With this we found a corresponding $\Omega_\Lambda$ to be $0.86\pm0.04$. Comparing it to a literature value of $0.761^{+0.017}_{-0.018}$ we find that there is only a $\sim 10 \%$ difference between them. One can gather that whilst our result is consistent with known values, within it's own uncertainties it does not include the accurate value. This potentially could be the case because we calculated our $\chi^2$ values in what is known as \textit{flux}-space. Equation \ref{eqn:chi_eqn} uses the observational and model fluxes of the supernovae to calculate the $\chi^2$ values. Instead of this, magnitudes could be used which would shift us into \textit{magnitude}-space. In our investigations we attempted to recalculate $\Omega_\Lambda$ and found $0.71\pm0.04$, we see that this is more consistent to the given literature value.
 
-Whilst we could have moved our experiment into magnitude-space on the basis of this calculation, we firstly had to understand the implications that this would bring. 
+Whilst we could have performed the rest of our experiment in magnitude-space, we chose not to as there would be additional implications and uncertainties.
 
-In converting from fluxes into magnitudes using Equation \ref{eqn:mag_flux} we find that the transformation modifies the input flux distribution and the shape of it will be biased towards fainter magnitudes \cite{magspace_stats}. 
+In converting from fluxes into magnitudes using Equation \ref{eqn:mag_flux} we find that the transformation modifies the input flux distribution and the shape of it will be biased towards fainter magnitudes \cite{magspace_stats}. However this does not account for the disparity between our calculated cosmological constants. 
+
+Investigating this further in literature, we have not been able to find the reason for this disparity. Although we could suggest that it may arise due to the conversion of flux into magnitude for the model in magnitude-space. If we consider observational data for supernovae, we find that multiple steps are required to convert an image into a magnitude value. First of all, frames are taken by CCDs and then aperture or point-spread function photometry is used to measure the amount of flux being received from the object. This flux then has to be converted into a magnitude using Equation \ref{eqn:mag_flux}, where the zero point is found by using objects from the same frame. 
+
+% provide references for the above paragraph.
+
+In our work we have kept $m_0=-20.45$, a value which is constant no matter which supernovae we are working with. If we were to change it to a more suitable value, would this produce more accurate results? Whilst this possibly could be the case, in our later research with larger data sets we find that working in flux-space returns cosmological parameters which are consistent to measured values. This discrepancy between flux and magnitude-space could just be a consequence of the method requiring a large data set for it to easily constrain the variables.
+
+From Table \ref{table:cosmo_parameters} we see that the uncertainties for $\Omega_\Lambda$ 
 
 {\renewcommand{\arraystretch}{1.2}%
 \begin{table*}[t]
@@ -193,7 +201,14 @@ In converting from fluxes into magnitudes using Equation \ref{eqn:mag_flux} we f
 \label{table:cosmo_parameters}
 \end{table*}
 
-aassa
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=9.25cm]{results/hubble_diagram}
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\vspace{-3ex}
+\label{fig:ol_lpsdfasdf}
+\end{center}
+\end{figure}
 
 \begin{figure}[!h]
 \begin{center}
