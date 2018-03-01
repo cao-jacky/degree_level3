@@ -26,6 +26,14 @@ M.~Longair.
 \newblock {\em High Energy Astrophysics}.
 \newblock Cambridge University Press, 3rd edition, 2011.
 
+\bibitem{magspace_stats}
+F.~Masci.
+\newblock {The danger of statistical inference in magnitude space}.
+\newblock
+  \url{http://web.ipac.caltech.edu/staff/fmasci/home/mystats/logfluxbias.html},
+  March 2012.
+\newblock [Online; accessed 1st March 2018].
+
 \bibitem{matheson}
 T.~Matheson et~al.
 \newblock {Optical Spectroscopy of Type Ia Supernovae}.

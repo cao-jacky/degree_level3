@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: supernova_cosmology.aux
 The style file: abbrv.bst
 Database file #1: supernova_cosmology.bib
-You've used 11 entries,
+You've used 12 entries,
             2118 wiz_defined-function locations,
-            557 strings with 4917 characters,
-and the built_in function-call counts, 2890 in all, are:
-= -- 278
-> -- 119
+            564 strings with 5113 characters,
+and the built_in function-call counts, 3109 in all, are:
+= -- 300
+> -- 126
 < -- 0
-+ -- 48
-- -- 36
-* -- 166
-:= -- 514
-add.period$ -- 32
-call.type$ -- 11
-change.case$ -- 45
++ -- 51
+- -- 38
+* -- 174
+:= -- 551
+add.period$ -- 36
+call.type$ -- 12
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 120
-empty$ -- 246
-format.name$ -- 36
-if$ -- 603
+cite$ -- 12
+duplicate$ -- 127
+empty$ -- 268
+format.name$ -- 38
+if$ -- 651
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 12
 missing$ -- 14
-newline$ -- 57
-num.names$ -- 22
-pop$ -- 49
+newline$ -- 63
+num.names$ -- 24
+pop$ -- 57
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 39
 quote$ -- 0
-skip$ -- 85
+skip$ -- 91
 stack$ -- 0
-substring$ -- 146
-swap$ -- 11
+substring$ -- 151
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 40
 warning$ -- 0
-while$ -- 26
-width$ -- 13
-write$ -- 118
+while$ -- 28
+width$ -- 14
+write$ -- 130

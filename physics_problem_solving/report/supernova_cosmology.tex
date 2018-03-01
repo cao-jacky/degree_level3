@@ -122,9 +122,10 @@ where $f_\text{obs}$ is the peak observed flux of the supernova, $f_\text{model}
 Obtaining $f_\text{obs}$ is a simple matter, we can find it by using a rearranged form of,
 \begin{equation}
 m_\text{obs}=m_0 - 2.5\log_{10}(f_\text{obs}),
+\label{eqn:mag_flux}
 \end{equation}
 
-that is, $m_\text{obs}$ is the effective peak magnitude of the supernova, $m_0$ is a constant with a value of $-20.45$, and $f$ is the supernova flux in units of erg cm$^{-2}$s$^{-1}$\AA$^{-1}$ \cite{script}.
+that is, $m_\text{obs}$ is the effective peak magnitude of the supernova, $m_0$ is the instrumental zero point constant with a value of $-20.45$, and $f$ is the supernova flux in units of erg cm$^{-2}$s$^{-1}$\AA$^{-1}$ \cite{script}.
 
 On the other hand, to find $f_\text{model}$ we begin by defining the flux equation for a certain model,
 \begin{equation}
@@ -167,9 +168,11 @@ To calculate cosmological parameters using supernovae we must first obtain data 
 
 In our first experiments we chose to use a data of set of 42 high-redshift ($z>0.1$) Type Ia supernovae from the Supernova Cosmology Project (SCP) and 18 low-redshift ($z<0.1$) ones from the Cal\'{a}n Tololo Survey (CTS) \cite{dataset_1}. As indicated in our previous discussion of the experimental theory we require the low-redshift supernovae to `calibrate' the Type Ia data so that Equation \ref{eqn:fmodel} can be used. From Table \ref{table:cosmo_parameters} we see that we find $L_{\text{peak}} = (3.1\pm0.1) \times 10^{35}$ W for the peak luminosity using the SCP and CTS data.
 
-With this we found a corresponding $\Omega_\Lambda$ of $0.86\pm0.04$. We can compare it to a literature value of $0.761^{+0.017}_{-0.018}$ and find only a $\sim 10 \%$ difference between them. One can gather that whilst our result is consistent with known values, within it's own uncertainties it does include the accurate value. This may be the case because we calculated our $\chi^2$ values in what is known as \textit{flux}-space. Equation \ref{eqn:chi_eqn} uses the observational and model fluxes of the supernovae to calculate the $\chi^2$ values. Instead of this, magnitudes could be used which would shift us into \textit{magnitude}-space. Again, from Table \ref{table:cosmo_parameters} we see the value for $\Omega_\Lambda$ and for this, it is more consistent to the given literature value.
+With this we found a corresponding $\Omega_\Lambda$ to be $0.86\pm0.04$. Comparing it to a literature value of $0.761^{+0.017}_{-0.018}$ we find that there is only a $\sim 10 \%$ difference between them. One can gather that whilst our result is consistent with known values, within it's own uncertainties it does not include the accurate value. This potentially could be the case because we calculated our $\chi^2$ values in what is known as \textit{flux}-space. Equation \ref{eqn:chi_eqn} uses the observational and model fluxes of the supernovae to calculate the $\chi^2$ values. Instead of this, magnitudes could be used which would shift us into \textit{magnitude}-space. In our investigations we attempted to recalculate $\Omega_\Lambda$ and found $0.71\pm0.04$, we see that this is more consistent to the given literature value.
 
-It is  
+Whilst we could have moved our experiment into magnitude-space on the basis of this calculation, we firstly had to understand the implications that this would bring. 
+
+In converting from fluxes into magnitudes using Equation \ref{eqn:mag_flux} we find that the transformation modifies the input flux distribution and the shape of it will be biased towards fainter magnitudes \cite{magspace_stats}. 
 
 {\renewcommand{\arraystretch}{1.2}%
 \begin{table*}[t]
