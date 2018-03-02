@@ -80,6 +80,8 @@ def plot_redmag(hubble, c, data, step, l_peak):
     for i in range(len(z)):
         fn_r[i] = model_ranged(hubble, c, data, step, l_peak, z[i], O_L)
 
+    # Testing the fit by calculating chi^2?
+
     fig = pyplot.figure()
     pyplot.title(r"\textbf{Magnitude agaisnt Redshift}")
     pyplot.xlabel(r'$z$')

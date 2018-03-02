@@ -49,10 +49,16 @@ def plot_h(hubble, c, data, step, milestone, extension1):
         model_two[i] = model_ranged(hubble, c, data, step, extension1[0], z[i], 
                 extension1[1])
 
+    # Savign to text files
+    np.savetxt('program/graphs/hubble/model_one.txt', model_one)
+    np.savetxt('program/graphs/hubble/model_two.txt', model_two)
+
     fig = pyplot.figure()
-    pyplot.title(r"\textbf{Magnitude agaisnt Redshift}")
-    pyplot.xlabel(r'$z$')
-    pyplot.ylabel(r'\textbf{mag}')
+    pyplot.xlabel(r'\textbf{Redshift}', fontsize=13)
+    pyplot.ylabel(r'\textbf{Effective Magnitude (mag)}', fontsize=13)
+
+    pyplot.tick_params(axis='y', which='major', labelsize=15)
+    pyplot.tick_params(axis='x', labelsize=15)
 
     # Plotting the data
     pyplot.errorbar(edt[0][:,1],edt[0][:,2],yerr=edt[0][:,3],marker=".",color="0.1",
