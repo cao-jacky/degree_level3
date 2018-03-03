@@ -20,7 +20,7 @@ lp_arnd = 3.40 * (10**35)
 ol_arnd = 0.80
 
 # Amount of steps for the MCMC function to take - higher number, takes longer
-rng = 10
+rng = 1500
 
 # Running the MCMC function, the number of times
 no = 10 

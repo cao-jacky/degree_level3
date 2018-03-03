@@ -49,8 +49,9 @@ def current_values(file_name, lp, ol):
     chi_sq_crrnt = error_function(file_name, lp, ol) / 2 # Current chi^2
 
     #: Proposed values for new Omega_Lambda and L_peak
-    ol_prpsed = np.random.normal(ol, 0.15, 1)
-    lp_prpsed = np.random.normal(lp, 0.2*(10**35),1)
+    ol_prpsed = np.random.normal(ol, 0.10, 1)
+    lp_prpsed = np.random.normal(lp, 0.2*(10**35),1)  
+
     print(ol_prpsed, lp_prpsed)
     
     chi_sq_prpsed = error_function(file_name, lp_prpsed, ol_prpsed) / 2 # Proposed chi^2
