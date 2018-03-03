@@ -231,7 +231,7 @@ In some of our experiments we became confined in these wells, one example is whe
 \begin{center}
 \includegraphics[width=9.25cm]{results/ol_lp_complete}
 \caption[]{Random Walk Metropolis-Hastings algorithm shown when constraining $\Omega_\Lambda$ and $L_\text{peak}$. 10 independent runs performed with 1500 individual random walks for each run. The red dot is the initial provided search parameters $\Omega_\Lambda=0.8$ and $L_\text{peak}=3.40\times10^{35}$, the blue dots represent the optimums for each of the 10 runs, and the green dot is the final average of all of the optimum parameters from each run. The ellipses represent the spread of data with the inner ellipse as $1\sigma$, second as $2\sigma$, and the third as $3\sigma$. This plot shows us the potential for the algorithm to become stuck within local minima if left unconstrained. }
-\vspace{-3ex}
+\vspace{-5ex}
 \label{fig:mcmc_search}
 \end{center}
 \end{figure}
@@ -241,7 +241,7 @@ We can circumnavigate this problem by implementing \textit{simulated annealing}.
 \vspace{-3ex}
 \subsection{Multi-cosmological Parameters} 
 \vspace{-2ex}
-With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see if searching for multiple cosmological parameters would affect the it more or less. We now required a more detailed model of the universe, we decided to reintroduce the contributions from radiation and also add a contribution from the spatial curvature of the universe. 
+With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which includes extra variables. We turn to the full Lambda Cold Dark Matter model ($\Lambda$CDM) we decided to reintroduce the contributions from radiation and also add a contribution from the spatial curvature of the universe. 
 
 \begin{figure}[!h]
 \begin{center}
