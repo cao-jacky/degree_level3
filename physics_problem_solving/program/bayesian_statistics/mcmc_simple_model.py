@@ -161,8 +161,8 @@ def complete(points, number):
 
     #: Labels
     #pyplot.title(r"\textbf{Covariance plot of L_{peak} and Omega_{Lambda}}")
-    pyplot.xlabel(r'$L_{peak}$')
-    pyplot.ylabel(r'$\Omega_{\Lambda}$')
+    pyplot.xlabel(r'$L_{peak}$', fontsize=13)
+    pyplot.ylabel(r'$\Omega_{\Lambda}$', fontsize=13)
 
     pyplot.tick_params(axis='y', which='major', labelsize=15)
     pyplot.tick_params(axis='x', labelsize=15)
