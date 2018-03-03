@@ -222,7 +222,11 @@ For our use in constraining cosmological parameters we chose to utilise a Random
 
 A more accurate value is therefore expected with the application of this algorithm. Although, we must first note that as this method relies on the random generation of new points, the optimum values will always lie within a range of $\sim 5\%$ above or below the literature values. To account for this, we therefore performed multiple runs of the algorithm and then averaged them together to find an acceptable value. 
 
-To find solely $\Omega_\Lambda$ we carried out 10 runs of 1500 walks each, from this we found a value of $0.72\pm0.01$. Whilst this does agree with literature, we find that the number calculated with Least Squares is more accurate than what we have here. This could be the case due to the number of walks given to the algorithm in a single run, if 10,000 walks had been allocated could we have seen the optimum match more closely to what has been measured? There is a substantial problem with this though, if left unaided the searcher could end up trapped in a `local minima' and it could take many walks before it is able to escape. 
+To find solely $\Omega_\Lambda$ we carried out 10 runs of 1500 walks each, from this we found a value of $0.72\pm0.01$. Whilst this does agree with literature, we find that the number calculated with Least Squares is more accurate than what we have here. This could be the case due to the number of walks given to the algorithm in a single run, if 10,000 walks had been allocated could we have seen the optimum match more closely to what has been measured? There is a substantial problem with doing this, if left unaided the search could end up trapped in a `local minima' and it could take many walks before it is able to escape. In some of our experiments we became confined in these wells and found $\Omega_\Lambda=0.47\pm0.02$, which is drastically different to what we have found previously.
+
+In attempting to circumnavigate this problem \textit{simulated annealing} could be implemented. This is where the descent algorithm is modified by random ascent moves so that local minima can be escaped [[CITE]]. In our experimentation these minima were infrequent enough so that this new method was not placed into practice. However, for larger searches it would be highly useful if the sampling avoided becoming trapped as resources would be wasted in rerunning the algorithms.
+
+% NOT SURE ABOUT THE ABOVE PARAGRAPH!!!
 
 \begin{figure}[!h]
 \begin{center}
