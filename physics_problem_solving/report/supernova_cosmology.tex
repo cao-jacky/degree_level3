@@ -216,12 +216,18 @@ In Figure \ref{fig:hubble_diagram} we have plotted the Union2.1 data set alongsi
 \vspace{-3ex}
 \subsection{Bayesian Statistics} 
 \vspace{-2ex}
-With our work in Bayesian statistics we have primarily made use of the Markov Chain Monte Carlo (MCMC) set of methods. Bayes theorem associates the posterior probability (the probability for parameters given known and observed data) to the likelihood 
+With our work in Bayesian statistics we have primarily made use of the Markov Chain Monte Carlo (MCMC) set of methods. Bayes theorem associates the posterior probability (the probability for parameters given known and observed data) to the likelihood (the probability for the data given certain parameters) and the prior (what was known about the parameter before the data). With these statistical procedures we are in essence updating our information about a value from the prior to the posterior \cite{mcmc_bs}. MCMC makes use of this theory and applies it into a methodology, values are generated and then assigned a likelihood probability, criteria is then used to decide if the parameters should be accepted or not, then finally an optimum solution should be found from all the runs.
+
+For our use in constraining cosmological parameters we chose to utilise a Random Walk Metropolis-Hastings (RWHM) algorithm, the method for which can be found in Appendix \ref{appendix:mcmc}. We chose to use this as it independently samples the parameter space, information about it's current point will not be considered for the location of it's next `jump' \cite{mcmc_bs}. Instead, an acceptance probability and a random value is compared to generate the next point in the parameter search.
+
+A more accurate value is therefore expected with the application of this algorithm. Although, we must first note that as this method relies on the random generation of new points, the optimum values will always lie within a range of $\sim 5\%$ above or below the literature values. To account for this, we therefore performed multiple runs of the algorithm and then averaged them together to find an acceptable value. 
+
+To find solely $\Omega_\Lambda$ we carried out 10 runs of 1500 walks each, from this we found a value of $0.72\pm0.01$. Whilst this does agree with literature, we find that the number calculated with Least Squares is more accurate than what we have here. This could be the case due to the number of walks given to the algorithm in a single run, if 10,000 walks had been allocated could we have seen the optimum match more closely to what has been measured? There is a substantial problem with this though, if left unaided the searcher could end up trapped in a `local minima' and it could take many walks before it is able to escape. 
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/ol_lp_complete}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em }
 \vspace{-3ex}
 \label{fig:ol_lp_complete}
 \end{center}
@@ -233,7 +239,7 @@ With our work in Bayesian statistics we have primarily made use of the Markov Ch
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=9.25cm]{results/triangle}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em \cite{jha, matheson}. }
+\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em  }
 \vspace{-3ex}
 \label{fig:triangle}
 \end{center}
@@ -265,6 +271,15 @@ In conclusion, we have found that it is possible to constrain cosmological param
 \vspace{-2ex}
 
 
+
+\clearpage
+
+\vspace{-3ex}
+\section{Random Walk Metropolis-Hastings MCMC}
+\label{appendix:mcmc}
+\vspace{-2ex}
+
+poo
 
 \clearpage
 \end{document}

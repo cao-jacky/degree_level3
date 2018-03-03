@@ -21,11 +21,6 @@ I.~G. Hughes and T.~P.~A. Hase.
 \newblock {\em {Measurements and their Uncertainties}}.
 \newblock Oxford University Press, 2010.
 
-\bibitem{jha}
-S.~Jha et~al.
-\newblock {UBVRI Light Curves of 44 Type Ia Supernovae}.
-\newblock {\em The Astronomical Journal}, 131:526--554, 2006.
-
 \bibitem{longair}
 M.~Longair.
 \newblock {\em High Energy Astrophysics}.
@@ -38,11 +33,6 @@ F.~Masci.
   \url{http://web.ipac.caltech.edu/staff/fmasci/home/mystats/logfluxbias.html},
   March 2012.
 \newblock [Online; accessed 1st March 2018].
-
-\bibitem{matheson}
-T.~Matheson et~al.
-\newblock {Optical Spectroscopy of Type Ia Supernovae}.
-\newblock {\em The Astronomical Journal}, 135:1598--1615, 2008.
 
 \bibitem{dataset_1}
 S.~Perlmutter et~al.
@@ -59,6 +49,12 @@ M.~M. Phillips.
 S.~Rosswod and M.~Br{\"u}ggen.
 \newblock {\em {Introduction to high-energy astrophysics}}.
 \newblock Cambridge University Press, 2007.
+
+\bibitem{mcmc_bs}
+S.~Sharma.
+\newblock {Markov Chain Monte Carlo Methods for Bayesian Data Analysis in
+  Astronomy}.
+\newblock {\em Annual Review of Astronomy and Astrophysics}, 55:1--49, 2017.
 
 \bibitem{dataset_2}
 N.~Suzuki et~al.

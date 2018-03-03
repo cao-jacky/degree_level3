@@ -49,7 +49,7 @@ def current_values(file_name, lp, ol):
     chi_sq_crrnt = error_function(file_name, lp, ol) / 2 # Current chi^2
 
     #: Proposed values for new Omega_Lambda and L_peak
-    ol_prpsed = np.random.normal(ol, 0.10, 1)
+    ol_prpsed = np.random.normal(ol, 0.1, 1)
     lp_prpsed = np.random.normal(lp, 0.2*(10**35),1)  
 
     print(ol_prpsed, lp_prpsed)
@@ -120,6 +120,9 @@ def plotter(max_point, name):
     pyplot.xlabel(r'$L_{peak}$')
     pyplot.ylabel(r'$\Omega_{\Lambda}$')
 
+    pyplot.tick_params(axis='y', which='major', labelsize=15)
+    pyplot.tick_params(axis='x', labelsize=15)
+
     #: Plotting main data
     pyplot.scatter(x, y,marker=".",color="0.1")
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
@@ -160,6 +163,9 @@ def complete(points, number):
     #pyplot.title(r"\textbf{Covariance plot of L_{peak} and Omega_{Lambda}}")
     pyplot.xlabel(r'$L_{peak}$')
     pyplot.ylabel(r'$\Omega_{\Lambda}$')
+
+    pyplot.tick_params(axis='y', which='major', labelsize=15)
+    pyplot.tick_params(axis='x', labelsize=15)
 
     pyplot.scatter(3.60936635 * (10**35),0.78, marker=".", color="red")
     pyplot.scatter(points[:,0],points[:,1], marker=".", color="deepskyblue")
