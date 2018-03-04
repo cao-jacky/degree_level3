@@ -68,6 +68,7 @@ From data sets of Type Ia supernovae we can easily employ them to calculate the 
 
 \vspace{-3ex}
 \subsection{Cosmological Parameters}
+\label{sec:cosmo_parameters}
 \vspace{-2ex}
 At large cosmological distances, the appearance of objects will be affected by the spacetime which it travels through. If we therefore wanted to describe the geometrical properties of the universe, we would require to solve Einstein's general theory of relativity. From \textit{An Introduction to Modern Astrophysics} \cite{mod_ast} we can build the framework required to calculate and compute cosmological parameters. 
 
@@ -85,22 +86,22 @@ Separate work performed by Einstein eventually led to a cosmological constant $\
 
 Taking the Friedmann equation, it can be rewritten so that it considers a three component universe composed of baryonic and dark matter, relativistic photons and neutrinos, and dark energy, 
 \begin{equation}
-\Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{\text{rel}} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
+\Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{r} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
 \end{equation}
 
-where $\rho_{M}$ is the density of matter, $\rho_{\text{rel}}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. Combining these densities with a critical density we can adapt the Friedmann equation so that it includes \textit{cosmological parameters}, these are values which describe the content makeup of the universe in terms of matter and energy. This critical density is defined as the value of the density that will result in a flat ($k=0$) universe. We see that the Friedmann equation becomes,
+where $\rho_{M}$ is the density of matter, $\rho_{r}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. Combining these densities with a critical density we can adapt the Friedmann equation so that it includes \textit{cosmological parameters}, these are values which describe the content makeup of the universe in terms of matter and energy. This critical density is defined as the value of the density that will result in a flat ($k=0$) universe. We see that the Friedmann equation becomes,
 \begin{equation}
-H^2 [1-(\Omega_{M} + \Omega_{\text{rel}} + \Omega_{\Lambda})]R^2 = -kc^2,
+H^2 [1-(\Omega_m + \Omega_{r} + \Omega_{\Lambda})]R^2 = -kc^2,
 \label{eqn:friedmann_old}
 \end{equation}
 
-where $H$ is the Hubble parameter and is related to the scale factor and expansion factors of the universe, $\Omega_{M}$ is the matter density parameter, $\Omega_{\text{rel}}$ is density contribution from radiation, and $\Omega_{\Lambda}$ is defined as the dark energy density parameter.
+where $H$ is the Hubble parameter and is related to the scale factor and expansion factors of the universe, $\Omega_m$ is the matter density parameter, $\Omega_{r}$ is density contribution from radiation, and $\Omega_{\Lambda}$ is defined as the dark energy density parameter.
 
-With this in hand, it is now possible to calculate the proportions of the universe which amounts to matter and the amount which is energy. In these calculations, cosmologists normally choose to omit the contribution from radiation as it is a negligible amount. Results from the Wilkinson Microwave Anisotropy Probe (WMAP) show that $\Omega_{\text{rad}}=8.25 \times 10^{-5}$, an insignificant value when compared to $\Omega_{\Lambda}=0.74 \pm 0.04$ and $\Omega_{M} = 0.27 \pm 0.04$ \cite{mod_ast}. 
+With this in hand, it is now possible to calculate the proportions of the universe which amounts to matter and the amount which is energy. In these calculations, cosmologists normally choose to omit the contribution from radiation as it is a negligible amount. Results from the Wilkinson Microwave Anisotropy Probe (WMAP) show that $\Omega_{\text{rad}}=8.25 \times 10^{-5}$, an insignificant value when compared to $\Omega_{\Lambda}=0.74 \pm 0.04$ and $\Omega_m = 0.27 \pm 0.04$ \cite{mod_ast}. 
 
 Using these cosmological variables we can additionally define the total density parameter,
 \begin{equation}
-\Omega \equiv \Omega_{M} + \Omega_{\Lambda} + (\Omega_{\text{rel}}).
+\Omega \equiv \Omega_m + \Omega_{\Lambda} + (\Omega_{r}).
 \label{eqn:total_density}
 \end{equation}
 
@@ -141,7 +142,7 @@ R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
 \label{eqn:comoving_integral}
 \end{equation}
 
-we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_{M} = 1 - \Omega_{\Lambda}$, reducing the cosmological parameters which we have to find \cite{script}. 
+we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_m = 1 - \Omega_{\Lambda}$, reducing the cosmological parameters which we have to find \cite{script}. 
 
 We now arrive at the following result for the Hubble Parameter,
 \begin{equation}
@@ -191,8 +192,8 @@ From Table \ref{table:cosmo_parameters} we find our value for $\Omega_\Lambda$ w
  $L_{\text{peak}}$ (W) & $(3.1\pm0.1)\times 10^{35}$ & $(3.3\pm0.1)\times 10^{35}$ & $(2.94\pm0.04)\times 10^{35}$ & $(3.4\pm0.1 ) \times 10^{35}$ & -\\
  $\Omega_\Lambda$ & $0.86\pm0.04$ &  $0.71\pm0.04$ & $0.74\pm0.01$ & $0.73\pm0.01$ & $0.761^{+0.017}_{-0.018}$ \\
  $\Omega_k$ & - & - & - & $-0.0029\pm0.009$ & $-0.0030^{+0.0095}_{-0.0102}$ \\
- $\Omega_M$ & - & - & - & $0.20\pm0.02$ & $0.239^{+0.018}_{-0.017}$ \\
- $\Omega_\text{rad}$ & - & - & - & $(4.4\pm0.7)\times10^{-6}$ & $(4.16)\times10^{-6}$ \\
+ $\Omega_m$ & - & - & - & $0.20\pm0.02$ & $0.239^{+0.018}_{-0.017}$ \\
+ $\Omega_r$ & - & - & - & $(4.4\pm0.7)\times10^{-6}$ & $(4.16)\times10^{-6}$ \\
  $w$ & - & - & - & $-0.912\pm0.01$ & $-0.941^{+0.087}_{-0.101}$ \\
  \hline
 \end{tabular}
@@ -243,7 +244,40 @@ We can circumnavigate this problem by implementing \textit{simulated annealing}.
 \vspace{-2ex}
 With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which would include extra variables into our testing. We therefore turned to the Lambda Cold Dark Matter model ($\Lambda$CDM) where cold dark matter is accounted for as well as for the cosmological constant \cite{mod_ast}. 
 
-For the purpose of testing our search algorithms we decided to reintroduce the parameter which accounts for contributions from radiation $\Omega_\text{rad}$ and also add a variable for the spatial curvature of the universe $\Omega_k$. Whilst we could have implemented a model which would have constrained many more parameters such as the cold dark matter density $\Omega_c$ or a baryon density $\Omega_b$, we chose not to as we wanted to restrict the parameter space that we were searching in and to also incrementally test the faults and errors of our system.
+For the purpose of testing our search algorithms we decided to implement a larger equation which describes the cosmic expansion history $H(z)$, 
+\begin{multline}
+H(z)=H_0[X(z)\Omega_\Lambda+(1+z)^2\Omega_k+\\
+(1+z)^3\Omega_m+(1+z)^4\Omega_r]^{1/2},
+\label{eqn:expansion_history}
+\end{multline}
+
+where $X(z)$ is the dark energy density relative to its present value, $\Omega_k$ is the spatial curvature of the universe, and the other terms are as previously defined in Section \ref{sec:cosmo_parameters} \cite{cosmo_constraints}.
+
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c} 
+ \hline
+ \textbf{Parameter} & \textbf{$\boldsymbol{X(z)=1}$} & \textbf{$\boldsymbol{\chi^2_{1}(m)}$} \\ [0.5ex] 
+ $L_{\text{peak}}$ (W) & $(3.3\pm0.1)\times 10^{35}$ & $(3.3\pm0.1)\times 10^{35}$ \\
+ $\Omega_\Lambda$ & $0.76\pm0.04$ & $0.71\pm0.04$ \\
+ $\Omega_k$ & $-0.002\pm0.001$ & -  \\
+ $\Omega_m$ & $0.32\pm0.02$ & - \\
+ $\Omega_r$ & $(3.2\pm0.2)\times10^{-6}$ & -  \\
+ \hline
+\end{tabular}
+\caption{We have calculated cosmological parameters using Equation \ref{eqn:expansion_history} with $X(z)=1$. Table shows the data from one of completed runs where we limit the range of search available for the algorithm. We conclude that the searcher is able to produce consistent values inline with measured literature parameters.}
+\vspace{-0.5em}
+\label{table:extended_search}
+\end{table}
+
+Initially we chose to set $X(z)=1$ as this represents simple `vanilla dark energy' \cite{cosmo_constraints}, we believed that this would be a good starting point to test whether we could achieve values in the range of the literature numbers. Our conclusion was that it was entirely possible to do so, in Table \ref{table:extended_search} we find the results of one of our runs which made use of just 100 steps per run. Comparing with the literature values as quoted in Table \ref{table:cosmo_parameters} we find that there is a general agreement between them both. 
+
+One would be correct to question why such a smaller number of runs was used when in our previous work we utilised at least 1500 steps. The reasoning behind this lies mainly with the problem of local minima, whilst we had suggested that they could be escaped with a larger number of steps, we found that with so many parameters it was more probable for multiple variables to become trapped. Reducing the number of walks taken places us  
+
+in exploring the model further we later introduced $X(z)=(1+z)^{3(1+w)}$ which allows the  
+
+
 
 
 
