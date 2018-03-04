@@ -241,7 +241,11 @@ We can circumnavigate this problem by implementing \textit{simulated annealing}.
 \vspace{-3ex}
 \subsection{Multi-cosmological Parameters} 
 \vspace{-2ex}
-With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which includes extra variables. We turn to the full Lambda Cold Dark Matter model ($\Lambda$CDM) we decided to reintroduce the contributions from radiation and also add a contribution from the spatial curvature of the universe. 
+With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which would include extra variables into our testing. We therefore turned to the Lambda Cold Dark Matter model ($\Lambda$CDM) where cold dark matter is accounted for as well as for the cosmological constant \cite{mod_ast}. 
+
+For the purpose of testing our search algorithms we decided to reintroduce the parameter which accounts for contributions from radiation $\Omega_\text{rad}$ and also add a variable for the spatial curvature of the universe $\Omega_k$. Whilst we could have implemented a model which would have constrained many more parameters such as the cold dark matter density $\Omega_c$ or a baryon density $\Omega_b$, we chose not to as we wanted to restrict the parameter space that we were searching in and to also incrementally test the faults and errors of our system.
+
+
 
 \begin{figure}[!h]
 \begin{center}
