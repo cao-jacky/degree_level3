@@ -6,6 +6,11 @@ import matplotlib.pyplot as pyplot
 from matplotlib.patches import Ellipse
 from matplotlib import rc
 
+import timeit
+import datetime
+start = timeit.default_timer() # Keeping track of program time
+now = datetime.datetime.now()
+
 pyplot.rc('text', usetex=True)
 pyplot.rc('font', family='serif')
 pyplot.rcParams['text.latex.preamble'] = [r'\boldmath']
@@ -20,7 +25,6 @@ def plotter():
     arrays = [np.loadtxt(f) for f in fnames] # Loading the data
     data = np.concatenate(arrays)
  
-
     # Axes for the plots
     f, axarr = pyplot.subplots(4, 4, figsize=(8,6))  
 
@@ -136,5 +140,41 @@ def plotter():
     pyplot.savefig("graphs_extended/triangle.pdf")
     pyplot.savefig("graphs_extended/triangle_transparent.png", transparent=True)
 
+def covariance():
+    fnames = glob.glob("/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/program/bayesian_statistics/runs_extended/*.txt") # Where the data files are
+    arrays = [np.loadtxt(f) for f in fnames] # Loading the data
+    data = np.concatenate(arrays) 
+
+    txt_name = "/Users/jackycao/Documents/Projects/degree_level3/physics_problem_solving/mcmc_extended_model_covariances.txt"
+    f = open(txt_name, 'w')
+    f.write("These values were generated at this date and time: " + str(now) + '\n')
+    f.write("\n")
+
+    f.write("Covariance of L_peak and O_L: \n" + str(np.corrcoef(data[:,2],data[:,1])) + "\n")
+    f.write("Covariance of L_peak and O_k: \n" + str(np.corrcoef(data[:,3],data[:,1])) + "\n")
+    f.write("Covariance of L_peak and O_m: \n" + str(np.corrcoef(data[:,4],data[:,1])) + "\n")
+    f.write("Covariance of L_peak and O_r: \n" + str(np.corrcoef(data[:,5],data[:,1])) + "\n")
+    f.write("Covariance of L_peak and L_peak: \n" + str(np.corrcoef(data[:,1],data[:,1])) + "\n")
+    f.write("\n")
+
+    f.write("Covariance of O_r and O_L: \n" + str(np.corrcoef(data[:,2],data[:,5])) + "\n")
+    f.write("Covariance of O_r and O_k: \n" + str(np.corrcoef(data[:,3],data[:,5])) + "\n")
+    f.write("Covariance of O_r and O_m: \n" + str(np.corrcoef(data[:,4],data[:,5])) + "\n")
+    f.write("Covariance of O_r and O_r: \n" + str(np.corrcoef(data[:,5],data[:,5])) + "\n")
+    f.write("\n")
+
+    f.write("Covariance of O_m and O_L: \n" + str(np.corrcoef(data[:,2],data[:,4])) + "\n")
+    f.write("Covariance of O_m and O_k: \n" + str(np.corrcoef(data[:,3],data[:,4])) + "\n")
+    f.write("Covariance of O_m and O_m: \n" + str(np.corrcoef(data[:,4],data[:,4])) + "\n")
+    f.write("\n")
+
+    f.write("Covariance of O_k and O_L: \n" + str(np.corrcoef(data[:,2],data[:,3])) + "\n")
+    f.write("Covariance of O_k and O_k: \n" + str(np.corrcoef(data[:,3],data[:,3])) + "\n")
+    f.write("\n")
+
+    #f.write("Covariance of O_L and O_L: \n" + str(np.corrcoef(data[:,2],data[:2])) + "\n")
+
+    f.close()
+
 if __name__ == '__main__':
-    plotter()
+    covariance()

@@ -273,28 +273,40 @@ where $X(z)$ is the dark energy density relative to its present value, $\Omega_k
 
 Initially we chose to set $X(z)=1$ as this represents simple `vanilla dark energy' \cite{cosmo_constraints}, we believed that this would be a good starting point to test whether we could achieve values in the range of the literature numbers. Our conclusion was that it was entirely possible to do so, in Table \ref{table:extended_search} we find the results of one of our runs which made use of 100 steps per run. Comparing with the literature values as quoted in Table \ref{table:cosmo_parameters} we find that there is a general agreement between them both. 
 
-However, one would be correct to question why such a smaller number of runs was used when in our previous work we utilised at least 1500 steps. The reasoning behind this lies mainly with the issue of local minima, whilst we had suggested that they could be escaped with a larger number of steps, we found that with so many parameters it was more probable for the multiple variables to become trapped. Therefore using just 100 walks was chosen as  
+However, one would be correct to question why such a smaller number of runs was used when in our previous work we utilised at least 1500 steps. The reasoning behind this lies mainly with the issue of local minima, whilst we had suggested that they could be escaped with a larger number of steps, we found that with so many parameters it was more probable for the variables to become trapped, therefore using just 100 walks was chosen to sufficient. Additionally with $1500\times10$ steps, the computational power and time required would not be reasonable, it would take an excess of $\mathrel{\mathsmaller{\gtrsim}} 3$ hours to generate results which conclude that minima were encountered.
+
+Evaluating each walk takes a lot of computational power as several parameters are being randomly generated at once from a Gaussian distribution. Whilst it is a taxing process, it also allows for each parameter series to be independently created from each other. This is an advantage as we want their magnitude and error to not be correlated to each other when we are calculating the parameters \cite{hugheshase}. Whilst actually we know that some of the variables should have correlations between each other. Take $\Omega_\Lambda$ and $\Omega_m$ for example, they should be related through the total density parameter (Equation \ref{eqn:total_density}) but if we look at the calculated correlation values in Table \ref{table:correlations} we see that they have no correlation at all. As a matter of fact, there is little correlation between any of the parameters (bar with themselves) which is a result of our choice of independently generating numbers. 
+
+% change the above for sure
+
+{\renewcommand{\arraystretch}{1.2}%
+\begin{table}[h!]
+\centering
+\begin{tabular}{c@{\hskip 10pt}c@{\hskip 10pt}c@{\hskip 10pt}c@{\hskip 10pt}c@{\hskip 10pt}c} 
+ \hline
+  & \textbf{$\boldsymbol{L_\text{peak}}$} & \textbf{$\boldsymbol{\Omega_\Lambda}$} & \textbf{$\boldsymbol{\Omega_k}$} & \textbf{$\boldsymbol{\Omega_m}$} & \textbf{$\boldsymbol{\Omega_r}$} \\ [0.5ex] 
+ \textbf{$\boldsymbol{L_\text{peak}}$} & +1.000 & $-0.088$ & +0.083 & $-0.213$ & $-0.250$ \\
+ \textbf{$\boldsymbol{\Omega_\Lambda}$} & $-0.088$ & +1.000 & $-0.113$ & $-0.105$ & $+0.128$ \\
+ \textbf{$\boldsymbol{\Omega_k}$} & +0.083 & $-0.113$ & +1.000 & $-0.107$ & $-0.108$ \\
+ \textbf{$\boldsymbol{\Omega_m}$} & $-0.213$ & $-0.105$ & $-0.107$ & +1.000 & +0.004 \\
+ \textbf{$\boldsymbol{\Omega_r}$} & $-0.250$ & $+0.128$  & $-0.108$ & +0.004 & +1.000\\
+ \hline
+\end{tabular}
+\caption{Correlation values have been calculated for the $X(z)=1$ model data used to find the cosmological parameters as shown in Table \ref{table:extended_search}. Between the variables there is little correlation due to the independent random generation of them - correlation is found when the correlation value is $\sim1$ or $\sim -1$ \cite{hugheshase}.}
+\vspace{-0.5em}
+\label{table:correlations}
+\end{table}
+
+With this in hand we then decided to explore the model further as we were confident that the results we produced could be accepted. We introduced \textit{quintessence} seeing 
 
 in exploring the model further we later introduced $X(z)=(1+z)^{3(1+w)}$ which allows the  
-
-With calculating the parameters random numbers are generated from a Gaussian distribution, meaning that they are independent from each other. This would mean that there should not be any relation
-
-
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=9.25cm]{results/triangle}
-\caption[]{Plot showing the general forms of Type Ia supernovae in the B and V bands. Archival data was translated along the time and magnitude axes to produce the general forms of the light curves. The B band has been offset by a magnitude of $3$ to allow us to see both graphs clearly. The supernovae which were used to plot this graph are: \em{1994ae, 1994S, 1995bd, 1996bo, }\em  and \em{1998aq }\em  }
-\vspace{-3ex}
-\label{fig:triangle}
-\end{center}
-\end{figure}
 
 \vspace{-3ex}
 \subsection{Further Investigation} 
 \vspace{-2ex}
 
-asdasd
+sdfasdf
+
 
 \vspace{-5ex}
 \section{Conclusions}

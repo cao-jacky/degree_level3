@@ -1,0 +1,48 @@
+These values were generated at this date and time: 2018-03-05 19:59:51.089633
+
+Covariance of L_peak and O_L: 
+[[ 1.         -0.08788118]
+ [-0.08788118  1.        ]]
+Covariance of L_peak and O_k: 
+[[ 1.          0.08296452]
+ [ 0.08296452  1.        ]]
+Covariance of L_peak and O_m: 
+[[ 1.         -0.21329432]
+ [-0.21329432  1.        ]]
+Covariance of L_peak and O_r: 
+[[ 1.         -0.25028901]
+ [-0.25028901  1.        ]]
+Covariance of L_peak and L_peak: 
+[[ 1.  1.]
+ [ 1.  1.]]
+
+Covariance of O_r and O_L: 
+[[ 1.          0.12808313]
+ [ 0.12808313  1.        ]]
+Covariance of O_r and O_k: 
+[[ 1.         -0.10789448]
+ [-0.10789448  1.        ]]
+Covariance of O_r and O_m: 
+[[ 1.          0.00447213]
+ [ 0.00447213  1.        ]]
+Covariance of O_r and O_r: 
+[[ 1.  1.]
+ [ 1.  1.]]
+
+Covariance of O_m and O_L: 
+[[ 1.         -0.10543036]
+ [-0.10543036  1.        ]]
+Covariance of O_m and O_k: 
+[[ 1.         -0.10698845]
+ [-0.10698845  1.        ]]
+Covariance of O_m and O_m: 
+[[ 1.  1.]
+ [ 1.  1.]]
+
+Covariance of O_k and O_L: 
+[[ 1.         -0.11343173]
+ [-0.11343173  1.        ]]
+Covariance of O_k and O_k: 
+[[ 1.  1.]
+ [ 1.  1.]]
+
