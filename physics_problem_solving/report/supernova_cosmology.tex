@@ -242,7 +242,7 @@ We can circumnavigate this problem by implementing \textit{simulated annealing}.
 \vspace{-3ex}
 \subsection{Multi-cosmological Parameters} 
 \vspace{-2ex}
-With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which would include extra variables into our testing. We therefore turned to the Lambda Cold Dark Matter model ($\Lambda$CDM) where cold dark matter is accounted for as well as for the cosmological constant \cite{mod_ast}. 
+With the knowledge that local minima could be encountered when performing these MCMC searches, we then decided to see how searching for multiple cosmological parameters would affect it. So, we required a more detailed model of the universe which would include extra variables into our testing. We therefore turned to the Lambda Cold Dark Matter model ($\Lambda$CDM) where a propotion of the universe is made up of cold dark matter and vacuum energy \cite{mod_ast, quintessence}. 
 
 For the purpose of testing our search algorithms we decided to implement a larger equation which describes the cosmic expansion history $H(z)$, 
 \begin{multline}
@@ -297,7 +297,7 @@ Evaluating each walk takes a lot of computational power as several parameters ar
 \label{table:correlations}
 \end{table}
 
-With this in hand we then decided to explore the model further as we were confident that the results we produced could be accepted. We introduced \textit{quintessence} by letting $X(z)=(1+z)^{3(1+w)}$ in Equation \ref{eqn:expansion_history}. Quintessence is 
+With this in hand we then decided to explore modifications to the model as we had confidence that our produced results could be accepted as valid. We therefore left the $\Lambda$CDM framework and introduced the concept of \textit{quintessence}. With the Quintessence Cold Dark Matter model (QCDM) to explain the non-matter component which helps produce $\Omega=1$, it has been suggested that there is a mixture of cold dark matter and quintessence, where quintessence is a slowly-varying and spatially-inhomogeneous component \cite{quintessence}. We can attribute an equation-of-state $w$  $X(z)=(1+z)^{3(1+w)}$ in Equation \ref{eqn:expansion_history}. Quintessence is 
 
 \vspace{-3ex}
 \subsection{Further Investigation} 

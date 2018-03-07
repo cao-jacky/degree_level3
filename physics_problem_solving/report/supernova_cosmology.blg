@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: supernova_cosmology.aux
 The style file: abbrv.bst
 Database file #1: supernova_cosmology.bib
-You've used 14 entries,
+Warning--I didn't find a database entry for "quntessence"
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            573 strings with 5481 characters,
-and the built_in function-call counts, 3464 in all, are:
-= -- 328
-> -- 146
+            580 strings with 5625 characters,
+and the built_in function-call counts, 3779 in all, are:
+= -- 360
+> -- 159
 < -- 0
-+ -- 59
-- -- 44
-* -- 184
-:= -- 620
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 57
++ -- 64
+- -- 48
+* -- 205
+:= -- 674
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 61
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 150
-empty$ -- 299
-format.name$ -- 44
-if$ -- 723
+cite$ -- 15
+duplicate$ -- 161
+empty$ -- 325
+format.name$ -- 48
+if$ -- 790
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 18
-newline$ -- 73
-num.names$ -- 28
-pop$ -- 75
+int.to.str$ -- 15
+missing$ -- 19
+newline$ -- 78
+num.names$ -- 30
+pop$ -- 77
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 50
 quote$ -- 0
-skip$ -- 104
+skip$ -- 113
 stack$ -- 0
-substring$ -- 125
-swap$ -- 14
+substring$ -- 151
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 48
 warning$ -- 0
-while$ -- 31
-width$ -- 16
-write$ -- 150
+while$ -- 34
+width$ -- 17
+write$ -- 161
+(There was 1 warning)
