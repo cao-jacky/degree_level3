@@ -188,7 +188,7 @@ From Table \ref{table:cosmo_parameters} we find our value for $\Omega_\Lambda$ w
 \centering
 \begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c@{\hskip 15pt}c} 
  \hline
- \textbf{Parameter} & \textbf{$\boldsymbol{\chi^2_{1}(f)}$} & \textbf{$\boldsymbol{\chi^2_{1}(m)}$} & \textbf{$\boldsymbol{\chi^2_2}$} & \textbf{MCMC} & \textbf{Literature} \\ [0.5ex] 
+ \textbf{Parameter} & \textbf{$\boldsymbol{\chi^2_{1}(f)}$} & \textbf{$\boldsymbol{\chi^2_{1}(m)}$} & \textbf{$\boldsymbol{\chi^2_2}$} & \textbf{QCDM} & \textbf{Literature} \\ [0.5ex] 
  $L_{\text{peak}}$ (W) & $(3.1\pm0.1)\times 10^{35}$ & $(3.3\pm0.1)\times 10^{35}$ & $(2.94\pm0.04)\times 10^{35}$ & $(3.4\pm0.1 ) \times 10^{35}$ & -\\
  $\Omega_\Lambda$ & $0.86\pm0.04$ &  $0.71\pm0.04$ & $0.74\pm0.01$ & $0.73\pm0.01$ & $0.761^{+0.017}_{-0.018}$ \\
  $\Omega_k$ & - & - & - & $-0.0029\pm0.009$ & $-0.0030^{+0.0095}_{-0.0102}$ \\
@@ -258,15 +258,15 @@ where $X(z)$ is the dark energy density relative to its present value, $\Omega_k
 \centering
 \begin{tabular}{c@{\hskip 15pt}c@{\hskip 15pt}c} 
  \hline
- \textbf{Parameter} & \textbf{$\boldsymbol{X(z)=1}$} & \textbf{$\boldsymbol{\chi^2_{1}(m)}$} \\ [0.5ex] 
- $L_{\text{peak}}$ (W) & $(3.3\pm0.1)\times 10^{35}$ & $(3.3\pm0.1)\times 10^{35}$ \\
- $\Omega_\Lambda$ & $0.76\pm0.04$ & $0.71\pm0.04$ \\
- $\Omega_k$ & $-0.002\pm0.001$ & -  \\
- $\Omega_m$ & $0.32\pm0.02$ & - \\
- $\Omega_r$ & $(3.2\pm0.2)\times10^{-6}$ & -  \\
+ \textbf{Parameter} & \textbf{$\boldsymbol{X(z)=1}$} & \textbf{Literature} \\ [0.5ex] 
+ $L_{\text{peak}}$ (W) & $(3.3\pm0.1)\times 10^{35}$ & - \\
+ $\Omega_\Lambda$ & $0.76\pm0.04$ & $0.761^{+0.017}_{-0.018}$ \\
+ $\Omega_k$ & $-0.002\pm0.001$ & $-0.0030^{+0.0095}_{-0.0102}$ \\
+ $\Omega_m$ & $0.32\pm0.02$ & $0.239^{+0.018}_{-0.017}$ \\
+ $\Omega_r$ & $(3.2\pm0.2)\times10^{-6}$ & $(4.16)\times10^{-6}$ \\
  \hline
 \end{tabular}
-\caption{We have calculated cosmological parameters using Equation \ref{eqn:expansion_history} with $X(z)=1$. Table shows the data from one of completed runs where we limit the range of search available for the algorithm. We conclude that the searcher is able to produce consistent values inline with measured literature parameters.}
+\caption{We have calculated cosmological parameters using Equation \ref{eqn:expansion_history} with $X(z)=1$. We present the averaged results from our 10 runs of 100 steps each, we limited the search range available for the algorithm to avoid local minima. Literature values have also been provided for comparison. We conclude that we are able to produce consistent values inline with measured literature parameters.}
 \vspace{-0.5em}
 \label{table:extended_search}
 \end{table}
@@ -297,7 +297,12 @@ Evaluating each walk takes a lot of computational power as several parameters ar
 \label{table:correlations}
 \end{table}
 
-With this in hand we then decided to explore modifications to the model as we had confidence that our produced results could be accepted as valid. We therefore left the $\Lambda$CDM framework and introduced the concept of \textit{quintessence}. With the Quintessence Cold Dark Matter model (QCDM) to explain the non-matter component which helps produce $\Omega=1$, it has been suggested that there is a mixture of cold dark matter and quintessence, where quintessence is a slowly-varying and spatially-inhomogeneous component \cite{quintessence}. We can attribute an equation-of-state $w$  $X(z)=(1+z)^{3(1+w)}$ in Equation \ref{eqn:expansion_history}. Quintessence is 
+With this in hand we then decided to explore modifications to the model as we had confidence that our produced results could be accepted as valid. We therefore left the $\Lambda$CDM framework and introduced the concept of \textit{quintessence}. With the Quintessence Cold Dark Matter model (QCDM) to explain the non-matter component which contributes to the total density parameter $\Omega=1$, it has been suggested that there is a mixture of cold dark matter and quintessence, where quintessence is a slowly-varying and spatially-inhomogeneous component \cite{quintessence}. We can attribute an equation-of-state $w$ to account for the missing energy and define it to be $w=p / \rho$ \cite{quintessence}, with $p$ as a negative pressure and $\rho$ the density of the energy. This can then be incorporated into Equation \ref{eqn:expansion_history} by letting $X(z)=(1+z)^{3(1+w)}$, for QCDM we should find that $-1< w \leq 0$ and alternatively $w=-1$ for $\Lambda$CDM \cite{quintessence} which produces our initial defined simplification of $X(z)=1$.
+
+Allowing our algorithm to now sample values for $w$ we find the results for the other parameters to have improved when compared to our earlier $\Lambda$CDM work. 
+
+
+Returning to Table \ref{table:cosmo_parameters} one can see that for same number of walks and runs, we were able to produce parameters in agreement but not with complete accuracy. We must acknowledge that when we compare this with the results from our initial $\Lambda$CDM experimentation, there is the peculiar fact that they are improved values. 
 
 \vspace{-3ex}
 \subsection{Further Investigation} 
