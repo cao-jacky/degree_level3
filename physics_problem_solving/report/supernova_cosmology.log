@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  8 MAR 2018 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  9 MAR 2018 19:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -618,10 +618,10 @@ m/n/9 ,
 ### simple group (level 1) entered at line 186 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7968 strings out of 493089
- 109064 string characters out of 6134841
+ 7967 strings out of 493089
+ 109054 string characters out of 6134841
  315118 words of memory out of 5000000
- 11292 multiletter control sequences out of 15000+600000
+ 11291 multiletter control sequences out of 15000+600000
  15488 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,32p,1505b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -651,7 +651,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 661888 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 663285 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams

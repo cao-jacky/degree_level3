@@ -12,6 +12,8 @@ data = data[data[:,2].argsort()]
 mdl_one = np.loadtxt('graphs/hubble/model_one.txt')
 mdl_two = np.loadtxt('graphs/hubble/model_two.txt')
 
+mdl_one = np.loadtxt('lcdm_model.txt')
+
 def find_nearest(array,value):
     idx = (np.abs(array-value)).argmin()
     return array[idx]
