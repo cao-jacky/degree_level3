@@ -1,48 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: supernova_cosmology.aux
-The style file: abbrv.bst
+The style file: unsrt.bst
 Database file #1: supernova_cosmology.bib
-Warning--I didn't find a database entry for "quntessence"
-You've used 15 entries,
-            2118 wiz_defined-function locations,
-            580 strings with 5625 characters,
-and the built_in function-call counts, 3779 in all, are:
-= -- 360
-> -- 159
+You've used 18 entries,
+            1791 wiz_defined-function locations,
+            542 strings with 5829 characters,
+and the built_in function-call counts, 2999 in all, are:
+= -- 260
+> -- 116
 < -- 0
-+ -- 64
-- -- 48
-* -- 205
-:= -- 674
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 61
++ -- 47
+- -- 29
+* -- 130
+:= -- 503
+add.period$ -- 55
+call.type$ -- 18
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 161
-empty$ -- 325
-format.name$ -- 48
-if$ -- 790
+cite$ -- 18
+duplicate$ -- 153
+empty$ -- 330
+format.name$ -- 29
+if$ -- 684
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 19
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 77
+int.to.str$ -- 18
+missing$ -- 21
+newline$ -- 94
+num.names$ -- 18
+pop$ -- 64
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 0
 quote$ -- 0
-skip$ -- 113
+skip$ -- 60
 stack$ -- 0
-substring$ -- 151
-swap$ -- 15
+substring$ -- 81
+swap$ -- 18
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 0
 warning$ -- 0
-while$ -- 34
-width$ -- 17
-write$ -- 161
-(There was 1 warning)
+while$ -- 23
+width$ -- 20
+write$ -- 195

@@ -1,19 +1,14 @@
 \begin{thebibliography}{10}
 
-\bibitem{script}
-R.~Bower.
-\newblock {Level 3 PHYS3561 Computing Laboratory Computing Projects Booklet},
-  2017.
+\bibitem{longair}
+M.~Longair.
+\newblock {\em High Energy Astrophysics}.
+\newblock Cambridge University Press, 3rd edition, 2011.
 
 \bibitem{mod_ast}
 B.~W. Carroll and D.~A. Ostlie.
 \newblock {\em An Introduction to Modern Astrophysics}.
 \newblock Pearson, 2nd edition, 2007.
-
-\bibitem{simulated_annealing}
-K.~L. Du and M.~N.~S. Swamy.
-\newblock {\em {Search and Optimizaton by Metaheuristics}}.
-\newblock Springer International Publishing Switzerland, 2016.
 
 \bibitem{obs_phys_class_sn}
 A.~Gal-Yam.
@@ -21,15 +16,36 @@ A.~Gal-Yam.
   Classification of Supernovae}.
 \newblock Springer International Publishing AG, 2017.
 
-\bibitem{hugheshase}
-I.~G. Hughes and T.~P.~A. Hase.
-\newblock {\em {Measurements and their Uncertainties}}.
-\newblock Oxford University Press, 2010.
+\bibitem{posn}
+S.~E. Woosley and Thomas~A. Weaver.
+\newblock {The Physics of Supernova Explosions}.
+\newblock {\em Annual Review of Astronomy and Astrophysics}, 24:205--253, 1986.
 
-\bibitem{longair}
-M.~Longair.
-\newblock {\em High Energy Astrophysics}.
-\newblock Cambridge University Press, 3rd edition, 2011.
+\bibitem{high_en_astro}
+S.~Rosswod and M.~Br{\"u}ggen.
+\newblock {\em {Introduction to high-energy astrophysics}}.
+\newblock Cambridge University Press, 2007.
+
+\bibitem{abs_phil}
+M.~M. Phillips.
+\newblock {The absolute magnitudes of Type Ia supernovae}.
+\newblock {\em The Astrophysics Journal}, 413(2):105--108, 1993.
+
+\bibitem{script}
+R.~Bower.
+\newblock {Level 3 PHYS3561 Computing Laboratory Computing Projects Booklet},
+  2017.
+
+\bibitem{dataset_1}
+S.~Perlmutter et~al.
+\newblock {Measurements of $\Omega$ and $\Lambda$ from 42 High-Redshift
+  Supernovae}.
+\newblock {\em The Astrophysical Journal}, 517(2), 1999.
+
+\bibitem{cosmo_constraints}
+M.~Tegmark et~al.
+\newblock {Cosmological constraints from the SDSS luminous red galaxies}.
+\newblock {\em Physics Review}, 74, 2006.
 
 \bibitem{magspace_stats}
 F.~Masci.
@@ -39,28 +55,6 @@ F.~Masci.
   March 2012.
 \newblock [Online; accessed 1st March 2018].
 
-\bibitem{dataset_1}
-S.~Perlmutter et~al.
-\newblock {Measurements of $\Omega$ and $\Lambda$ from 42 High-Redshift
-  Supernovae}.
-\newblock {\em The Astrophysical Journal}, 517(2), 1999.
-
-\bibitem{abs_phil}
-M.~M. Phillips.
-\newblock {The absolute magnitudes of Type Ia supernovae}.
-\newblock {\em The Astrophysics Journal}, 413(2):105--108, 1993.
-
-\bibitem{high_en_astro}
-S.~Rosswod and M.~Br{\"u}ggen.
-\newblock {\em {Introduction to high-energy astrophysics}}.
-\newblock Cambridge University Press, 2007.
-
-\bibitem{mcmc_bs}
-S.~Sharma.
-\newblock {Markov Chain Monte Carlo Methods for Bayesian Data Analysis in
-  Astronomy}.
-\newblock {\em Annual Review of Astronomy and Astrophysics}, 55:1--49, 2017.
-
 \bibitem{dataset_2}
 N.~Suzuki et~al.
 \newblock {The Hubble Space Telescope Cluster Supernova Survey: V. Improving
@@ -68,19 +62,42 @@ N.~Suzuki et~al.
   Supernova Sample}.
 \newblock {\em Astrophysical Journal}, 746(85), 2012.
 
-\bibitem{cosmo_constraints}
-M.~Tegmark et~al.
-\newblock {Cosmological constraints from the SDSS luminous red galaxies}.
-\newblock {\em Physics Review}, 74, 2006.
+\bibitem{hugheshase}
+I.~G. Hughes and T.~P.~A. Hase.
+\newblock {\em {Measurements and their Uncertainties}}.
+\newblock Oxford University Press, 2010.
 
-\bibitem{posn}
-S.~E. Woosley and T.~A. Weaver.
-\newblock {The Physics of Supernova Explosions}.
-\newblock {\em Annual Review of Astronomy and Astrophysics}, 24:205--253, 1986.
+\bibitem{mcmc_bs}
+S.~Sharma.
+\newblock {Markov Chain Monte Carlo Methods for Bayesian Data Analysis in
+  Astronomy}.
+\newblock {\em Annual Review of Astronomy and Astrophysics}, 55:1--49, 2017.
+
+\bibitem{simulated_annealing}
+K.~L. Du and M.~N.~S. Swamy.
+\newblock {\em {Search and Optimizaton by Metaheuristics}}.
+\newblock Springer International Publishing Switzerland, 2016.
 
 \bibitem{quintessence}
 I.~Zlatev et~al.
 \newblock {Quintessence, Cosmic Coincidence, and the Cosmological Constant}.
 \newblock {\em Physical Review Letters}, 82:896--899, 1999.
+
+\bibitem{hubble_constant}
+A.~G. Riess et~al.
+\newblock {A 2.4\% determination of the local value of the Hubble Constant}.
+\newblock {\em The Astrophysical Journal}, 826(56):31, 2016.
+
+\bibitem{speed_of_light}
+{NIST Standard Reference Database}.
+\newblock {CODATA value: speed of light in a vacuum}.
+\newblock \url{https://physics.nist.gov/cgi-bin/cuu/Value?c}, 2016.
+\newblock [Online; accessed 6th January 2018].
+
+\bibitem{cmb_cosmo}
+A.~G. Sanchez et~al.
+\newblock {Cosmological parameters from CMB measurements and the final 2dFGRS
+  power spectrum}.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 366, 2006.
 
 \end{thebibliography}
