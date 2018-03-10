@@ -24,8 +24,10 @@
  
 \author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of report: 28/02/2018}
 
-\begin{abstract}              
-Type Ia supernovae have the unique trait of being standard candles, their light curves can be used in cosmology to calculate and constrain cosmological parameters. In observing Type Ia supernovae and fitting model light curves to such data one can attempt to derive such values. We have monitored, collected, and analysed data for supernova explosions over a period of 34 days. A $16''$ and a $0.5$ m telescope situated in Durham and La Palma was used for this project. After calculating the magnitudes for a Type Ia (2017hhz) and Type Ia-91bg (2017hle) supernova object, we fitted template light curves with the Python program, \textit{SNooPy}. The quality of fit for the program's \texttt{fit()} function was deemed to be acceptable in accordance to the average reduced $\chi^2$ values calculated for the B and V photometric bands, $\chi^2_{\nu,B} \approx 1.38$ and $\chi^2_{V,\nu} \approx 2.95$ - a good fit requiring $\chi^2_{\nu} \approx1$. The distance modulus to the supernova 2017hhz was calculated by SNooPy to be $36.121\pm0.106$ mag, using this value we were able to compute $H_0=70\pm20$ km s$^{-1}$ Mpc$^{-1}$. However, the quoted error negates the meaning of $H_0$ as it is too large of an uncertainty. In improving the accuracy and uncertainties we suggest that more observations of the supernovae were required, and constraining values should be used for the parameters in SNooPy's templates.
+\begin{abstract}     
+The geometry of the universe can be quantified in terms of cosmological parameters, these variables provide a way for the matter and energy makeup to be known and then understood. It is therefore important to find easily accessible methods which allows us to calculate these parameters. We have used the Supernova Cosmology Project's Union2.1 compilation of 753 Type Ia supernovae to constrain several cosmological parameters. Our initial work with a least squares method yielded a dark energy density parameter of $\Omega_\Lambda=0.74\pm0.01$, this was deemed an acceptable fit as the reduced $\chi^2$ was found to be 2.4547 and a good fit generally requires $\chi^2_\nu=1$. We then decided that we should explore the $\Lambda$ Cold Dark Matter model where several cosmological parameters could be constrained, with this we used a variant of the Markov 
+
+
 \end{abstract}
 
 \maketitle
@@ -150,14 +152,14 @@ H^2 = H_0^2 [(1+z)^3 - \Omega_{\Lambda} ((1+z)^3-1)],
 \label{eqn:hubble_parameter}
 \end{equation}
 
-where $H_0$ is a value for the Hubble's constant, $z$ is the redshift for a supernova, and $\Omega_\Lambda$ is a cosmological constant.
+where $H_0$ is Hubble's constant, $z$ is the redshift for a supernova, and $\Omega_\Lambda$ is a cosmological constant.
 
 To find the optimum value for $\Omega_\Lambda$ we can select a range from 0.0 to 1.0 and then calculate $f_\text{model}$ and $\chi^2$ for each number. Identical to finding $L_\text{peak}$, the best value for the cosmological parameter is found by choosing the minimum value for $\chi^2$. Through the usage of this least squares method one is able to explore cosmological parameters using Type Ia supernova data sets.
 
 \vspace{-4ex}
 \subsection{Project Aims}
 \vspace{-2ex}
-In this paper we discuss the experimental work performed to constrain cosmological parameters using Type Ia supernova data. Least Squares and Bayesian methods are initially explored, then details of experiments involving models which contain more than two parameters are analysed.
+In this paper we discuss the experimental work performed to understand how cosmological parameters can be constrained using Type Ia supernova data. We explore Least Squares and Markov Chain Monte Carlo methods and then we discuss our exploration of more complex cosmological models which make use of several parameters. 
 
 \vspace{-3ex}
 \section{Results and Discussion} 
@@ -310,7 +312,7 @@ Once that has been done, different methods of constraining cosmological paramete
 \vspace{-3ex}
 \section{Conclusions}
 \vspace{-2ex}
-In conclusion, we have found that it has been possible to constrain cosmological parameters of the universe using Type Ia supernova data and with statistical methods. We have used a basic least squares method and found that it is able to produce values for $\Omega_\Lambda$ which provide a reasonable fit when a Hubble diagram is plotted, the fitting can then be rated as acceptable with a reduced $\chi^2$ value of 2.4539. For more complex models with multiple parameters we had to employ an MCMC method, with our testing with a quintessence-based QCDM model we managed to produce a model which had $\chi^2_\nu=2.4166$, a slight improvement to the least squares method.
+To conclude, we have found that it has been possible to constrain cosmological parameters of the universe using Type Ia supernova data and with statistical methods. We have used a basic least squares method and found that it is able to produce values for $\Omega_\Lambda$ which provide a reasonable fit when a Hubble diagram is plotted, the fitting can then be rated as acceptable with a reduced $\chi^2$ value of 2.4539. For more complex models with multiple parameters we had to employ an MCMC method, with our testing with a quintessence-based QCDM model we managed to produce a model which had $\chi^2_\nu=2.4166$, a slight improvement to the least squares method.
 
 More work definitely has to be done to improve our method for the multi-parameter fitting, in our testing with both $\Lambda$CDM and QCDM models we found that there was always a potential for the searcher algorithm to become trapped within local minima. That is why simulated annealing should be implemented in future work to avoid having to limit the parameter search space to avoid the wells. 
 

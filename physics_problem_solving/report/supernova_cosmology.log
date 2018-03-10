@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  10 MAR 2018 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  10 MAR 2018 11:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,41 +570,33 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
  Problem Solving \\ Date of report: 28/02/2018.
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] <results/hubble_diagram.pdf, id=27, 230.8625pt x 155.58125pt>
+[2] <results/hubble_diagram.pdf, id=24, 230.8625pt x 155.58125pt>
 File: results/hubble_diagram.pdf Graphic file (type pdf)
 
 <use results/hubble_diagram.pdf>
-Package pdftex.def Info: results/hubble_diagram.pdf used on input line 207.
+Package pdftex.def Info: results/hubble_diagram.pdf used on input line 209.
 (pdftex.def)             Requested size: 263.18799pt x 177.3787pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 207--209
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 209--211
  [] 
  []
 
 [3 <./results/hubble_diagram.pdf>]
 
-LaTeX Warning: Command \L invalid in math mode on input line 228.
+LaTeX Warning: Command \L invalid in math mode on input line 230.
 
-<results/ol_lp_complete.pdf, id=51, 230.8625pt x 155.58125pt>
+<results/ol_lp_complete.pdf, id=48, 230.8625pt x 155.58125pt>
 File: results/ol_lp_complete.pdf Graphic file (type pdf)
 
 <use results/ol_lp_complete.pdf>
-Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 232.
+Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 234.
 (pdftex.def)             Requested size: 263.18799pt x 177.3787pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 232--233
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 234--235
  [] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 251.
-
-[5 <./results/ol_lp_complete.pdf>] (./supernova_cosmology.bbl
+[4 <./results/ol_lp_complete.pdf>] [5] (./supernova_cosmology.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 51--57
  \OT1/cmtt/m/n/9 staff / fmasci / home / mystats / logfluxbias . html$\OT1/cmr/
 m/n/9 ,
@@ -613,18 +605,18 @@ m/n/9 ,
 ) [6] [7] [8] (./supernova_cosmology.aux) )
 (\end occurred inside a group at level 3)
 
-### simple group (level 3) entered at line 279 ({)
-### simple group (level 2) entered at line 255 ({)
-### simple group (level 1) entered at line 186 ({)
+### simple group (level 3) entered at line 281 ({)
+### simple group (level 2) entered at line 257 ({)
+### simple group (level 1) entered at line 188 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  7976 strings out of 493089
- 109240 string characters out of 6134841
- 315166 words of memory out of 5000000
+ 109241 string characters out of 6134841
+ 314166 words of memory out of 5000000
  11300 multiletter control sequences out of 15000+600000
  15488 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,32p,1505b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,32p,1241b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
@@ -651,7 +643,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 667489 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 665297 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
