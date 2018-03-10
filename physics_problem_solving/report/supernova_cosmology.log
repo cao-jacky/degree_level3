@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  9 MAR 2018 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  10 MAR 2018 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -610,12 +610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--57
 m/n/9 ,
  []
 
-) [6] [7] [8] (./supernova_cosmology.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- )
+) [6] [7] [8] (./supernova_cosmology.aux) )
 (\end occurred inside a group at level 3)
 
 ### simple group (level 3) entered at line 279 ({)
@@ -656,7 +651,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 667282 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 667489 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
