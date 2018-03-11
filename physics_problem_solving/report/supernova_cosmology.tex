@@ -348,17 +348,65 @@ The standard error, or standard deviation of the mean can be given by,
 \end{equation}
 
 where $\sigma_{N-1}$ is the standard deviation of the average, and $N$ is the number of measurements used.
-
-
-
 \clearpage
 
 \vspace{-3ex}
-\section{Random Walk Metropolis-Hastings MCMC}
+\section{Random Walk Metropolis-Hastings}
 \label{appendix:mcmc}
 \vspace{-2ex}
+To calculate our several cosmological parameters in the $\Lambda$ Cold Dark Matter and Quintessence Cold Dark Matter model we chose to use a form of the Markov Chain Monte Carlo method, we used a Random Walk Metropolis-Hastings algorithm. 
 
-poo
+Below, we provide our basic pseudocode used to implement this method within our experimentation. \\
+
+\texttt{def error$\_$function(cosmological$\_$parameters):}
+\indent\indent\indent \texttt{""" Function which calculate and } 
+\indent\indent\indent \texttt{returns a value for the $\chi^2$ between a}
+\indent\indent\indent \texttt{model and experimental data. """} \\
+
+\indent\indent\indent \texttt{return chi$\_$squared} \\
+
+\texttt{def likelihood$\_$ratio(chisq$\_$current, chisq$\_$proposed):} \\
+\indent\indent\indent \texttt{""" Function assigns a probability to} 
+\indent\indent\indent \texttt{the current $\chi^2$ plus the $\chi^2$ for the} \\
+\indent\indent\indent \texttt{randomly generated parameters. """} \\
+
+\indent\indent\indent \texttt{return likelihood} \\
+
+\texttt{def new$\_$values(cosmological$\_$parameters):} \\
+\indent\indent\indent \texttt{""" Considers the current inputted} 
+\indent\indent\indent \texttt{parameters and generates proposals for} \\
+\indent\indent\indent \texttt{the next set of parameters. """} \\
+
+\indent\indent\indent \texttt{new$\_$parameters = randomly generated values from a Gaussian distribution} \\
+
+\indent\indent\indent \texttt{chisq$\_$proposed = uses new$\_$parameters in the error$\_$function to calculate a new chisq} \\
+
+\indent\indent\indent \texttt{ratio = uses likelihood function to provide a probability for the current and proposed parameters together} \\
+
+\indent\indent\indent \texttt{return ratio, new$\_$parameters} \\
+
+\texttt{def ratio$\_$tester(cosmological$\_$parameters):} \\
+\indent\indent\indent \texttt{""" Function which performs the random } 
+\indent\indent\indent \texttt{walk it takes the new$\_$values functions} \\
+\indent\indent\indent \texttt{and samples the parameter space. """} \\
+
+\indent\indent\indent \texttt{loop: \# goes over the entire specified range e.g. 1500 steps} \\
+\indent\indent\indent\indent \texttt{> code which inputs the current cosmological parameters into new$\_$values function, it obtains the ratio and then compares it with a randomly generated value between 0 and 1} \\
+\indent\indent\indent\indent \texttt{> if statement: if ratio > random value: accept the new$\_$parameters from new$\_$values function and take a walk, otherwise: keep current values and take another walk} \\
+
+\indent\indent\indent \texttt{return data$\_$from$\_$all$\_$runs} \\
+
+\texttt{def optimal$\_$values(data$\_$sample):} \\
+\indent\indent\indent \texttt{""" Takes the data from ratio$\_$tester } 
+\indent\indent\indent \texttt{and then chooses the optimal parameter} \\
+\indent\indent\indent \texttt{by selecting the parameter set which} \\
+\indent\indent\indent \texttt{has the greatest likelihood probability. """} \\
+
+\indent\indent\indent \texttt{> code which sorts by likelihood probability and then selects the corresponding parameters} \\
+
+\indent\indent\indent \texttt{return optimal$\_$parameters} \\
+
+
 
 \clearpage
 \end{document}
