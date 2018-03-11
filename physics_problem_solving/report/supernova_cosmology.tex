@@ -219,7 +219,7 @@ In Figure \ref{fig:hubble_diagram} we have plotted the Union2.1 data set alongsi
 \vspace{-2ex}
 With our work in Bayesian statistics we have primarily made use of the Markov Chain Monte Carlo (MCMC) set of methods. Bayes theorem associates the posterior probability (the probability for parameters given known and observed data) to the likelihood (the probability for the data given certain parameters) and the prior (what was known about the parameter before the data). With these statistical procedures we are in essence updating our information about a value from the prior to the posterior \cite{mcmc_bs}. MCMC makes use of this theory and applies it into a methodology, values are generated and then assigned a likelihood probability, criteria is then used to decide if the parameters should be accepted or not, then finally an optimum solution should be found from all the runs.
 
-For our use in constraining cosmological parameters we chose to utilise a Random Walk Metropolis-Hastings (RWHM) algorithm, the method for which can be found in Appendix \ref{appendix:mcmc}. We chose to use this as it independently samples the parameter space, information about it's current point will not be considered for the location of it's next `jump' \cite{mcmc_bs}. Instead, an acceptance probability and a random value is compared to generate the next point in the parameter search.
+For our use in constraining cosmological parameters we chose to utilise a Random Walk Metropolis-Hastings (RWMH) algorithm, the method for which can be found in Appendix \ref{appendix:mcmc}. We chose to use this as it independently samples the parameter space, information about it's current point will not be considered for the location of it's next `jump' \cite{mcmc_bs}. Instead, an acceptance probability and a random value is compared to generate the next point in the parameter search.
 
 Accurate values are therefore expected with this algorithm, but due to it's statistical nature we are required to perform multiple runs of the same number of walks and then average the optimum values from each run to find the overall optima.
 
@@ -328,6 +328,26 @@ Our experimentation has shown us the practicability for Type Ia supernovae, we h
 \vspace{-3ex}
 \section{Uncertainties}
 \vspace{-2ex}
+\subsection{$\chi^2$}
+\vspace{-2ex}
+In the least squares and RWMH methods we were required to attribute a $\chi^2$ for each model that we produce, this then helped us to decide the optimal cosmological parameters. This was found by using the following equation, 
+\begin{equation}
+\chi^2 = \sum \frac{f_\text{obs}-f_\text{model}}{\sigma_\text{obs}},
+\end{equation}
+
+where $f_\text{obs}$ is the observational flux of the supernovae, $f_\text{model}$ is the model flux, and $\sigma_\text{obs}$ is the uncertainty on the observed flux. This equation was taken from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
+
+\vspace{-3ex}
+\subsection{Parameter Uncertainties}
+\vspace{-2ex}
+Our experimental project made use of observational data which contained errors, in creating our models we produced cosmological parameters which initially had no uncertainty associated with them. We chose to calculate a standard error as this would provide us with an idea of the quality of our data. We collected the optimal parameters for each run and created a final average which in turn allowed us to calculate a standard error. This formula was based off equations from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
+
+The standard error, or standard deviation of the mean can be given by,
+\begin{equation}
+\alpha=\frac{\sigma_{N-1}}{\sqrt{N}},
+\end{equation}
+
+where $\sigma_{N-1}$ is the standard deviation of the average, and $N$ is the number of measurements used.
 
 
 
