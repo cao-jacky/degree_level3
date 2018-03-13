@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  11 MAR 2018 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  13 MAR 2018 09:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,7 +811,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-[8] (./supernova_cosmology.aux) )
+[8] (./supernova_cosmology.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+
+
+ )
 (\end occurred inside a group at level 3)
 
 ### simple group (level 3) entered at line 279 ({)
@@ -825,7 +830,7 @@ Here is how much of TeX's memory you used:
  11305 multiletter control sequences out of 15000+600000
  15992 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,32p,1704b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,32p,1712b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
@@ -853,7 +858,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 686059 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 686154 bytes).
 PDF statistics:
  183 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams

@@ -25,7 +25,7 @@
 \author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of report: 28/02/2018}
 
 \begin{abstract}     
-The geometry and content of the universe can be quantified in terms of cosmological parameters. We wanted to test the usage of Type Ia supernovae and statistical methods to constrain these parameters. Our work has used the Supernova Cosmology Project's Union2.1 compilation of 753 supernovae to constrain several cosmological parameters. Our initial experimentation used a least squares method which yielded a dark energy density parameter of $\Omega_\Lambda=0.74\pm0.01$, this was deemed an acceptable fit with $\chi^2_\nu=2.4547$ - a good fit requires $\chi^2_\nu=1$. We then decided to explore the multi-parameter $\Lambda$ Cold Dark Matter model using a variant of the Markov Chain Monte Carlo method. With this we encountered problems such as local minima which were dealt with by limiting our search parameter space. Using the Quintessence Cold Dark Model we obtained the results: $\Omega_\Lambda=0.73\pm0.01$, $\Omega_k=-0.0029\pm0.009$, $\Omega_m = 0.20\pm0.02$, $\Omega_r = (4.4\pm0.7)\times10^{-6}$, and $w=-0.912\pm0.01$. From this description we then used it to form a model, comparing it with observational data we found $\chi^2_\nu=2.4166$ which is acceptable and can be deemed as an improvement on the least squares method. To refine our work, local minima should be the main focus of future experimentation, one can potentially implement `simulated annealing' to circumnavigate them. Plus future work could involve combining Type Ia data with Cosmic Microwave Background and Baryon Acoustic Oscillation data to further constrain the cosmological parameters and provide more accurate results.
+The geometry and content of the universe can be quantified in terms of cosmological parameters. We therefore wanted to test the usage of Type Ia supernovae and statistical methods to constrain these parameters. Our work has made use of the Supernova Cosmology Project's Union2.1 compilation of 753 supernovae to constrain several cosmological parameters. Our initial experimentation used a least squares method which yielded a dark energy density parameter of $\Omega_\Lambda=0.74\pm0.01$, this was deemed an acceptable fit with $\chi^2_\nu=2.4547$ - a good fit requires $\chi^2_\nu=1$. We then decided to explore the multi-parameter $\Lambda$ Cold Dark Matter model using a variant of the Markov Chain Monte Carlo method. With this we encountered problems such as local minima which were dealt with by limiting our search parameter space. Using the Quintessence Cold Dark Model we obtained the results: $\Omega_\Lambda=0.73\pm0.01$, $\Omega_k=-0.0029\pm0.009$, $\Omega_m = 0.20\pm0.02$, $\Omega_r = (4.4\pm0.7)\times10^{-6}$, and $w=-0.912\pm0.01$. From this description we then formed a model, comparing it with observational data we found $\chi^2_\nu=2.4166$ which is acceptable and can be deemed as an improvement on the least squares method. To refine our work, local minima should be the main focus of future experimentation, one can potentially implement `simulated annealing' to circumnavigate them. Plus future work could involve combining Type Ia data with Cosmic Microwave Background and Baryon Acoustic Oscillation data to further constrain the cosmological parameters and provide more accurate results.
 \end{abstract}
 
 \maketitle
@@ -37,16 +37,16 @@ In cosmology, one can argue that one of the most important observable events are
 
 We can generally class supernova explosions into two separate groups, Type I and Type II supernovae. The main distinction arises due to the fact that Type I's have an optical spectra which contains no Balmer hydrogen features, whilst Type II supernovae do contain this hydrogen feature \cite{mod_ast}. 
 
-Within these two subclasses there are further divisions which can be characterised through their spectra and through features as found in their light curves \cite{obs_phys_class_sn}. Light curves are a way to show the evolution of a supernova's magnitude as time passes. For example, with two of the subclasses of Type II supernovae, Type II-L and Type II-P, they can be classed from features of their light curves. For a Type II-L supernova there is a rapid linear decrease in magnitude, and with a Type II-P we see a constant magnitude after maximum \cite{mod_ast}.
+Within these two subclasses there are further divisions which can be characterised through their spectra and through features as found in their light curves \cite{obs_phys_class_sn}. Light curves are a way to show the evolution of a supernova's magnitude as time passes. For example, with two of the subclasses of Type II supernovae, Type II-L and Type II-P, there is a rapid linear decrease in magnitude for the former, and with Type II-P we see a constant plateau magnitude after maximum \cite{mod_ast}.
 
-For the application of supernovae in cosmology, we must turn to the variety of Type Ia.
+For the application of supernovae in cosmology, we must turn to the subclass of Type Ia and understand how they form plus how they are useful. 
 
 \vspace{-3ex}
 \subsection{Type Ia Supernovae}
 \vspace{-2ex}
-It is accepted that the light curves of Type Ia supernovae are generally homogeneous \cite{posn}, this means that they can be utilised as standard candles therefore allowing us a measure of cosmic distance. 
+It is accepted that the light curves of Type Ia supernovae are generally homogeneous \cite{posn}, this means that they can be utilised as standard candles which allows us another measure of cosmic distance. 
 
-Their homogeneity arises due to the mechanism behind the explosion. The progenitor system for Type Ia's consist of a binary system with a primary white dwarf and secondary star which has a mass close towards the Chandrasekhar limit of $1.4 M_{\odot}$ \cite{mod_ast, posn}. The white dwarf will accrete matter from it's companion until it itself reaches the critical mass limit. After this point we would then expect the primary star to collapse into a neutron star, however this is not what happens. Instead, we find that a supernova explosion occurs. An event which arises due to a massive disruption to the star's internal structure by a large amount of energy.
+Their homogeneity arises due to the mechanism behind their explosion. The progenitor system for Type Ia's consist of a binary system with a primary white dwarf and secondary star which has a mass close towards the Chandrasekhar limit of $1.4 M_{\odot}$ \cite{mod_ast, posn}. The white dwarf will accrete matter from it's companion until it itself reaches the critical mass limit. After this point we would then expect the primary star to collapse into a neutron star, however this is not the case. Instead, we find that a supernova explosion occurs. An event which arises due to a massive disruption to the star's internal structure by a large amount of energy.
 
 It is currently understood that as the white dwarf accretes matter it heats up and produces thermonuclear energy. This energy is achieved in the stellar interior at a temperature of $10^9$ K, as a result a disruption to the electron degeneracy pressure takes place. The star becomes gravitationally unstable from the nuclear energy and a total collapse into a neutron star is prevented \cite{longair, posn}.
 
@@ -72,7 +72,7 @@ From data sets of Type Ia supernovae we can easily employ them to calculate the 
 \vspace{-2ex}
 At large cosmological distances, the appearance of objects will be affected by the spacetime which it travels through. If we therefore wanted to describe the geometrical properties of the universe, we would require to solve Einstein's general theory of relativity. From \textit{An Introduction to Modern Astrophysics} \cite{mod_ast} we can build the framework required to calculate and compute cosmological parameters. 
 
-If we solve Einstein's field equations for an isotropic, homogenous universe a description of the evolution of the universe can be obtained in the form of a differential equation which is also known as the Friedmann equation. In the 1922 form of the equation, a non-static universe is accounted for,
+If we solve Einstein's field equations for an isotropic, homogenous universe then we can obtain a description of the evolution of the universe. Given as a differential equation it is more commonly known as the Friedmann equation. In the 1922 form of the equation, a non-static universe is accounted for,
 \begin{equation}
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G \rho \Big] R^2 = -k c^2,
 \label{eqn:1922_friedmann}
@@ -82,14 +82,14 @@ where $R(t)$ is the scale factor, $G$ the gravitational constant, $\rho$ is the 
 
 $k$ can be defined as a constant which is equal to $-1$ for a negatively curved universe, $0$ for a spatially flat universe, and $+1$ for a positively curved universe \cite{longair}. 
 
-Separate work performed by Einstein eventually led to a cosmological constant $\Lambda$ being introduced in the Friedmann equation. This was included in the form of $\tfrac{1}{3}\Lambda c^2$ within the square brackets of the left hand side of Equation \ref{eqn:1922_friedmann}. Whilst Einstein included this term to account for his static and closed universe, as a consequence of observations which implied an accelerating universe, astronomers in the 1990s eventually related the cosmological constant to dark energy.
+Separate work performed by Einstein eventually led to a cosmological constant $\Lambda$ being introduced in the Friedmann equation. This was included in the form of $+\tfrac{1}{3}\Lambda c^2$ within the square brackets of the left hand side of Equation \ref{eqn:1922_friedmann}. Whilst Einstein included this term to account for his static and closed universe, as a consequence of observations which implied an accelerating universe, astronomers in the 1990s eventually related the cosmological constant to dark energy.
 
-Taking the Friedmann equation, it can be rewritten so that it considers a three component universe composed of baryonic and dark matter, relativistic photons and neutrinos, and dark energy, 
+Taking the Friedmann equation, it can be rewritten so that it considers a three component universe composed of baryonic matter and dark matter, relativistic photons and neutrinos, and dark energy, 
 \begin{equation}
 \Big[ \Big( \frac{1}{R} \frac{dR}{dt} \Big)^2 - \frac{8}{3} \pi G (\rho_{M} + \rho_{r} + \rho_{\Lambda} )\Big] R^2 = -kc^2,
 \end{equation}
 
-where $\rho_{M}$ is the density of matter, $\rho_{r}$ is the density of the radiation, and $\rho_{\Lambda}$ is the density of the dark energy. Combining these densities with a critical density we can adapt the Friedmann equation so that it includes \textit{cosmological parameters}, these are values which describe the content makeup of the universe in terms of matter and energy. This critical density is defined as the value of the density that will result in a flat ($k=0$) universe. We see that the Friedmann equation becomes,
+where $\rho_{M}$ is the density of matter, $\rho_{r}$ is the density of radiation, and $\rho_{\Lambda}$ is the density of dark energy. Combining these densities with a critical density we can adapt the Friedmann equation so that it includes \textit{cosmological parameters}, these are values which describe the content makeup of the universe in terms of matter and energy. This critical density is defined as the value of the density that will result in a flat ($k=0$) universe. We see that the Friedmann equation becomes,
 \begin{equation}
 H^2 [1-(\Omega_m + \Omega_{r} + \Omega_{\Lambda})]R^2 = -kc^2,
 \label{eqn:friedmann_old}
@@ -99,7 +99,7 @@ where $H$ is the Hubble parameter and is related to the scale factor and expansi
 
 With this in hand, it is now possible to calculate the proportions of the universe which amounts to matter and the amount which is energy. In these calculations, cosmologists normally choose to omit the contribution from radiation as it is a negligible amount. Results from the Wilkinson Microwave Anisotropy Probe (WMAP) show that $\Omega_{\text{rad}}=8.25 \times 10^{-5}$, an insignificant value when compared to $\Omega_{\Lambda}=0.74 \pm 0.04$ and $\Omega_m = 0.27 \pm 0.04$ \cite{mod_ast}. 
 
-Using these cosmological variables we can additionally define the total density parameter,
+Using these cosmological variables we can define the total density parameter,
 \begin{equation}
 \Omega \equiv \Omega_m + \Omega_{\Lambda} + (\Omega_{r}).
 \label{eqn:total_density}
@@ -118,7 +118,7 @@ To constrain the cosmological parameters using supernovae we do not look at the 
 \label{eqn:chi_eqn}
 \end{equation}
 
-where $f_\text{obs}$ is the peak observed flux of the supernova, $f_\text{model}$ is the model flux for the supernova calculated using the corresponding redshift and with certain defined cosmological parameters, and $\sigma_\text{model}$ is the uncertainty on the observational flux \cite{script}.
+where $f_\text{obs}$ is the peak observed flux of the supernova, $f_\text{model}$ is the model flux for the supernova calculated using the corresponding redshift and with defined cosmological parameters, and $\sigma_\text{model}$ is the uncertainty on the observational flux \cite{script}.
 
 Obtaining $f_\text{obs}$ is a simple matter, we can find it by using a rearranged form of,
 \begin{equation}
@@ -136,13 +136,13 @@ f_\text{model}=\frac{L_\text{peak}}{4\pi [R_0 S(\eta)]^2 (1+z)^2},
 
 where $L_\text{peak}$ is the peak luminosity value for Type Ia supernovae, $R_0 S(\eta)$ is the comoving distance between the observer and where the supernova exploded in space, and $z$ is the redshift for the supernova \cite{script}.
 
-To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. Optimum $L_\text{peak}$ can then found by using Equation \ref{eqn:chi_eqn}, the smallest value for $\chi^2$ corresponds to the best luminosity. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For this data set the comoving distance cannot be simply approximated so we must use the following definition,
+To find $L_\text{peak}$, the low-redshift ($z<0.1$) Type Ia supernovae objects can be selected out of a data set and then Equation \ref{eqn:fmodel} can be used by taking the approximation $R_0 S(\eta) \approx cz/H_0$. Optimum $L_\text{peak}$ can then found by using Equation \ref{eqn:chi_eqn}, the smallest value for $\chi^2$ corresponds to the best luminosity. This value can then be applied to calculations involving supernovae which have redshifts higher than 0.1. For supernovae with $z>0.1$ the comoving distance cannot be simply approximated so we must use the following definition,
 \begin{equation}
 R_0 \eta = c \int_0^z \frac{dz'}{H(z')},
 \label{eqn:comoving_integral}
 \end{equation}
 
-we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_m = 1 - \Omega_{\Lambda}$, reducing the cosmological parameters which we have to find \cite{script}. 
+we find that within this integral we need to integrate a form of the Friedmann equation between a value for the redshift of the supernova $z$ and no redshift. We can derive this by using Equation \ref{eqn:friedmann_old} and with the assumption that if the universe is flat then $\Omega_m = 1 - \Omega_{\Lambda}$, this then reduces the cosmological parameters that we have to find \cite{script}. 
 
 We now arrive at the following result for the Hubble Parameter,
 \begin{equation}
@@ -154,10 +154,10 @@ where $H_0$ is Hubble's constant, $z$ is the redshift for a supernova, and $\Ome
 
 To find the optimum value for $\Omega_\Lambda$ we can select a range from 0.0 to 1.0 and then calculate $f_\text{model}$ and $\chi^2$ for each number. Identical to finding $L_\text{peak}$, the best value for the cosmological parameter is found by choosing the minimum value for $\chi^2$. Through the usage of this least squares method one is able to explore cosmological parameters using Type Ia supernova data sets.
 
-\vspace{-4ex}
+\vspace{-5ex}
 \subsection{Project Aims}
 \vspace{-2ex}
-In this paper we discuss the experimental work performed to understand how cosmological parameters can be constrained using Type Ia supernova data. We explore Least Squares and Markov Chain Monte Carlo methods and then we discuss our exploration of more complex cosmological models which make use of several parameters. 
+In this paper we discuss the experimental work performed to understand how cosmological parameters can be constrained using Type Ia supernova data. We explore Least Squares and Markov Chain Monte Carlo methods and then we discuss our exploration of more complex cosmological models which make use of several parameters. We finally conclude on potential work that could be done to improve the accuracy of our search.
 
 \vspace{-3ex}
 \section{Results and Discussion} 
