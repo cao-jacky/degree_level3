@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  13 MAR 2018 10:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  13 MAR 2018 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,25 +574,25 @@ Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
 File: results/hubble_diagram.pdf Graphic file (type pdf)
 
 <use results/hubble_diagram.pdf>
-Package pdftex.def Info: results/hubble_diagram.pdf used on input line 207.
+Package pdftex.def Info: results/hubble_diagram.pdf used on input line 205.
 (pdftex.def)             Requested size: 263.18799pt x 177.3787pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 207--209
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 205--207
  [] 
  []
 
 [3 <./results/hubble_diagram.pdf>]
 
-LaTeX Warning: Command \L invalid in math mode on input line 228.
+LaTeX Warning: Command \L invalid in math mode on input line 226.
 
 <results/ol_lp_complete.pdf, id=49, 230.8625pt x 155.58125pt>
 File: results/ol_lp_complete.pdf Graphic file (type pdf)
 
 <use results/ol_lp_complete.pdf>
-Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 232.
+Package pdftex.def Info: results/ol_lp_complete.pdf used on input line 230.
 (pdftex.def)             Requested size: 263.18799pt x 177.3787pt.
 
-Overfull \hbox (26.07182pt too wide) in paragraph at lines 232--233
+Overfull \hbox (26.07182pt too wide) in paragraph at lines 230--231
  [] 
  []
 
@@ -602,7 +602,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [4]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 251.
+ on input line 249.
 
 [5 <./results/ol_lp_complete.pdf>] (./supernova_cosmology.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 51--57
@@ -611,79 +611,94 @@ m/n/9 ,
  []
 
 ) [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 
-Overfull \hbox (0.94182pt too wide) in paragraph at lines 361--365
+Overfull \hbox (0.94182pt too wide) in paragraph at lines 359--363
 []\OT1/cmtt/m/n/10 def error$[]$function(cosmological$[]$parameters):
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--365
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
 [][][]\OT1/cmtt/m/n/10 """ Function which calculate and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--365
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
 [][][]\OT1/cmtt/m/n/10 returns a value for the $\OML/cmm/m/it/10 ^^_[]$ \OT1/cm
 tt/m/n/10 between a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--365
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--372
+Underfull \hbox (badness 10000) in paragraph at lines 366--370
 []\OT1/cmtt/m/n/10 def likelihood$[]$ratio(chisq$[]$current,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--372
+Underfull \hbox (badness 10000) in paragraph at lines 366--370
 [][][]\OT1/cmtt/m/n/10 """ Function assigns a probability to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--372
+Underfull \hbox (badness 10000) in paragraph at lines 366--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--379
+Underfull \hbox (badness 10000) in paragraph at lines 373--377
 [][][]\OT1/cmtt/m/n/10 """ Considers the current inputted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--379
+Underfull \hbox (badness 10000) in paragraph at lines 373--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 [][][]\OT1/cmtt/m/n/10 new$[]$parameters = randomly generated
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+[][][]\OT1/cmtt/m/n/10 chisq$[]$proposed = uses new$[]$parameters in
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 382--383
-[][][]\OT1/cmtt/m/n/10 chisq$[]$proposed = uses new$[]$parameters in
+[][][]\OT1/cmtt/m/n/10 ratio = uses likelihood function to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+\OT1/cmtt/m/n/10 provide a probability for the current and
  []
 
 
@@ -693,130 +708,115 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 384--385
-[][][]\OT1/cmtt/m/n/10 ratio = uses likelihood function to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-\OT1/cmtt/m/n/10 provide a probability for the current and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
+Underfull \hbox (badness 10000) in paragraph at lines 386--390
 [][][]\OT1/cmtt/m/n/10 """ Function which performs the random
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
+Underfull \hbox (badness 10000) in paragraph at lines 386--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 [][][]\OT1/cmtt/m/n/10 loop: # goes over the entire specified
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 [][][][]\OT1/cmtt/m/n/10 > code which inputs the current
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 cosmological parameters into new$[]$values
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 function, it obtains the ratio and then
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 compares it with a randomly generated value
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 [][][][]\OT1/cmtt/m/n/10 > if statement: if ratio > random
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 value: accept the new$[]$parameters from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 new$[]$values function and take a walk,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 \OT1/cmtt/m/n/10 otherwise: keep current values and take
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--396
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--404
+Underfull \hbox (badness 10000) in paragraph at lines 397--402
 [][][]\OT1/cmtt/m/n/10 """ Takes the data from ratio$[]$tester
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--404
+Underfull \hbox (badness 10000) in paragraph at lines 397--402
 [][][]\OT1/cmtt/m/n/10 has the greatest likelihood
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--404
+Underfull \hbox (badness 10000) in paragraph at lines 397--402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 [][][]\OT1/cmtt/m/n/10 > code which sorts by likelihood
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 \OT1/cmtt/m/n/10 probability and then selects the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 [8] (./supernova_cosmology.aux) )
 (\end occurred inside a group at level 3)
 
-### simple group (level 3) entered at line 279 ({)
-### simple group (level 2) entered at line 255 ({)
-### simple group (level 1) entered at line 186 ({)
+### simple group (level 3) entered at line 277 ({)
+### simple group (level 2) entered at line 253 ({)
+### simple group (level 1) entered at line 184 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  7983 strings out of 493089
@@ -853,7 +853,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 686199 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 686179 bytes).
 PDF statistics:
  183 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams
