@@ -1,47 +1,47 @@
-These values were generated at this date and time: 2018-03-03 13:49:45.411892
+These values were generated at this date and time: 2018-03-16 10:37:51.768603
 
 The following values were also calculated in flux space! 
 
 Using a basic MCMC method we have calculated on run0: 
-L_peak: 2.88376914292e+35
-Omega_Lambda: 0.438177533943
+L_peak: 2.90322125779e+35
+Omega_Lambda: 0.461616237682
 
 Using a basic MCMC method we have calculated on run1: 
-L_peak: 2.87663507046e+35
-Omega_Lambda: 0.439662181463
+L_peak: 2.91947198111e+35
+Omega_Lambda: 0.474594390423
 
 Using a basic MCMC method we have calculated on run2: 
-L_peak: 2.87230470989e+35
-Omega_Lambda: 0.429447534898
+L_peak: 2.90396746112e+35
+Omega_Lambda: 0.473335274705
 
 Using a basic MCMC method we have calculated on run3: 
-L_peak: 2.88070534047e+35
-Omega_Lambda: 0.454070262815
+L_peak: 2.91421823364e+35
+Omega_Lambda: 0.47077912507
 
 Using a basic MCMC method we have calculated on run4: 
-L_peak: 2.89328566433e+35
-Omega_Lambda: 0.447310987946
+L_peak: 2.89650112836e+35
+Omega_Lambda: 0.443412615368
 
 Using a basic MCMC method we have calculated on run5: 
-L_peak: 2.87696336526e+35
-Omega_Lambda: 0.436983300491
+L_peak: 2.97462403092e+35
+Omega_Lambda: 0.474256743209
 
 Using a basic MCMC method we have calculated on run6: 
-L_peak: 2.89139916212e+35
-Omega_Lambda: 0.464792262789
+L_peak: 2.88109102504e+35
+Omega_Lambda: 0.448168612768
 
 Using a basic MCMC method we have calculated on run7: 
-L_peak: 2.89184720337e+35
-Omega_Lambda: 0.467848417166
+L_peak: 2.87114594875e+35
+Omega_Lambda: 0.427263817138
 
 Using a basic MCMC method we have calculated on run8: 
-L_peak: 2.86557247109e+35
-Omega_Lambda: 0.433524811999
+L_peak: 2.87490310332e+35
+Omega_Lambda: 0.44396080652
 
 Using a basic MCMC method we have calculated on run9: 
-L_peak: 2.89597755696e+35
-Omega_Lambda: 0.453788811706
+L_peak: 2.89000256387e+35
+Omega_Lambda: 0.450994278004
 
 Final average values for L_peak and Omega_Lambda and their uncertainties: 
-L_peak: 2.88284596869e+35 +- 3.03926286377e+32
-Omega_Lambda: 0.446560610522 +- 0.00395872107711
+L_peak: 2.90291467339e+35 +- 8.95733046681e+32
+Omega_Lambda: 0.456838190089 +- 0.0049376627365
