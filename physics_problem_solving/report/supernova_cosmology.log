@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  15 MAR 2018 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  16 MAR 2018 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -567,7 +567,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Class revtex4 Warning: Assuming \noaffiliation for Jacky Cao, Group C3, Physics
- Problem Solving \\ Date of report: 28/02/2018.
+ Problem Solving \\ Date of submission: 16/03/2018.
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] <results/hubble_diagram.pdf, id=25, 230.8625pt x 155.58125pt>
@@ -856,7 +856,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supernova_cosmology.pdf (8 pages, 686167 bytes).
+Output written on supernova_cosmology.pdf (8 pages, 686221 bytes).
 PDF statistics:
  183 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams

@@ -22,7 +22,7 @@
 
 \title{Constraining the geometry of the Universe using Type Ia supernovae and statistical methods}
  
-\author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of report: 28/02/2018}
+\author{Jacky Cao, Group C3, Physics Problem Solving \\ Date of submission: 16/03/2018}
 
 \begin{abstract}     
 The geometry and content of the universe can be quantified in terms of cosmological parameters. We used Type Ia supernovae and statistical methods to constrain these parameters. Our work made use of the Supernova Cosmology Project's Union2.1 compilation of 753 Type Ia supernovae to constrain several cosmological parameters. Our initial experimentation used a least squares method which yielded a dark energy density parameter of $\Omega_\Lambda=0.74\pm0.01$, this was deemed an acceptable fit with $\chi^2_\nu=2.4547$ - a good fit requires $\chi^2_\nu=1$. We then decided to explore the multi-parameter $\Lambda$ Cold Dark Matter model using a variant of the Markov Chain Monte Carlo method. With this we encountered problems such as local minima which were dealt with by limiting our search parameter space. Using the Quintessence Cold Dark Model we obtained the results: $\Omega_\Lambda=0.73\pm0.01$, $\Omega_k=-0.0029\pm0.009$, $\Omega_m = 0.20\pm0.02$, $\Omega_r = (4.4\pm0.7)\times10^{-6}$, and $w=-0.912\pm0.01$. From this description we then formed a model. Comparing with observational data we found $\chi^2_\nu=2.4166$ which is acceptable and can be deemed as an improvement to the least squares method. To refine our work, local minima should be the main focus of future experimentation, one can potentially implement `simulated annealing' to circumnavigate them. Plus future work could involve combining Type Ia data with Cosmic Microwave Background and Baryon Acoustic Oscillation data to further constrain the cosmological parameters and provide more accurate results.
@@ -215,7 +215,7 @@ In Figure \ref{fig:hubble_diagram} we have plotted the Union2.1 data set alongsi
 \vspace{-3ex}
 \subsection{Bayesian Statistics} 
 \vspace{-2ex}
-With our work in Bayesian statistics we have primarily made use of the Markov Chain Monte Carlo (MCMC) set of methods. Bayes theorem associates the posterior probability (the probability for parameters given known and observed data) to the likelihood (the probability for the data given certain parameters) and the prior (what was known about the parameters before the data). With these statistical procedures we are in essence updating our information about a value from the prior to the posterior \cite{mcmc_bs}. MCMC makes use of this theory and applies it into a methodology, values are generated and then assigned a likelihood probability, criteria is then used to decide if the parameters should be accepted or not, then finally an optimum solution is found from all the completed random walks.
+With our work in Bayesian statistics we have primarily made use of the Markov Chain Monte Carlo (MCMC) set of methods. Bayes' theorem associates the posterior probability (the probability for parameters given known and observed data) to the likelihood (the probability for the data given certain parameters) and the prior (what was known about the parameters before the data). With these statistical procedures we are in essence updating our information about a value from the prior to the posterior \cite{mcmc_bs}. MCMC makes use of this theory and applies it into a methodology, values are generated and then assigned a likelihood probability, criteria is then used to decide if the parameters should be accepted or not, then finally an optimum solution is found from all the completed random walks.
 
 For our work in constraining cosmological parameters we chose to utilise a variant of MCMC, the Random Walk Metropolis-Hastings (RWMH) algorithm. A basic outline of which can be found in Appendix \ref{appendix:mcmc}. We chose to use this as it independently samples the parameter space, information about it's current point does not completely influence the location of it's next `jump' \cite{mcmc_bs}. Instead, an acceptance probability and a random value is compared to generate the next point in the parameter search.
 
@@ -285,7 +285,7 @@ Once confined we could produce results as found in Table \ref{table:extended_sea
  \textbf{$\boldsymbol{\Omega_r}$} & $-0.250$ & $+0.128$  & $-0.108$ & +0.004 & +1.000\\
  \hline
 \end{tabular}
-\caption{Correlation values have been calculated for the $X(z)=1$ model, the cosmological parameters have been taken from Table \ref{table:extended_search}. Between the variables we find little correlation due to the random indepedent generation. We find correlation when the correlation value is $\sim1$ or $\sim -1$, $0$ relates to no correlation \cite{hugheshase}.}
+\caption{Correlation values have been calculated for the $X(z)=1$ model, the cosmological parameters have been taken from Table \ref{table:extended_search}. Between the variables we find little correlation due to the random independent generation of values. We find correlation when the correlation value is $\sim1$ or $\sim -1$, and no correlation with $0$ \cite{hugheshase}.}
 \vspace{-0.5em}
 \label{table:correlations}
 \end{table}
@@ -330,7 +330,7 @@ Our experimentation has shown us the practicability for Type Ia supernovae, we h
 \vspace{-2ex}
 In the least squares and RWMH methods we were required to attribute a $\chi^2$ for each model that we produced, this then helped us to decide the optimal cosmological parameters. The following equation was used in this work, 
 \begin{equation}
-\chi^2 = \sum \frac{f_\text{obs}-f_\text{model}}{\sigma_\text{obs}},
+\chi^2 = \sum \frac{(f_\text{obs}-f_\text{model})^2}{\sigma_\text{obs}^2},
 \end{equation}
 
 where $f_\text{obs}$ is the observational flux of the supernovae, $f_\text{model}$ is the model flux, and $\sigma_\text{obs}$ is the uncertainty on the observed flux. This equation was taken from \textit{Measurements and their Uncertainties} [I. G. Hughes and T. P. A. Hase. \textit{Measurements and their Uncertainties}, Oxford University Press, 2010].
